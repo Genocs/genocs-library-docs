@@ -1,11 +1,11 @@
 {
-  "name": "@hyas/doks",
-  "description": "Doks theme",
-  "version": "0.4.0",
+  "name": "genocs-library",
+  "description": "Genocs Library Doks theme",
+  "version": "1.0.0",
   "browserslist": [
     "defaults"
   ],
-  "repository": "https://github.com/h-enk/doks",
+  "repository": "https://github.com/genocs/genocs-library-docs",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

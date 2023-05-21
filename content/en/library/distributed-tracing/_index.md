@@ -73,6 +73,9 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 
 `samplingRate` - determines the percentage of spans to report. Required only for probabilistic sampler.
 
+
+## Settings
+
 **appsettings.json**
 
 ``` json

@@ -34,9 +34,9 @@ Currently, you can contribute to:
 
 ### How to contribute?
 
-Please note the following steps are applicable only for the `docs` repository.
+Please note the following steps are applicable only for the `genocs-library-docs` repository.
 
-1. Fork the `docs` Repository to your Github Profile.
+1. Fork the `genocs-library-docs` repository to your Github profile.
 2. `[Optional]` Navigate to your newly forked Repository -> Settings -> Secrets.
 3. `[Optional]` Add a new Repository Secret with a name `GT_TOKEN`. As for the value, paste in your GitHub Token (https://github.com/settings/tokens)
 4. Clone this repository locally.
@@ -54,6 +54,14 @@ Submit your PR and join the elite list!
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
+</a>
+
+## Genocs Library Documentation
+
+Submit your PR and join the elite list!
+
+<a href="https://github.com/Genocs/genocs-library-docs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library-docs" />
 </a>
 
 ## Clen Architecture Template

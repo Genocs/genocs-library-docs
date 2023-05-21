@@ -201,7 +201,7 @@ And here is the response.
 }
 ```
 
-You will need to pass the `token` in the request headers to authenticate calls to the genocs library API!
+You will need to pass the `token` in the request headers to authenticate calls to the Genocs Library API!
 
 For further steps and details, [Read the Getting Started Guide](https://blog.genocs.com/dotnet-webapi-boilerplate/general/getting-started/)
 

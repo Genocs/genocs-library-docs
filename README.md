@@ -12,3 +12,15 @@
 8. Refer https://github.com/Genocs/genocs-library-docs/blob/main/content/en/dotnet-webapi-boilerplate/general/getting-started/index.md to get an idea on how to write documentation and include images, code snippets and stuff.
 9. To run the application locally, run the command `npm run start` and navigate to localhost:1313
 10. Once ready, send a Pull Request.
+
+
+## Acknowledgment
+
+Original theme
+[h-enk doks](https://github.com/h-enk/doks)
+
+Original project
+[fullstackhero](https://github.com/fullstackhero)
+
+Awesome mentor
+[Mukesh Murugan](https://github.com/iammukeshm)

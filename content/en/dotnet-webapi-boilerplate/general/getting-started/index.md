@@ -33,14 +33,14 @@ To get started with this Boilerplate, here are the available options.
 
 ### Prerequisites
 
-Before creating your first genocs library solution, you should ensure that your local machine has:
+Before creating your first Genocs Library solution, you should ensure that your local machine has:
 
 - **.NET 7** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
 - **NodeJS (16+)** You can find the download [here](https://nodejs.org/en/download).
 
 ### Installation
 
-After you have installed .NET, you will need to install the `fsh` console tool.
+After you have installed .NET, you will need to install the `genocs` console tool.
 
 ``` bash
 dotnet tool install --global Genocs.CLI

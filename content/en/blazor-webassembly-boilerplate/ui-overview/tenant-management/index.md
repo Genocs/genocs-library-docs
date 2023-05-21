@@ -1,7 +1,7 @@
 ---
 title: "Tenant Management"
-description: "Tenant Management Pages in genocs library's Blazor WebAssembly Boilerplate."
-lead: "Tenant Management Pages in genocs library's Blazor WebAssembly Boilerplate."
+description: "Tenant Management Pages in Genocs Library's Blazor WebAssembly Boilerplate."
+lead: "Tenant Management Pages in Genocs Library's Blazor WebAssembly Boilerplate."
 date: 2023-05-13T15:40:19+02:00
 lastmod: 2023-05-13T15:40:19+02:00
 draft: false

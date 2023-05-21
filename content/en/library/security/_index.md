@@ -54,6 +54,9 @@ public static IWebHostBuilder GetWebHostBuilder(string[] args)
 
 `kv` - KV storage used for loading JSON settings during application startup.
 
+
+## Settings
+
 **appsettings.json**
 
 ``` json

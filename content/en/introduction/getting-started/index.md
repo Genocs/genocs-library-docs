@@ -68,7 +68,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet tablet-secondary">dotnet</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Get to work with the latest and greatest of Microsoft's .NET 7 Web API fused with the goodness of genocs library.</p>
+          <p>Get to work with the latest and greatest of Microsoft's .NET 7 Web API fused with the goodness of Genocs Library.</p>
           <p><a href="https://github.com/Genocs/dotnet-webapi-boilerplate">View Github Repository</a> | <a href="https://blog.genocs.com/dotnet-webapi-boilerplate/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>

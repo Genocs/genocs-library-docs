@@ -95,6 +95,8 @@ To blacklist and deactivate the access tokens, use `IAccessTokenService` and inv
 
 `validateAudience` - if true then the audience defined in validAudience will be validated.
 
+## Settings
+
 **appsettings.json**
 
 ``` json

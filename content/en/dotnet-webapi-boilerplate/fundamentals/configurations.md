@@ -1,7 +1,7 @@
 ---
 title: "Configurations"
-description: "Understanding Configurations in genocs library's Web API."
-lead: "Understanding Configurations in genocs library's Web API."
+description: "Understanding Configurations in Genocs Library's Web API."
+lead: "Understanding Configurations in Genocs Library's Web API."
 date: 2023-05-13 10:26:50+02:00
 lastmod: 2023-05-13 10:26:50+02:00
 draft: false
@@ -117,7 +117,7 @@ Here, the locale-key can be anything like fr,de, it and so on. The default local
 
 ## Logger
 
-genocs library internally uses Serilog for logging. Here is the configuration for logger.
+Genocs Library internally uses Serilog for logging. Here is the configuration for logger.
 
 ``` json
 {

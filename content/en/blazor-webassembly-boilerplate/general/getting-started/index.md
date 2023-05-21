@@ -27,11 +27,11 @@ To get started with this Boilerplate, here are the avaiable options.
 
 You would probably need to take this approach if you want to keep your source code upto date with the latest changes. To get started based on this repository, you need to get a copy locally. You have three options: fork, clone, or download.
 
-- Make a fork of genocs library's `blazor-wasm-boilerplate` repository in your Github account.
+- Make a fork of Genocs Library's `blazor-wasm-boilerplate` repository in your Github account.
 - Next, since you need to start your private personal project, create your new `blazor-wasm-boilerplate` personal project by cloning the forked repository on your personal github. This could be done as simple as running `git clone https://github.com/{yourgithubuseraccount}/blazor-wasm-boilerplate.git` locally on your development machine.
 - Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{yourgithubuseraccount}/blazor-wasm-boilerplate` and `git remote set-url --push upstream DISABLE`
 
-Now, whenever there is a new update on genocs library's `blazor-wasm-boilerplate` repository, you could simply pull in the latest change on your private fork of the genocs library's `blazor-wasm-boilerplate` repository and later merge these changes with you personal projects.
+Now, whenever there is a new update on Genocs Library's `blazor-wasm-boilerplate` repository, you could simply pull in the latest change on your private fork of the Genocs Library's `blazor-wasm-boilerplate` repository and later merge these changes with you personal projects.
 
 For step by step instructions, [follow this](https://discord.com/channels/878181478972928011/892573122186838046/933513103688224838) and [this](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274).
 
@@ -85,7 +85,7 @@ Once that is done, your new solution is created for you. As simple as that!
 
 Firstly, keep in mind that this is a client application that actually consumes data by sending HTTP Requests to the API Server. Thus, you need to make sure that the API is up and running.
 
-To learn about setting up the API Server, refer [Getting Started with genocs library's .NET Web API](/dotnet-webapi-boilerplate/general/getting-started/).
+To learn about setting up the API Server, refer [Getting Started with Genocs Library's .NET Web API](/dotnet-webapi-boilerplate/general/getting-started/).
 
 Once the Server is up and running, like any other Blazor application, simply navigate to the Host folder under the source folder of the Blazor Project (`\src\Host`) and run the following standard commands.
 

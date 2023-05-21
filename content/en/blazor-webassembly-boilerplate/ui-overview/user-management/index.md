@@ -1,7 +1,7 @@
 ---
 title: "User Management"
-description: "User Management Pages in genocs library's Blazor WebAssembly Boilerplate."
-lead: "User Management Pages in genocs library's Blazor WebAssembly Boilerplate."
+description: "User Management Pages in Genocs Library's Blazor WebAssembly Boilerplate."
+lead: "User Management Pages in Genocs Library's Blazor WebAssembly Boilerplate."
 date: 2023-05-13T15:40:19+02:00
 lastmod: 2023-05-13T15:40:19+02:00
 draft: false
