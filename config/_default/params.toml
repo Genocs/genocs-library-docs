@@ -1,0 +1,97 @@
+# Meta Data for SEO
+
+## Homepage
+title = "Genocs Library"
+titleSeparator = "-"
+titleAddition = "Open-Source Framework for Modern Web Applications."
+description = "Genocs Library is a project to cater the needs of Developers and Organizations to reduce the development effort"
+logo = "/images/main-logo.png"
+navBarLogo = "/images/icon.png"
+
+
+## Documentation
+# docsVersion = "1"
+
+# Search
+mainSections = ["introduction", "library", "blog", "blazor-webassembly-boilerplate", "dotnet-webapi-boilerplate" ]
+
+## Open Graph
+images = ["logo.png"]
+ogLocale = "en_US"
+domainTLD = "doks.netlify.app"
+titleHome = "Doks Theme"
+
+## Twitter Cards
+twitterSite = "@noccogiovanni"
+twitterCreator = "@noccogiovanni"
+
+## JSON-LD
+# schemaType = "Person"
+schemaType = "Organization"
+schemaName = "genocs"
+schemaAuthor = "Nocco Giovanni Emanuele"
+schemaAuthorTwitter = "https://twitter.com/noccogiovanni"
+schemaAuthorLinkedIn = "https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/"
+schemaAuthorGitHub = "https://github.com/giovanninocco"
+schemaLocale = "en-US"
+schemaLogo = "logo.png"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "logo.png"
+schemaImageWidth = 1280
+schemaImageHeight = 640
+schemaTwitter = "https://twitter.com/noccogiovanni"
+schemaLinkedIn = ""
+schemaGitHub = "https://github.com/Genocs"
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 100
+bgColor = "#fff"
+landscapePhotoWidths = [2000, 1000, 900, 800, 700, 600, 500,400]
+portraitPhotoWidths = [800, 700, 600, 500,100]
+lqipWidth = "20x"
+smallLimit = "30"
+
+# Footer
+footer = "Developed & Maintained by <a href=\"https://www.genocs.com/\">Nocco Giovanni Emanuele</a>"
+
+# Feed
+copyRight = "Copyright (c) 2023 Genocs"
+
+# Alert
+alert = true
+alertDismissable = false
+alertText = ".NET 7 Genocs Library Released <a target=\"_blank\" class=\"alert-link\" href=\"https://www.youtube.com/watch?v=TgxDvU---Ak/\">Click here to get started!</a>"
+
+# Edit Page
+repoHost = "GitHub"
+docsRepo = "https://github.com/genocs/genocs-library-docs"
+docsRepoBranch = "master"
+editPage = true
+lastMod = true
+
+[options]
+  lazySizes = true
+  clipBoard = true
+  instantPage = true
+  flexSearch = true
+  darkMode = true
+  bootStrapJs = true
+  breadCrumb = true
+  highLight = true
+  kaTex = false
+  multilingualMode = false
+  docsVersioning = false
+  fullWidth = true
+
+[menu]
+  [menu.section]
+    auto = false
+    collapsibleSidebar = false
