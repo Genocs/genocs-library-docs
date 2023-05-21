@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on</title><link>/introduction/</link><description>Recent content in Introduction on</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><lastBuildDate>Sat, 13 May 2023 15:40:19 +0200</lastBuildDate><atom:link href="/introduction/index.xml" rel="self" type="application/rss+xml"/><item><title>Getting Started 🚀</title><link>/introduction/getting-started/</link><pubDate>Sat, 13 May 2023 15:40:19 +0200</pubDate><guid>/introduction/getting-started/</guid><description>Problem Statement # Ever gone through the pain of setting up new Projects from scratch each and every time?
+Genocs Library aims to address this pain point by offering Starting Points aka Boilerplates for various technologies that can help save hours of Development and Research Time for Developers and Teams.
+Solution # Genocs Library offers Boilerplates with latest packages and services that your projects will ever need.</description></item><item><title>Exploring Docs</title><link>/introduction/exploring-docs/</link><pubDate>Sat, 13 May 2023 15:40:19 +0200</pubDate><guid>/introduction/exploring-docs/</guid><description>Genocs Library sports a pretty much straight forward documentation website that is frequently updated and also accepts new documentations / corrections from the community!</description></item><item><title>Contributing</title><link>/introduction/contributing/</link><pubDate>Sat, 13 May 2023 15:40:19 +0200</pubDate><guid>/introduction/contributing/</guid><description>Being a completely community driven project, I encourage the community to submit their valuable contributions to whichever repository they are comfortable with.
+Currently, you can contribute to:
+Genocs Library Source Code
+Genocs Library Documentation
+Genocs Library Template
+Genocs Library Deployments
+Genocs Library Example
+.NET Web API Boilerplate (soon) https://github.com/Genocs/dotnet-webapi-boilerplate
+Blazor WebAssembly Boilerplate (soon) https://github.com/Genocs/blazor-wasm-boilerplate
+Angular Front-End (soon)</description></item></channel></rss>
