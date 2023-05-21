@@ -65,7 +65,7 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
 }
 ```
 
-You can easily register all command handlers in DI container by calling `AddCommandHandlers()` method on IGenocsBuilder:
+You can easily register all command handlers in DI container by calling `AddCommandHandlers()` method on `IGenocsBuilder`:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
@@ -79,7 +79,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 }
 ```
 
-Dispatching a particular command object can be also done using Genocs.Common package. Start with registering in-memory dispatcher on your IGenocsBuilder by calling a `AddInMemoryCommandDispatcher()` method:
+Dispatching a particular command object can be also done using Genocs.Common package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryCommandDispatcher()` method:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
@@ -140,7 +140,7 @@ public class GetAccountHandler : IQueryHandler<GetAccount, AccountDto>
 }
 ```
 
-You can easily register all query handlers in DI container by calling `AddQueryHandlers()` method on IGenocsBuilder:
+You can easily register all query handlers in DI container by calling `AddQueryHandlers()` method on `IGenocsBuilder`:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
@@ -154,7 +154,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 }
 ```
 
-Dispatching a particular query object can be also done using Genocs.Common package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryQueryDispatcher()` method:
+Dispatching a particular query object can be also done using **Genocs.Common** package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryQueryDispatcher()` method:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
@@ -169,7 +169,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 }
 ```
 
-Then simply inject IQueryDispatcher into a class and call DispatchAsync() method:
+Then simply inject `IQueryDispatcher` into a class and call `DispatchAsync()` method:
 
 ``` cs
 public class AccountsService
@@ -223,7 +223,7 @@ public class AccountCreatedHandler : IEventHandler<AccountCreated>
 }
 ```
 
-You can easily register all event handlers in DI container by calling AddEventHandlers() method on IGenocsBuilder:
+You can easily register all event handlers in DI container by calling AddEventHandlers() method on `IGenocsBuilder`:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)

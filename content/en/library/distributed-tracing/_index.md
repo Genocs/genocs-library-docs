@@ -22,6 +22,10 @@ toc: true
 dotnet add package Genocs.Tracing
 ```
 
+> **Open Tracing migration to Open Telemetry**
+>
+> We are committed to move forward from former Open Tracing to the [Open Telemetry](https://opentelemetry.io/)
+>
 
 ## Dependencies
 
@@ -85,7 +89,7 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 ```
 
 ## Usage
-Inside your Startup.cs extend `IGenocsBuilder` with `AddJaeger()` that will create the `ITracer` using chosen sampler and reporter:
+Inside your *Startup.cs* extend `IGenocsBuilder` with `AddJaeger()` that will create the `ITracer` using chosen sampler and reporter:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)

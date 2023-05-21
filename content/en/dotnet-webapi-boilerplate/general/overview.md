@@ -119,7 +119,7 @@ genocs api n Genocs.Starter
 ```
 
 This will create a new .NET 7 WebAPI solution for you using the Genocs Templates.
-For further steps and details, [Read the Getting Started Guide](https://Genocs.net/dotnet-webapi-boilerplate/general/getting-started/)
+For further steps and details, [Read the Getting Started Guide](https://blog.genocs.com/dotnet-webapi-boilerplate/general/getting-started/)
 
 #### Update
 To update the tool & templates, run the following commands

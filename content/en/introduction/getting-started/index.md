@@ -57,7 +57,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">microservices</div>
             </div>
           <p>Coming soon.</p>
-          <p><a href="https://github.com/Genocs/genocs-lirary">View Github Repository</a> | <a href="https://Genocs.net/dotnet-microservices-boilerplate/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/genocs-lirary">View Github Repository</a> | <a href="https://blog.genocs.com/dotnet-microservices-boilerplate/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
@@ -69,7 +69,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">multitenancy</div>
             </div>
           <p>Get to work with the latest and greatest of Microsoft's .NET 7 Web API fused with the goodness of genocs library.</p>
-          <p><a href="https://github.com/Genocs/dotnet-webapi-boilerplate">View Github Repository</a> | <a href="https://Genocs.net/dotnet-webapi-boilerplate/general/getting-started/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/dotnet-webapi-boilerplate">View Github Repository</a> | <a href="https://blog.genocs.com/dotnet-webapi-boilerplate/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
@@ -82,7 +82,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">multitenancy</div>
             </div>
           <p>Clean Architecture Boilerplate Template for .NET 6.0 Blazor WebAssembly built for FSH WebAPI with the goodness of MudBlazor Components.</p>
-          <p><a href="https://github.com/Genocs/blazor-wasm-boilerplate">View Github Repository</a> | <a href="https://Genocs.net/blazor-webassembly-boilerplate/general/overview/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/genocs-library-docs/blazor-wasm-boilerplate">View Github Repository</a> | <a href="https://blog.genocs.com/blazor-webassembly-boilerplate/general/overview/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card">
