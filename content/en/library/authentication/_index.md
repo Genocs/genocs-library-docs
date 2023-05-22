@@ -107,8 +107,8 @@ To blacklist and deactivate the access tokens, use `IAccessTokenService` and inv
     "rawData": ""
   },
   "secretKey": "secret,
-  "issuer": "trill",
-  "validIssuer": "trill",
+  "issuer": "genocs-auth",
+  "validIssuer": "genocs-auth",
   "validateAudience": false,
   "validateIssuer": true,
   "validateLifetime": true,

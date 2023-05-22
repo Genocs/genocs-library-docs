@@ -64,7 +64,7 @@ Submit your PR and join the elite list!
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library-docs" />
 </a>
 
-## Clen Architecture Template
+## Clean Architecture Template
 
 Submit your PR and join the elite list!
 
@@ -83,14 +83,6 @@ Submit your PR and join the elite list!
 ## Blazor WebAssembly Boilerplate (soon)
 
 Here are the contributors of the Blazor WASM Project! Submit your PR to join this Elite list ;) Make sure your code is warning free!
-
-<a href="https://github.com/Genocs/genocs-library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
-</a>
-
-## .NET Web API Boilerplate (soon)
-
-Submit your PR and join the elite list!
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />

@@ -7,3 +7,5 @@ resources
 .idea
 TODO
 .vs
+package-lock.json
+CNAME
