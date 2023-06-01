@@ -44,7 +44,7 @@
 [[main]]
   name = "Microservices 🔥"
   identifier = "microservices"
-  url = "/dotnet-microservices-boilerplate/"
+  url = "/dotnet-microservices-template/"
   weight = 50
 
 ####################################
@@ -52,7 +52,7 @@
 [[main]]
   name = "Blazor"
   identifier = "blazor"
-  url = "/blazor-webassembly-boilerplate/general/getting-started/"
+  url = "/blazor-template/general/getting-started/"
   weight = 60
 
 [[main]]

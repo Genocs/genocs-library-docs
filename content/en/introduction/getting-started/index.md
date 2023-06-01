@@ -22,21 +22,20 @@ toc: true
 
 <p>Ever gone through the pain of setting up new Projects from scratch each and every time?</p>
 <p><b>Genocs Library</b> aims to
-address this pain point by offering Starting Points aka Boilerplates for various technologies that can help save
+address this pain point by offering starting points for various technologies that can help save
 hours of Development and Research Time for Developers and Teams.</p>
 
 ## Solution
 
-<p><b>Genocs Library</b> offers Boilerplates with latest packages and services that your projects will ever need. We intend to provide Clean and Well structured Boilerplates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
+<p><b>Genocs Library</b> offers library framework and cli and templates with latest packages and services that your projects will ever need. We intend to provide Clean and Well structured Boilerplates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
 </p>
 <p class="code-green">Most importantly, <b>Genocs Library</b> is completely FREE to use!</p>
 
 As the name suggests, the idea is to provide a full-stack end to end solution to kick start products of any scale following a modularized monolith architecture with well cut designs, code readability, scalability as the out-of-the-box features. Bottomline, using <b>Genocs Library</b>, your new projects will be up and running in no time.
 
-
 ## Vision
 
-<b>Genocs Library</b> is not a single repository or project, rather a collection of library out of which you get to choose your preference. In the long term, <b>Genocs Library</b> would ideally have multiple API projects that are written in various technologies like .NET, Node.js, GoLang and multiple client applications that are built on awesome tech like Blazor, Vue.js, React, Angular and so on.
+<b>Genocs Library</b> is not a single repository or project, rather a collection of library, templates and cli out of which you get to choose your preference. In the long term, <b>Genocs Library</b> would ideally have multiple API projects that are written in various technologies like .NET, Node.js, GoLang and multiple client applications that are built on awesome tech like Blazor, Vue.js, React, Angular and so on.
 
 <b>Genocs Library</b> should be the one-stop that caters to the needs of various developers in various technology. This obviously would require a lot of community adaptation and contributions.
 
@@ -57,7 +56,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">microservices</div>
             </div>
           <p>Coming soon.</p>
-          <p><a href="https://github.com/Genocs/genocs-lirary">View Github Repository</a> | <a href="https://blog.genocs.com/dotnet-microservices-boilerplate/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/genocs-library">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-microservices-boilerplate/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
@@ -69,7 +68,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">multitenancy</div>
             </div>
           <p>Get to work with the latest and greatest of Microsoft's .NET 7 Web API fused with the goodness of Genocs Library.</p>
-          <p><a href="https://github.com/Genocs/dotnet-webapi-boilerplate">View Github Repository</a> | <a href="https://blog.genocs.com/dotnet-webapi-boilerplate/general/getting-started/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/dotnet-webapi-boilerplate">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
@@ -82,7 +81,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">multitenancy</div>
             </div>
           <p>Clean Architecture Boilerplate Template for .NET 6.0 Blazor WebAssembly built for FSH WebAPI with the goodness of MudBlazor Components.</p>
-          <p><a href="https://github.com/Genocs/genocs-library-docs/blazor-wasm-boilerplate">View Github Repository</a> | <a href="https://blog.genocs.com/blazor-webassembly-boilerplate/general/overview/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/genocs-library-docs/blazor-wasm-boilerplate">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/blazor-webassembly-boilerplate/general/overview/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card">

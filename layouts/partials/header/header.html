@@ -10,7 +10,7 @@
   <header class="navbar navbar-expand-md navbar-light doks-navbar sticky-lg-top">
     <nav class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} flex-wrap flex-md-nowrap"
       aria-label="Main navigation">
-      <a class="navbar-brand p-0 me-auto" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
+      <a class="navbar-brand p-0 me-auto" href="{{ " /" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
         <img src="{{ .Site.Params.NavBarLogo }}" alt="Genocs Logo" style="max-width: 40px">
         <b style="font-weight: 600;">Genocs</b>
       </a>
@@ -37,7 +37,7 @@
       <div class="offcanvas offcanvas-start border-0 py-md-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true"
         aria-labelledby="offcanvasDoksLabel">
         <div class="offcanvas-header d-md-none">
-          <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="{{ "/" | relLangURL
+          <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="{{ " /" | relLangURL
               }}"><img src="{{ .Site.Params.NavBarLogo }}" alt="Genocs Logo" style="max-width: 40px">
               <b style="font-weight: 600;">Genocs</b></a></h2>
           <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas"
@@ -51,9 +51,10 @@
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
-            {{- $active = or $active (and (eq .Name "API") (eq $current.Section "dotnet-webapi-boilerplate")) -}}
-            {{- $active = or $active (and (eq .Name "Microservices🔥") (eq $current.Section "dotnet-microservices-boilerplate")) -}}
-            {{- $active = or $active (and (eq .Name "Blazor") (eq $current.Section "blazor-webassembly-boilerplate"))
+            {{- $active = or $active (and (eq .Name "API") (eq $current.Section "dotnet-webapi-template")) -}}
+            {{- $active = or $active (and (eq .Name "Microservices🔥") (eq $current.Section
+            "dotnet-microservices-template")) -}}
+            {{- $active = or $active (and (eq .Name "Blazor") (eq $current.Section "blazor-template"))
             -}}
             <li class="nav-item">
               <a class="nav-link py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
