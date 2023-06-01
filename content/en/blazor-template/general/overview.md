@@ -21,11 +21,11 @@ toc: true
 The goal of this repository is to help developers / companies kickstart their Web Application Development with a pre-built Blazor WebAssembly Boilerplate that includes several much needed components and features.
 
 > Note that this is a frontend / client application only! The backend for this application is available in a seperate repository.
-> - Find Genocs Library's .NET 7 Web API Boilerplate here - https://github.com/Genocs/dotnet-webapi-boilerplate
+> - Find Genocs Library's .NET 7 Web API Boilerplate here - https://github.com/Genocs/dotnet-webapi-template
 
 ## Prerequisites
 
-- Make sure you have the API Running. Here is FSH Backend - https://github.com/Genocs/dotnet-webapi-boilerplate
+- Make sure you have the API Running. Here is FSH Backend - https://github.com/Genocs/dotnet-webapi-template
 - Once Genocs Library's .NET 7 Web API is up and running, run the Blazor WebAssembly Project to consume it's services.
 
 ## Community

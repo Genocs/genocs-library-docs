@@ -7,7 +7,7 @@ lastmod: 2023-05-13T15:51:03+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-boilerplate:
+  dotnet-webapi-template:
     identifier: "api-testing"
     name: "API Testing"
     parent: "general"
@@ -81,7 +81,7 @@ As mentioned earlier, to the /api/tokens endpoint we POST a request with the fol
 
 Postman is also supported!
 
-Now that our application is up and running, let's fire up POSTMAN and run some basic requests. You can find the updated Postman collection under the /postman folder of your solution or [here](https://github.com/Genocs/genocs-library-docs/dotnet-webapi-boilerplate/blob/main/postman/dotnet.webapi.boilerplate.postman_collection.json). Import this postman collection on to your local Postman.
+Now that our application is up and running, let's fire up POSTMAN and run some basic requests. You can find the updated Postman collection under the /postman folder of your solution or [here](https://github.com/Genocs/genocs-library-docs/dotnet-webapi-template/blob/main/postman/dotnet.webapi.boilerplate.postman_collection.json). Import this postman collection on to your local Postman.
 
 Note that I have set up some default collection variables to make things easier.
 

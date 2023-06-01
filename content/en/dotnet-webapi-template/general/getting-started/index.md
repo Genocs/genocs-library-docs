@@ -7,7 +7,7 @@ lastmod: 2023-04-08T15:32:05+05:30
 draft: false
 images: []
 menu:
-  dotnet-webapi-boilerplate:
+  dotnet-webapi-template:
     identifier: "general-getting-started"
     name: "Getting Started 🚀"
     parent: "general"
@@ -18,7 +18,7 @@ toc: true
   <img src="https://raw.githubusercontent.com/Genocs/genocs-library-docs/main/media/genocs-dotnet-7-webapi-boilerplate-banner.png" />
   <p>
 
-Firstly, make sure that you have already setup your development environment that runs the prerequisite tools and SDKs. Refer [Development Environment](/dotnet-webapi-boilerplate/general/development-environment/) for details.
+Firstly, make sure that you have already setup your development environment that runs the prerequisite tools and SDKs. Refer [Development Environment](/dotnet-webapi-template/general/development-environment/) for details.
 
 This guide will take you right from strating up your own .NET Web API Project using `Genocs Library .NET WebAPI Boilerplate` package / repository to testing the API using the provided Postman/ThunderClient Collection!
 
@@ -27,7 +27,7 @@ To get started with this Boilerplate, here are the available options.
 - Install using the `Genocs CLI` tool. Use this for release versions of the Boilerplate only.
 - Fork the Repository. Use this if you want to always keep your version of the Boilerplate up-to date with the latest changes.
 
-> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://blog.genocs.com/dotnet-webapi-boilerplate/general/development-environment/)
+> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://blog.genocs.com/dotnet-webapi-template/general/development-environment/)
 
 ## Genocs CLI Tool
 
@@ -61,11 +61,11 @@ To learn more about the Genocs CLI tool, [read here](https://github.com/Genocs/g
 
 You would probably need to take this approach if you want to keep your source code upto date with the latest changes. To get started based on this repository, you need to get a copy locally.
 
-- Make a fork of Genocs.CleanArchitectureTemplate's `dotnet-webapi-boilerplate` repository in your Github account.
-- Next, since you need to start your private personal project, create your new `dotnet-webapi-boilerplate` personal project by cloning the forked repository on your personal github. This could be done as simple as running `git clone https://github.com/{yourgithubuseraccount}/dotnet-webapi-boilerplate.git` locally on your development machine.
-- Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{yourgithubuseraccount}/dotnet-webapi-boilerplate` and `git remote set-url --push upstream DISABLE`
+- Make a fork of Genocs.CleanArchitectureTemplate's `dotnet-webapi-template` repository in your Github account.
+- Next, since you need to start your private personal project, create your new `dotnet-webapi-template` personal project by cloning the forked repository on your personal github. This could be done as simple as running `git clone https://github.com/{yourgithubuseraccount}/dotnet-webapi-template.git` locally on your development machine.
+- Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{yourgithubuseraccount}/dotnet-webapi-template` and `git remote set-url --push upstream DISABLE`
 
-Now, whenever there is a new update on Genocs CleanArchitectureTemplate's `dotnet-webapi-boilerplate` repository, you could simply pull in the latest change on your private fork of the Genocs CleanArchitectureTemplate's `dotnet-webapi-boilerplate` repository and later merge these changes with you personal projects.
+Now, whenever there is a new update on Genocs CleanArchitectureTemplate's `dotnet-webapi-template` repository, you could simply pull in the latest change on your private fork of the Genocs CleanArchitectureTemplate's `dotnet-webapi-template` repository and later merge these changes with you personal projects.
 
 For step by step instructions, [follow this](https://discord.com/channels/878181478972928011/892573122186838046/933513103688224838) and [this](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274).
 

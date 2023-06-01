@@ -7,7 +7,7 @@ lastmod: 2023-05-13T15:51:03+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-boilerplate:
+  dotnet-webapi-template:
     identifier: "general-development-environment"
     name: "Development Environment"
     parent: "general"

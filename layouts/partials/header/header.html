@@ -51,8 +51,8 @@
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
-            {{- $active = or $active (and (eq .Name "API") (eq $current.Section "dotnet-webapi-template")) -}}
-            {{- $active = or $active (and (eq .Name "Microservices🔥") (eq $current.Section
+            {{- $active = or $active (and (eq .Name ".NET 7 API") (eq $current.Section "dotnet-webapi-template")) -}}
+            {{- $active = or $active (and (eq .Name "Microservices") (eq $current.Section
             "dotnet-microservices-template")) -}}
             {{- $active = or $active (and (eq .Name "Blazor") (eq $current.Section "blazor-template"))
             -}}

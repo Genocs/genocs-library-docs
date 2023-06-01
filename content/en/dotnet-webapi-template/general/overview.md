@@ -7,7 +7,7 @@ lastmod: 2023-05-13 09:17:27+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-boilerplate:
+  dotnet-webapi-template:
     identifier: "general-overview"
     name: "Overview"
     parent: "general"
@@ -65,11 +65,12 @@ The goal of this repository is to provide a complete and feature-rich starting p
 - [x] MediatR - CQRS
 - [x] SignalR Notifications
 - [x] & Much More
+
 </details>
 
 ## Documentation
 
-Read Documentation related to this Boilerplate here - https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/
+Read Documentation related to this Boilerplate here - https://genocs-blog.netlify.app/dotnet-webapi-template/
 > Feel free to contribute to the Documentation Repository - https://github.com/Genocs/genocs-library-docs
 
 ## Getting Started
@@ -79,7 +80,7 @@ To get started with this Boilerplate, here are the available options.
 - Install using the `Genocs CLI` tool. Use this for release versions of the Boilerplate only.
 - Fork the Repository. Use this if you want to always keep your version of the Boilerplate up-to date with the latest changes.
 
-> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/development-environment/)
+> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://genocs-blog.netlify.app/dotnet-webapi-template/general/development-environment/)
 
 ### Genocs CLI Tool
 
@@ -119,24 +120,25 @@ genocs api n Genocs.Starter
 ```
 
 This will create a new .NET 7 WebAPI solution for you using the Genocs Templates.
-For further steps and details, [Read the Getting Started Guide](https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/getting-started/)
+For further steps and details, [Read the Getting Started Guide](https://genocs-blog.netlify.app/dotnet-webapi-template/general/getting-started/)
 
 #### Update
 To update the tool & templates, run the following commands
+
 ``` bash
 dotnet tool update Genocs.CLI --global
 genocs update
 ```
+
 ### Forking the Repository
 
 You would probably need to take this approach if you want to keep your source code up to date with the latest changes. To get started based on this repository, you need to get a copy locally. You have three options: fork, clone, or download.
 
 - Make a fork of this repository in your Github account.
-- Create your new `dotnet-webapi-boilerplate` personal project by cloning the forked repository on your personal github.
-- Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{githubuseraccount}/dotnet-webapi-boilerplate` and `git remote set-url --push upstream DISABLE`
+- Create your new `dotnet-webapi-template` personal project by cloning the forked repository on your personal github.
+- Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{githubuseraccount}/dotnet-webapi-template` and `git remote set-url --push upstream DISABLE`
 
 For step by step instructions, [follow this](https://discord.com/channels/878181478972928011/892573122186838046/933513103688224838) and [this](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274).
-
 
 ## Quick Start Guide
 
@@ -157,6 +159,7 @@ make start
 That's it, the application would connect to the defined postgresql database and start creating tables, and seed required data.
 
 For testing this API, we have 3 options.
+
 1. Swagger @ `localhost:5001/swagger`
 2. Postman collections are available `./postman`
 3. ThunderClient for VSCode. You will have to install the Thunderclient extension for VSCode.
@@ -203,7 +206,7 @@ And here is the response.
 
 You will need to pass the `token` in the request headers to authenticate calls to the Genocs Library API!
 
-For further steps and details, [Read the Getting Started Guide](https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/getting-started/)
+For further steps and details, [Read the Getting Started Guide](https://genocs-blog.netlify.app/dotnet-webapi-template/general/getting-started/)
 
 ## Containerization
 
@@ -220,6 +223,7 @@ You can also push the docker image directly to dockerhub or any supported regist
 ``` bash
 make publish-to-hub
 ```
+
 You will have to update your docker registry / repo url in the Makefile though!.
 
 ## Docker Compose
@@ -238,10 +242,12 @@ There are also examples for mysql & mssql variations of the fsh webapi. You can 
 This is something you wont get to see very often with boilerplates. But, we do support cloud deployment to AWS using terraform. The terraform files are available at the `./terraform` folder.
 
 ### Prerequisites
+
 - Install Terraform
 - Install & Configure AWS CLI profiles to allow terraform to provision resources for you. I have made a video about [AWS Credentials Management](https://www.youtube.com/watch?v=oY0-1mj4oCo&ab_channel=Genocs).
 
 In brief, the terraform folder has 2 sub-folders.
+
 - backend
 - environments/staging
 
@@ -261,6 +267,7 @@ terraform init
 ```
 
 Once done, you can go the terraform.tfvars file to change the variables like,
+
 - project tags
 - docker image name
 - ecs cluster name and so on.
@@ -281,19 +288,19 @@ make td
 
 ## Important Links & Documentations
 
-Overview - [Read](https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/overview/)
+Overview - [Read](https://genocs-blog.netlify.app/dotnet-webapi-template/general/overview/)
 
-Getting Started - [Read](https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/getting-started/)
+Getting Started - [Read](https://genocs-blog.netlify.app/dotnet-webapi-template/general/getting-started/)
 
-Development Environment - [Learn about setting up the DEV environment](https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/development-environment/)
+Development Environment - [Learn about setting up the DEV environment](https://genocs-blog.netlify.app/dotnet-webapi-template/general/development-environment/)
 
-Participate in Discussions - [QNA & General Discussions](https://github.com/genocs-blog.netlify.app/dotnet-webapi-boilerplate/discussions)
+Participate in Discussions - [QNA & General Discussions](https://github.com/genocs-blog.netlify.app/dotnet-webapi-template/discussions)
 
 Join our Discord - [@genocs](https://discord.gg/fWwArnkV)
 
 ## Changelogs
 
-[View Complete Changelogs.](https://github.com/genocs-blog.netlify.app/dotnet-webapi-boilerplate/blob/main/CHANGELOGS.md)
+[View Complete Changelogs.](https://github.com/genocs-blog.netlify.app/dotnet-webapi-template/blob/main/CHANGELOGS.md)
 
 ## Community
 
@@ -311,16 +318,15 @@ Submit your PR and join the elite list!
 
 ## License
 
-This project is licensed with the [MIT license](https://github.com/Genocs/genocs-library-docs/dotnet-webapi-boilerplate/blob/main/LICENSE).
+This project is licensed with the [MIT license](https://github.com/Genocs/genocs-library-docs/dotnet-webapi-template/blob/main/LICENSE).
 
 ## Support ⭐
 
 Has this Project helped you learn something New? or Helped you at work?
 Here are a few ways by which you can support.
 
--   Leave a star! ⭐
--   Recommend this awesome project to your colleagues. 🥇
--   Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://genocs.com/linkedin) 🦸
--   Sponsor the project - [opencollective/genocs](https://opencollective.com/genocs) ❤️
--   Or, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)! ☕
-
+- Leave a star! ⭐
+- Recommend this awesome project to your colleagues. 🥇
+- Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://genocs.com/linkedin) 🦸
+- Sponsor the project - [opencollective/genocs](https://opencollective.com/genocs) ❤️
+- Or, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)! ☕

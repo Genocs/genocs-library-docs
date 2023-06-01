@@ -25,8 +25,8 @@ Currently, you can contribute to:
 - [Genocs Library Deployments](https://github.com/Genocs/enterprise-containers)
 - [Genocs Library Example](https://github.com/Genocs/genocs-basket)
 
-- .NET Web API Boilerplate (soon) https://github.com/Genocs/dotnet-webapi-boilerplate
-- Blazor WebAssembly Boilerplate (soon) https://github.com/Genocs/blazor-wasm-boilerplate
+- .NET Web API Boilerplate (soon) https://github.com/Genocs/dotnet-webapi-template
+- Blazor WebAssembly Boilerplate (soon) https://github.com/Genocs/blazor-template
 - Angular Front-End (soon)
 - React Front-End (soon)
 
@@ -43,7 +43,7 @@ Please note the following steps are applicable only for the `genocs-library-docs
 5. Ensure that you have Node.js and Visual Code installed.
 6. At the root of the repository run `npm install`. This installs all the required packages. Might take some time depending on your network connection.
 7. All the documentations are to be written in markdown format.
-8. Refer https://github.com/Genocs/genocs-library-docs/blob/main/content/en/dotnet-webapi-boilerplate/general/getting-started/index.md to get an idea on how to write documentation and include images, code snippets and stuff.
+8. Refer https://github.com/Genocs/genocs-library-docs/blob/main/content/en/dotnet-webapi-template/general/getting-started/index.md to get an idea on how to write documentation and include images, code snippets and stuff.
 9. To run the application locally, run the command `npm run start` and navigate to **localhost:1313**
 10. Once ready, send a Pull Request.
 

@@ -49,7 +49,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
     <div class="row justify-content-center text-center" style="padding:10px!important">
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET 7 Microservices Boilerplate</h2>
+          <h2 class="h4">.NET 7 Microservice Template</h2>
           <div class="tablet-group">
               <div class="tablet">server</div>
               <div class="tablet tablet-secondary">dotnet</div>
@@ -61,19 +61,19 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
       </div>
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET 7 Web API Boilerplate</h2>
+          <h2 class="h4">.NET 7 Web API Template</h2>
           <div class="tablet-group">
               <div class="tablet">server</div>
               <div class="tablet tablet-secondary">dotnet</div>
               <div class="tablet">multitenancy</div>
             </div>
           <p>Get to work with the latest and greatest of Microsoft's .NET 7 Web API fused with the goodness of Genocs Library.</p>
-          <p><a href="https://github.com/Genocs/dotnet-webapi-boilerplate">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-webapi-boilerplate/general/getting-started/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/dotnet-webapi-template">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-webapi-template/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">Blazor WebAssembly Boilerplate</h2>
+          <h2 class="h4">Blazor WebAssembly Template</h2>
           <div class="tablet-group">
               <div class="tablet">client application</div>
               <div class="tablet tablet-secondary">dotnet</div>
@@ -85,11 +85,15 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
         </div>
       </div>
       <div class="card feature-card">
-        <h2 class="h4">Angular Material Boilerplate</h2>
+        <h2 class="h4">React Template</h2>
         <p>Coming Soon!</p>
       </div>
       <div class="card feature-card">
-        <h2 class="h4">ASP.NET MVC Boilerplate</h2>
+        <h2 class="h4">Angular Material Template</h2>
+        <p>Coming Soon!</p>
+      </div>
+      <div class="card feature-card">
+        <h2 class="h4">ASP.NET MVC Template</h2>
         <p>Coming Soon!</p>
       </div>
     </div>

@@ -7,7 +7,7 @@ lastmod: 2023-05-13 10:23:13+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-boilerplate:
+  dotnet-webapi-template:
     identifier: "makefile-commands"
     name: "MakeFile Commands"
     parent: "general"
@@ -82,6 +82,7 @@ The Genocs Library webapi boilerplate comes with built-in terraform scripts to p
 Your images will be deployed to an ECS Container (FARGATE) and an RDS instance with postgresql engine would be spun up, to which your webapi container will connect to!
 
 In brief, the terraform folder has 2 sub-folders.
+
 - backend
 - environments/staging
 
@@ -101,6 +102,7 @@ terraform init
 ```
 
 Once done, you can go the terraform.tfvars file to change the variables like,
+
 - project tags
 - docker image name
 - ecs cluster name and so on.
@@ -124,6 +126,7 @@ make ta
 ```
 
 The resources are as follows:
+
 1. ECS Cluster
 2. ECS Task Definitions
 3. ECS Service
@@ -143,6 +146,7 @@ make td
 ```
 
 ## Migrations
+
 This command is to be executed from the Host Directory of the project.
 
 ``` bash

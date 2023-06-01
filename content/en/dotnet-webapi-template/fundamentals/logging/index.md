@@ -7,7 +7,7 @@ lastmod: 2021-12-12T11:21:11+05:30
 draft: false
 images: []
 menu:
-  dotnet-webapi-boilerplate:
+  dotnet-webapi-template:
     identifier: "logging"
     name: "Logging"
     parent: "fundamentals"
