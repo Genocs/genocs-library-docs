@@ -1,5 +1,7 @@
 # Genocs Library's Documentation
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6dbb93bc-ad39-4fda-849a-e542abdcfa7c/deploy-status)](https://app.netlify.com/sites/genocs-blog/deploys)
+
 ## How to contribute?
 
 1. Fork this Repository.
