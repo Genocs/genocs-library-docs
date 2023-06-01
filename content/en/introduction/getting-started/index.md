@@ -81,7 +81,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">multitenancy</div>
             </div>
           <p>Clean Architecture Boilerplate Template for .NET 6.0 Blazor WebAssembly built for FSH WebAPI with the goodness of MudBlazor Components.</p>
-          <p><a href="https://github.com/Genocs/genocs-library-docs/blazor-wasm-boilerplate">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/blazor-webassembly-boilerplate/general/overview/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/genocs-library-docs">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card">

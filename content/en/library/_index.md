@@ -8,6 +8,8 @@ draft: false
 images: []
 ---
 
+{{< img src="logo.png" >}}
+
 Supported features that will help to quickly set up your next microservices:
 
 - Authentication [JWT](http://jwt.io) with secret key & certificates extensions

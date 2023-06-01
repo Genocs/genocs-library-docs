@@ -1,5 +1,5 @@
 ---
-title : "Library"
+title : "Distributed Tracing"
 description: "Genocs Library make use of Distributed tracing to implement cross service tracing!"
 lead: ""
 date: 2023-05-13T15:40:19+02:00

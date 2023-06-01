@@ -23,7 +23,7 @@ Note that currently, Genocs Library's Web API supports the following major DB Pr
 3. PostgreSQL
 4. Oracle
 
-Download links to setup the supported Database providers are mentioned here - https://blog.genocs.com/dotnet-webapi-template/general/development-environment/
+Download links to setup the supported Database providers are mentioned here - https://genocs-blog.netlify.app//dotnet-webapi-template/general/development-environment/
 
 To maintain scalability, the database migrations of each of these DB Providers are kept in separate class library projects namely
 1. Migrators/Migrators.MSSQL

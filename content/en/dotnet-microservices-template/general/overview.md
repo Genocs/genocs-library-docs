@@ -15,8 +15,8 @@ weight: 1
 toc: true
 ---
 
-## What's Genocs's .NET Microservices Boilerplate?
+## What's Genocs's .NET Microservices Template?
 
-Github Repository URI : [Genocs/dotnet-microservices-boilerplate](https://github.com/Genocs/dotnet-microservices-boilerplate)
+Github Repository URI : [Genocs/dotnet-microservices-template](https://github.com/Genocs/clean-architecture-template)
 
 `Star the above repository and support me!`

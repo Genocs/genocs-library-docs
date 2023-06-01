@@ -27,7 +27,7 @@ To get started with this Boilerplate, here are the available options.
 - Install using the `Genocs CLI` tool. Use this for release versions of the Boilerplate only.
 - Fork the Repository. Use this if you want to always keep your version of the Boilerplate up-to date with the latest changes.
 
-> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://blog.genocs.com/dotnet-webapi-template/general/development-environment/)
+> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://genocs-blog.netlify.app/dotnet-webapi-template/general/development-environment/)
 
 ## Genocs CLI Tool
 
