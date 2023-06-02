@@ -1,6 +1,6 @@
 [[main]]
   name = "Introduction"
-  url = "/introduction/getting-started/"
+  url = "/introduction/"
   weight = 10
 
 [[main]]
@@ -18,33 +18,33 @@
 
 [[main]]
   name = ".NET 7 API"
-  url = "/dotnet-webapi-boilerplate/general/getting-started/"
+  url = "/dotnet-webapi-template/general/getting-started/"
   weight = 40
 
-[[dotnet-webapi-boilerplate]]
+[[dotnet-webapi-template]]
   name = "General"
   identifier = "general"
-  url = "/dotnet-webapi-boilerplate/general/"
+  url = "/dotnet-webapi-template/general/"
   weight = 10
 
-[[dotnet-webapi-boilerplate]]
+[[dotnet-webapi-template]]
   name = "Fundamentals"
   identifier = "fundamentals"
-  url = "/dotnet-webapi-boilerplate/fundamentals/"
+  url = "/dotnet-webapi-template/fundamentals/"
   weight = 20
 
-[[dotnet-webapi-boilerplate]]
+[[dotnet-webapi-template]]
   name = "Tutorials"
   identifier = "tutorials"
-  url = "/dotnet-webapi-boilerplate/tutorials/"
+  url = "/dotnet-webapi-template/tutorials/"
   weight = 30
 
 ####################################
 
 [[main]]
-  name = "Microservices 🔥"
+  name = "Microservices"
   identifier = "microservices"
-  url = "/dotnet-microservices-boilerplate/"
+  url = "/dotnet-microservices-template/"
   weight = 50
 
 ####################################
@@ -52,7 +52,7 @@
 [[main]]
   name = "Blazor"
   identifier = "blazor"
-  url = "/blazor-webassembly-boilerplate/general/getting-started/"
+  url = "/blazor-template/general/getting-started/"
   weight = 60
 
 [[main]]
