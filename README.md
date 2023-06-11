@@ -1,6 +1,12 @@
 # Genocs Library's Documentation
 
+[![Discord](https://img.shields.io/discord/1106846706512953385?color=%237289da&label=Discord&logo=discord&logoColor=%237289da&style=flat-square)](https://discord.com/invite/fWwArnkV)
+[![Twitter](https://img.shields.io/twitter/follow/genocs?color=1DA1F2&label=Twitter&logo=Twitter&style=flat-square)](https://twitter.com/genocs)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6dbb93bc-ad39-4fda-849a-e542abdcfa7c/deploy-status)](https://app.netlify.com/sites/genocs-blog/deploys)
+
+<p align="center">
+    <img src="genocs-library-logo.png" alt="icon">
+</p>
 
 ## How to contribute?
 
