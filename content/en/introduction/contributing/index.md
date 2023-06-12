@@ -19,20 +19,19 @@ Being a completely community driven project, I encourage the community to submit
 
 Currently, you can contribute to:
 
-- [Genocs Library Source Code](https://github.com/Genocs/genocs-library)
-- [Genocs Library Documentation](https://github.com/Genocs/genocs-library-docs)
-- [Genocs Library Template](https://github.com/Genocs/genocs-library-templates)
-- [Genocs Library Deployments](https://github.com/Genocs/enterprise-containers)
-- [Genocs Library Example](https://github.com/Genocs/genocs-basket)
+- [Source Code](https://github.com/Genocs/genocs-library)
+- [Documentation](https://github.com/Genocs/genocs-library-docs)
+- [Template](https://github.com/Genocs/genocs-library-templates)
+- [Deployments](https://github.com/Genocs/enterprise-containers)
+- [Example](https://github.com/Genocs/genocs-basket)
 
-- .NET Web API Boilerplate (soon) https://github.com/Genocs/dotnet-webapi-template
-- Blazor WebAssembly Boilerplate (soon) https://github.com/Genocs/blazor-template
+- .NET Web API Template (soon) https://github.com/Genocs/dotnet-webapi-template
+- Blazor WebAssembly Template (soon) https://github.com/Genocs/blazor-template
 - Angular Front-End (soon)
 - React Front-End (soon)
 
-## Docs
 
-### How to contribute?
+## How to contribute?
 
 Please note the following steps are applicable only for the `genocs-library-docs` repository.
 
@@ -48,7 +47,7 @@ Please note the following steps are applicable only for the `genocs-library-docs
 10. Once ready, send a Pull Request.
 
 
-## Genocs Library
+### Genocs Library
 
 Submit your PR and join the elite list!
 
@@ -56,7 +55,7 @@ Submit your PR and join the elite list!
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
 </a>
 
-## Genocs Library Documentation
+### Genocs Library Documentation
 
 Submit your PR and join the elite list!
 
@@ -64,7 +63,7 @@ Submit your PR and join the elite list!
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library-docs" />
 </a>
 
-## Clean Architecture Template
+### Clean Architecture Template
 
 Submit your PR and join the elite list!
 
@@ -72,7 +71,7 @@ Submit your PR and join the elite list!
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
 </a>
 
-## .NET Web API Boilerplate (soon)
+### .NET Web API Template (soon)
 
 Submit your PR and join the elite list!
 
@@ -80,7 +79,7 @@ Submit your PR and join the elite list!
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
 </a>
 
-## Blazor WebAssembly Boilerplate (soon)
+### Blazor WebAssembly Template (soon)
 
 Here are the contributors of the Blazor WASM Project! Submit your PR to join this Elite list ;) Make sure your code is warning free!
 

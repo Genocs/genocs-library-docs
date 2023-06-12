@@ -65,7 +65,7 @@ Get the .NET WebApi Boilerplate by running the following command
 dotnet new install Genocs.CleanArchitectureTemplate::2.1.0
 ```
 
-### Creating your First Solution
+### Creating Solution
 
 > Note that this is not valid only if you have installed the NuGet package of this Boilerplate.
 

@@ -52,10 +52,9 @@
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
             {{- $active = or $active (and (eq .Name ".NET 7 API") (eq $current.Section "dotnet-webapi-template")) -}}
-            {{- $active = or $active (and (eq .Name "Microservices") (eq $current.Section
-            "dotnet-microservices-template")) -}}
-            {{- $active = or $active (and (eq .Name "Blazor") (eq $current.Section "blazor-template"))
-            -}}
+            {{- $active = or $active (and (eq .Name "Microservices") (eq $current.Section "dotnet-microservices-template")) -}}
+            {{- $active = or $active (and (eq .Name "Blazor") (eq $current.Section "blazor-template")) -}}
+            {{- $active = or $active (and (eq .Name "CLI") (eq $current.Section "cli")) -}}
             <li class="nav-item">
               <a class="nav-link py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
             </li>

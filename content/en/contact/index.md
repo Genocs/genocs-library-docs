@@ -14,8 +14,8 @@ Below you can find some pointers for contacting us, as well as getting in touch 
 ## Issues and Bug Reports
 
 For any bug reports, please first consult the main Github repositories:
-- [Genocs Library Source Code](https://github.com/Genocs/genocs-library/)
-- [Genocs Library Documentation]( https://github.com/Genocs/genocs-library-docs/)
+- [Source Code](https://github.com/Genocs/genocs-library/)
+- [Documentation]( https://github.com/Genocs/genocs-library-docs/)
 
 Chances are that a similar issue may have already been posted by other users in the past.
 

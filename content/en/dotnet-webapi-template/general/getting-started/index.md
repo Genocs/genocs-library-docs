@@ -57,7 +57,7 @@ Do note that, at the time of writing this documentation, the latest available ve
 
 To learn more about the Genocs CLI tool, [read here](https://github.com/Genocs/genocs-library-docs/blob/main/fsh-cli/README.md)
 
-## Forking the Repository & Creating your New Solution!
+## Forking Repository
 
 You would probably need to take this approach if you want to keep your source code upto date with the latest changes. To get started based on this repository, you need to get a copy locally.
 
@@ -70,7 +70,7 @@ Now, whenever there is a new update on Genocs CleanArchitectureTemplate's `dotne
 For step by step instructions, [follow this](https://discord.com/channels/878181478972928011/892573122186838046/933513103688224838) and [this](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274).
 
 
-### Creating your First Solution
+### Creating Solution
 
 > Note that this is not valid only if you have installed the fsh cli tool.
 
@@ -100,11 +100,11 @@ When you installed the NuGet package, there is also an entry that has been creat
 
 Simply open up Visual Studio 2022 and Click on Create New Project.
 
-{{< img src="visual-studio-template.png" >}}
+{{< img src="vs-template.png" >}}
 
 Important - Make sure to check the 'Place solution and project in same directory' option. Else the solution and projects will be created on different folders and there will be build errors stating that few files are not found.
 
-{{< img src="vs-same-directory.jpg" >}}
+{{< img src="vs-same-directory.png" >}}
 
 Another issue I noticed with creating solutions via Visual Studio is that the Solution structure might be lost. This is a very minor bug, that maybe someone can figure out and fix in our template configuration. Microsoft doesn't seem to have very detailed guide about this.
 
@@ -134,8 +134,8 @@ Details on the usage of other Settings will be explained in the upcoming documen
 
 ``` json
 "DatabaseSettings": {
-    "ConnectionString": "Host=localhost;Database=rootTenantDb;Username=postgres;Password=root;Include Error Detail=true",
-    "DBProvider": "postgresql"
+    "DBProvider": "postgresql",
+    "ConnectionString": "Host=localhost;Database=rootTenantDb;Username=postgres;Password=root;Include Error Detail=true"
   }
 ```
 
@@ -143,8 +143,8 @@ Details on the usage of other Settings will be explained in the upcoming documen
 
 ``` json
 "DatabaseSettings": {
-    "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True",
-    "DBProvider": "mysql"
+    "DBProvider": "mysql",
+    "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True"
   }
 ```
 #### MSSQL
@@ -158,11 +158,9 @@ Details on the usage of other Settings will be explained in the upcoming documen
 #### Oracle
 
 ``` json
-{
-  "DatabaseSettings": {
-    "DBProvider": "oracle",
-    "ConnectionString": "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=49154))(CONNECT_DATA =(SERVER=DEDICATED)(SERVICE_NAME=ORCLPDB1.localdomain)));User Id=fullstack;Password=password123"
-  }
+"DatabaseSettings": {
+  "DBProvider": "oracle",
+  "ConnectionString": "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=49154))(CONNECT_DATA =(SERVER=DEDICATED)(SERVICE_NAME=ORCLPDB1.localdomain)));User Id=fullstack;Password=password123"
 }
 ```
 
@@ -214,4 +212,3 @@ As you can see from the logs, a couple of operations happen as soon as you launc
 ```
 
 - The Connection String that you provided in the appSettings will be taken as the `root` Tenant's Connection. Note that all the tenant data will be stored on to this connection under the Tenants table.
-
