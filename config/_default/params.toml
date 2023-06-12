@@ -73,7 +73,7 @@ alertText = ".NET 7 Genocs Library Released <a target=\"_blank\" class=\"alert-l
 # Edit Page
 repoHost = "GitHub"
 docsRepo = "https://github.com/genocs/genocs-library-docs"
-docsRepoBranch = "master"
+docsRepoBranch = "main"
 editPage = true
 lastMod = true
 
