@@ -10,9 +10,9 @@ images: []
 
 ## Introduction
 
-The genocs CLI (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides a unified experience across different services inside your platform. It allow developers to create applications with ease. With its extensive set of commands, the genocs CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern  developers, offering productivity, and scalability in application development.
+The **Genocs CLI** (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides a unified experience across different services inside your platform. It allow developers to create applications with ease. With its extensive set of commands, the genocs CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern  developers, offering productivity, and scalability in application development.
 
-**Genocs cli** is the *dotnet tool* that allow you to use the genocs templates.
+**Genocs CLI** is the *dotnet tool* that allow you to use the genocs templates.
 Genocs templates are dotnet template that will help you to setup quickly and easily services in your environment.
 
 Genocs tool is based on Microsoft - dotnet tools. Here where you can find the official Documentation:
@@ -22,7 +22,7 @@ Genocs tool is based on Microsoft - dotnet tools. Here where you can find the of
 
 ## Supported runtime
 
-Genocs cli can be used on NET6 or NET7.
+Genocs CLI can be used on both .NET 6 or .NET 7.
 
 ---
 
@@ -68,25 +68,38 @@ The picture shows the console log upon the template are installed.
 
 ## The Templates
 
-| Template   |      Command      |  To be used for              |
-|:-----------|:------------------|-----------------------------:|
-| blazor     | gnx-blazor        | blazor front-end portal      |
-| webapi     | gnx-webapi        | standard web api service     |
-| worker     | gnx-worker        | backgroud worker service     |
-| cleanapi   | gnx-cleanapi      | clean architecture web api   |
-| angular    | gnx-angular       | angular front-end SPA        |
-| react      | gnx-react         | react front-end SPA          |
+| Template        |      Command      |  To be used for                         |
+|:----------------|:------------------|----------------------------------------:|
+| blazor          | gnx-blazor        | blazor front-end portal                 |
+| cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal      |
+| webapi          | gnx-webapi        | standard web api service                |
+| worker          | gnx-worker        | backgroud worker service                |
+| cleanapi        | gnx-cleanapi      | clean architecture - web api            |
+| angular         | gnx-angular       | angular front-end SPA                   |
+| react           | gnx-react         | react front-end SPA                     |
 
 
 ### blazor
 
-To create service use this command 
-``` bash
-genocs blazor new <Company.Project.Service>
-```
+To create a blazor portal use one of these commands
 
+``` bash
+# To build a blazor front-end portal 
+genocs blazor new <Company.Project.Service>
+
+# (SOON) To build a clean architecture blazor portal 
+genocs cleanblazor new <Company.Project.Service>
+```
 ### webapi
 
+``` bash
+
+# To build a web api architecture webapi 
+genocs webapi new <Company.Project.Service>
+
+# Another option to build a clen architecture webapi 
+genocs cleanapi new <Company.Project.Service>
+```
 
 ## The solution
 
@@ -96,7 +109,8 @@ You can find the solution on github:
 
 You are free to fork or to clone it. Then you can update it at your own pace.
 
-### Usefull commands to work on your own 
+### Usefull commands to work on your own
+
 ``` bash
 # build the project 
 dotnet build ./src/genocs.cli.csproj
