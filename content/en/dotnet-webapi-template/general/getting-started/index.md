@@ -126,7 +126,7 @@ Next, let's set up some valid connection strings. Navigate to `src/Host/Configur
 
 Details on the usage of other Settings will be explained in the upcoming documentations.
 
-`By default, FSH WebAPI tempalte ships with pre-configured PostgreSQL connection strings`
+`By default, Genocs WebAPI template ships with pre-configured PostgreSQL connection strings`
 
 {{< alert text="It is also important to update the src/Host/Configurations/hangfire.json connection string / provider as well." />}}
 

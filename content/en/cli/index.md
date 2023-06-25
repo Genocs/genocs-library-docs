@@ -70,13 +70,13 @@ The picture shows the console log upon the template are installed.
 
 | Template        |      Command      |  To be used for                         |
 |:----------------|:------------------|----------------------------------------:|
-| blazor          | gnx-blazor        | blazor front-end portal                 |
-| cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal      |
-| webapi          | gnx-webapi        | standard web api service                |
-| worker          | gnx-worker        | backgroud worker service                |
-| cleanapi        | gnx-cleanapi      | clean architecture - web api            |
 | angular         | gnx-angular       | angular front-end SPA                   |
 | react           | gnx-react         | react front-end SPA                     |
+| blazor          | gnx-blazor        | blazor front-end portal                 |
+| cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal      |
+| cleanapi        | gnx-cleanapi      | clean architecture - web api            |
+| webapi          | gnx-webapi        | standard web api service                |
+| worker          | gnx-worker        | backgroud worker service                |
 
 
 ### blazor

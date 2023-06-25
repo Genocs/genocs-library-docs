@@ -27,6 +27,10 @@ Key Features:
 
 - **DevOps Integration**: Genocs' libraries seamlessly integrate with popular DevOps tools and frameworks, enabling streamlined CI/CD pipelines and efficient collaboration between development and operations teams.
 
-By utilizing Genocs' software libraries, you can unlock the full potential of cloud-agnostic microservices, accelerating your development process and future-proofing your applications. Throughout this documentation, we will provide detailed explanations, code samples, and best practices to guide you in leveraging these libraries effectively.
+- **Powerful Command Line Interface (CLI)**: Genocs' libraries come with a feature-rich command line interface, providing developers with a convenient and efficient way to interact with the libraries and perform various tasks. The CLI simplifies configuration, deployment, and management of your cloud-agnostic microservices.
+
+- **Boilerplate Templates**: To speed up the setup process, Genocs' libraries include a set of boilerplate templates. These templates serve as a starting point for your microservice projects, providing pre-configured structures and configurations. With these boilerplate templates, you can quickly set up the foundation of your application and focus on implementing your business logic.
+
+By utilizing Genocs' software libraries, along with the powerful command line interface and boilerplate templates, you can unlock the full potential of cloud-agnostic microservices, accelerating your development process and future-proofing your applications. Throughout this documentation, we will provide detailed explanations, code samples, and best practices to guide you in leveraging these libraries effectively.
 
 Let's dive in and discover how Genocs' software libraries can empower you to build cloud-agnostic microservice solutions that scale, adapt, and thrive in today's dynamic cloud landscape.

@@ -29,7 +29,7 @@ dotnet add package Genocs.CQRS
 
 ### Overview
 
-Adds an ability to create and process commands in the sense of CQRS.
+Adds an ability to create and process commands in the sense of [CQRS](https://martinfowler.com/bliki/CQRS.html).
 
 ### Usage
 
@@ -53,6 +53,7 @@ public class CreateAccount : ICommand
     }
 }
 ```
+
 Create dedicated command handler class that implements `ICommandHandler<TCommand>` interface with `HandleAsync()` method:
 
 ``` cs
@@ -79,7 +80,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 }
 ```
 
-Dispatching a particular command object can be also done using Genocs.Common package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryCommandDispatcher()` method:
+Dispatching a particular command object can be also done using `Genocs.Common` package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryCommandDispatcher()` method:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
@@ -94,7 +95,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 }
 ```
 
-Then simply inject ICommandDispatcher into a class and call `DispatchAsync()` method:
+Then simply inject `ICommandDispatcher` into a class and call `DispatchAsync()` method:
 
 ``` cs
 public class AccountsService
@@ -115,7 +116,7 @@ public class AccountsService
 
 ### Overview
 
-Adds an ability to create and process queries in the sense of CQRS.
+Adds an ability to create and process queries in the sense of [CQRS](https://martinfowler.com/bliki/CQRS.html).
 
 ### Usage
 
@@ -154,7 +155,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 }
 ```
 
-Dispatching a particular query object can be also done using **Genocs.Common** package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryQueryDispatcher()` method:
+Dispatching a particular query object can be also done using `Genocs.Common` package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryQueryDispatcher()` method:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
@@ -190,7 +191,7 @@ public class AccountsService
 
 ### Overview
 
-Adds ability to create and process events in the sense of CQRS.
+Adds ability to create and process events in the sense of [CQRS](https://martinfowler.com/bliki/CQRS.html).
 
 ### Usage
 
@@ -223,7 +224,7 @@ public class AccountCreatedHandler : IEventHandler<AccountCreated>
 }
 ```
 
-You can easily register all event handlers in DI container by calling AddEventHandlers() method on `IGenocsBuilder`:
+You can easily register all event handlers in DI container by calling `AddEventHandlers()` method on `IGenocsBuilder`:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
@@ -237,13 +238,11 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 }
 ```
 
-Dispatching a particular event object can be also done using Genocs.Common package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryEventDispatcher()` method:
+Dispatching a particular event object can be also done using `Genocs.Common` package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryEventDispatcher()` method:
 
 ``` cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
 {
-    services.AddOpenTracing();
-
     var builder = services
                         .AddGenocs()
                         .AddCommandHandlers()

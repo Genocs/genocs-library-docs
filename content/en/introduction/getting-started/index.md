@@ -1,5 +1,5 @@
 ---
-title: "Getting Started 🚀"
+title: "Getting Started"
 description: "Let's get started with Genocs Library!"
 lead: "Let's get started with Genocs Library!"
 date: 2023-05-13T15:40:19+02:00
@@ -9,7 +9,7 @@ images: []
 menu:
   introduction:
     identifier: "basics-getting-started"
-    name: "Getting Started 🚀"
+    name: "Getting Started"
     parent: "introduction"
 weight: 1
 toc: true
@@ -20,14 +20,14 @@ toc: true
 
 ## Problem Statement
 
-<p>Ever gone through the pain of setting up new Projects from scratch each and every time?</p>
+<p>Ever gone through the pain of setting up new project from scratch each and every time?</p>
 <p><b>Genocs Library</b> aims to
 address this pain point by offering starting points for various technologies that can help save
-hours of Development and Research Time for Developers and Teams.</p>
+hours of development and research time for developers and teams.</p>
 
 ## Solution
 
-<p><b>Genocs Library</b> offers library framework and cli and templates with latest packages and services that your projects will ever need. We intend to provide Clean and Well structured Boilerplates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
+<p><b>Genocs Library</b> offers library framework and cli and templates with latest packages and services that your projects will ever need. We intend to provide Clean and well structured Boilerplates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
 </p>
 <p class="code-green">Most importantly, <b>Genocs Library</b> is completely FREE to use!</p>
 

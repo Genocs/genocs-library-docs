@@ -3,7 +3,7 @@ title : "Distributed Tracing"
 description: "Genocs Library make use of Distributed tracing to implement cross service tracing!"
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-05-13T15:40:19+02:00
+lastmod: 2023-06-25T15:40:19+02:00
 draft: false
 images: []
 menu:
@@ -32,7 +32,7 @@ dotnet add package Genocs.Tracing
 - Genocs.Core
 - Open Tracing
 
-Genocs Library does not generate any default spans for your ASP.NET Core applications. However, this can be simply achieved by plugging in Open Tracing:
+Genocs Library does not generate any default spans for your ASP.NET Core applications. However, this can be simply achieved by plugging in Open Tracing.
 
 ## Installation
 
@@ -42,7 +42,7 @@ dotnet add package OpenTracing
 
 ## Usage
 
-Enable the instrumentation inside your Startup.cs -> ConfigureServices() by calling AddOpenTracing() method on IServiceCollection:
+Enable the instrumentation inside your Startup.cs -> ConfigureServices() by calling `AddOpenTracing()` method on `IServiceCollection`.
 
 ``` cs
 public void ConfigureServices(this IServiceCollection services)
@@ -110,7 +110,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 
 ### Creating custom spans
 
-Once the ITracer got registered in Startup.cs file, you can inject it to any class you want to create custom spans (not provided by Open Tracing) as follows:
+Once the `ITracer` got registered in Startup.cs file, you can inject it to any class you want to create custom spans (not provided by Open Tracing) as follows:
 
 ``` cs
 public class MyClass
