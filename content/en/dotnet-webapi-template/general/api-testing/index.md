@@ -56,7 +56,7 @@ Once you have the token, simply copy it , click on the Authoize button (found at
 
 This is my personal favorite way to test any .NET API that I work with. This will be very helpful to you too if you use Visual Code for .NET development. Make sure that you have the ThunderClient VsCode Extension installed.
 
-I have included the files required for you to test the FSH WebAPI in the **./thunder-tests** folder at the root of the solution.
+I have included the files required for you to test the Genocs WebAPI in the **./thunder-tests** folder at the root of the solution.
 
 {{< img src="tc-tests.png" >}}
 

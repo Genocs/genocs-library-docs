@@ -17,14 +17,14 @@ toc: true
 
 For the Azure AD integration to work with this template, you have to create 2 `App Registrations` under your Azure AD tenant with the right settings, and then fill out the `AzureAd` section in `Configurations/security.json` to hook those apps up. This guide will walk you through doing all that.
 
-## Create the FSHApi Application Registration
+## Create the GenocsApi Application Registration
 
 * Log into the azure portal and go to the [Azure Active Directory blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade). Make sure you are in the directory where you want your apps to be registered. You can switch directories by clicking on your account info in the top right corner.
 
 * Under `Manage`, click on `App registrations`, and click the `New registration` button on top:
 {{< img src="new-registration.png" >}}
 
-* Fill in `FSHApi` (or whichever name you want for this app) as `Name`. Under `Supported account types` select `Accounts in any organizational directory - Multitenant` and click on `Register`:
+* Fill in `Genocs-Api` (or whichever name you want for this app) as `Name`. Under `Supported account types` select `Accounts in any organizational directory - Multitenant` and click on `Register`:
 {{< img src="register-api.png" >}}
 
 ### Expose the Api
@@ -43,7 +43,7 @@ For the Azure AD integration to work with this template, you have to create 2 `A
 * Under `Manage`, click on `App roles` and click the `Create app role` button on top:
 {{< img src="create-app-role-1.png" >}}
 
-* Fill in `Administrators` as Display name and `Admin` as value. Especially the value is important, as this has to match the name of the role in the FSH application itself. Click on Apply:
+* Fill in `Administrators` as Display name and `Admin` as value. Especially the value is important, as this has to match the name of the role in the Genocs-Api application itself. Click on Apply:
 {{< img src="create-app-role-2.png" >}}
 
 * In the same way, create app roles for the other roles in your application (by default the only other role is the `Basic` role).
@@ -52,7 +52,7 @@ For the Azure AD integration to work with this template, you have to create 2 `A
 
 You will have to assign those freshly created App roles to the AzureAd users to which you want to grant access to your application:
 
-* On the [Azure Active Directory blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade), under `Manage` click on `Enterprise applications` and select the FSHApi application:
+* On the [Azure Active Directory blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade), under `Manage` click on `Enterprise applications` and select the Genocs-Api application:
 {{< img src="assign-app-roles-1.png" >}}
 
 * Under `Manage`, click on `Users and groups` and click the `Add user/group` button on top:
@@ -64,7 +64,7 @@ You will have to assign those freshly created App roles to the AzureAd users to 
 
 * Go back again to the [Azure Active Directory blade](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade) and under `Manage`, click on `App registrations`, and click the `New registration` button on top again.
 
-* This time, fill out `FSHClient` as Name, choose again for `Accounts in any organizational directory - Multitenant` and under `Redirect URI`, select `Single-page application (SPA)` and fill out the url `https://localhost:5001/swagger/oauth2-redirect.html`. Click on `Register`:
+* This time, fill out `Genocs-Client` as Name, choose again for `Accounts in any organizational directory - Multitenant` and under `Redirect URI`, select `Single-page application (SPA)` and fill out the url `https://localhost:5001/swagger/oauth2-redirect.html`. Click on `Register`:
 {{< img src="register-api.png" >}}
 
 ### Add permission for the Api
@@ -72,7 +72,7 @@ You will have to assign those freshly created App roles to the AzureAd users to 
 * On the newly created App's blade, under `Manage`, click on `API permissions` and click the `Add a permission` button:
 {{< img src="add-permission-1.png" >}}
 
-* On the next view, under `Select an API`, click on `My APIs` and select FSHApi:
+* On the next view, under `Select an API`, click on `My APIs` and select Genocs-Api:
 {{< img src="add-permission-2.png" >}}
 
 * Then, under `Select permissions`, check the `access_as_user` permission and click on `Add permissions`:
@@ -91,7 +91,7 @@ On the Web API project, under `src\Host\Configurations`, open `security.json` an
 * `Instance`: set to `https://login.microsoftonline.com/`
 * `Domain`: you can find your domain in the Azure Active Directory blade on the `Overview` page under `Primary domain`.
 * `TenantId`: set to `organizations`
-* `ClientId`: set to the `Application (client) ID` of the FSHApi App registration (you can find this on the `Overview` page of the App registration in Azure)
+* `ClientId`: set to the `Application (client) ID` of the Genocs-Api App registration (you can find this on the `Overview` page of the App registration in Azure)
 * `Scopes`: set to `access_as_user`
 * `RootIssuer`: set to `https://sts.windows.net/<Your Tenant ID>/` (your `Tenant ID` is also on the `Overview` page of the Azure Active Directory blade)
 
@@ -99,8 +99,8 @@ Then for swagger to work you need the following settings under the `Swagger` nod
 
 * `AuthorizationUrl`: set to `https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize`
 * `TokenUrl`: set to `https://login.microsoftonline.com/organizations/oauth2/v2.0/token`
-* `ApiScope`: set to the full name of the api scope we created in the FSHApi App registration above (`api://<ClientId of the FSHApi App registration>/access_as_user`)
-* `OpenIdClientId`: set to the `Application (client) ID` of the FSHClient App registration (or the one you specifically created for swagger).
+* `ApiScope`: set to the full name of the api scope we created in the Genocs-Api App registration above (`api://<ClientId of the Genocs-Api App registration>/access_as_user`)
+* `OpenIdClientId`: set to the `Application (client) ID` of the Genocs-Client App registration (or the one you specifically created for swagger).
 
 ## Update the AzureAd settings on the Blazor Client project
 
@@ -108,9 +108,9 @@ Then for the blazor client to work, you need the following settings over there i
 
 * `AuthProvider`: set to `AzureAd`
 * `Authority`: set to `https://login.microsoftonline.com/organizations`
-* `ClientId`: set to the `Application (client) ID` of the FSHClient App registration (or the one you specifically created for the blazor client).
+* `ClientId`: set to the `Application (client) ID` of the Genocs-Client App registration (or the one you specifically created for the blazor client).
 * `ValidateAuthority`: set to `true`
-* `ApiScope`: set to the full name of the api scope we created in the FSHApi App registration (`api://<ClientId of the FSHApi App registration>/access_as_user`) same as before with the swagger client.
+* `ApiScope`: set to the full name of the api scope we created in the Genocs-Api App registration (`api://<ClientId of the Genocs-Api App registration>/access_as_user`) same as before with the swagger client.
 
 ## Configuration for Postman
 

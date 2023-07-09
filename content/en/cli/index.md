@@ -72,7 +72,7 @@ The picture shows the console log upon the template are installed.
 |:----------------|:------------------|----------------------------------------:|
 | angular         | gnx-angular       | angular front-end SPA                   |
 | react           | gnx-react         | react front-end SPA                     |
-| blazor          | gnx-blazor        | blazor front-end portal                 |
+| blazor          | gnx-blazor        | blazor portal                           |
 | cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal      |
 | cleanapi        | gnx-cleanapi      | clean architecture - web api            |
 | webapi          | gnx-webapi        | standard web api service                |
@@ -84,7 +84,7 @@ The picture shows the console log upon the template are installed.
 To create a blazor portal use one of these commands
 
 ``` bash
-# To build a blazor front-end portal 
+# To build a blazor portal 
 genocs blazor new <Company.Project.Service>
 
 # (SOON) To build a clean architecture blazor portal 

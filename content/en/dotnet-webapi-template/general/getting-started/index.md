@@ -72,7 +72,7 @@ For step by step instructions, [follow this](https://discord.com/channels/878181
 
 ### Creating Solution
 
-> Note that this is not valid only if you have installed the fsh cli tool.
+> Note that this is not valid only if you have installed the Genocs cli tool.
 
 Now that you have installed the template locally on your machine, let's see how you can start generating complete .NET WebAPI Solutions seamlessly.
 

@@ -235,7 +235,7 @@ make dcu #docker compose up - Boots up the webapi & postgresql container
 make dcd #docker compose down - Shuts down the webapi & postgresql containers
 ```
 
-There are also examples for mysql & mssql variations of the fsh webapi. You can find the other docker-compose files under the ./docker-compose folder. Read more about [Genocs Library's docker-compose instructions & files here](./docker-compose/README.md)
+There are also examples for mysql & mssql variations of the Genocs webapi. You can find the other docker-compose files under the ./docker-compose folder. Read more about [Genocs Library's docker-compose instructions & files here](./docker-compose/README.md)
 
 ## Cloud Deployment with Terraform + AWS ECS
 

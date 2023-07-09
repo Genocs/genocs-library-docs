@@ -1,7 +1,7 @@
 ---
 title: "Overview"
-description: "Built with .NET 7 and the goodness of MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: "Built with .NET 7 and the goodness of MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: "Built with .NET 7 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: "Built with .NET 7 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13T15:40:19+02:00
 lastmod: 2023-05-13T15:40:19+02:00
 draft: false
@@ -25,7 +25,7 @@ The goal of this repository is to help developers / companies kickstart their We
 
 ## Prerequisites
 
-- Make sure you have the API Running. Here is FSH Backend - https://github.com/Genocs/dotnet-webapi-template
+- Make sure you have the API Running. Here is Genocs API Backend - https://github.com/Genocs/dotnet-webapi-template
 - Once Genocs Library's .NET 7 Web API is up and running, run the Blazor WebAssembly Project to consume it's services.
 
 ## Community

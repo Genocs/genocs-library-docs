@@ -17,7 +17,7 @@ toc: true
 
 ## 5.0.0-preview.3.0
 - .NET 7 Upgrade
-- FSH CLI Support
+- Genocs CLI Support
 - Bug Fixes
 - Code Cleanups
 - Package Upgrades

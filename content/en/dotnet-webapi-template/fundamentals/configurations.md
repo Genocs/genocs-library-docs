@@ -74,7 +74,7 @@ By default, the dbprovider is set to postgresql. You will also have to change th
 {
   "DatabaseSettings": {
     "DBProvider": "postgresql",
-    "ConnectionString": "Host=localhost;Port=5432;Database=fshDb;Username=postgres;Password=admin;Include Error Detail=true"
+    "ConnectionString": "Host=localhost;Port=5432;Database=gnxDb;Username=postgres;Password=admin;Include Error Detail=true"
   }
 }
 ```
