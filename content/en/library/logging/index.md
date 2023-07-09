@@ -41,7 +41,7 @@ Extend Program.cs -> CreateDefaultBuilder() with UseLogging() that will add the 
 ``` cs
 public static IWebHostBuilder GetWebHostBuilder(string[] args)
     => WebHost.CreateDefaultBuilder(args)
-        .ConfigureServices(services => services.AddConvey().Build())
+        .ConfigureServices(services => services.AddGenocs().Build())
         .UseLogging();
 ```
 

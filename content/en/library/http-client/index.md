@@ -3,7 +3,7 @@ title : "Http Clients"
 description: "Requests, service discovery, load balancing."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-06-25T15:40:19+02:00
+lastmod: 2023-07-09T22:29:19+02:00
 draft: false
 images: []
 menu:
@@ -33,10 +33,10 @@ dotnet add package Genocs.HTTP
 
 ### Usage
 
-Extend `IConveyBuilder` with `AddHttpClient()` that will register the required services.
+Extend `IGenocsBuilder` with `AddHttpClient()` that will register the required services.
 
 ``` cs
-public static IConveyBuilder RegisterConvey(this IConveyBuilder builder)
+public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 {
     builder.AddHttpClient();
     // Other services.
@@ -50,13 +50,13 @@ Then, simply inject `IHttpClient` (and optionally HttpClientOptions to resolve s
 ``` cs
 public class SomeService
 {
-    private readonly string _webService1Url;
+    private readonly string _webServiceUrl;
     private readonly IHttpClient _client;
 
     public SomeService(IHttpClient _client, HttpClientOptions options)
     {
         _client = _client;
-        _webService1Url = options.Services["web-service1"];
+        _webServiceUrl = options.Services["web-service1"];
     }
 
     public async Task FooAsync()
@@ -107,10 +107,10 @@ dotnet add package Genocs.Discovery
 
 ### Usage
 
-Extend IConveyBuilder with `AddConsul()` that will register the required services.
+Extend IGenocsBuilder with `AddConsul()` that will register the required services.
 
 ``` cs
-public static IConveyBuilder RegisterConvey(this IConveyBuilder builder)
+public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 {
     builder
         .AddHttpClient()
@@ -175,10 +175,10 @@ dotnet add package Genocs.LoadBalancing
 - Genocs.Discovery
 
 ### Usage
-Extend `IConveyBuilder` with `AddFabio()` that will register the required services.
+Extend `IGenocsBuilder` with `AddFabio()` that will register the required services.
 
 ``` cs
-public static IConveyBuilder RegisterConvey(this IConveyBuilder builder)
+public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 {
     builder
         .AddHttpClient()
