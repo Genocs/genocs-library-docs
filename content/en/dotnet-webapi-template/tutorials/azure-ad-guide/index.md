@@ -3,7 +3,7 @@ title: "Setting up Azure AD Authentication"
 description: "Setting up Azure AD Authentication with Genocs's Web API"
 lead: "Setting up Azure AD Authentication with Genocs's Web API"
 date: 2023-05-13T15:51:03+02:00
-lastmod: 2023-05-13T15:51:03+02:00
+lastmod: 2023-07-10T16:43:03+02:00
 draft: false
 images: []
 menu:
