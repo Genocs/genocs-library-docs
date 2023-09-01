@@ -26,10 +26,9 @@ Currently, you can contribute to:
 - [Example](https://github.com/Genocs/genocs-basket)
 
 - [.NET Web API Template](https://github.com/Genocs/dotnet-webapi-template) (soon)
-- [Blazor WebAssembly Template](https://github.com/Genocs/blazor-template) (soon) 
-- [Angular Front-End]() (soon)
-- [React Front-End]() (soon)
-
+- [Blazor WebAssembly Template](https://github.com/Genocs/blazor-template) (soon)
+- [Angular Front-End](https://github.com/Genocs/angular-frontend-template) (soon)
+- [React Front-End](https://github.com/Genocs/react-frontend-template) (soon)
 
 ## How to contribute?
 
@@ -45,7 +44,6 @@ Please note the following steps are applicable only for the `genocs-library-docs
 8. Refer https://github.com/Genocs/genocs-library-docs/blob/main/content/en/dotnet-webapi-template/general/getting-started/index.md to get an idea on how to write documentation and include images, code snippets and stuff.
 9. To run the application locally, run the command `npm run start` and navigate to **localhost:1313**
 10. Once ready, send a Pull Request.
-
 
 ### Genocs Library
 
@@ -63,7 +61,7 @@ Submit your PR and join the elite list!
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library-docs" />
 </a>
 
-### Clean Architecture Template
+### .NET Web API Clean Architecture Template
 
 Submit your PR and join the elite list!
 
@@ -79,7 +77,15 @@ Submit your PR and join the elite list!
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
 </a>
 
-### Blazor WebAssembly Template (soon)
+### Blazor WebAssembly Clean Architecture Template (soon)
+
+Here are the contributors of the Blazor WASM Project! Submit your PR to join this Elite list ;) Make sure your code is warning free!
+
+<a href="https://github.com/Genocs/genocs-library/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
+</a>
+
+### Blazor WebAssembly .NET Web API Template (soon)
 
 Here are the contributors of the Blazor WASM Project! Submit your PR to join this Elite list ;) Make sure your code is warning free!
 

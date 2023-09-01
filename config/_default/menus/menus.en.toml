@@ -4,39 +4,39 @@
   weight = 10
 
 [[main]]
-  name = "Library"
-  url = "/library/"
-  weight = 20
-
-
-[[main]]
   name = "CLI"
   url = "/cli/"
+  weight = 20
+
+[[main]]
+  name = "Library"
+  url = "/library/"
   weight = 30
+
 
 ##############################
 
 [[main]]
-  name = ".NET 7 API"
-  url = "/dotnet-webapi-template/general/getting-started/"
+  name = ".NET Templates"
+  url = "/dotnet-templates/"
   weight = 40
 
-[[dotnet-webapi-template]]
+[[dotnet-templates]]
   name = "General"
   identifier = "general"
-  url = "/dotnet-webapi-template/general/"
+  url = "/dotnet-templates/general/"
   weight = 10
 
-[[dotnet-webapi-template]]
+[[dotnet-templates]]
   name = "Fundamentals"
   identifier = "fundamentals"
-  url = "/dotnet-webapi-template/fundamentals/"
+  url = "/dotnet-templates/fundamentals/"
   weight = 20
 
-[[dotnet-webapi-template]]
+[[dotnet-templates]]
   name = "Tutorials"
   identifier = "tutorials"
-  url = "/dotnet-webapi-template/tutorials/"
+  url = "/dotnet-templates/tutorials/"
   weight = 30
 
 ####################################

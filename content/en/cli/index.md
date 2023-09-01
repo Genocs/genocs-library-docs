@@ -19,7 +19,6 @@ Genocs tool is based on Microsoft - dotnet tools. Here where you can find the of
 
 - [microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 
-
 ## Supported runtime
 
 Genocs CLI can be used on both .NET 6 or .NET 7.
@@ -28,14 +27,14 @@ Genocs CLI can be used on both .NET 6 or .NET 7.
 
 {{< img src="initialize.png" >}}
 
-
 ## How to install
 
-To install the tool the only think you have to do is to take it from nuget, install it into your global, that's it. 
+To install the tool the only think you have to do is to take it from nuget, install it into your global, that's it.
 
 ``` bash
 dotnet tool install -g genocs.cli
-``` 
+```
+
 ### Usefull commands
 
 ``` bash
@@ -56,7 +55,6 @@ dotnet tool update -g genocs.cli
 dotnet tool uninstall -g genocs.cli
 ```
 
-
 ## Install templates
 
 Genocs contains a bunch of templates that you can use to build a complete set of services from scratch.
@@ -64,7 +62,6 @@ Genocs contains a bunch of templates that you can use to build a complete set of
 The picture shows the console log upon the template are installed.
 
 {{< img src="template_installed.png" >}}
-
 
 ## The Templates
 
@@ -78,6 +75,20 @@ The picture shows the console log upon the template are installed.
 | webapi          | gnx-webapi        | standard web api service                |
 | worker          | gnx-worker        | backgroud worker service                |
 
+## Uninstall templates
+
+To uninstall the templates you can use the following command:
+
+``` bash
+# Get the templates list
+dotnet new uninstall
+
+# Follow the command line instruction
+# or run the commands below
+dotnet new uninstall Genocs.CleanArchitectureTemplate
+dotnet new uninstall Genocs.WebApiTemplate
+dotnet new uninstall Genocs.MicroserviceTemplate
+```
 
 ### blazor
 
@@ -90,10 +101,10 @@ genocs blazor new <Company.Project.Service>
 # (SOON) To build a clean architecture blazor portal 
 genocs cleanblazor new <Company.Project.Service>
 ```
+
 ### webapi
 
 ``` bash
-
 # To build a web api architecture webapi 
 genocs webapi new <Company.Project.Service>
 
