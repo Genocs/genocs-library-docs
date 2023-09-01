@@ -7,7 +7,7 @@ lastmod: 2023-05-13 09:17:27+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "general-project-structure"
     name: "Project Structure"
     parent: "general"

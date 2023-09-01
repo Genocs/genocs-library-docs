@@ -1,20 +1,20 @@
 ---
 title : "Containers"
-description: "Containerizing applications is necessary for modern enterprise application. Genocs Library Template contains containers setup as well!"
+description: "Containerizing applications is mandatory step for modern enterprise applications. Genocs Library contains containers setup as well!"
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-05-13T15:40:19+02:00
+lastmod: 2023-09-01T21:40:19+02:00
 draft: false
 images: []
 ---
-
-{{< img src="logo.png" >}}
 
 Setup Kubernetes cluster to be production ready isn't a simple task. It requires to take in consideration many topics.
 
 In this walkthrough we will setup the steps required to have a Kubernetes cluster up and running.
 
 This proposal is thought as to be used on Azure, even though most of the options could be reused for any cloud provider like Google Cloud or AWS.
+
+{{<img src="k8s-architecture.png">}}
 
 ## Prerequisites
 
@@ -27,7 +27,7 @@ This proposal is thought as to be used on Azure, even though most of the options
 
 ## Introduction
 
-The setup process can be spitted into different steps:
+The setup is spitted into different steps:
 
 - Bare components
 - Security
@@ -41,7 +41,7 @@ During this step we are going to setup Kubernetes cluster tackling the following
 
 - Setup private Docker images repository
 - Setup the Kubernetes cluster
-- Setup the vault for secrets
+- Setup the Vault for secrets
 - Secure secrets
 - Setup networking
 - Setup autoscaler
@@ -62,7 +62,6 @@ Open-source Components uses in this demo:
 
 ### Security and Networking
 
-<img src="./images/k8s-architecture.png" />
 
 Security and Networking context will implement all the components that allows to handle:
 

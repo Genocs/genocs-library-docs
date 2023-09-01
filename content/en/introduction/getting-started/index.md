@@ -68,7 +68,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">multitenancy</div>
             </div>
           <p>Get to work with the latest and greatest of Microsoft's .NET 7 Web API fused with the goodness of Genocs Library.</p>
-          <p><a href="https://github.com/Genocs/dotnet-webapi-template">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-webapi-template/general/getting-started/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/dotnet-templates">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-templates/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">

@@ -7,7 +7,7 @@ lastmod: 2023-05-13 10:23:13+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "makefile-commands"
     name: "MakeFile Commands"
     parent: "general"

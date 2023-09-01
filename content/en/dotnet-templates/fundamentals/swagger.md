@@ -7,7 +7,7 @@ lastmod: 2021-10-28T10:07:45+05:30
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "swagger"
     name: "Swagger"
     parent: "fundamentals"

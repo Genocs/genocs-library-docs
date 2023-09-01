@@ -73,10 +73,9 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 
 `samplingRate` - determines the percentage of spans to report. Required only for probabilistic sampler.
 
-
 ## Settings
 
-**appsettings.json**
+Following settings are required to be set in your **appsettings.json**
 
 ``` json
 "jaeger": {
@@ -92,6 +91,7 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 ```
 
 ## Usage
+
 Inside your *Startup.cs* extend `IGenocsBuilder` with `AddJaeger()` that will create the `ITracer` using chosen sampler and reporter:
 
 ``` cs
@@ -101,6 +101,7 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
 
     var builder = services
                         .AddGenocs()
+                        .AddOpenTelemetry()
                         .AddJaeger();
 
     //other registrations    

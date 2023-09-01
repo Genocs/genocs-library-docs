@@ -7,7 +7,7 @@ lastmod: 2023-05-13 11:08:50+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "deploying-to-azure"
     name: "Deploying to Azure AppService"
     parent: "tutorials"

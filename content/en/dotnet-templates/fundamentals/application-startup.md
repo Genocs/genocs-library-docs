@@ -7,7 +7,7 @@ lastmod: 2023-05-13 10:26:50+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "application-startup"
     name: "Application Startup"
     parent: "fundamentals"

@@ -7,7 +7,7 @@ lastmod: 2023-05-13 10:26:50+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "configurations"
     name: "Configurations"
     parent: "fundamentals"
@@ -79,7 +79,7 @@ By default, the dbprovider is set to postgresql. You will also have to change th
 }
 ```
 
-For details about other database providers, [refer this page](http://localhost:1313/dotnet-webapi-template/general/getting-started/#setting-up-the-connection-string)
+For details about other database providers, [refer this page](http://localhost:1313/dotnet-templates/general/getting-started/#setting-up-the-connection-string)
 
 ## Localization
 

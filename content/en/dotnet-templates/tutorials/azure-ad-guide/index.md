@@ -7,7 +7,7 @@ lastmod: 2023-07-10T16:43:03+02:00
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "azure-ad-guide"
     name: "Azure AD Authentication"
     parent: "tutorials"

@@ -7,7 +7,7 @@ lastmod: 2022-01-15T21:31:44+05:30
 draft: false
 images: []
 menu:
-  dotnet-webapi-template:
+  dotnet-templates:
     identifier: "database-migrations"
     name: "Database Migrations"
     parent: "tutorials"
@@ -23,7 +23,7 @@ Note that currently, Genocs Library's Web API supports the following major DB Pr
 3. PostgreSQL
 4. Oracle
 
-Download links to setup the supported Database providers are mentioned here - https://genocs-blog.netlify.app//dotnet-webapi-template/general/development-environment/
+Download links to setup the supported Database providers are mentioned here - https://genocs-blog.netlify.app//dotnet-templates/general/development-environment/
 
 To maintain scalability, the database migrations of each of these DB Providers are kept in separate class library projects namely
 1. Migrators/Migrators.MSSQL
