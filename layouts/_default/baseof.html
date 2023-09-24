@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default " en" }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}">
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
@@ -44,4 +44,3 @@
     window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </script>
 </html>
-
