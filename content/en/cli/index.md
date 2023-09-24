@@ -71,8 +71,9 @@ The picture shows the console log upon the template are installed.
 | react           | gnx-react         | react front-end SPA                     |
 | blazor          | gnx-blazor        | blazor portal                           |
 | cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal      |
-| cleanapi        | gnx-cleanapi      | clean architecture - web api            |
-| webapi          | gnx-webapi        | standard web api service                |
+| cleanapi        | gnx-cleanapi      | clean architecture - WebAPI             |
+| webapi          | gnx-microservice  | microservice multitenant WebAPI         |
+| webapi          | gnx-webapi        | standard WebAPI service                 |
 | worker          | gnx-worker        | backgroud worker service                |
 
 ## Uninstall templates
@@ -88,6 +89,7 @@ dotnet new uninstall
 dotnet new uninstall Genocs.CleanArchitectureTemplate
 dotnet new uninstall Genocs.WebApiTemplate
 dotnet new uninstall Genocs.MicroserviceTemplate
+dotnet new uninstall Genocs.Microservice.Template
 ```
 
 ### blazor
@@ -110,6 +112,9 @@ genocs webapi new <Company.Project.Service>
 
 # Another option to build a clen architecture webapi 
 genocs cleanapi new <Company.Project.Service>
+
+# To build a microservice webapi with multitentant support
+genocs microservice  <Company.Project.Service>
 ```
 
 ## The solution

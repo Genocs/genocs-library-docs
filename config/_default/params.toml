@@ -13,7 +13,7 @@ navBarLogo = "/images/icon.png"
 # docsVersion = "1"
 
 # Search
-mainSections = ["introduction", "library", "blog", "blazor-template", "dotnet-templates" ]
+mainSections = ["introduction", "cli", "library", "blog", "blazor-template", "dotnet-templates", "dotnet-microservices-template", "containers" ]
 
 ## Open Graph
 images = ["logo.png"]
@@ -41,7 +41,7 @@ schemaImage = "logo.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/noccogiovanni"
-schemaLinkedIn = ""
+schemaLinkedIn = "https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169"
 schemaGitHub = "https://github.com/Genocs"
 schemaSection = "blog"
 
@@ -68,7 +68,7 @@ copyRight = "Copyright (c) 2023 Genocs"
 # Alert
 alert = true
 alertDismissable = false
-alertText = ".NET 7 Genocs Library Released <a target=\"_blank\" class=\"alert-link\" href=\"https://www.youtube.com/watch?v=TgxDvU---Ak/\">Click here to get started!</a>"
+alertText = ".NET7 Genocs Library Released <a target=\"_blank\" class=\"alert-link\" href=\"https://www.youtube.com/watch?v=TgxDvU---Ak/\">Click here to get started!</a>"
 
 # Edit Page
 repoHost = "GitHub"
