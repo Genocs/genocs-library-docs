@@ -296,7 +296,6 @@ Development Environment - [Learn about setting up the DEV environment](https://g
 
 Participate in Discussions - [QNA & General Discussions](https://github.com/genocs-blog.netlify.app/dotnet-templates/discussions)
 
-Join our Discord - [@genocs](https://discord.gg/fWwArnkV)
 
 ## Changelogs
 
