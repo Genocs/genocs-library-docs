@@ -18,14 +18,14 @@ toc: true
 Firstly, make sure that you have already setup your development environment that runs the prerequisite tools and SDKs. Refer [Development Environment](/blazor-webassembly-boilerplate/general/development-environment/) for details.
 
 
-To get started with this Boilerplate, here are the avaiable options.
+To get started with this Boilerplate, here are the available options.
 
 - Fork the Repository. Use this if you want to always keep your version of the Boilerplate up-to date with the latest changes.
 - Install using dotnet new . Use this for release versions of the Boilerplate only. Note that this option is currently unavailable for Blazor WASM Boilerplate.
 
 ## Forking the Repository
 
-You would probably need to take this approach if you want to keep your source code upto date with the latest changes. To get started based on this repository, you need to get a copy locally. You have three options: fork, clone, or download.
+You would probably need to take this approach if you want to keep your source code up to date with the latest changes. To get started based on this repository, you need to get a copy locally. You have three options: fork, clone, or download.
 
 - Make a fork of Genocs Library's `blazor-wasm-boilerplate` repository in your Github account.
 - Next, since you need to start your private personal project, create your new `blazor-wasm-boilerplate` personal project by cloning the forked repository on your personal github. This could be done as simple as running `git clone https://github.com/{yourgithubuseraccount}/blazor-wasm-boilerplate.git` locally on your development machine.
@@ -39,7 +39,7 @@ For step by step instructions, [follow this](https://discord.com/channels/878181
 
 This is by far the easiest and the most streamlined way of getting the latest available `Release version` of Genocs Blazor WebAssembly Boilerplate.
 
-Open up your Command Prompt / Powershell and run the following command to install the solution template.
+Open up your Command Prompt / PowerShell and run the following command to install the solution template.
 
 ```powershell
 dotnet new --install Genocs.BlazorWebAssembly.Boilerplate
@@ -51,7 +51,7 @@ dotnet new --install Genocs.BlazorWebAssembly.Boilerplate::0.0.1-rc
 ```
 This would install the `Genocs Blazor WebAssembly Boilerplate` template globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **0.0.1-rc** which is also one of the first stable pre-release version of the package. It is highly likely that there is already a newer version available when you are reading this.
 
-> *To get the latest version of the package, visit [nuget.org](https://www.nuget.org/packages/Genocs.BlazorWebAssembly.Boilerplate/)*
+> *To get the latest version of the package, visit [NuGet.org](https://www.nuget.org/packages/Genocs.BlazorWebAssembly.Boilerplate/)*
 >
 > *Genocs.BlazorWebAssembly.Boilerplate is now in pre-release state. You can find the latest version on NuGet.org*
 

@@ -17,7 +17,7 @@ Genocs templates are dotnet template that will help you to setup quickly and eas
 
 Genocs tool is based on Microsoft - dotnet tools. Here where you can find the official Documentation:
 
-- [microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
+- [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
 
 ## Supported runtime
 
@@ -29,13 +29,13 @@ Genocs CLI can be used on both .NET 6 or .NET 7.
 
 ## How to install
 
-To install the tool the only think you have to do is to take it from nuget, install it into your global, that's it.
+To install the tool the only think you have to do is to take it from NuGet, install it into your global, that's it.
 
 ``` bash
 dotnet tool install -g genocs.cli
 ```
 
-### Usefull commands
+### Useful commands
 
 ``` bash
 # Get the list of tool
@@ -102,7 +102,7 @@ genocs blazor new <Company.Project.Service>
 genocs cleanblazor new <Company.Project.Service>
 ```
 
-### webapi
+### WebAPI
 
 ``` bash
 # To build a web api architecture webapi 
@@ -114,13 +114,13 @@ genocs cleanapi new <Company.Project.Service>
 
 ## The solution
 
-You can find the solution on github:
+You can find the solution on GitHub:
 
 [genocs-library-cli](https://github.com/Genocs/genocs-library-cli)
 
 You are free to fork or to clone it. Then you can update it at your own pace.
 
-### Usefull commands to work on your own
+### Useful commands to work on your own
 
 ``` bash
 # build the project 

@@ -24,11 +24,6 @@
 
 ## Acknowledgment
 
-Original theme
-[h-enk doks](https://github.com/h-enk/doks)
-
-Original project
-[fullstackhero](https://github.com/fullstackhero)
-
-Awesome mentor
-[Mukesh Murugan](https://github.com/iammukeshm)
+- Original theme [h-enk doks](https://github.com/h-enk/doks)
+- Original project [fullstackhero](https://github.com/fullstackhero)
+- Awesome mentor [Mukesh Murugan](https://github.com/iammukeshm)

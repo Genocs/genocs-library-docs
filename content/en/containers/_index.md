@@ -19,8 +19,8 @@ This proposal is thought as to be used on Azure, even though most of the options
 ## Prerequisites
 
 - **Azure Subscription** to create AKS cluster
-- **kubectl** logged into kubernetes cluster
-- **Powershell**
+- **kubectl** logged into Kubernetes cluster
+- **PowerShell**
 - **Postman**
 - **Helm**
 - **DockerHub account** (optional)
@@ -56,9 +56,9 @@ Open-source Components uses in this demo:
 
 - [Grafana](https://grafana.com/)
 - [Jaeger](https://www.jaegertracing.io/)
-- [Promotheus](https://prometheus.io/)
+- [Prometheus](https://prometheus.io/)
 
-**NOTE:** The open-source components have the entreprise version. It requires to have active subscription if you plan to use them.  
+**NOTE:** The open-source components have the enterprise version. It requires to have active subscription if you plan to use them.  
 
 ### Security and Networking
 
@@ -160,7 +160,7 @@ docker-compose -f .\src\docker-compose-dockerhub.yaml push
 
 **NOTE:** Please update the yaml files with the correct image version before use them.
 
-### [Powershell](Powersehll)
+### [PowerShell](PowerShell)
 
 Contains the helper PowerShell scripts to:
 
@@ -210,9 +210,9 @@ This allows to setup Kubernetes cluster on Google Cloud.
 
 ### 2.1 Install Azure Container Registry ACR
 
-The **ACR** (Azure Container Registry) allows to store Docker images inside a private repositoy.
+The **ACR** (Azure Container Registry) allows to store Docker images inside a private repository.
 
-Run [initializeACR](/Powershell/initializeACR.ps1) powershell script with default values from root directory.
+Run [initializeACR](/Powershell/initializeACR.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\initializeACR.ps1
@@ -220,7 +220,7 @@ Run [initializeACR](/Powershell/initializeACR.ps1) powershell script with defaul
 
 ### 2.2 Install Kubernetes Cluster AKS
 
-Run [initializeAKS](/Powershell/initializeAKS.ps1) powershell script with default values from root directory.
+Run [initializeAKS](/Powershell/initializeAKS.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\initializeAKS.ps1
@@ -237,7 +237,7 @@ Secret data are:
 - certificates
 - public/private keys
 
-Run [initializeAKV](/Powershell/initializeAKV.ps1) powershell script with default values from root directory.
+Run [initializeAKV](/Powershell/initializeAKV.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\initializeAKV.ps1
@@ -251,9 +251,9 @@ The **AKS** will use a network infrastructure composed by:
 - VNET
 - AGIC (Application Gateway Ingress Controller)
 
-The Poweshell script will *'Create peering beetween AGIC and AKS and viceversa'* as well.
+The PowerShell script will *'Create peering between AGIC and AKS and vice versa* as well.
 
-Run [initializeNetwork](/Powershell/initializeNetwork.ps1) powershell script with default values from root directory.
+Run [initializeNetwork](/Powershell/initializeNetwork.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\initializeNetwork.ps1
@@ -263,7 +263,7 @@ Run [initializeNetwork](/Powershell/initializeNetwork.ps1) powershell script wit
 
 This step shows how to setup a script file to push Secrets inside AKV.
 
-Run [deployAKV-secrets](/Powershell/deployAKV-secrets.ps1) powershell script with default values from root directory.
+Run [deployAKV-secrets](/Powershell/deployAKV-secrets.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\deployAKV-secrets.ps1
@@ -273,9 +273,9 @@ Run [deployAKV-secrets](/Powershell/deployAKV-secrets.ps1) powershell script wit
 
 This step shows how to setup a RabbitMQ node inside AKS.
 
-***Not reccomanded for Production***
+***Not recommended for Production***
 
-Run [deployRabbitMQ](/Powershell/deployRabbitMQ.ps1) powershell script with default values from root directory.
+Run [deployRabbitMQ](/Powershell/deployRabbitMQ.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\deployRabbitMQ.ps1
@@ -285,9 +285,9 @@ Run [deployRabbitMQ](/Powershell/deployRabbitMQ.ps1) powershell script with defa
 
 This step shows how to setup a MongoDb instance inside AKS.
 
-***Not reccomanded for Production***
+***Not recommended for Production***
 
-Run [deployMongoDB](/Powershell/deployMongoDB.ps1) powershell script with default values from root directory.
+Run [deployMongoDB](/Powershell/deployMongoDB.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\deployMongoDB.ps1
@@ -297,7 +297,7 @@ Run [deployMongoDB](/Powershell/deployMongoDB.ps1) powershell script with defaul
 
 This step shows how to setup a Prometheus and Grafana inside AKS.
 
-Run [deployPrometheus](/Powershell/deployPrometheus.ps1) powershell script with default values from root directory.
+Run [deployPrometheus](/Powershell/deployPrometheus.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\deployPrometheus.ps1
@@ -307,7 +307,7 @@ Run [deployPrometheus](/Powershell/deployPrometheus.ps1) powershell script with 
 
 This step shows how to setup a Jaeger distributed Tracing inside AKS.
 
-Run [deployJaeger](/Powershell/deployJaeger.ps1) powershell script with default values from root directory.
+Run [deployJaeger](/Powershell/deployJaeger.ps1) PowerShell script with default values from root directory.
 
 ``` PS
 .\Powershell\deployJaeger.ps1
@@ -333,7 +333,7 @@ kubectl get all -n keda
 
 Deploy External WebAPI (Producer), Internal WebAPI and Backgroud Worker Consumer.
 
-Execute the powershell script.
+Execute the PowerShell script.
 
 ``` PS
 # Use this to setup the application with Secret coming from file as Opaque secret
@@ -349,7 +349,7 @@ cd Powershell
 cd ..
 ```
 
-The `deployApplications-AKS` powershell script deploys the RabbitMQConsumer and RabbitMQProducer in the correct order.
+The `deployApplications-AKS` PowerShell script deploys the RabbitMQConsumer and RabbitMQProducer in the correct order.
 
 Alternately, all the components can also be deployed directly using the `kubectl` apply command recursively on the k8s directory as shown below:
 
@@ -360,7 +360,7 @@ kubectl apply -R -f .
 
 ### 2.12 Deploy Application AutoScaler
 
-Execute the `deployAutoScaler.ps1` powershell script.
+Execute the `deployAutoScaler.ps1` PowerShell script.
 
 ``` PS
 cd Powershell 
@@ -420,7 +420,7 @@ Also note the public `LoadBalancer` IP for the Producer Service. In this case th
 
 ### 2.11 Watch for deployments
 
-The rabbitmq `ScaledObject` will be deployed as part of the deployment. Watch out for the deployments to see the changes in the scaling as the number of messages increases
+The RabbitMQ `ScaledObject` will be deployed as part of the deployment. Watch out for the deployments to see the changes in the scaling as the number of messages increases
 
 ``` bash
 kubectl get deployment -w
@@ -429,7 +429,7 @@ kubectl get deploy -w
 
 ![List of all Kubernetes services](/images/initial-deploy-state.png)
 
-Initially there is 1 instance of rabbitmq-consumer and 2 replicas of the rabbitmq-producer (Producer) deployed in the cluster.
+Initially there is 1 instance of RabbitMQ-consumer and 2 replicas of the RabbitMQ-producer (Producer) deployed in the cluster.
 
 ### 2.12 Browse RabbitMQ Management UI
 
@@ -444,7 +444,7 @@ kubectl port-forward svc/rabbitmq 15672:15672
 ```
 
 Open the web browser:
-[rabbitmq](http://localhost:15672/)
+[RabbitMQ](http://localhost:15672/)
 
 Login to the management UI using credentials as `guest` and `guest`.
 
@@ -476,7 +476,7 @@ See the number of containers for consumer grow to adjust the messages and also t
 
 ![autoscaling consumers](/images/pods-and-deployments-autoscaled.png)
 
-On the left-hand side of the screen you can see the pods auto scaled and on the right we see the deploymnets autoscaled progressively to 2, 4, 8, 16 and 30.
+On the left-hand side of the screen you can see the pods auto scaled and on the right we see the deployments autoscaled progressively to 2, 4, 8, 16 and 30.
 
 While the messages are being processed, we can also observe the RabbitMQ management UI.
 

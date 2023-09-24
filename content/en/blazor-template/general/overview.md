@@ -20,7 +20,7 @@ toc: true
 
 The goal of this repository is to help developers / companies kickstart their Web Application Development with a pre-built Blazor WebAssembly Boilerplate that includes several much needed components and features.
 
-> Note that this is a frontend / client application only! The backend for this application is available in a seperate repository.
+> Note that this is a frontend / client application only! The backend for this application is available in a separate repository.
 > - Find Genocs Library's .NET 7 Web API Boilerplate here - https://github.com/Genocs/dotnet-templates
 
 ## Prerequisites

@@ -13,15 +13,15 @@ Below you can find some pointers for contacting us, as well as getting in touch 
 
 ## Issues and Bug Reports
 
-For any bug reports, please first consult the main Github repositories:
+For any bug reports, please first consult the main GitHub repositories:
 - [Source Code](https://github.com/Genocs/genocs-library/)
 - [Documentation]( https://github.com/Genocs/genocs-library-docs/)
 
 Chances are that a similar issue may have already been posted by other users in the past.
 
-Github has an excellent search function, which may help find existing answers to your questions.
+GitHub has an excellent search function, which may help find existing answers to your questions.
 
-If you cannot find a solution in the existing issues, please raise a bug report directly in Github. By tagging the issue with the label `Bug`, we'll try our best to prioritize your request.
+If you cannot find a solution in the existing issues, please raise a bug report directly in GitHub. By tagging the issue with the label `Bug`, we'll try our best to prioritize your request.
 
 Please make sure to always include the following details in your bug report:
 

@@ -19,7 +19,7 @@ Here are some of the general components, features and pages that you get to see 
 
 ## Loading Screen
 
-The following is the dedault loading screen of the template.
+The following is the defaults loading screen of the template.
 
 You can tweak around the appearance by modifying `\src\Client\wwwroot\index.html`.
 
@@ -45,7 +45,7 @@ By default, the boilerplate sports an ADMIN Dashboard template that is mostly us
 
 Genocs Library's Blazor WebAssembly Boilerplate comes with a built-in theme manager that helps you customize various UI aspects right from primary colors to the radius of the containers with ease. You can view the Theme Manager component by clicking on the Paint Icon that you would see on every page of the boilerplate.
 
-Note that each of the configuration changes you make get stored to your browser's localstorage.
+Note that each of the configuration changes you make get stored to your browser's local storage.
 
 {{< img src="theme-manager.png" >}}
 
@@ -61,9 +61,9 @@ Here you get to set the Primary and Secondary colors used by the Blazor Applicat
 
 {{< img src="colors.png" >}}
 
-{{< img src="default-pallete.png" >}}
+{{< img src="default-pallets.png" >}}
 
-Not finding the color that you need? You can easily add new colors to this pallete by changing some code!
+Not finding the color that you need? You can easily add new colors to this pallets by changing some code!
 
 In the below screenshot you can find the default 12 colors defined in code.
 

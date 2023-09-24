@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Site.LanguageCode | default " en" }}">
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
@@ -12,36 +12,36 @@
     {{ .Scratch.Set "class" .Type -}}
     {{ .Scratch.Add "class" " list" -}}
   {{ end -}}
-  <head>
+<head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
-     </head>
-      
-  <body class="{{ .Scratch.Get "class" }}">
+</head>
+
+<body class="{{ .Scratch.Get "class" }}">
     {{ partial "header/header.html" . }}
     <div class="wrap container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}" role="document">
-      <div class="content">
-        {{ block "main" . }}{{ end }}
-      </div>
+        <div class="content">
+            {{ block "main" . }}{{ end }}
+        </div>
     </div>
     {{ block "sidebar-prefooter" . }}{{ end }}
     {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
     {{ partial "footer/script-footer.html" . }}
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-    data-id="genocs" data-description="Support me on Buy me a coffee!" data-message="" data-color="#65bf96"
-    data-position="Right" data-x_margin="18" data-y_margin="18"></script>
-  </body>
-  <script>
+            data-id="genocs" data-description="Support me on Buy me a coffee!" data-message="" data-color="#65bf96"
+            data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+<script>
     var config = {
-        startOnLoad:true,
+        startOnLoad: true,
         theme: 'forest',
-        flowchart:{
-                useMaxWidth:false,
-                htmlLabels:true
-            }
+        flowchart: {
+            useMaxWidth: false,
+            htmlLabels: true
+        }
     };
     mermaid.initialize(config);
     window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-    </script>
+</script>
 </html>
 

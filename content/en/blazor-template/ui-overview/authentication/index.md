@@ -31,6 +31,6 @@ Anyways, here are the default login details for your reference.
 
 ## Forgot Password
 
-In case, you happen to forget your password, the application has the functionailty to reset the password for you.
+In case, you happen to forget your password, the application has the functionality to reset the password for you.
 
 {{< img src="forgot-password.png" >}}
