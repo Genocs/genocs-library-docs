@@ -34,6 +34,10 @@
   {{ $slice = $slice | append $instantPage -}}
 {{ end -}}
 
+{{ if .Site.Params.options.flexSearch -}}
+  {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.bundle.js" -}}
+  {{ $slice = $slice | append $flexSearch -}}
+{{ end -}}
 
 {{ if .Site.Params.options.darkMode -}}
   {{ $darkMode := resources.Get "js/darkmode.js" -}}
