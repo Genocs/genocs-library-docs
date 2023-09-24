@@ -29,7 +29,8 @@ defaults:
     shell: bash
 
 jobs:
-  deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.108.0
@@ -54,6 +55,22 @@ jobs:
 
       - name: Build production website
         run: npm run build
+
+  # Deployment job
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    needs: build
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2    
 
 
 #     - name: Deploy to GitHub Pages
