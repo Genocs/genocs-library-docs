@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-description: "Genocs Library built with .NET 7.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: "Genocs Library built with .NET 7.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2023-05-13 09:17:27+02:00
+lastmod: 2023-11-25 14:17:27+02:00
 draft: false
 images: []
 menu:
@@ -30,7 +30,7 @@ The goal of this repository is to provide a complete and feature-rich starting p
 
 ## Features
 
-- [x] Built on .NET 7.0
+- [x] Built on .NET8
 - [x] Follows Clean Architecture Principles
 - [x] Domain Driven Design
 - [x] Cloud Ready. Can be deployed to AWS Infrastructure as ECS Containers using Terraform!
@@ -198,9 +198,9 @@ And here is the response.
 
 ``` json
 {
-  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjM0YTY4ZjQyLWE0ZDgtNDNlMy1hNzE3LTI1OTczZjZmZTJjNyIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImFkbWluQHJvb3QuY29tIiwiZnVsbE5hbWUiOiJyb290IEFkbWluIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InJvb3QiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zdXJuYW1lIjoiQWRtaW4iLCJpcEFkZHJlc3MiOiIxMjcuMC4wLjEiLCJ0ZW5hbnQiOiJyb290IiwiaW1hZ2VfdXJsIjoiIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbW9iaWxlcGhvbmUiOiIiLCJleHAiOjE2ODA5NDE3MzN9.VYNaNvk2T4YDvQ3wriXgk2W_Vy9zyEEhjveNauNAeJY",
-  "refreshToken": "pyxO30zJK8KelpEXF0vPfbSbjntdlbbnxrZAlUFXfyE=",
-  "refreshTokenExpiryTime": "2023-04-15T07:15:33.5187598Z"
+  "token": "<your JWT Token>",
+  "refreshToken": "<your refresh token>",
+  "refreshTokenExpiryTime": "2023-11-25T14:15:33.5187598Z"
 }
 ```
 

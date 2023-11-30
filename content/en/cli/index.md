@@ -134,12 +134,12 @@ dotnet build ./src/genocs.cli.csproj
 # Pack the tool (to be deployed on nuget) 
 dotnet pack
 
-# Run the tool to install the templates using the net7 as runtime
-dotnet run -f net7.0 --project ./src/genocs.cli.csproj genocs -i
+# Run the tool to install the templates using the net8 as runtime
+dotnet run -f net8.0 --project ./src/genocs.cli.csproj genocs -i
 
 # Run the tool to install the templates (some as above with cd command)
 cd ./src
-dotnet run -f net7.0 genocs -i
+dotnet run -f net8.0 genocs -i
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./src/nupkg genocs.cli
