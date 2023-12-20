@@ -65,16 +65,15 @@ The picture shows the console log upon the template are installed.
 
 ## The Templates
 
-| Template        |      Command      |  To be used for                         |
-|:----------------|:------------------|----------------------------------------:|
-| angular         | gnx-angular       | angular front-end SPA                   |
-| react           | gnx-react         | react front-end SPA                     |
-| blazor          | gnx-blazor        | blazor portal                           |
-| cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal      |
-| cleanapi        | gnx-cleanapi      | clean architecture - WebAPI             |
-| webapi          | gnx-microservice  | microservice multitenant WebAPI         |
-| webapi          | gnx-webapi        | standard WebAPI service                 |
-| worker          | gnx-worker        | backgroud worker service                |
+| Template        |      Command      |  To be used for                                 |
+|:----------------|:------------------|------------------------------------------------:|
+| angular         | gnx-angular       | angular front-end SPA                           |
+| react           | gnx-react         | react front-end SPA                             |
+| blazor          | gnx-wasmblazor    | web assembly - blazor portal                    |
+| cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal              |
+| webapi          | gnx-cleanwebapi   | onion clean architecture - WebAPI               |
+| webapi          | gnx-microwebapi   | microservice multitenant - WebAPI               |
+| webapi          | gnx-librawebapi   | microservice on top of Genocs Library - WebAPI  |
 
 ## Uninstall templates
 

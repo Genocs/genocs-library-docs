@@ -36,78 +36,25 @@ Genocs Library does not generate any default spans for your ASP.NET Core applica
 
 ## Installation
 
-``` bash
-dotnet add package OpenTracing
-```
 
 ## Usage
 
-Enable the instrumentation inside your Startup.cs -> ConfigureServices() by calling `AddOpenTracing()` method on `IServiceCollection`.
+Inside your *Program.cs* extend `IGenocsBuilder` with `AddOpenTelemetry()` then `AddJaeger()` that will create the `ITracer` using chosen sampler and reporter:
 
 ``` cs
-public void ConfigureServices(this IServiceCollection services)
-{
-    services.AddOpenTracing();
-}
+
+var builder = services
+                    .AddGenocs()
+                    .AddOpenTelemetry()
+                    .AddJaeger();
+
+//other registrations    
+return builder.Build();
 ```
 
 ### Jaeger
 
 Once your application produces spans needed for Jaeger, you need to enable reporting in a way that suits you the most.
-
-## Options
-
-`enabled` - determines whether reporting is enabled.
-
-`serviceName` - name of the applciation that’s going to be used in Jaeger query engine.
-
-`udpHost` - host part of the Jaeger endpoint (UDP).
-
-`udpPort` - port of the Jaeger endpoint (UDP).
-
-`maxPacketSize` - maximum size of the UDP header packet (by default 0). This is not required.
-
-`sampler` - The allowed values are: const, rate and probabilistic. For more details about sampling check the official Jaeger Docs.
-
-`maxTracesPerSecond` - determines maximum number of reported traces per second. Required only for rate sampler.
-
-`samplingRate` - determines the percentage of spans to report. Required only for probabilistic sampler.
-
-## Settings
-
-Following settings are required to be set in your **appsettings.json**
-
-``` json
-"jaeger": {
-  "enabled": true,
-  "serviceName": "users",
-  "udpHost": "localhost",
-  "udpPort": 6831,
-  "maxPacketSize": 65000,
-  "sampler": "const",
-  "maxTracesPerSecond": 10,
-  "excludePaths": ["/", "/ping", "/metrics"]
-}
-```
-
-## Usage
-
-Inside your *Startup.cs* extend `IGenocsBuilder` with `AddJaeger()` that will create the `ITracer` using chosen sampler and reporter:
-
-``` cs
-public IServiceProvider ConfigureServices(this IServiceCollection services)
-{
-    services.AddOpenTracing();
-
-    var builder = services
-                        .AddGenocs()
-                        .AddOpenTelemetry()
-                        .AddJaeger();
-
-    //other registrations    
-    return builder.Build();
-}
-```
 
 ### Creating custom spans
 
@@ -148,3 +95,39 @@ public class MyClass
             .StartActive(true);
 }
 ```
+
+## Options
+
+`enabled` - determines whether reporting is enabled.
+
+`serviceName` - name of the applciation that’s going to be used in Jaeger query engine.
+
+`udpHost` - host part of the Jaeger endpoint (UDP).
+
+`udpPort` - port of the Jaeger endpoint (UDP).
+
+`maxPacketSize` - maximum size of the UDP header packet (by default 0). This is not required.
+
+`sampler` - The allowed values are: const, rate and probabilistic. For more details about sampling check the official Jaeger Docs.
+
+`maxTracesPerSecond` - determines maximum number of reported traces per second. Required only for rate sampler.
+
+`samplingRate` - determines the percentage of spans to report. Required only for probabilistic sampler.
+
+## Settings
+
+Following settings are required to be set in your **appsettings.json**
+
+``` json
+"jaeger": {
+  "enabled": true,
+  "serviceName": "users",
+  "udpHost": "localhost",
+  "udpPort": 6831,
+  "maxPacketSize": 65000,
+  "sampler": "const",
+  "maxTracesPerSecond": 10,
+  "excludePaths": ["/", "/ping", "/metrics"]
+}
+```
+
