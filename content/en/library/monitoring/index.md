@@ -11,7 +11,7 @@ menu:
     identifier: "monitoring"
     name: "Monitoring"
     parent: "library"
-weight: 1
+weight: 9
 toc: true
 ---
 

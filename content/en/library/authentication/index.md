@@ -11,7 +11,7 @@ menu:
     identifier: "authentication"
     name: "Authentication"
     parent: "library"
-weight: 1
+weight: 2
 toc: true
 ---
 

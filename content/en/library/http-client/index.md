@@ -11,7 +11,7 @@ menu:
     identifier: "http-client"
     name: "HTTP Clients"
     parent: "library"
-weight: 1
+weight: 5
 toc: true
 ---
 

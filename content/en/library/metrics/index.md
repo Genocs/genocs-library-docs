@@ -11,6 +11,6 @@ menu:
     identifier: "metrics"
     name: "Metrics"
     parent: "library"
-weight: 1
+weight: 8
 toc: true
 ---

@@ -11,7 +11,7 @@ menu:
     identifier: "logging"
     name: "Logging"
     parent: "library"
-weight: 1
+weight: 6
 toc: true
 ---
 

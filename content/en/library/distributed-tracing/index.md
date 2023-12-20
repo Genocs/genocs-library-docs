@@ -11,7 +11,7 @@ menu:
     identifier: "distributed-tracing"
     name: "Distributed Tracing"
     parent: "library"
-weight: 1
+weight: 4
 toc: true
 ---
 

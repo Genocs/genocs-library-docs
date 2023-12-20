@@ -11,6 +11,6 @@ menu:
     identifier: "persistence"
     name: "Persistance"
     parent: "library"
-weight: 1
+weight: 10
 toc: true
 ---
