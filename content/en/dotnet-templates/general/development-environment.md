@@ -3,7 +3,7 @@ title: "Development Environment"
 description: "Setting up the Development Environment for the .NET WebApi Boilerplate"
 lead: "Let's get started with setting up the Development Environment for .NET WebApi Boilerplate Development!"
 date: 2023-05-13T15:51:03+02:00
-lastmod: 2023-05-13T15:51:03+02:00
+lastmod: 2024-02-29T19:44:03+02:00
 draft: false
 images: []
 menu:
@@ -18,11 +18,11 @@ Genocs Library's **.NET WebApi Boilerplate** Project Development needs you to ha
 
 ## .NET SDK
 
-As mentioned earlier, this project is built with the latest available .NET SDK, which is .NET 7.0.
+As mentioned earlier, this project is built with the latest available .NET SDK, which is .NET 8.0.
 
-Ensure that you have the latest version of the SDK available - [Download from Microsoft](https://dotnet.microsoft.com/download/dotnet/7.0)
+Ensure that you have the latest version of the SDK available - [Download from Microsoft](https://dotnet.microsoft.com/download/dotnet/8.0)
 
-{{< alert icon="💡" text="Note : At the time of compiling this documentation, the latest version available was SDK 7.0.200" />}}
+{{< alert icon="💡" text="Note : At the time of compiling this documentation, the latest version available was SDK 8.0.201" />}}
 
 
 ## IDE

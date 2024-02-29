@@ -5,6 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
       {left: '$', right: '$', display: false},
       {left: '\\(', right: '\\)', display: false},
       {left: '\\[', right: '\\]', display: true},
-    ],
+    ]
   });
 });

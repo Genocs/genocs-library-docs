@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Let's get started with Genocs Library!"
 lead: "Let's get started with Genocs Library!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-05-13T15:40:19+02:00
+lastmod: 2024-02-29T19:44:19+02:00
 draft: false
 images: []
 menu:
@@ -39,7 +39,7 @@ As the name suggests, the idea is to provide a full-stack end to end solution to
 
 <b>Genocs Library</b> should be the one-stop that caters to the needs of various developers in various technology. This obviously would require a lot of community adaptation and contributions.
 
-As of the initial releases, <b>Genocs Library</b> sports an API Project built on Microsoft's newest .NET 7 and the front-end application (that consumes the .NET 7 Web API) built with Blazor WebAssembly!
+As of the initial releases, <b>Genocs Library</b> sports an API Project built on Microsoft's newest .NET 8 and the front-end application (that consumes the .NET 8 Web API) built with Blazor WebAssembly!
 
 ## Projects
 
@@ -49,10 +49,10 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
     <div class="row justify-content-center text-center" style="padding:10px!important">
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET 7 Microservice Template</h2>
+          <h2 class="h4">.NET 8 Microservice Template</h2>
           <div class="tablet-group">
-              <div class="tablet">server</div>
-              <div class="tablet tablet-secondary">dotnet</div>
+              <div class="tablet">web api</div>
+              <div class="tablet tablet-secondary">.NET</div>
               <div class="tablet">microservices</div>
             </div>
           <p>Coming soon.</p>
@@ -61,13 +61,13 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
       </div>
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET 7 Web API Template</h2>
+          <h2 class="h4">.NET 8 Web API Template</h2>
           <div class="tablet-group">
-              <div class="tablet">server</div>
-              <div class="tablet tablet-secondary">dotnet</div>
+              <div class="tablet">web api</div>
+              <div class="tablet tablet-secondary">.NET</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Get to work with the latest and greatest of Microsoft's .NET 7 Web API fused with the goodness of Genocs Library.</p>
+          <p>Get to work with the latest and greatest of Microsoft's .NET 8 Web API fused with the goodness of Genocs Library.</p>
           <p><a href="https://github.com/Genocs/dotnet-templates">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-templates/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>
@@ -76,11 +76,11 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
           <h2 class="h4">Blazor WebAssembly Template</h2>
           <div class="tablet-group">
               <div class="tablet">client application</div>
-              <div class="tablet tablet-secondary">dotnet</div>
+              <div class="tablet tablet-secondary">.NET</div>
               <div class="tablet tablet-secondary">blazor webassembly</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Clean Architecture Boilerplate Template for .NET 6.0 Blazor WebAssembly built for Genocs-Api WebAPI with MudBlazor Components.</p>
+          <p>Clean Architecture Boilerplate Template for .NET 8.0 Blazor WebAssembly built for Genocs-Api WebAPI with MudBlazor Components.</p>
           <p><a href="https://github.com/Genocs/genocs-library-docs">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read Getting Started Guide</a></p>
         </div>
       </div>

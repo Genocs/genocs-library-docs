@@ -3,7 +3,7 @@ title: "MakeFile Commands"
 description: "Here are some important MakeFile Commands that are to be used along with Genocs Library CLI."
 lead: "Here are some important MakeFile Commands that are to be used along with Genocs Library CLI."
 date: 2023-05-13 10:23:13+02:00
-lastmod: 2023-05-13 10:23:13+02:00
+lastmod: 2024-02-29T19:44:13+02:00
 draft: false
 images: []
 menu:
@@ -44,7 +44,7 @@ This packs your Solution into a nuget package. The required .template.config fol
 ``` bash
 make publish
 ```
-Using .NET 7's Built-In Containerization feature, this command builds the docker image for you using the `dotnet publish` command internally. Here is how to setup the metadata of your docker image.
+Using .NET 8's Built-In Containerization feature, this command builds the docker image for you using the `dotnet publish` command internally. Here is how to setup the metadata of your docker image.
 
 Navigate to src/Host/Host.csproj file and modify the following as per your requirement.
 

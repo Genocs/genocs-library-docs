@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-description: ".NET Microservices Boilerplate Template built with .NET 7.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: ".NET Microservices Boilerplate Template built with .NET 7.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: ".NET Microservices Boilerplate Template built with .NET 8.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: ".NET Microservices Boilerplate Template built with .NET 8.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13T15:51:03+02:00
-lastmod: 2023-05-13T15:51:03+02:00
+lastmod: 2024-02-29T19:44:03+02:00
 draft: false
 images: []
 menu:

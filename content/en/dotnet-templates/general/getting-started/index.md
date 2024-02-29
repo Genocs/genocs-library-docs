@@ -3,7 +3,7 @@ title: "Getting Started 🚀"
 description: "Let's get started with the .NET WebApi Boilerplate!"
 lead: "Let's get started with the .NET WebApi Boilerplate!"
 date: 2021-08-30T00:59:34+05:30
-lastmod: 2023-04-08T15:32:05+05:30
+lastmod: 2024-02-29T19:44:05+05:30
 draft: false
 images: []
 menu:
@@ -35,7 +35,7 @@ To get started with this Boilerplate, here are the available options.
 
 Before creating your first Genocs Library solution, you should ensure that your local machine has:
 
-- **.NET 7** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+- **.NET 8** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 - **NodeJS (16+)** You can find the download [here](https://nodejs.org/en/download).
 
 ### Installation

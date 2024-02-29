@@ -3,7 +3,7 @@ title: "Overview"
 description: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 lead: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2023-11-25 14:17:27+02:00
+lastmod: 2024-02-29T19:44:27+02:00
 draft: false
 images: []
 menu:
@@ -26,7 +26,7 @@ Genocs Library is a starting point for your next `.NET Microservices library` th
 
 ## Goals
 
-The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET 7 microservice cloud agnostic solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
+The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET 8 microservice cloud agnostic solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
 
 ## Features
 
@@ -119,7 +119,7 @@ OR
 genocs api n Genocs.Starter
 ```
 
-This will create a new .NET 7 WebAPI solution for you using the Genocs Templates.
+This will create a new .NET 8 WebAPI solution for you using the Genocs Templates.
 For further steps and details, [Read the Getting Started Guide](https://genocs-blog.netlify.app/dotnet-templates/general/getting-started/)
 
 #### Update
@@ -210,7 +210,7 @@ For further steps and details, [Read the Getting Started Guide](https://genocs-b
 
 ## Containerization
 
-The API project, being .NET 7, it is configured to have built-in support for containerization. That means, you really don't need a Dockerfile to containerize the webapi.
+The API project, being .NET 8, it is configured to have built-in support for containerization. That means, you really don't need a Dockerfile to containerize the webapi.
 
 To build a docker image, all you have to do is, ensure that docker-desktop or docker instance is running. And run the following command at the root of the solution.
 

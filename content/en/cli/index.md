@@ -2,7 +2,7 @@
 title: "CLI"
 description: "The genocs CLI (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run  applications. It provides a unified experience across different platforms, allowing developers to create cross-platform applications with ease. With its extensive set of commands, the .NET CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-05-13T15:40:19+02:00
+lastmod: 2024-02-29T19:44:19+02:00
 draft: false
 images: []
 ---
@@ -21,7 +21,7 @@ Genocs tool is based on Microsoft - dotnet tools. Here where you can find the of
 
 ## Supported runtime
 
-Genocs CLI can be used on both .NET 6 or .NET 7.
+Genocs CLI can be used on both .NET 8.
 
 ---
 
