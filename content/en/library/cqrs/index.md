@@ -11,7 +11,7 @@ menu:
     identifier: "cqrs"
     name: "CQRS"
     parent: "library"
-weight: 3
+weight: 4
 toc: true
 ---
 

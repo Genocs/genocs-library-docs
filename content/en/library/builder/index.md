@@ -29,7 +29,39 @@ dotnet add package Genocs.Core
 
 Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` that will get register the required services.
 
-``` cs
+This is what you need to do in the `Program.cs` file.
+
+``` c#
+// Create a new WebApplication
+var builder = WebApplication.CreateBuilder(args);
+
+// Get the services
+var services = builder.Services;
+
+// Setup the builder
+services.AddGenocs(builder.Configuration);
+```
+
+
+## Example
+
+This is an example of how to setup the builder in the `Program.cs` file along with some other services.
+
+``` c#
+using Genocs.Core.Builders;
+using Genocs.Core.Demo.WebApi.Infrastructure.Extensions;
+using Genocs.Core.Demo.WebApi.Options;
+using Genocs.Logging;
+using Genocs.Persistence.MongoDb.Extensions;
+using Genocs.Secrets.AzureKeyVault;
+using Genocs.Tracing;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using Serilog;
+using Serilog.Events;
+using System.Reflection;
+using System.Text.Json.Serialization;
+
+// Setup the logger
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
@@ -38,30 +70,39 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateLogger();
 
+// Create a new WebApplication
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host
-        .UseLogging();
+        .UseLogging() // Use Serilog
+        .UseAzureKeyVault(); // Use Azure Key Vault
 
-// add services to DI container
+// Get the services
 var services = builder.Services;
 
+// Setup the builder
 services
-    .AddGenocs(builder.Configuration);
+    .AddGenocs(builder.Configuration) // Add Genocs
+    .AddOpenTelemetry() // Add OpenTelemetry
+    .AddMongoFast() // Add MongoDb
+    .RegisterMongoRepositories(Assembly.GetExecutingAssembly()) // Register MongoDb Repositories
+    .AddApplicationServices() // Add Application Services
+    .Build(); // Build the services
 
-```
-
-Add the required services to the DI container.
-
-``` cs
-services.AddCors();
+services.AddCors(); // Add Cors
 services.AddControllers().AddJsonOptions(x =>
 {
-    // serialize enums as strings in api responses (e.g. Role)
+    // serialize Enums as strings in api responses (e.g. Role)
     x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 
+// Add health checks
 services.AddHealthChecks();
+
+
+var settings = new SecretSettings();
+builder.Configuration.GetSection(SecretSettings.Position).Bind(settings);
+services.AddSingleton(settings);
 
 services.Configure<HealthCheckPublisherOptions>(options =>
 {
@@ -73,15 +114,13 @@ services.Configure<HealthCheckPublisherOptions>(options =>
 services.AddEndpointsApiExplorer();
 services.AddSwaggerGen();
 
+// Add the options
 services.AddOptions();
-```
 
-Then, build, setup use components and run the Application.
-
-``` cs
+// Build the application
 var app = builder.Build();
 
-// Enable middleware to serve generated Swagger as a JSON endpoint.
+// Configure the api documentation (Swagger and SwaggerUI only in Development environment)
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -95,6 +134,7 @@ app.UseCors(x => x
     .AllowAnyHeader()
     .AllowCredentials());
 
+
 app.UseHttpsRedirection();
 
 app.UseRouting();
@@ -103,18 +143,20 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Map the health checks
 app.MapHealthChecks("/hc");
 
+// Run the application
 app.Run();
-```
-
-Close the log as the last action.
-
-``` c#
 
 // Close the log and flush all the events in the buffer.
 Log.CloseAndFlush();
 ```
+
+## Console
+
+{{< img src="service_console.png" >}}
+
 
 ## Options
 
@@ -134,10 +176,12 @@ Log.CloseAndFlush();
 
 **appsettings.json**
 
+Use the following settings in the `appsettings.json` file according to your needs.
+
 ``` json
   "app": {
     "name": "Service Name",
-    "service": "name-servcice",
+    "service": "service-name",
     "instance": "000001",
     "version": "v1.0",
     "displayBanner": true,

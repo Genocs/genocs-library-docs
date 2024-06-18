@@ -24,9 +24,23 @@ dotnet add package Genocs.Auth
 ## Dependencies
 
 - Genocs.Core
-- Genocs.Persistence.Redis
+- Genocs.Security
 
 ## Usage
+
+There are three different ways you can to create the access tokens:
+
+- Using a certificate.
+- Using a secret key.
+- Using a OpenId external provider.
+
+Using a certificate is the most secure way to create the access tokens. The certificate can be stored in the file system or in the Azure Key Vault.
+
+Using a secret key is the simplest way to create the access tokens. The secret key is stored in the appsettings.json file.
+
+Using a OpenId external provider is the most flexible way to create the access tokens. The OpenId provider can be configured in the appsettings.json file.
+
+## JWT authentication with CERTIFICATE
 
 Extend `IGenocsBuilder` with `AddJwt()` that will register the required services.
 
@@ -39,6 +53,38 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
     return builder;
 }
 ```
+
+## JWT authentication with RSA Private key
+
+Extend `IGenocsBuilder` with `AddPrivateKeyJwt()` that will register the required services.
+
+``` cs
+public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
+{
+    builder.AddPrivateKeyJwt()
+    // Other services.
+
+    return builder;
+}
+```
+
+
+## JWT authentication with OpenId provider
+
+OpenId official web page: [https://openid.net/](https://openid.net/)
+
+Extend `IGenocsBuilder` with `AddOpenIdJwt()` that will register the required services.
+
+``` cs
+public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
+{
+    builder.AddOpenIdJwt()
+    // Other services.
+
+    return builder;
+}
+```
+
 
 Then, invoke `UseAuthentication()` extension from `IApplicationBuilder`.
 
@@ -81,11 +127,20 @@ To blacklist and deactivate the access tokens, use `IAccessTokenService` and inv
 
 ## Options
 
+The default section name for the JWT settings is `jwt`. The following options are available: 
+
+`enabled` - if true then the JWT authentication is enabled.
+
+`allowAnonymousEndpoints` - if true then the JWT authentication is disabled for the endpoints with the AllowAnonymous attribute.
+
 `certificate` - certificate used to issue or just validate the tokens (including private key or just the public one).
+
+`algorithm` - the algorithm used to sign the tokens.
+
+`issuer` - a party signing the tokens.
 
 `secretKey` - a secret key used to create the access tokens (instead of using the certificate).
 
-`issuer` - a party signing the tokens.
 
 `expiry` - how long the token will remain valid.
 
@@ -101,17 +156,81 @@ To blacklist and deactivate the access tokens, use `IAccessTokenService` and inv
 
 ``` json
 "jwt": {
+  "enabled": true,
+  "allowAnonymousEndpoints": [
+    "/api/health",
+    "/api/health/ready",
+    "/api/health/live",
+    "/api/health/alive",
+    "/api/health/healthz",
+    "/api/health/healthz/ready",
+    "/api/health/healthz/live",
+    "/api/health/healthz/alive"
+  ],
   "certificate": {
     "location": "certs/localhost.pfx",
     "password": "test",
     "rawData": ""
   },
-  "secretKey": "secret,
+  "algorithm": "",
   "issuer": "genocs-auth",
+  "issuerSigningKey": "genocs-auth",
+  "secretKey": "secret",
   "validIssuer": "genocs-auth",
-  "validateAudience": false,
+  "authority": "",
+  "audience": "",
+  "challenge" : "Bearer",
+  "metadataAddress" : "/.well-known/openid-configuration",
+  "saveToken": true,
+  "requireAudience": true,
+  "requireHttpsMetadata": true,
+  "requireExpirationTime": true,
+  "requireSignedTokens": true,
+  "expiryMinutes": 0,
+  "expiry": "01:00:00",
+  "validAudience": null,
+  "validAudiences": null,
+  "validIssuer": null,
+  "validIssuers" : null,
+  "validateActor" : null,
+  "validateAudience" : true,
+  "validateIssuer" : true,
+  "validateLifetime" : true,
+  "validateTokenReplay" : null,
+  "validateIssuerSigningKey" : null,
+  "refreshOnIssuerKeyNotFound" : true,
+  "includeErrorDetails" : true,
+  "authenticationType" : null,
+  "nameClaimType" : null,
+  "roleClaimType" : null,
+}
+```
+
+
+
+
+
+
+
+
+
+### Default settings
+
+Default settings for some variable has bee overwritten with the following configuration.
+
+``` json
+"jwt": {
+  "challenge": "Bearer",
+  "metadataAddress": "/.well-known/openid-configuration",
+  "saveToken": true,
+  "requireAudience": true,
+  "requireHttpsMetadata": true,
+  "requireExpirationTime": true,
+  "requireSignedTokens": true,
+  "validateAudience": true,
   "validateIssuer": true,
   "validateLifetime": true,
-  "expiry": "01:00:00"
+  "refreshOnIssuerKeyNotFound": true,
+  "includeErrorDetails": true,
 }
 ```
