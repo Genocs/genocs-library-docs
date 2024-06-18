@@ -1,3 +1,4 @@
+<!-- 
 <section class="section section-sm bg-light" style="padding: 0px;">
   <div
     style="padding-left: 20px;padding-right: 20px;padding-bottom: 10px;margin-bottom: 20px;padding-top: 20px;margin-top: 20px;">
@@ -14,6 +15,17 @@
     </iframe>
 
 </section>
+-->
+
+<section class="section section-sm bg-light" style="padding: 0px;">
+  {{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") -}}
+  <div style="padding-left: 20px;padding-right: 20px;padding-bottom: 10px;margin-bottom: 20px;" class="page-links">
+    <h3>Contents On this page</h3>
+    {{ .TableOfContents }}
+  </div>
+  {{ end -}}
+</section>
+
 <section class="section section-sm bg-light" style="padding: 0px;">
   <div
     style="padding-left: 20px;padding-right: 20px;padding-bottom: 10px;margin-bottom: 20px;padding-top: 20px;margin-top: 20px;">
@@ -24,12 +36,4 @@
     <a class="btn btn-primary btn-lg px-4 mb-2" style="font-size: medium;"
       href="https://opencollective.com/genocs/contribute" target="_blank" role="button">Sponsor 😍</a>
   </div>
-</section>
-<section class="section section-sm bg-light" style="padding: 0px;">
-  {{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") -}}
-  <div style="padding-left: 20px;padding-right: 20px;padding-bottom: 10px;margin-bottom: 20px;" class="page-links">
-    <h3>Contents On this page</h3>
-    {{ .TableOfContents }}
-  </div>
-  {{ end -}}
 </section>
