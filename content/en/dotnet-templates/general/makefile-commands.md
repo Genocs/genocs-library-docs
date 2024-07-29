@@ -77,7 +77,7 @@ The terraform scripts are available at the `./terraform` folder.
 - Install Terraform
 - Install & Configure AWS CLI profiles to allow terraform to provision resources for you. there is a video about [AWS Credentials Management](https://www.youtube.com/watch?v=oY0-1mj4oCo&ab_channel=Genocs).
 
-The Genocs Library webapi boilerplate comes with built-in terraform scripts to provision docker containers with your webapi image to aws infrastructure with just one line of command!
+The Genocs Library webapi template comes with built-in terraform scripts to provision docker containers with your webapi image to aws infrastructure with just one line of command!
 
 Your images will be deployed to an ECS Container (FARGATE) and an RDS instance with postgresql engine would be spun up, to which your webapi container will connect to!
 

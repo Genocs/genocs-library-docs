@@ -60,10 +60,10 @@ lqipWidth = "20x"
 smallLimit = "30"
 
 # Footer
-footer = "Developed & Maintained by <a href=\"https://www.genocs.com/\">Nocco Giovanni Emanuele</a>"
+footer = "Developed & Maintained by <a href=\"https://www.genocs.com/\">Genocs</a>"
 
 # Feed
-copyRight = "Copyright (c) 2023 Genocs"
+copyRight = "Copyright (c) 2024 Genocs"
 
 # Alert
 alert = true

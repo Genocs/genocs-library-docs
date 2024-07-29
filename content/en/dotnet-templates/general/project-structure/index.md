@@ -1,7 +1,7 @@
 ---
 title: "Project Structure"
-description: "Here is how the .NET WebApi Boilerplate is structured."
-lead: "Here is how the .NET WebApi Boilerplate is structured."
+description: "Here is how the .NET Microservice Template is structured."
+lead: "Here is how the .NET Microservice Template is structured."
 date: 2023-05-13 09:17:27+02:00
 lastmod: 2023-05-13 09:17:27+02:00
 draft: false
@@ -15,7 +15,7 @@ weight: 6
 toc: true
 ---
 
-Genocs Library's .NET WebApi Boilerplate is based on Clean Architecture. In other words, Onion / Hexagonal Architecture. [Read about the advantages and principles of Onion Architecture here →](https://blog.genos.com/blog/onion-architecture-in-aspnet-core/)
+Genocs Library's .NET Microservice Template is based on Clean Architecture. In other words, Onion / Hexagonal Architecture. [Read about the advantages and principles of Onion Architecture here →](https://blog.genos.com/blog/onion-architecture-in-aspnet-core/)
 
 ## General Structure
 

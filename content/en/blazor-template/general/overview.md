@@ -18,10 +18,10 @@ toc: true
 
 ## Goals
 
-The goal of this repository is to help developers / companies kickstart their Web Application Development with a pre-built Blazor WebAssembly Boilerplate that includes several much needed components and features.
+The goal of this repository is to help developers / companies kickstart their Web Application Development with a pre-built Blazor WebAssembly Template that includes several much needed components and features.
 
 > Note that this is a frontend / client application only! The backend for this application is available in a separate repository.
-> - Find Genocs Library's .NET 8 Web API Boilerplate here - https://github.com/Genocs/dotnet-templates
+> - Find Genocs Library's .NET 8 Web API Template here - https://github.com/Genocs/dotnet-templates
 
 ## Prerequisites
 

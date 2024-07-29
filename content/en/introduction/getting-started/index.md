@@ -27,7 +27,7 @@ hours of development and research time for developers and teams.</p>
 
 ## Solution
 
-<p><b>Genocs Library</b> offers library framework and cli and templates with latest packages and services that your projects will ever need. We intend to provide Clean and well structured Boilerplates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
+<p><b>Genocs Library</b> offers library framework and cli and templates with latest packages and services that your projects will ever need. We intend to provide Clean and well structured Templates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
 </p>
 <p class="code-green">Most importantly, <b>Genocs Library</b> is completely FREE to use!</p>
 
@@ -56,7 +56,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet">microservices</div>
             </div>
           <p>Coming soon.</p>
-          <p><a href="https://github.com/Genocs/genocs-library">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-microservices-boilerplate/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/genocs-library">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-microservices-template/">Read Getting Started Guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
@@ -80,7 +80,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet tablet-secondary">blazor webassembly</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Clean Architecture Boilerplate Template for .NET 8.0 Blazor WebAssembly built for Genocs-Api WebAPI with MudBlazor Components.</p>
+          <p>Clean Architecture Template Template for .NET 8.0 Blazor WebAssembly built for Genocs-Api WebAPI with MudBlazor Components.</p>
           <p><a href="https://github.com/Genocs/genocs-library-docs">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read Getting Started Guide</a></p>
         </div>
       </div>

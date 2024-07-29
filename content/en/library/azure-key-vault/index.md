@@ -18,7 +18,7 @@ toc: true
 ### Overview
 This package is used to configure Azure Key Vault in the application. It uses the `Microsoft.Extensions.Configuration.AzureKeyVault` package to configure the Azure Key Vault.
 
-The only thing you need to do is to add the package and set the configuration in the `appsettings.json` file. you can use User Assigned Managed Identity or System Assigned Managed Identity to access the Azure Key Vault.
+The only thing you need to do is to add the package and set the configuration in the `appsettings.json` file. You can use *User Assigned Managed Identity* or *System Assigned Managed Identity* to access the Azure Key Vault, as well as you can setup RBAC long with Azure EntraID.
 
 For more information about Azure Key Vault, please visit the [Azure Key Vault documentation](https://docs.microsoft.com/en-us/azure/key-vault/), or you can check on the personal blog how to [configure Azure Key Vault in the application](https://genocs.github.io/2022/03/19/azurekeyvault.html).
 
@@ -46,9 +46,11 @@ builder.Host
 
 `enabled` - Enable or disable the Azure Key Vault configuration. Default is false
 
-`name` - sets the key vault name to be used. If the key vault url is `https://kyvault.vault.azure.net/` then the name is `kyvault`.
+`name` - Sets the key vault name to be used. If the key vault url is `https://kyvault.vault.azure.net/` then the name is `kyvault`.
 
 `managedIdentityId` - sets the managed identity id to be used. You can find the managed identity id in the Azure portal. The managed identity id is the object id of the managed identity.
+
+**NOTE:** In case of RBAC, you don't need to set the managed identity id.
 
 
 **appsettings.json**

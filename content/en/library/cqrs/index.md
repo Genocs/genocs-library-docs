@@ -35,8 +35,8 @@ Adds an ability to create and process commands in the sense of [CQRS](https://ma
 
 Implement `ICommand` (marker) interface in the selected class. Since the command represents the user’s intention you should follow the convention:
 
-- keep all the commands immutable
-- name of your commands should be imperative
+- Keep all the commands immutable
+- Name of your commands should be imperative
 
 ``` cs
 public class CreateAccount : ICommand

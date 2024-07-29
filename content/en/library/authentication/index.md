@@ -85,6 +85,38 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 }
 ```
 
+Add the use of the authentication middleware in the `ConfigureServices` method of the `Startup` class.
+``` cs
+public static IGenocsBuilder UseGenocs(this IGenocsBuilder builder)
+{
+    builder.UseOpenIdJwt()
+    // Other services.
+
+    return builder;
+}
+```
+
+Build an authentication middleware that will validate the access tokens.
+``` cs
+public static IApplicationBuilder UseFirebaseAuthentication(this IApplicationBuilder builder)
+{
+    return builder.UseMiddleware<FirebaseAuthenticationMiddleware>();
+}
+```
+
+Add the use of the authentication middleware in the `Configure` method of the `Startup` class.
+``` cs
+app.UseFirebaseAuthentication();
+```
+
+**NOTE**: Please, make sure that the `System.IdentityModel.Tokens.Jwt` package is NOT installed in the project. If it is, remove it from the project file.
+
+``` cs
+    <ItemGroup>
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
+    </ItemGroup>
+``` cs
+
 
 Then, invoke `UseAuthentication()` extension from `IApplicationBuilder`.
 

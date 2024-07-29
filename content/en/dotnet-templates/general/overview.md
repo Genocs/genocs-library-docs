@@ -21,8 +21,8 @@ toc: true
 
 Genocs Library is a starting point for your next `.NET Microservices library` that incorporates the most essential packages and features your projects will ever need including out of the box Multi-Tenancy support.
 
-> As the name suggests, this is an API / Server Boilerplate. You can find other Client Boilerplates that consume this API under `@genocs-library` handle.
-> - Find `Blazor WebAssembly Boilerplate` here - https://github.com/Genocs/genocs-library-blazor-template
+> As the name suggests, this is an API / Server Template. You can find other Client Templates that consume this API under `@genocs-library` handle.
+> - Find `Blazor WebAssembly Template` here - https://github.com/Genocs/genocs-library-blazor-template
 
 ## Goals
 
@@ -70,15 +70,15 @@ The goal of this repository is to provide a complete and feature-rich starting p
 
 ## Documentation
 
-Read Documentation related to this Boilerplate here - https://genocs-blog.netlify.app/dotnet-templates/
+Read Documentation related to this Template here - https://genocs-blog.netlify.app/dotnet-templates/
 > Feel free to contribute to the Documentation Repository - https://github.com/Genocs/genocs-library-docs
 
 ## Getting Started
 
-To get started with this Boilerplate, here are the available options.
+To get started with this Template, here are the available options.
 
-- Install using the `Genocs CLI` tool. Use this for release versions of the Boilerplate only.
-- Fork the Repository. Use this if you want to always keep your version of the Boilerplate up-to date with the latest changes.
+- Install using the `Genocs CLI` tool. Use this for release versions of the Template only.
+- Fork the Repository. Use this if you want to always keep your version of the Template up-to date with the latest changes.
 
 > Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://genocs-blog.netlify.app/dotnet-templates/general/development-environment/)
 
@@ -102,8 +102,8 @@ genocs install
 
 This install the `Genocs CLI` tools and the associated Templates. You are now ready to create your first project!
 
-#### Genocs .NET WebAPI Boilerplate
-Here's how you would create a Solution using the Genocs .NET WebAPI Boilerplate.
+#### Genocs .NET WebAPI Template
+Here's how you would create a Solution using the Genocs .NET WebAPI Template.
 
 Simply navigate to a new directory (wherever you want to place your new solution), and open up Command Prompt at the opened directory.
 
@@ -239,7 +239,7 @@ There are also examples for mysql & mssql variations of the Genocs webapi. You c
 
 ## Cloud Deployment with Terraform + AWS ECS
 
-This is something you wont get to see very often with boilerplates. But, we do support cloud deployment to AWS using terraform. The terraform files are available at the `./terraform` folder.
+This is something you wont get to see very often with templates. But, we do support cloud deployment to AWS using terraform. The terraform files are available at the `./terraform` folder.
 
 ### Prerequisites
 

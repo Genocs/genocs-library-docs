@@ -62,13 +62,7 @@ using System.Reflection;
 using System.Text.Json.Serialization;
 
 // Setup the logger
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
-    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-    .MinimumLevel.Override("MassTransit", LogEventLevel.Information)
-    .Enrich.FromLogContext()
-    .WriteTo.Console()
-    .CreateLogger();
+StaticLogger.EnsureInitialized();
 
 // Create a new WebApplication
 var builder = WebApplication.CreateBuilder(args);

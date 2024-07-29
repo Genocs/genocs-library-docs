@@ -17,13 +17,13 @@ toc: true
 
 So, you have already added new entities into the Domain project, modified an existing entity or want to recreate all the pre-generated migrations? Here is how to proceed.
 
-Note that currently, Genocs Library's Web API supports the following major DB Providers,
+Note that currently, Genocs Library's Web API supports the following major DB Providers:
 1. MSSQL
 2. MySQL
 3. PostgreSQL
 4. Oracle
 
-Download links to setup the supported Database providers are mentioned here - https://genocs-blog.netlify.app//dotnet-templates/general/development-environment/
+Download links to setup the supported Database providers are mentioned here - https://genocs-blog.netlify.app/dotnet-templates/general/development-environment/
 
 To maintain scalability, the database migrations of each of these DB Providers are kept in separate class library projects namely
 1. Migrators/Migrators.MSSQL
@@ -53,9 +53,9 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 
 ``` json
 {
-  "DatabaseSettings": {
-    "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True",
-    "DBProvider": "mysql"
+  "DatabaseSettings": { 
+    "DBProvider": "mysql",
+    "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True"
   }
 }
 ```
@@ -63,9 +63,9 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 
 ``` json
 {
-"Storage": {
-  "StorageProvider": "mysql",
-  "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True"
+  "Storage": {
+    "StorageProvider": "mysql",
+    "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True"
   }
 }
 ```
@@ -79,7 +79,7 @@ Once your connection strings are all updated in the mentioned configuration file
 
 As mentioned earlier, since we have 2 Db Contexts defined in our application, we will have seperate commands for each of the available context classes.
 
-The generic command to add migrations over the **Application Db Context** goes like this,
+The generic command to add migrations over the **Application Db Context** goes like this:
 
 ``` bash
 dotnet ef migrations add <CommitMessage> --project .././Migrators/Migrators.<DBProvider>/ --context ApplicationDbContext -o Migrations/Application
@@ -89,7 +89,7 @@ where
 - `<CommitMessage>` should be replaced by an appropriate name that describes the Migration
 - `<DBProvider>` should be replaced by your selected Database Provider (`MSSQL`, `MySQL`, `Oracle` or `PostgreSQL`)
 
-The generic command to add migrations over the **Tenant Db Context** goes like this,
+The generic command to add migrations over the **Tenant Db Context** goes like this:
 
 ``` bash
 dotnet ef migrations add <CommitMessage> --project .././Migrators/Migrators.<DBProvider>/ --context TenantDbContext -o Migrations/Tenant
@@ -117,4 +117,4 @@ dotnet ef migrations add ModifiedTenantTable --project .././Migrators/Migrators.
 
 That's almost it. Once the process is completed you would be able see new Migration cs files that represent your new additions / modifications at the table level added to the respective Migrator project.
 
-You do not have to do anything extra to apply the migrations to your database. The application does it for you during the startup. Cheers!
+You do not have to do anything extra to apply the migrations to your database. The application does it for you during the startup.

@@ -1,6 +1,6 @@
 ---
 title : "Monitoring"
-description: "Genocs Library is a collection of Enterprise Level Libraries and Boilerplates for Modern Web Applications that gets you started with premium application development in no-time!"
+description: "Genocs Library is a collection of Enterprise Level Libraries and Templates for Modern Web Applications that gets you started with premium application development in no-time!"
 lead: ""
 date: 2023-11-29T21:00:19+02:00
 lastmod: 2023-11-29T21:00:19+02:00

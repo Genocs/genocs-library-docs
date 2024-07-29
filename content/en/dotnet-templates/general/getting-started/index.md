@@ -1,7 +1,7 @@
 ---
 title: "Getting Started 🚀"
-description: "Let's get started with the .NET WebApi Boilerplate!"
-lead: "Let's get started with the .NET WebApi Boilerplate!"
+description: "Let's get started with the .NET WebApi Template!"
+lead: "Let's get started with the .NET WebApi Template!"
 date: 2021-08-30T00:59:34+05:30
 lastmod: 2024-02-29T19:44:05+05:30
 draft: false
@@ -15,17 +15,17 @@ weight: 3
 toc: true
 ---
 
-  <img src="https://raw.githubusercontent.com/Genocs/genocs-library-docs/main/media/genocs-dotnet-7-webapi-boilerplate-banner.png" />
+  <img src="https://raw.githubusercontent.com/Genocs/genocs-library-docs/main/media/genocs-dotnet-7-webapi-template-banner.png" />
   <p>
 
 Firstly, make sure that you have already setup your development environment that runs the prerequisite tools and SDKs. Refer [Development Environment](/dotnet-templates/general/development-environment/) for details.
 
-This guide will take you right from strating up your own .NET Web API Project using `Genocs Library .NET WebAPI Boilerplate` package / repository to testing the API using the provided Postman/ThunderClient Collection!
+This guide will take you right from strating up your own .NET Web API Project using `Genocs Library .NET WebAPI Template` package / repository to testing the API using the provided Postman/ThunderClient Collection!
 
-To get started with this Boilerplate, here are the available options.
+To get started with this Template, here are the available options.
 
-- Install using the `Genocs CLI` tool. Use this for release versions of the Boilerplate only.
-- Fork the Repository. Use this if you want to always keep your version of the Boilerplate up-to date with the latest changes.
+- Install using the `Genocs CLI` tool. Use this for release versions of the Template only.
+- Fork the Repository. Use this if you want to always keep your version of the Template up-to date with the latest changes.
 
 > Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](https://genocs-blog.netlify.app/dotnet-templates/general/development-environment/)
 
@@ -94,9 +94,9 @@ Here are the folders and files created for you.
 
 ### Alternatively..
 
-> Note that this is valid only if you have installed the NuGet package of this Boilerplate.
+> Note that this is valid only if you have installed the NuGet package of this Template.
 
-When you installed the NuGet package, there is also an entry that has been created into your Visual Studio Template for Genocs Library's .NET WebAPI Boilerplate. If you find it easier to work with Visual Studio rather than CLI Commands to generate new solutions, you are free to do so.
+When you installed the NuGet package, there is also an entry that has been created into your Visual Studio Template for Genocs Library's .NET WebAPI Template. If you find it easier to work with Visual Studio rather than CLI Commands to generate new solutions, you are free to do so.
 
 Simply open up Visual Studio 2022 and Click on Create New Project.
 

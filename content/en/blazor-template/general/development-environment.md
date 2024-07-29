@@ -1,7 +1,7 @@
 ---
 title: "Development Environment"
-description: "Setting up the Development Environment for the Blazor WebAssembly Boilerplate"
-lead: "Let's get started with setting up the Development Environment for Blazor WebAssembly Boilerplate Development!"
+description: "Setting up the Development Environment for the Blazor WebAssembly Template"
+lead: "Let's get started with setting up the Development Environment for Blazor WebAssembly Template Development!"
 date: 2023-05-13T15:40:19+02:00
 lastmod: 2024-02-29T19:44:00+02:00
 draft: false
@@ -27,7 +27,7 @@ Ensure that you have the latest version of the SDK available - [Download from Mi
 
 ## IDE
 
-Visual Studio Code IDE is the recommended IDE to use for Genocs Library's Blazor WebAssembly Boilerplate Project Development. If you are not already using this IDE, consider switching to it. It's definitely worth it! (_Fun Fact : I recently switched from Visual Studio 2019 Community to Visual Studio Code and it's been awesome!_)
+Visual Studio Code IDE is the recommended IDE to use for Genocs Library's Blazor WebAssembly Template Project Development. If you are not already using this IDE, consider switching to it. It's definitely worth it! (_Fun Fact : I recently switched from Visual Studio 2019 Community to Visual Studio Code and it's been awesome!_)
 
 However, you are always free to use your choice of IDEs as well.
 

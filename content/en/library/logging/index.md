@@ -39,13 +39,7 @@ dotnet add package Genocs.Logging
 Extend Program.cs -> `CreateBuilder()` with `UseLogging()` that will add the required services and configure `ILogger` available in ASP.NET Core framework.
 
 ``` cs
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
-    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-    .MinimumLevel.Override("MassTransit", LogEventLevel.Information)
-    .Enrich.FromLogContext()
-    .WriteTo.Console()
-    .CreateLogger();
+StaticLogger.EnsureInitialized();
 
 var builder = WebApplication.CreateBuilder(args);
 
