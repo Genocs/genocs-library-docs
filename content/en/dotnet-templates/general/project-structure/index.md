@@ -27,7 +27,7 @@ This means that the entire solution is built in such a way that it can be scaled
 │   ├── Shared.csproj
 │   ├── Domain.csproj
 |   ├── Infrastructure.csproj
-|   ├── __application__.WebApi.csproj
+|   ├── WebApi.csproj
 ```
 
 The idea is to build a very loosely coupled architecture following best practices and packages. Let's see in brief what responsibilities each of these projects handle.

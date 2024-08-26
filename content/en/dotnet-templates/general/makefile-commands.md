@@ -3,7 +3,7 @@ title: "MakeFile Commands"
 description: "Here are some important MakeFile Commands that are to be used along with Genocs Library CLI."
 lead: "Here are some important MakeFile Commands that are to be used along with Genocs Library CLI."
 date: 2023-05-13 10:23:13+02:00
-lastmod: 2024-02-29T19:44:13+02:00
+lastmod: 2024-08-21 14:50:50+02:00
 draft: false
 images: []
 menu:
@@ -17,7 +17,7 @@ toc: true
 
 Makefile is included within this solution to give a better developer experience. Here are the makefile commands available for this solution.
 
-`Note the the makefile commands have to be executed at the root of the solution where Makefile file exists.`
+**Note: The makefile commands have to be executed at the root of the solution where Makefile file exists.**
 
 ## Build
 ``` bash
@@ -67,7 +67,7 @@ Similar to the previous command, you can build and push docker images directly t
 ``` bash
 make publish-to-hub
 ```
-Note : Currently, the docker repository is set to mine. You can modify this to yours in the Makefile.
+Note: Currently, the docker repository is set to mine. You can modify this to yours in the Makefile.
 
 ### Terraform & AWS Deployments
 
@@ -145,17 +145,7 @@ The below commands destroys all the resources created, related to Genocs Library
 make td
 ```
 
-## Migrations
 
-This command is to be executed from the Host Directory of the project.
-
-``` bash
-dotnet ef migrations add <CommitMessage> --project .././Migrators/Migrators.<Provider>/ --context ApplicationDbContext -o Migrations/Application
-```
-CommitMessage : Enter a commit message here.
-Provider : Enter the available DB Provider name. MSSQL , MySQL , PostgreSQL , Oracle
-
-While adding migrations for a particular provider, ensure that you have configured a valid connection string to the provider's database at both `src/Host/Configurations/database.json` and `src/Host/Configurations/hangfire.json`.
 
 ## Docker Compose
 

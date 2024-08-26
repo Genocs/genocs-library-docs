@@ -3,7 +3,7 @@ title: "Overview"
 description: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 lead: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2024-02-29T19:44:27+02:00
+lastmod: 2024-08-21 14:50:50+02:00
 draft: false
 images: []
 menu:
@@ -40,7 +40,7 @@ The goal of this repository is to provide a complete and feature-rich starting p
   - [x] Create Tenants with Multi Database / Shared Database Support
   - [x] Activate / Deactivate Tenants on Demand
   - [x] Upgrade Subscription of Tenants - Add More Validity Months to each tenant!
-- [x] Supports MySQL, MSSQL, Oracle & PostgreSQL!
+- [x] Supports MSSQL, MySQL, Oracle,PostgreSQL, SqLite!
 
 <details>
   <summary>Click to See More!</summary>
@@ -88,7 +88,7 @@ To get started with this Template, here are the available options.
 
 Before creating your first solution, you should ensure that your local machine has:
 
-- **.NET 7** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/7.0).
+- **.NET 8** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
 - **NodeJS (16+)** You can find the download [here](https://nodejs.org/en/download).
 
 #### Installation

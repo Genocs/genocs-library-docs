@@ -1,9 +1,9 @@
 ---
 title: "Configurations"
-description: "Understanding Configurations in Genocs Library's Web API."
-lead: "Understanding Configurations in Genocs Library's Web API."
+description: "Understanding Configurations in Genocs Library's Microservice Template."
+lead: "Understanding Configurations in Genocs Library's Microservice Template."
 date: 2023-05-13 10:26:50+02:00
-lastmod: 2023-05-13 10:26:50+02:00
+lastmod: 2024-08-21 14:50:50+02:00
 draft: false
 images: []
 menu:
@@ -14,7 +14,13 @@ menu:
 weight: 8
 toc: true
 ---
-Within the Host boot project there is a folder called "Configurations". where there are all the configuration files, one for each area.
+
+The configuration files are used to manage the application settings. The configuration files are stored in the `Configurations` folder where there are different configuration files for different areas of the application. The `Startup` class is responsible for loading all the configuration files. 
+
+
+>The classic `appsettings.json` configuration file is still available to manage custom parameters.
+
+The configuration folder is located in the Host project.
 
 ## General Structure
 
@@ -36,7 +42,6 @@ Within the Host boot project there is a folder called "Configurations". where th
 |
 ```
 
-> The classic appsettings.json configuration file is still available to manage custom parameters.
 
 The **`Startup` class** inside the folder is responsible for loading all the configuration files described above.
 
@@ -53,6 +58,7 @@ By default, the application uses in-memory cache. To enable Distributed caching 
   }
 }
 ```
+
 ## CORS
 
 Depends on the client consuming the WebAPI.
@@ -66,6 +72,7 @@ Depends on the client consuming the WebAPI.
   }
 }
 ```
+
 ## Database
 
 By default, the dbprovider is set to postgresql. You will also have to change the connection string that is defined in hangfire.json.
@@ -85,11 +92,11 @@ For details about other database providers, [refer this page](http://localhost:1
 
 The outgoing responses can be localized using this. The client would have to pass the following header to receive localized responses.
 
-```
+``` http
 Accept-Language: <local-key>
 ```
 
-Here, the locale-key can be anything like fr,de, it and so on. The default locale is set to english.
+Here, the locale-key can be anything like `fr|de|it` and so on. The default locale is set to english `en`.
 
 ``` json
 {
@@ -152,6 +159,8 @@ We use Ethereal, a fake SMTP Service for mocking email transactions. Don't worry
 ```
 
 ### Security
+
+TODO: Add more details about the security settings.
 
 ``` json
 {
