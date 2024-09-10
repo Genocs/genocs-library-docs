@@ -98,21 +98,21 @@ public class MyClass
 
 ## Options
 
-`enabled` - determines whether reporting is enabled.
+`enabled` - It determines whether reporting is enabled.
 
-`serviceName` - name of the applciation that’s going to be used in Jaeger query engine.
+`serviceName` - The name of the application that’s going to be used in Jaeger query engine.
 
-`udpHost` - host part of the Jaeger endpoint (UDP).
+`udpHost` - The host part of the Jaeger endpoint (UDP).
 
-`udpPort` - port of the Jaeger endpoint (UDP).
+`udpPort` - The port of the Jaeger endpoint (UDP).
 
-`maxPacketSize` - maximum size of the UDP header packet (by default 0). This is not required.
+`maxPacketSize` - Then maximum size of the UDP header packet (by default 0). This is not required.
 
 `sampler` - The allowed values are: const, rate and probabilistic. For more details about sampling check the official Jaeger Docs.
 
-`maxTracesPerSecond` - determines maximum number of reported traces per second. Required only for rate sampler.
+`maxTracesPerSecond` - It determines maximum number of reported traces per second. Required only for rate sampler.
 
-`samplingRate` - determines the percentage of spans to report. Required only for probabilistic sampler.
+`samplingRate` - It determines the percentage of spans to report. Required only for probabilistic sampler.
 
 ## Settings
 

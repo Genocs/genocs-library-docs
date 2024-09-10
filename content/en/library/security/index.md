@@ -40,17 +40,17 @@ public static IWebHostBuilder GetWebHostBuilder(string[] args)
 
 ## Options
 
-`enabled` - determines whether Vault integration is going to be available.
+`enabled` - It determines whether Vault integration is going to be available.
 
-`url` - URL of the Vault service.
+`url` - The URL of the Vault service.
 
-`authType` - authentication type, possible values: token, userpass.
+`authType` - The authentication type, possible values: token, userpass.
 
-`token` - a secret token used to authenticate to Vault, used when authType = token.
+`token` - The secret token used to authenticate to Vault, used when authType = token.
 
-`username` - name of the user used to authenticate to Vault, used when authType = userpass.
+`username` - The name of the user used to authenticate to Vault, used when authType = userpass.
 
-`password` - password of the user used to authenticate to Vault, used when authType = userpass.
+`password` - The password of the user used to authenticate to Vault, used when authType = userpass.
 
 `kv` - KV storage used for loading JSON settings during application startup.
 

@@ -161,26 +161,25 @@ To blacklist and deactivate the access tokens, use `IAccessTokenService` and inv
 
 The default section name for the JWT settings is `jwt`. The following options are available: 
 
-`enabled` - if true then the JWT authentication is enabled.
+`enabled` - If true then the JWT authentication is enabled.
 
-`allowAnonymousEndpoints` - if true then the JWT authentication is disabled for the endpoints with the AllowAnonymous attribute.
+`allowAnonymousEndpoints` - If true then the JWT authentication is disabled for the endpoints with the AllowAnonymous attribute.
 
-`certificate` - certificate used to issue or just validate the tokens (including private key or just the public one).
+`certificate` - Certificate used to issue or just validate the tokens (including private key or just the public one).
 
-`algorithm` - the algorithm used to sign the tokens.
+`algorithm` - The algorithm used to sign the tokens.
 
-`issuer` - a party signing the tokens.
+`issuer` - A party signing the tokens.
 
-`secretKey` - a secret key used to create the access tokens (instead of using the certificate).
+`secretKey` - A secret key used to create the access tokens (instead of using the certificate).
 
+`expiry` - How long the token will remain valid.
 
-`expiry` - how long the token will remain valid.
+`validateLifetime` - If true then the lifetime defined in expiryMinutes will be validated.
 
-`validateLifetime` - if true then the lifetime defined in expiryMinutes will be validated.
+`validAudience` - An audience that can use the access tokens.
 
-`validAudience` - an audience that can use the access tokens.
-
-`validateAudience` - if true then the audience defined in validAudience will be validated.
+`validateAudience` - If true then the audience defined in validAudience will be validated.
 
 ## Settings
 
@@ -237,14 +236,6 @@ The default section name for the JWT settings is `jwt`. The following options ar
   "roleClaimType" : null,
 }
 ```
-
-
-
-
-
-
-
-
 
 ### Default settings
 

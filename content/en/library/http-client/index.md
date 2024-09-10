@@ -68,11 +68,11 @@ public class SomeService
 
 ### Options
 
-`type` - sets the IHttpClient message handler, if none is specified then the default handler will be used, other possible values: consul, fabio.
+`type` - It sets the IHttpClient message handler, if none is specified then the default handler will be used, other possible values: consul, fabio.
 
-`retries` - number of HTTP request retries using an exponential backoff.
+`retries` - The number of HTTP request retries using an exponential backoff.
 
-`services` - dictionary (map) of service_name:service_url values that can be used to invoke the other web services without a need to hardcode the configuration URLs, especially useful when service discovery mechanism or load balancer is available.
+`services` - The dictionary (map) of service_name:service_url values that can be used to invoke the other web services without a need to hardcode the configuration URLs, especially useful when service discovery mechanism or load balancer is available.
 
 **appsettings.json**
 
@@ -124,19 +124,19 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 
 ### Options
 
-`enabled` - determines whether Consul integration is going to be available.
+`enabled` - It determines whether Consul integration is going to be available.
 
-`url` - URL of the Consul service.
+`url` - The URL of the Consul service.
 
-`service` - name of the service group (multiple instances of the same service will use the same service name).
+`service` - The name of the service group (multiple instances of the same service will use the same service name).
 
-`address` - address of the service.
+`address` - The address of the service.
 
-`port` - port under which the service is available.
+`port` - The port under which the service is available.
 
-`pingEnabled` - register health checks from Consul to validate the service availability (if the service will be offline, it will be removed after the pingInterval and removeAfterInterval timeouts).
+`pingEnabled` - Register health checks from Consul to validate the service availability (if the service will be offline, it will be removed after the pingInterval and removeAfterInterval timeouts).
 
-`pingEndpoint` - an endpoint that should be called when performing the healt check by Consul.
+`pingEndpoint` - The endpoint that is called when performing the health check by Consul.
 
 **appsettings.json**
 
@@ -192,11 +192,11 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 
 ### Options
 
-`enabled` - determines whether Fabio integration is going to be available.
+`enabled` - It determines whether Fabio integration is going to be available.
 
-`url` - URL of the Fabio service.
+`url` - The URL of the Fabio service.
 
-`service` - name of the service group used for the Consul registration.
+`service` - the name of the service group used for the Consul registration.
 
 **appsettings.json**
 

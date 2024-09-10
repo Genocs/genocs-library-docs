@@ -37,10 +37,24 @@ dotnet add package Genocs.Secrets.AzureKeyVault
 
 Extend Program.cs -> use WebHostBuilder or HostBuilder to setup the Azure Key Vault configuration.
 
+You can use different ways to setup the Azure Key Vault.
+1. By using Managed Identity (User Assigned Managed Identity or System Assigned Managed Identity)
+2. By using RBAC (Role Based Access Control)
+3. By using Certificate
+
+
+#### Managed Identity or RBAC
 ``` cs
 builder.Host
         .UseAzureKeyVault();
 ```
+
+#### Certificate
+``` cs
+builder.Host
+        .UseAzureKeyVaultWithCertificate();
+```
+
 
 ### Options
 
@@ -48,7 +62,14 @@ builder.Host
 
 `name` - Sets the key vault name to be used. If the key vault url is `https://kyvault.vault.azure.net/` then the name is `kyvault`.
 
-`managedIdentityId` - sets the managed identity id to be used. You can find the managed identity id in the Azure portal. The managed identity id is the object id of the managed identity.
+`managedIdentityId` - Sets the managed identity id to be used. You can find the managed identity id in the Azure portal. The managed identity id is the object id of the managed identity.
+
+`azureADCertThumbprint` - The client id. To be used with Certificate authentication.
+
+`azureADApplicationId` - The Active Directory Application id. To be used with Certificate authentication.
+
+`azureADDirectoryId` - The Azure EntraID tenant Id. To be used with Certificate authentication.
+
 
 **NOTE:** In case of RBAC, you don't need to set the managed identity id.
 
@@ -59,6 +80,9 @@ builder.Host
   "azureKeyVault": {
     "enabled": false,
     "name": "kyvault",
-    "managedIdentityId": "your-managed-identity-id"
+    "managedIdentityId": "your-managed-identity-id",
+    "azureADCertThumbprint": "your-certificate-thumbprint",
+    "azureADApplicationId": "your-application-id",
+    "azureADDirectoryId": "your-directory-id"
   }
 ```

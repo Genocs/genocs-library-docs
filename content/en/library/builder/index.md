@@ -68,15 +68,15 @@ StaticLogger.EnsureInitialized();
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host
-        .UseLogging() // Use Serilog
-        .UseAzureKeyVault(); // Use Azure Key Vault
+        .UseAzureKeyVault() // Use Azure Key Vault
+        .UseLogging(); // Use Serilog
 
 // Get the services
 var services = builder.Services;
 
 // Setup the builder
 services
-    .AddGenocs(builder.Configuration) // Add Genocs
+    .AddGenocs(builder.Configuration) // Setup Genocs builder
     .AddOpenTelemetry() // Add OpenTelemetry
     .AddMongoFast() // Add MongoDb
     .RegisterMongoRepositories(Assembly.GetExecutingAssembly()) // Register MongoDb Repositories
@@ -154,17 +154,17 @@ Log.CloseAndFlush();
 
 ## Options
 
-`name` - the service name.
+`name` - The service name.
 
-`service` - service name used TBW.
+`service` - Service name used TBW.
 
-`instance` - the service instance.
+`instance` - The service instance.
 
-`version` - service version.
+`version` - The service version.
 
-`displayBanner` - if true then the banner is shown into the console.
+`displayBanner` - If true then the banner is shown into the console.
 
-`displayVersion` - if true then the service version is shown into the console. See `version` param.
+`displayVersion` - If true then the service version is shown into the console. See `version` param.
 
 ## Settings
 
