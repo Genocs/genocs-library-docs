@@ -203,7 +203,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 
 The Provider values for other supported DBs are as follows.
 - MSSQL - **mssql**
-- MYSQL - **mssql**
+- MYSQL - **mysql**
 - Oracle - **oracle**
 - PostgreSQL - **postgresql**
 - SQLite - **sqlite**
@@ -211,6 +211,8 @@ The Provider values for other supported DBs are as follows.
 Once your connection strings are all updated in the mentioned configuration files, open up the command terminal on the Host Project's directory and run the following commands.
 
 As mentioned earlier, since we have 2 Db Contexts defined in our application, we will have seperate commands for each of the available context classes.
+
+**Move to the WebAPI project directory and run the following commands.**
 
 The generic command to add migrations over the **Application Db Context** goes like this:
 
