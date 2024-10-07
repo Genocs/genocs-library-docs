@@ -3,7 +3,7 @@ title: "Contributing"
 description: "Contributing to Genocs Library"
 lead: "Contributing to Genocs Library"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-06-25T15:40:19+02:00
+lastmod: 2024-10-07T16:40:19+02:00
 draft: false
 images: []
 menu:
@@ -25,8 +25,8 @@ Currently, you can contribute to:
 - [Deployments](https://github.com/Genocs/enterprise-containers)
 - [Example](https://github.com/Genocs/genocs-basket)
 
-- [.NET Web API Template](https://github.com/Genocs/dotnet-webapi-template) (soon)
-- [Blazor WebAssembly Template](https://github.com/Genocs/blazor-template) (soon)
+- [.NET Web API Template](https://github.com/Genocs/microservice-template)
+- [Blazor WebAssembly Template](https://github.com/Genocs/blazor-template)
 - [Angular Front-End](https://github.com/Genocs/angular-frontend-template) (soon)
 - [React Front-End](https://github.com/Genocs/react-frontend-template) (soon)
 

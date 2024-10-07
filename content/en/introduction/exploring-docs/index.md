@@ -17,4 +17,4 @@ toc: true
 
 <b>Genocs Library</b> sports a pretty much straight forward documentation website that is frequently updated and also accepts new documentations/corrections from the community!
 
-{{< img src="docs.png" >}}
+{{< img src="2024-10-07.png" >}}

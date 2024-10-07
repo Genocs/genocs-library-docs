@@ -1,7 +1,7 @@
 ---
 title: "Genocs Microservice Template along with Entity Framework Core"
-description: "Adding Database Migrations for Entity Framework Core with Genocs Library's Web API"
-lead: "Adding Database Migrations for Entity Framework Core with Genocs Library's Web API"
+description: "Adding Database Migrations for Entity Framework Core"
+lead: "Adding Database Migrations for Entity Framework Core"
 date: 2022-01-15T21:31:40+05:30
 lastmod: 2024-08-21 14:50:50+02:00
 draft: false
@@ -23,7 +23,13 @@ Before you begin, make sure you have the following installed on your machine:
 
 1. [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 2. [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
-3. [MySQL Server](https://dev.mysql.com/downloads/mysql/) or [MSSQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or [PostgreSQL Server](https://www.postgresql.org/download/) or [Oracle Server](https://www.oracle.com/database/technologies/)
+3. Database Server:
+
+    1. [MSSQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+    2. [MySQL Server](https://dev.mysql.com/downloads/mysql/)
+    3. [Oracle Server](https://www.oracle.com/database/technologies/)
+    4. [PostgreSQL Server](https://www.postgresql.org/download/)
+    5. [SQLite Server](https://www.sqlite.org/download.html)     
 
 
 ## Create Database Migrations
@@ -62,7 +68,7 @@ Note that currently, Genocs Microservice Template supports the following major D
 4. PostgreSQL
 5. SQLite
 
-Download links to setup the supported Database providers are mentioned here - https://genocs-blog.netlify.app/dotnet-templates/general/development-environment/
+Here you can find everything to setup the supported Database providers - [Setup Databases](https://genocs-blog.netlify.app/dotnet-templates/general/development-environment/)
 
 To maintain scalability, the database migrations of each of these DB Providers are kept in separate class library projects namely
 1. Migrators/Migrators.MSSQL
@@ -74,6 +80,7 @@ To maintain scalability, the database migrations of each of these DB Providers a
 Out of the box, the default migrations are already generated and is made available for you. This means you wouldn't even have to run a `update-database` to get started. The Application startup already handles it for you.
 
 As of now, Genocs Library's Microservice Template consists of the following EF Core DB Context classes:
+
 1. **ApplicationDbContext** - This is where you would ideally reference your new entities. By default, Catalog entities are referenced here.
 2. **TenantDbContext** - Related to Finbuckle's Multitenancy setup of Stores.
 
@@ -91,21 +98,105 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 
 #### database.json
 
+**mssql** 
 ``` json
 {
-  "DatabaseSettings": { 
+  "DatabaseSettings": {
+    "DBProvider": "mssql",
+    "ConnectionString": "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=Genocs.Microservice.Template;Integrated Security=True;MultipleActiveResultSets=True"
+  }
+}
+```
+
+**mysql**
+``` json
+{
+  "DatabaseSettings": {
     "DBProvider": "mysql",
     "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True"
   }
 }
 ```
+
+**oracle**
+``` json
+{
+  "DatabaseSettings": {
+    "DBProvider": "oracle",
+    "ConnectionString": "Data Source=localhost;User Id=system;Password=oracle;"
+  }
+}
+```
+
+**postgresql**
+``` json
+{
+  "DatabaseSettings": {
+    "DBProvider": "postgresql",
+    "ConnectionString": "Host=localhost;Port=5432;Database=Genocs.Microservice.Template;Username=postgres;Password=postgres"
+  }
+}
+```
+
+**sqlite**
+``` json
+{
+  "DatabaseSettings": {
+    "DBProvider": "sqlite",
+    "ConnectionString": "Data Source=app.db;"
+  }
+}
+```
+
 #### hangfire.json
 
+**mssql**
+``` json
+{
+  "Storage": {
+    "StorageProvider": "mssql",
+    "ConnectionString": "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=Genocs.Microservice.Template;Integrated Security=True;MultipleActiveResultSets=True"
+  }
+}
+```
+
+**mysql**
 ``` json
 {
   "Storage": {
     "StorageProvider": "mysql",
     "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True"
+  }
+}
+```
+
+**oracle**
+``` json
+{
+  "Storage": {
+    "StorageProvider": "oracle",
+    "ConnectionString": "Data Source=localhost;User Id=system;Password=oracle;"
+  }
+}
+
+```
+
+**postgresql**
+``` json
+{
+  "Storage": {
+    "StorageProvider": "postgresql",
+    "ConnectionString": "Host=localhost;Port=5432;Database=Genocs.Microservice.Template;Username=postgres;Password=postgres"
+  }
+}
+```
+
+**sqlite**
+``` json
+{
+  "Storage": {
+    "StorageProvider": "sqlite",
+    "ConnectionString": "Data Source=app.db;"
   }
 }
 ```
@@ -153,6 +244,8 @@ dotnet ef migrations add AddedMenuEntity --project ../Migrators/Migrators.MySQL/
 dotnet ef migrations add ModifiedTenantTable --project ../Migrators/Migrators.MySQL/ --context TenantDbContext -o Migrations/Tenant
 ```
 
-That's almost it. Once the process is completed you would be able see new Migration cs files that represent your new additions / modifications at the table level added to the respective Migrator project.
+That's almost it.
+
+Once the process is completed you would be able see new Migration cs files that represent your new `additions/modifications` at the table level added to the respective Migrator project.
 
 You do not have to do anything extra to apply the migrations to your database. The application does it for you during the startup.

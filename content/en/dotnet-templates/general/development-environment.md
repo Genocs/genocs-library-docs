@@ -1,7 +1,7 @@
 ---
 title: "Development Environment"
 description: "Setting up the Development Environment for the Genocs .NET Templates"
-lead: "Let's get started with setting up the Development Environment for Genocs .NET Templates!"
+lead: "Let's get started with setting up the Development Environment"
 date: 2023-05-13T15:51:03+02:00
 lastmod: 2024-08-21 14:50:50+02:00
 draft: false
@@ -16,7 +16,7 @@ toc: true
 ---
 Genocs Library's **.NET Templates** needs you to have the following *applications/tools* available on your machine. 
 
-Please Note that this project is being built on a Windows 11 Machine using Visual Studio Code IDE.
+Please Note that this project is being built on a Windows11 Machine using Visual Studio Code IDE.
 
 ## .NET SDK
 
@@ -51,10 +51,7 @@ Genocs Library's .NET Microservice Template gives you the freedom to choose betw
 
 {{< alert text="Make sure that you have at least one of these servers installed, along with a Database Management tool like Azure Data Studio / PostgreSQL pgAdmin / MySQL Workbench " />}}
 
-### PostgreSQL
 
-Probably the best Open Source Database Server with lots of Enterprise level features.
-- Download postgresql Installer - [Get from postgresql.org](https://www.postgresql.org/download/)
 
 ### MSSQL
 
@@ -72,6 +69,11 @@ There are high chances that you already have this installed on your machine. Thi
 ### Oracle
 
 - [Download](https://www.oracle.com/in/database/technologies/oracle19c-windows-downloads.html)
+
+### PostgreSQL
+
+Probably the best Open Source Database Server with lots of Enterprise level features.
+- Download postgresql Installer - [Get from postgresql.org](https://www.postgresql.org/download/)
 
 ## API Testing Tools
 
