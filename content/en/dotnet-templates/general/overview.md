@@ -15,10 +15,6 @@ weight: 1
 toc: true
 ---
 
-
-
-## What's Genocs Library?
-
 Genocs Library is a starting point for your next `.NET Microservices library` that incorporates the most essential packages and features your projects will ever need including out of the box Multi-Tenancy support.
 
 > As the name suggests, this is an API / Server Template. You can find other Client Templates that consume this API under `@genocs-library` handle.

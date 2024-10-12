@@ -69,7 +69,8 @@ body.docs {
 
 .home h1 {
   /* font-size: calc(1.375rem + 1.5vw); */
-  font-size: calc(1.875rem + 1.5vw);
+  font-weight: 900;
+  font-size: calc(4.0rem + 15.0vw);
 }
 
 a:hover,
@@ -97,21 +98,6 @@ a.btn:focus {
   padding-bottom: 2rem;
 }
 
-/*
-.section svg {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  vertical-align: text-top;
-}
-*/
-
-/*
-body {
-  padding-top: 3.5625rem;
-}
-*/
-
 .docs-sidebar {
   order: 2;
 }
@@ -121,7 +107,7 @@ body {
     order: 0;
   }
 
-  @supports ((position:-webkit-sticky) or (position:sticky)) {
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
     .docs-sidebar {
       position: -webkit-sticky;
       position: sticky;
@@ -164,7 +150,7 @@ body {
   order: 2;
 }
 
-@supports ((position:-webkit-sticky) or (position:sticky)) {
+@supports ((position: -webkit-sticky) or (position: sticky)) {
   .docs-toc {
     position: -webkit-sticky;
     position: sticky;
@@ -274,7 +260,6 @@ body {
   width: 3px !important;
 }
 
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(185, 185, 185) !important;
@@ -345,16 +330,23 @@ body {
 }
 
 .gradient-banner {
-
-  font-size: 48px;
+  font-size: 4em;
   font-weight: 900;
   margin: 40px 0;
-  background: -webkit-linear-gradient(90deg, $primary, $blue-300 50%, $pink-500);
+  background: -webkit-linear-gradient(-45deg,
+      $primary,
+      $blue-300 50%,
+      $pink-500 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 100%;
   background-repeat: repeat;
   background-clip: text;
+}
 
 
+.logo-introduction {
+  font-family: "Nunito";
+  font-weight: 900;
+  font-size: calc(8.0rem + 200.0vw);
 }
