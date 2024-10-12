@@ -36,7 +36,7 @@ dotnet tool install -g NSwag.CodeGeneration
 
 Into the `scripts` folder you will find `nswag-regen.ps1`. This script will generate the necessary files for you. You can run the script by executing the following command:
 
-Before run be shure the API is running, you can run the API by executing the following command:
+Before run be sure the API is running, you can run the API by executing the following command:
 
 ```ps
 # Run your API locally
