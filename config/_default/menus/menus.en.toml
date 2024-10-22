@@ -41,11 +41,11 @@
 
 ####################################
 
-[[main]]
-  name = "Microservices"
-  identifier = "microservices"
-  url = "/dotnet-microservices-template/"
-  weight = 50
+## [[main]]
+##   name = "Microservices"
+##   identifier = "microservices"
+##   url = "/dotnet-microservices-template/"
+##   weight = 50
 
 ####################################
 

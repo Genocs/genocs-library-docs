@@ -67,11 +67,29 @@ body.docs {
   }
 }
 
-.home h1 {
-  /* font-size: calc(1.375rem + 1.5vw); */
-  font-weight: 900;
-  font-size: calc(4.0rem + 15.0vw);
+@media (max-width: 1250px) {
+
+  .home h1 {
+    font-weight: 900;
+    font-size: calc(4.0rem + 5.0vw);
+  }
+
+  .gradient-banner {
+    font-size: 2em;
+  }
 }
+
+@media (min-width: 1250px) {
+  .home h1 {
+    font-weight: 900;
+    font-size: calc(4.0rem + 15.0vw);
+  }
+
+  .gradient-banner {
+    font-size: 4em;
+  }
+}
+
 
 a:hover,
 a:focus {
@@ -330,7 +348,6 @@ a.btn:focus {
 }
 
 .gradient-banner {
-  font-size: 4em;
   font-weight: 900;
   margin: 40px 0;
   background: -webkit-linear-gradient(-45deg,

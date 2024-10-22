@@ -16,6 +16,7 @@ Supported features that will help to quickly set up your next microservices:
 - CQRS basic abstractions
 - [Consul](https://www.consul.io) service registry integration
 - [Swagger](https://swagger.io) extensions
+- [Redocly](https://redocly.com/) extensions
 - [RestEase](https://github.com/canton7/RestEase) extensions
 - [Fabio](https://github.com/fabiolb/fabio) load balancer integration
 - Logging extensions for [Serilog](https://serilog.net/) & integration with [Seq](https://datalust.co/seq), [ELK](https://www.elastic.co/what-is/elk-stack), [Loki](https://grafana.com/oss/loki/)
@@ -27,6 +28,7 @@ Supported features that will help to quickly set up your next microservices:
 - [MongoDB](https://www.mongodb.com/cloud) extensions
 - [OpenStack OCS](https://specs.openstack.org/openstack/ironic-specs/specs/4.0/msft-ocs-power-driver.html) support
 - [Redis](https://redis.io) extensions
+- [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault) Azure key vault integration
 - [Vault](https://www.vaultproject.io) secrets engine (settings, dynamic credentials, PKI etc.) integration
 - Security extensions (certificates, mTLS, encryption etc.)
 - [Jaeger](https://www.jaegertracing.io) tracing integration

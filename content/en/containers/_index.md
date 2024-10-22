@@ -1,7 +1,7 @@
 ---
 title : "Containers"
-description: "Containerizing applications is mandatory step for modern enterprise applications. Genocs Library contains containers setup as well!"
-lead: ""
+description: "How to containerize your solution!"
+lead: "Containerizing applications is mandatory step for modern enterprise applications. Genocs Library contains containers setup as well!"
 date: 2023-05-13T15:40:19+02:00
 lastmod: 2023-09-01T21:40:19+02:00
 draft: false
