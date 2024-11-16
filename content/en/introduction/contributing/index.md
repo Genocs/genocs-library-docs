@@ -3,7 +3,7 @@ title: "Contributing"
 description: "Contributing to Genocs Library"
 lead: "Contributing to Genocs Library"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-10-07T16:40:19+02:00
+lastmod: 2024-11-16T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -39,8 +39,8 @@ Please note the following steps are applicable only for the `genocs-library-docs
 3. `[Optional]` Add a new Repository Secret with a name `GT_TOKEN`. As for the value, paste in your GitHub Token (https://github.com/settings/tokens)
 4. Clone this repository locally.
 5. Ensure that you have Node.js and Visual Code installed.
-6. At the root of the repository run `npm install`. This installs all the required packages. Might take some time depending on your network connection.
-7. All the documentations are to be written in markdown format.
+6. At the root of the repository run `npm install`. This installs all the required packages. It might take some time depending on your network connection.
+7. All the documentation is to be written in markdown format.
 8. Refer `https://github.com/Genocs/genocs-library-docs/blob/main/content/en/dotnet-templates/general/getting-started/index.md` to get an idea on how to write documentation and include images, code snippets and stuff.
 9. To run the application locally, run the command `npm run start` and navigate to **localhost:1313**
 10. Once ready, send a Pull Request.

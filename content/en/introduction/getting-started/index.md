@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Let's get started with Genocs Library!"
 lead: "Let's get started with Genocs Library!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-02-29T19:44:19+02:00
+lastmod: 2024-11-16T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -20,26 +20,26 @@ toc: true
 
 ## Problem Statement
 
-<p>Ever gone through the pain of setting up new project from scratch each and every time?</p>
+<p>Ever gone through the pain of setting up new project from scratch each time?</p>
 <p><b>Genocs Library</b> aims to
 address this pain point by offering starting points for various technologies that can help save
 hours of development and research time for developers and teams.</p>
 
 ## Solution
 
-<p><b>Genocs Library</b> offers library framework and cli and templates with latest packages and services that your projects will ever need. We intend to provide Clean and well structured Templates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
+<p><b>Genocs Library</b> offers a library framework and cli and templates with the latest packages and services that your projects will ever need. We intend to provide Clean and well-structured Templates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
 </p>
 <p class="code-green">Most importantly, <b>Genocs Library</b> is completely FREE to use!</p>
 
-As the name suggests, the idea is to provide a full-stack end to end solution to kick start products of any scale following a modularized monolith architecture with well cut designs, code readability, scalability as the out-of-the-box features. Bottomline, using <b>Genocs Library</b>, your new projects will be up and running in no time.
+As the name suggests, the idea is to provide a full-stack end to end solution to kick start products of any scale following a modularized monolith architecture with well-cut designs, code readability, scalability as the out-of-the-box features. Bottomline, using <b>Genocs Library</b>, your new projects will be up and running in no time.
 
 ## Vision
 
-<b>Genocs Library</b> is not a single repository or project, rather a collection of library, templates and cli out of which you get to choose your preference. In the long term, <b>Genocs Library</b> would ideally have multiple API projects that are written in various technologies like .NET, Node.js, GoLang and multiple client applications that are built on awesome tech like Blazor, Vue.js, React, Angular and so on.
+<b>Genocs Library</b> is not a single repository or project, rather a collection of libraries, templates and cli out of which you get to choose your preference. In the long term, <b>Genocs Library</b> would ideally have multiple API projects that are written in various technologies like .NET, Node.js, GoLang and multiple client applications that are built on awesome tech like Blazor, Vue.js, React, Angular and so on.
 
 <b>Genocs Library</b> should be the one-stop that caters to the needs of various developers in various technology. This obviously would require a lot of community adaptation and contributions.
 
-As of the initial releases, <b>Genocs Library</b> sports an API Project built on Microsoft's newest .NET 8 and the front-end application (that consumes the .NET 8 Web API) built with Blazor WebAssembly!
+As for the initial releases, <b>Genocs Library</b> sports an API Project built on Microsoft's newest .NET 8 and the front-end application (that consumes the .NET 8 Web API) built with Blazor WebAssembly!
 
 ## Projects
 
@@ -67,7 +67,7 @@ As of the initial releases, <b>Genocs Library</b> sports an API Project built on
               <div class="tablet tablet-secondary">.NET</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Get to work with the latest and greatest of Microsoft's .NET 8 Web API fused with the goodness of Genocs Library.</p>
+          <p>Getting to work with the latest and greatest of Microsoft's .NET 8 Web API fused with the goodness of Genocs Library.</p>
           <p><a href="https://github.com/Genocs/dotnet-templates">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-templates/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>

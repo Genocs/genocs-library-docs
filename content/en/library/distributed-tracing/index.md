@@ -3,7 +3,7 @@ title : "Distributed Tracing"
 description: "Genocs Library make use of Distributed tracing to implement cross service tracing!"
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-06-25T15:40:19+02:00
+lastmod: 2024-11-16T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -22,10 +22,10 @@ toc: true
 dotnet add package Genocs.Tracing
 ```
 
-> **Open Tracing migration to Open Telemetry**
+> **Open Tracing Migration to Open Telemetry**
 >
-> We have removed are Open Tracing and are complaint to the [Open Telemetry](https://opentelemetry.io/)
-> Library. We are in the process of upgrade naming convention of our library to Open Telemetry. Please stay tuned for the updates.
+> We have removed Open Tracing reference. The library is complaint with [Open Telemetry](https://opentelemetry.io/)
+> Library. We are in the process of upgrading naming convention of our library to Open Telemetry. Please stay tuned for the updates.
 >
 
 ## Dependencies
@@ -63,7 +63,7 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 ### Creating custom spans
 
 > **Note:** 
-> Obsolate: This method is obsolate and will be removed in future versions. Please use the new method to create custom spans.
+> Obsolete: This method is obsolete and will be removed in future versions. Please use the new method to create custom spans.
 
 > Once the `ITracer` got registered in Startup.cs file, you can inject it to any class you want to create custom spans (not provided by Open > Tracing) as follows:
 > 

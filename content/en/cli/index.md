@@ -1,8 +1,8 @@
 ---
 title: "CLI"
-description: "The genocs CLI (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run  applications. It provides a unified experience across different platforms, allowing developers to create cross-platform applications with ease. With its extensive set of commands, the .NET CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development."
+description: "The genocs CLI (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides unified experience across different platforms, allowing developers to create cross-platform applications with ease. With its extensive set of commands, the .NET CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-02-29T19:44:19+02:00
+lastmod: 2024-11-16T00:00:00+02:00
 draft: false
 images: []
 ---
@@ -10,26 +10,31 @@ images: []
 
 ## Introduction
 
-The **Genocs CLI** (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides a unified experience across different services inside your platform. It allow developers to create applications with ease. With its extensive set of commands, the genocs CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern  developers, offering productivity, and scalability in application development.
+The **Genocs CLI** (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides unified experience across different services inside your platform. It allows developers to create applications with ease. With its extensive set of commands, the Genocs CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity and scalability in application development.
 
-**Genocs CLI** is the *dotnet tool* that allow you to use the genocs templates.
-Genocs templates are dotnet template that will help you to setup quickly and easily services in your environment.
+**Genocs CLI** is the *dotnet tool* that allow you to use the Genocs templates. Genocs templates are dotnet template that will help you to setup quickly and easily services in your environment.
 
-Genocs tool is based on Microsoft - dotnet tools. Here where you can find the official Documentation:
-
-- [Microsoft - dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools)
+Genocs tool is based on [Microsoft-dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools).
 
 ## Supported runtime
 
-Genocs CLI can be used on both .NET 8.
+Genocs CLI can be used on both .NET6|8|9.
 
 ---
 
-{{< img src="initialize.png" >}}
+## Visual Studio Integration
+
+The Genocs CLI is integrated with Visual Studio. You can use the Genocs CLI to create, build, and run applications directly from Visual Studio. The Genocs CLI provides a unified experience across different platforms, allowing you to create cross-platform applications with ease. You can use the Genocs CLI to automate tasks such as project management, dependency resolution, and deployment. The Genocs CLI is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development.
+
+{{< img src="vs_integration.png" >}}
+
+---
 
 ## How to install
 
-To install the tool the only think you have to do is to take it from NuGet, install it into your global, that's it.
+To install the tool the only thing you must do is to take it from NuGet, install it into your global, that’s it.
+
+{{< img src="initialize.png" >}}
 
 ``` bash
 dotnet tool install -g genocs.cli
@@ -38,7 +43,7 @@ dotnet tool install -g genocs.cli
 ### Useful commands
 
 ``` bash
-# Get the list of tool
+# Get the list of tools
 dotnet tool list
 
 # Get the list of templates
@@ -59,7 +64,7 @@ dotnet tool uninstall -g genocs.cli
 
 Genocs contains a bunch of templates that you can use to build a complete set of services from scratch.
 
-The picture shows the console log upon the template are installed.
+The picture shows the console log upon the template is installed.
 
 {{< img src="template_installed.png" >}}
 
@@ -77,7 +82,7 @@ The picture shows the console log upon the template are installed.
 
 ## Uninstall templates
 
-To uninstall the templates you can use the following command:
+To uninstall the templates, you can use the following command:
 
 ``` bash
 # Get the templates list
@@ -112,7 +117,7 @@ genocs webapi new <Company.Project.Service>
 # Another option to build a clen architecture webapi 
 genocs cleanapi new <Company.Project.Service>
 
-# To build a microservice webapi with multitentant support
+# To build a microservice web Api with multitenant support
 genocs microservice  <Company.Project.Service>
 ```
 
@@ -127,7 +132,7 @@ You are free to fork or to clone it. Then you can update it at your own pace.
 ### Useful commands to work on your own
 
 ``` bash
-# build the project 
+# Build the project 
 dotnet build ./src/genocs.cli.csproj
 
 # Pack the tool (to be deployed on nuget) 
