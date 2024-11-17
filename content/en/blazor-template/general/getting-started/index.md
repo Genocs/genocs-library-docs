@@ -85,7 +85,7 @@ Once that is done, your new solution is created for you. As simple as that!
 
 Firstly, keep in mind that this is a client application that actually consumes data by sending HTTP Requests to the API Server. Thus, you need to make sure that the API is up and running.
 
-To learn about setting up the API Server, refer [Getting Started with Genocs Library's .NET Web API](/dotnet-templates/general/getting-started/).
+To learn about setting up the API Server, refer [Getting Started with Genocs Library's .NET Web API](/emplates/general/getting-started/).
 
 Once the Server is up and running, like any other Blazor application, simply navigate to the Host folder under the source folder of the Blazor Project (`\src\Host`) and run the following standard commands.
 

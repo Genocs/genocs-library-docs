@@ -14,7 +14,7 @@ rootUrl = "https://www.genocs.com"
 # docsVersion = "1"
 
 # Search
-mainSections = ["introduction", "cli", "library", "dotnet-templates", "blazor", "containers" ]
+mainSections = ["introduction", "cli", "library", "templates", "blazor", "containers" ]
 
 ## Open Graph
 images = ["logo.png"]

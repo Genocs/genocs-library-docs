@@ -17,40 +17,40 @@
 ##############################
 
 [[main]]
-  name = ".NET Templates"
-  url = "/dotnet-templates/"
+  name = "Templates"
+  url = "/templates/"
   weight = 40
 
-[[dotnet-templates]]
+[[templates]]
   name = "General"
   identifier = "general"
-  url = "/dotnet-templates/general/"
+  url = "/templates/general/"
   weight = 10
 
-[[dotnet-templates]]
+[[templates]]
   name = "Multitenancy"
   identifier = "multitenancy-dotnet-template"
-  url = "/dotnet-templates/multitenancy-template/"
+  url = "/templates/multitenancy-template/"
   weight = 20
 
-[[dotnet-templates]]
+[[templates]]
   name = "Onion"
   identifier = "onion-dotnet-template"
-  url = "/dotnet-templates/onion-template/"
+  url = "/templates/onion-template/"
   weight = 30
 
 
-  [[dotnet-templates]]
+  [[templates]]
   name = "Library"
   identifier = "library-dotnet-template"
-  url = "/dotnet-templates/library-template/"
+  url = "/templates/library-template/"
   weight = 40  
 
 
-[[dotnet-templates]]
+[[templates]]
   name = "Tutorials"
   identifier = "tutorials"
-  url = "/dotnet-templates/tutorials/"
+  url = "/templates/tutorials/"
   weight = 50
 
 

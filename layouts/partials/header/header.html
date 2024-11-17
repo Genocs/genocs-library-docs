@@ -51,8 +51,7 @@
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
-            {{- $active = or $active (and (eq .Name ".NET Templates") (eq $current.Section "dotnet-templates")) -}}
-            {{- $active = or $active (and (eq .Name "Microservices") (eq $current.Section "dotnet-microservices-template")) -}}
+            {{- $active = or $active (and (eq .Name ".Templates") (eq $current.Section "templates")) -}}
             {{- $active = or $active (and (eq .Name "Blazor") (eq $current.Section "blazor-template")) -}}
             {{- $active = or $active (and (eq .Name "CLI") (eq $current.Section "cli")) -}}
             <li class="nav-item">

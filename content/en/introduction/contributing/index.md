@@ -41,7 +41,7 @@ Please note the following steps are applicable only for the `genocs-library-docs
 5. Ensure that you have Node.js and Visual Code installed.
 6. At the root of the repository run `npm install`. This installs all the required packages. It might take some time depending on your network connection.
 7. All the documentation is to be written in markdown format.
-8. Refer `https://github.com/Genocs/genocs-library-docs/blob/main/content/en/dotnet-templates/general/getting-started/index.md` to get an idea on how to write documentation and include images, code snippets and stuff.
+8. Refer `https://github.com/Genocs/genocs-library-docs/blob/main/content/en/templates/general/getting-started/index.md` to get an idea on how to write documentation and include images, code snippets and stuff.
 9. To run the application locally, run the command `npm run start` and navigate to **localhost:1313**
 10. Once ready, send a Pull Request.
 
