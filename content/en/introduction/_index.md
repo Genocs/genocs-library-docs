@@ -12,23 +12,24 @@ images: []
 
 Genocs, a leading technology company, has developed a suite of software libraries specifically crafted to address the challenges faced by developers in building cloud-agnostic microservice architecture. With these libraries, developers can unleash their creativity and focus on building exceptional applications without being tied to a specific cloud provider. Whether you're working with Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), or any other major cloud provider, Genocs' libraries ensure compatibility and portability across multiple cloud environments.
 
+
 Key Features:
 
-- **Cloud Agnosticism**: Genocs' libraries empower developers to write microservices that are decoupled from specific cloud platforms. This cloud-agnostic approach enables seamless migration and deployment across various cloud providers, giving you the freedom to choose the best-fit platform for your application's requirements.
+- :white_check_mark: **Cloud Agnosticism**: Genocs' libraries empower developers to write microservices that are decoupled from specific cloud platforms. This cloud-agnostic approach enables seamless migration and deployment across various cloud providers, giving you the freedom to choose the best-fit platform for your application's requirements.
 
-- **Scalability and Elasticity**: Harness the power of auto-scaling and elastic resource provisioning with Genocs' libraries. They provide robust mechanisms for dynamically scaling your microservices based on demand, ensuring optimal performance even during peak usage periods.
+- :white_check_mark: **Scalability and Elasticity**: Harness the power of auto-scaling and elastic resource provisioning with Genocs' libraries. They provide robust mechanisms for dynamically scaling your microservices based on demand, ensuring optimal performance even during peak usage periods.
 
-- **Service Discovery and Load Balancing**: Effortlessly manage service discovery and load balancing across your microservices using Genocs' libraries. These tools offer efficient routing and distribution of traffic, improving the overall performance and availability of your application.
+- :white_check_mark: **Service Discovery and Load Balancing**: Effortlessly manage service discovery and load balancing across your microservices using Genocs' libraries. These tools offer efficient routing and distribution of traffic, improving the overall performance and availability of your application.
 
-- **Fault Tolerance and Resilience**: Building reliable microservices is made easier with Genocs' libraries. They provide built-in fault tolerance mechanisms, such as circuit breakers and retry policies, enabling your application to gracefully handle failures and recover seamlessly.
+- :white_check_mark: **Fault Tolerance and Resilience**: Building reliable microservices is made easier with Genocs' libraries. They provide built-in fault tolerance mechanisms, such as circuit breakers and retry policies, enabling your application to gracefully handle failures and recover seamlessly.
 
-- **Monitoring and Observability**: Gain deep insights into the behavior and performance of your microservices using Genocs' monitoring and observability tools. Track metrics, analyze logs, and visualize application behavior to diagnose issues and optimize performance.
+- :white_check_mark: **Monitoring and Observability**: Gain deep insights into the behavior and performance of your microservices using Genocs' monitoring and observability tools. Track metrics, analyze logs, and visualize application behavior to diagnose issues and optimize performance.
 
-- **DevOps Integration**: Genocs' libraries seamlessly integrate with popular DevOps tools and frameworks, enabling streamlined CI/CD pipelines and efficient collaboration between development and operations teams.
+- :white_check_mark: **DevOps Integration**: Genocs' libraries seamlessly integrate with popular DevOps tools and frameworks, enabling streamlined CI/CD pipelines and efficient collaboration between development and operations teams.
 
-- **Powerful Command Line Interface (CLI)**: Genocs' libraries come with a feature-rich command line interface, providing developers with a convenient and efficient way to interact with the libraries and perform various tasks. The CLI simplifies configuration, deployment, and management of your cloud-agnostic microservices.
+- :white_check_mark: **Powerful Command Line Interface (CLI)**: Genocs' libraries come with a feature-rich command line interface, providing developers with a convenient and efficient way to interact with the libraries and perform various tasks. The CLI simplifies configuration, deployment, and management of your cloud-agnostic microservices.
 
-- **Template Templates**: To speed up the setup process, Genocs' libraries include a set of template templates. These templates serve as a starting point for your microservice projects, providing pre-configured structures and configurations. With these template templates, you can quickly set up the foundation of your application and focus on implementing your business logic.
+- :white_check_mark: **Template Templates**: To speed up the setup process, Genocs' libraries include a set of template templates. These templates serve as a starting point for your microservice projects, providing pre-configured structures and configurations. With these template templates, you can quickly set up the foundation of your application and focus on implementing your business logic.
 
 By utilizing Genocs' software libraries, along with the powerful command line interface and template templates, you can unlock the full potential of cloud-agnostic microservices, accelerating your development process and futureproofing  your applications. Throughout this documentation, we will provide detailed explanations, code samples, and best practices to guide you in leveraging these libraries effectively.
 

@@ -38,14 +38,15 @@ Into the `scripts` folder you will find `nswag-regen.ps1`. This script will gene
 
 Before run be sure the API is running, you can run the API by executing the following command:
 
-```ps
+```bash
 # Run your API locally
 dotnet run --project .\src\Genocs.MicroserviceTemplate.Api\Genocs.MicroserviceTemplate.Api.csproj
 ```
 
 then run the script:
-```ps
+```bash
+# Run the script using PowerShell
 .\scripts\nswag-regen.ps1
 ```
 
-The script will generate the necessary `src\Infrastructure\ApiClient\GNXApi.cs` file for you..
+The script will generate the necessary `src\Infrastructure\ApiClient\GNXApi.cs` file for you.

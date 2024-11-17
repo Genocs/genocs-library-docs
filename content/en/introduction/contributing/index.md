@@ -45,9 +45,28 @@ Please note the following steps are applicable only for the `genocs-library-docs
 9. To run the application locally, run the command `npm run start` and navigate to **localhost:1313**
 10. Once ready, send a Pull Request.
 
+```mermaid
+gitGraph:
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit tag:"test"
+    checkout main
+    commit 
+    commit
+    merge develop
+    commit type: HIGHLIGHT
+    branch ver_x000
+    commit
+```
+
+Submit your PR to join this Elite list ;) Make sure your code is warning free!
+
+
 ### Genocs Library
 
-Submit your PR and join the elite list!
+Here are the contributors:
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
@@ -55,15 +74,12 @@ Submit your PR and join the elite list!
 
 ### Genocs Library Documentation
 
-Submit your PR and join the elite list!
+Here are the contributors:
 
-<a href="https://github.com/Genocs/genocs-library-docs/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library-docs" />
-</a>
 
 ### .NET Web API Clean Architecture Template
 
-Submit your PR and join the elite list!
+Here are the contributors:
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
@@ -71,7 +87,7 @@ Submit your PR and join the elite list!
 
 ### .NET Web API Template (soon)
 
-Submit your PR and join the elite list!
+Here are the contributors:
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
@@ -79,15 +95,15 @@ Submit your PR and join the elite list!
 
 ### Blazor WebAssembly Clean Architecture Template (soon)
 
-Here are the contributors of the Blazor WASM Project! Submit your PR to join this Elite list ;) Make sure your code is warning free!
+Here are the contributors:
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
 </a>
 
-### Blazor WebAssembly .NET Web API Template (soon)
+### Blazor WebAssembly .NET Web API Template
 
-Here are the contributors of the Blazor WASM Project! Submit your PR to join this Elite list ;) Make sure your code is warning free!
+Here are the contributors:
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
