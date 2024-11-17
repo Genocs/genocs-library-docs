@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "security"
     name: "Security"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 13
 toc: true
 ---
 

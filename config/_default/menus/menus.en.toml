@@ -28,24 +28,31 @@
   weight = 10
 
 [[dotnet-templates]]
-  name = "Fundamentals"
-  identifier = "fundamentals"
-  url = "/dotnet-templates/fundamentals/"
+  name = "Multitenancy"
+  identifier = "multitenancy-dotnet-template"
+  url = "/dotnet-templates/multitenancy-template/"
   weight = 20
+
+[[dotnet-templates]]
+  name = "Onion"
+  identifier = "onion-dotnet-template"
+  url = "/dotnet-templates/onion-template/"
+  weight = 30
+
+
+  [[dotnet-templates]]
+  name = "Library"
+  identifier = "library-dotnet-template"
+  url = "/dotnet-templates/library-template/"
+  weight = 40  
+
 
 [[dotnet-templates]]
   name = "Tutorials"
   identifier = "tutorials"
   url = "/dotnet-templates/tutorials/"
-  weight = 30
+  weight = 50
 
-####################################
-
-## [[main]]
-##   name = "Microservices"
-##   identifier = "microservices"
-##   url = "/dotnet-microservices-template/"
-##   weight = 50
 
 ####################################
 
@@ -55,11 +62,15 @@
   url = "/blazor-template/general/getting-started/"
   weight = 60
 
+####################################
+
 [[main]]
   name = "Containers"
   identifier = "containers"
   url = "/containers/"
   weight = 70
+
+####################################
 
 [[main]]
   name = "Contact"

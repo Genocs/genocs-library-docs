@@ -10,7 +10,7 @@ menu:
   dotnet-templates:
     identifier: "open-api"
     name: "OpenAPI"
-    parent: "fundamentals"
+    parent: "multitenancy-dotnet-template"
 weight: 11
 toc: true
 ---

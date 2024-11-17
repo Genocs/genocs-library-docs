@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "logging"
     name: "Logging"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 15
 toc: true
 ---
 Genocs Web API has out of the box support for logging to several destinations. Thanks to the usage of Serilog! All of the configurations related to Logging can be found under `src/Host/Configurations/logger.json`.

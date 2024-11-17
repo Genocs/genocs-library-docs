@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "localization"
     name: "Localization"
-    parent: "fundamentals"
-weight: 10
+    parent: "multitenancy-dotnet-template"
+weight: 7
 toc: true
 ---
 

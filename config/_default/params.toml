@@ -13,7 +13,7 @@ navBarLogo = "/images/icon.png"
 # docsVersion = "1"
 
 # Search
-mainSections = ["introduction", "cli", "library", "blog", "blazor-template", "dotnet-templates", "dotnet-microservices-template", "containers" ]
+mainSections = ["introduction", "cli", "library", "dotnet-templates", "blazor", "containers" ]
 
 ## Open Graph
 images = ["logo.png"]

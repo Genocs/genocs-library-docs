@@ -10,7 +10,7 @@ menu:
   dotnet-templates:
     identifier: "open-telementry"
     name: "OpenTelemetry"
-    parent: "fundamentals"
+    parent: "multitenancy-dotnet-template"
 weight: 12
 toc: true
 ---

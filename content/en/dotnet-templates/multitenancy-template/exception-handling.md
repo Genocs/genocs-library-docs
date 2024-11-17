@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "exception-handling"
     name: "Exception Handling"
-    parent: "fundamentals"
-weight: 9
+    parent: "multitenancy-dotnet-template"
+weight: 5
 toc: true
 ---
 

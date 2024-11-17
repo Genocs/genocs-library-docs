@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "application-startup"
     name: "Application Startup"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 1
 toc: true
 ---
 

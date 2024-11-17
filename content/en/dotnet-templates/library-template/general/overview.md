@@ -7,10 +7,10 @@ lastmod: 2024-02-29T19:44:03+02:00
 draft: false
 images: []
 menu:
-  dotnet-microservices-template:
-    identifier: "general-overview"
+  dotnet-templates:
+    identifier: "library-dotnet-template-general-overview"
     name: "Overview"
-    parent: "general"
+    parent: "library-dotnet-template"
 weight: 1
 toc: true
 ---

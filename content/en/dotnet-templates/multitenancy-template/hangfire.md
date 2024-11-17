@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "hangfire"
     name: "Hangfire"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 6
 toc: true
 ---
 

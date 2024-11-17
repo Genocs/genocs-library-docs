@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "mail-service"
     name: "Mail Service"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 8
 toc: true
 ---
 

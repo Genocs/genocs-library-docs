@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "middlewares"
     name: "Middlewares"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 9
 toc: true
 ---
 

@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "cors"
     name: "CORS"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 4
 toc: true
 ---
 

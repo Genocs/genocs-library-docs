@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "configurations"
     name: "Configurations"
-    parent: "fundamentals"
-weight: 8
+    parent: "multitenancy-dotnet-template"
+weight: 3
 toc: true
 ---
 

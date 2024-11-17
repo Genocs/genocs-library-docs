@@ -10,8 +10,8 @@ menu:
   dotnet-templates:
     identifier: "signalr"
     name: "SignalR"
-    parent: "fundamentals"
-weight: 11
+    parent: "multitenancy-dotnet-template"
+weight: 14
 toc: true
 ---
 
