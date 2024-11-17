@@ -10,9 +10,9 @@
   <header class="navbar navbar-expand-md navbar-light doks-navbar sticky-lg-top">
     <nav class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} flex-wrap flex-md-nowrap"
       aria-label="Main navigation">
-      <a class="navbar-brand p-0 me-auto" href="{{ " /" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
+      <a class="navbar-brand p-0 me-auto" href="{{ .Site.Params.rootUrl }}" aria-label="{{ .Site.Params.Title }}" target="_blank">
         <img src="{{ .Site.Params.NavBarLogo }}" alt="Genocs Logo" style="max-width: 40px">
-        <b style="font-weight: 600;">Genocs</b>
+        <b style="font-weight: 600;">enocs</b>
       </a>
       <button class="btn btn-menu d-block d-md-none order-5" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasDoks" aria-controls="offcanvasDoks" aria-label="Open main menu">
@@ -37,9 +37,9 @@
       <div class="offcanvas offcanvas-start border-0 py-md-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true"
         aria-labelledby="offcanvasDoksLabel">
         <div class="offcanvas-header d-md-none">
-          <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="{{ " /" | relLangURL
-              }}"><img src="{{ .Site.Params.NavBarLogo }}" alt="Genocs Logo" style="max-width: 40px">
-              <b style="font-weight: 600;">Genocs</b></a></h2>
+          <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="{{ .Site.Params.rootUrl }}" target="_blank">
+            <img src="{{ .Site.Params.NavBarLogo }}" alt="Genocs Logo" style="max-width: 40px">
+              <b style="font-weight: 600;">enocs</b></a></h2>
           <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas"
             aria-label="Close main menu"></button>
         </div>
