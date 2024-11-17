@@ -3,7 +3,7 @@ title : "Authentication - JWT"
 description: "Adds the integration with JWT using an available authentication middleware and system components to validate and grant the access tokens."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-06-25T15:40:19+02:00
+lastmod: 2024-11-17T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -32,13 +32,13 @@ There are three different ways you can to create the access tokens:
 
 - Using a certificate.
 - Using a secret key.
-- Using a OpenId external provider.
+- Using an OpenId external provider.
 
-Using a certificate is the most secure way to create the access tokens. The certificate can be stored in the file system or in the Azure Key Vault.
+**Using a certificate** is the most secure way to create the access tokens. The certificate can be stored in the file system or in the Azure Key Vault.
 
-Using a secret key is the simplest way to create the access tokens. The secret key is stored in the appsettings.json file.
+**Using a secret** key is the simplest way to create the access tokens. The secret key is stored in the appsettings.json file.
 
-Using a OpenId external provider is the most flexible way to create the access tokens. The OpenId provider can be configured in the appsettings.json file.
+**Using an OpenId external provider** is the most flexible way to create the access tokens. The OpenId provider can be configured in the `appsettings.json` file.
 
 ## JWT authentication with CERTIFICATE
 
@@ -161,31 +161,22 @@ To blacklist and deactivate the access tokens, use `IAccessTokenService` and inv
 
 The default section name for the JWT settings is `jwt`. The following options are available: 
 
-`enabled` - If true then the JWT authentication is enabled.
-
-`allowAnonymousEndpoints` - If true then the JWT authentication is disabled for the endpoints with the AllowAnonymous attribute.
-
-`certificate` - Certificate used to issue or just validate the tokens (including private key or just the public one).
-
-`algorithm` - The algorithm used to sign the tokens.
-
-`issuer` - A party signing the tokens.
-
-`secretKey` - A secret key used to create the access tokens (instead of using the certificate).
-
-`expiry` - How long the token will remain valid.
-
-`validateLifetime` - If true then the lifetime defined in expiryMinutes will be validated.
-
-`validAudience` - An audience that can use the access tokens.
-
-`validateAudience` - If true then the audience defined in validAudience will be validated.
+- `enabled` - If true then the JWT authentication is enabled.
+- `allowAnonymousEndpoints` - If true then the JWT authentication is disabled for the endpoints with the AllowAnonymous attribute.
+- `certificate` - Certificate used to issue or just validate the tokens (including private key or just the public one).
+- `algorithm` - The algorithm used to sign the tokens.
+- `issuer` - A party signing the tokens.
+- `secretKey` - A secret key used to create the access tokens (instead of using the certificate).
+- `expiry` - How long the token will remain valid.
+- `validateLifetime` - If true then the lifetime defined in expiryMinutes will be validated.
+- `validAudience` - An audience that can use the access tokens.
+- `validateAudience` - If true then the audience defined in validAudience will be validated.
 
 ## Settings
 
-**appsettings.json**
+Use the following settings in the `appsettings.json` file according to your needs
 
-``` json
+```json
 "jwt": {
   "enabled": true,
   "allowAnonymousEndpoints": [
@@ -241,7 +232,7 @@ The default section name for the JWT settings is `jwt`. The following options ar
 
 Default settings for some variable has bee overwritten with the following configuration.
 
-``` json
+```json
 "jwt": {
   "challenge": "Bearer",
   "metadataAddress": "/.well-known/openid-configuration",

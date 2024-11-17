@@ -3,7 +3,7 @@ title : "Builder"
 description: "Genocs builder is the entrypoint for the application builder."
 lead: ""
 date: 2023-12-20T17:40:19+02:00
-lastmod: 2023-12-20T17:40:19+02:00
+lastmod: 2024-11-17T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -31,7 +31,7 @@ Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` that will ge
 
 This is what you need to do in the `Program.cs` file.
 
-``` c#
+```csharp
 // Create a new WebApplication
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,7 +47,7 @@ services.AddGenocs(builder.Configuration);
 
 This is an example of how to setup the builder in the `Program.cs` file along with some other services.
 
-``` c#
+```csharp
 using Genocs.Core.Builders;
 using Genocs.Core.Demo.WebApi.Infrastructure.Extensions;
 using Genocs.Core.Demo.WebApi.Options;
@@ -154,25 +154,18 @@ Log.CloseAndFlush();
 
 ## Options
 
-`name` - The service name.
-
-`service` - Service name used TBW.
-
-`instance` - The service instance.
-
-`version` - The service version.
-
-`displayBanner` - If true then the banner is shown into the console.
-
-`displayVersion` - If true then the service version is shown into the console. See `version` param.
+- `name` - The service name.
+- `service` - Service name used TBW.
+- `instance` - The service instance.
+- `version` - The service version.
+- `displayBanner` - If true then the banner is shown into the console.
+- `displayVersion` - If true then the service version is shown into the console. See `version` param.
 
 ## Settings
 
-**appsettings.json**
-
 Use the following settings in the `appsettings.json` file according to your needs.
 
-``` json
+```json
   "app": {
     "name": "Service Name",
     "service": "service-name",
@@ -180,5 +173,5 @@ Use the following settings in the `appsettings.json` file according to your need
     "version": "v1.0",
     "displayBanner": true,
     "displayVersion": true
-  },
+  }
 ```
