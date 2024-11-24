@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-description: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: "Genocs Library built with .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: "Genocs Library built with .NET 9.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: "Genocs Library built with .NET 9.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2024-08-21 14:50:50+02:00
+lastmod: 2024-11-24T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -22,11 +22,11 @@ Genocs Library is a starting point for your next `.NET Microservices library` th
 
 ## Goals
 
-The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET 8 microservice cloud agnostic solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
+The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET 9.0 microservice cloud agnostic solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
 
 ## Features
 
-- [x] Built on .NET8
+- [x] Built on .NET 9.0
 - [x] Follows Clean Architecture Principles
 - [x] Domain Driven Design
 - [x] Cloud Ready. Can be deployed to AWS Infrastructure as ECS Containers using Terraform!
@@ -84,7 +84,7 @@ To get started with this Template, here are the available options.
 
 Before creating your first solution, you should ensure that your local machine has:
 
-- **.NET 8** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+- **.NET 9.0** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
 - **NodeJS (16+)** You can find the download [here](https://nodejs.org/en/download).
 
 #### Installation
@@ -115,7 +115,7 @@ OR
 genocs api n Genocs.Starter
 ```
 
-This will create a new .NET 8 WebAPI solution for you using the Genocs Templates.
+This will create a new .NET 9.0 WebAPI solution for you using the Genocs Templates.
 For further steps and details, [Read the Getting Started Guide](https://genocs-blog.netlify.app/templates/general/getting-started/)
 
 #### Update
@@ -206,7 +206,7 @@ For further steps and details, [Read the Getting Started Guide](https://genocs-b
 
 ## Containerization
 
-The API project, being .NET 8, it is configured to have built-in support for containerization. That means, you really don't need a Dockerfile to containerize the webapi.
+The API project, being .NET 9.0, it is configured to have built-in support for containerization. That means, you really don't need a Dockerfile to containerize the webapi.
 
 To build a docker image, all you have to do is, ensure that docker-desktop or docker instance is running. And run the following command at the root of the solution.
 

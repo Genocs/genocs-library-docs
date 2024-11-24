@@ -35,7 +35,7 @@ To get started with this Template, here are the available options.
 
 Before creating your first Genocs Library solution, you should ensure that your local machine has:
 
-- **.NET 8** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/8.0).
+- **.NET 9.0** You can find the download [here](https://dotnet.microsoft.com/en-us/download/dotnet/9.0).
 - **NodeJS (16+)** You can find the download [here](https://nodejs.org/en/download).
 
 ### Installation

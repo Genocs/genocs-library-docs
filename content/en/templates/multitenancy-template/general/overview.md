@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-description: ".NET Microservice Template built with .NET 8.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: ".NET Microservice Template built with .NET 8.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: ".NET Microservice Template built with .NET 9.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: ".NET Microservice Template built with .NET 9.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13T15:51:03+02:00
-lastmod: 2024-11-17T00:00:00+02:00
+lastmod: 2024-11-24T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -50,7 +50,7 @@ mindmap
 
 ## Features
 
-- :white_check_mark: Built on .NET8
+- :white_check_mark: Built on .NET 9.0
 - :white_check_mark: Follows Clean Architecture Principles
 - :white_check_mark: Domain Driven Design
 - :white_check_mark: Cloud Ready. Can be deployed to AWS Infrastructure as ECS Containers using Terraform

@@ -38,7 +38,10 @@ docker run -d -p 1313:80 genocs/genocs-library-docs
 5. push the image to docker hub
 ```bash
 docker login
+docker tag genocs/genocs-library-docs genocs/genocs-library-docs:1.0.0
 docker tag genocs/genocs-library-docs genocs/genocs-library-docs:latest
+
+docker push genocs/genocs-library-docs:1.0.0
 docker push genocs/genocs-library-docs:latest
 ```
 

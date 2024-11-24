@@ -43,6 +43,25 @@ services.AddGenocs(builder.Configuration);
 ```
 
 
+> NOTE: By Adding `AddGenocs(builder.Configuration)` you are adding the following services:
+
+// Add health checks
+services.AddHealthChecks();
+
+No need to call MapHealthChecks, it is already done for you.
+
+
+```csharp
+// Map the Default Endpoints
+// It contains the following endpoints:
+// - /
+// - /health
+// - /live
+app.MapDefaultEndpoints();
+```
+
+
+
 ## Example
 
 This is an example of how to setup the builder in the `Program.cs` file along with some other services.
@@ -90,9 +109,6 @@ services.AddControllers().AddJsonOptions(x =>
     x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 
-// Add health checks
-services.AddHealthChecks();
-
 
 var settings = new SecretSettings();
 builder.Configuration.GetSection(SecretSettings.Position).Bind(settings);
@@ -137,8 +153,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-// Map the health checks
-app.MapHealthChecks("/hc");
+app.MapDefaultEndpoints();
 
 // Run the application
 app.Run();
@@ -154,12 +169,17 @@ Log.CloseAndFlush();
 
 ## Options
 
-- `name` - The service name.
-- `service` - Service name used TBW.
-- `instance` - The service instance.
-- `version` - The service version.
+- `name` - The service name. The service name is used to display the banner and the version is used to display the version of the service.
+- `service` - Service property is used to identify the service. This is used to identify the service in the logs. It *mandatory* to have this property when using the **OpenTelemetry** support.  
+- `instance` - The service instance. If present then the instance is used to setup **OpenTelemetry**.
+- `version` - The service version. If present then the version is used to setup **OpenTelemetry**.
 - `displayBanner` - If true then the banner is shown into the console.
 - `displayVersion` - If true then the service version is shown into the console. See `version` param.
+
+
+The service name is used to display the banner and the version is used to display the version of the service.
+
+```csharp
 
 ## Settings
 
