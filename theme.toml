@@ -2,7 +2,7 @@ name = "Doks"
 license = "MIT"
 licenselink = "https://github.com/h-enk/doks/blob/master/LICENSE"
 description = "Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-timeout = 600000
+timeout = 1200000
 
 homepage = "https://github.com/h-enk/doks"
 demosite = "https://doks.netlify.app"

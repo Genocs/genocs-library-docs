@@ -33,7 +33,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.108.0
+      HUGO_VERSION: 0.139.0
 
     steps:
       - name: Checkout 

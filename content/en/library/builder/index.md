@@ -3,7 +3,7 @@ title : "Builder"
 description: "Genocs builder is the entrypoint for the application builder."
 lead: ""
 date: 2023-12-20T17:40:19+02:00
-lastmod: 2024-11-17T00:00:00+02:00
+lastmod: 2024-11-30T00:00:00+02:00
 draft: false
 images: []
 menu:
@@ -27,20 +27,49 @@ dotnet add package Genocs.Core
 
 ## Usage
 
-Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` that will get register the required services.
+The builder is the entrypoint for the application builder. You can use the `Genocs.Core` builder to setup the application.
 
-This is what you need to do in the `Program.cs` file.
+There are two ways to setup the builder:
 
-```csharp
-// Create a new WebApplication
-var builder = WebApplication.CreateBuilder(args);
+1. Extend `WebApplicationBuilder` with `UseGenocs()`
 
-// Get the services
-var services = builder.Services;
+    This is what you need to do in the `Program.cs` file.
 
-// Setup the builder
-services.AddGenocs(builder.Configuration);
-```
+    ```csharp
+    // Create a new WebApplication
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.AddGenocs();
+
+    ... // Add other services
+    ```
+
+    This option will allow you to be able to integrate [Microsoft Aspire](https://learn.microsoft.com/en-us/dotnet/aspire/) effortlessly, as well as, you can add the following services:
+
+    ```csharp
+    ... // From the above code
+    builder.AddJwt()
+            .AddOpenTelemetry()
+            .AddMongoFast()
+            .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
+            .AddApplicationServices()
+            .Build();
+    ```
+
+2. Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` that will get register the required services.
+
+    This is what you need to do in the `Program.cs` file.
+
+    ```csharp
+    // Create a new WebApplication
+    var builder = WebApplication.CreateBuilder(args);
+
+    // Get the services
+    var services = builder.Services;
+
+    // Setup the builder
+    services.AddGenocs(builder.Configuration);
+    ```
 
 
 > NOTE: By Adding `AddGenocs(builder.Configuration)` you are adding the following services:
@@ -50,12 +79,11 @@ services.AddHealthChecks();
 
 No need to call MapHealthChecks, it is already done for you.
 
-
 ```csharp
 // Map the Default Endpoints
 // It contains the following endpoints:
 // - /
-// - /health
+// - /healthz
 // - /live
 app.MapDefaultEndpoints();
 ```
@@ -90,17 +118,18 @@ builder.Host
         .UseAzureKeyVault() // Use Azure Key Vault
         .UseLogging(); // Use Serilog
 
-// Get the services
-var services = builder.Services;
 
 // Setup the builder
-services
-    .AddGenocs(builder.Configuration) // Setup Genocs builder
+builder
+    .AddGenocs() // Setup Genocs builder
     .AddOpenTelemetry() // Add OpenTelemetry
     .AddMongoFast() // Add MongoDb
     .RegisterMongoRepositories(Assembly.GetExecutingAssembly()) // Register MongoDb Repositories
     .AddApplicationServices() // Add Application Services
     .Build(); // Build the services
+
+// Get the services
+var services = builder.Services;
 
 services.AddCors(); // Add Cors
 services.AddControllers().AddJsonOptions(x =>
@@ -108,7 +137,6 @@ services.AddControllers().AddJsonOptions(x =>
     // serialize Enums as strings in api responses (e.g. Role)
     x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
-
 
 var settings = new SecretSettings();
 builder.Configuration.GetSection(SecretSettings.Position).Bind(settings);
@@ -153,6 +181,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+// Map the Default Endpoints and Health Checks
 app.MapDefaultEndpoints();
 
 // Run the application
@@ -189,7 +218,7 @@ Use the following settings in the `appsettings.json` file according to your need
   "app": {
     "name": "Service Name",
     "service": "service-name",
-    "instance": "000001",
+    "instance": "01",
     "version": "v1.0",
     "displayBanner": true,
     "displayVersion": true
