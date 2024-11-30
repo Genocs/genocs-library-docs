@@ -34,14 +34,14 @@ npm run build
 docker build -t genocs/genocs-library-docs .
 
 # tag the image
-docker tag genocs/genocs-library-docs genocs/genocs-library-docs:1.1.0
+docker tag genocs/genocs-library-docs genocs/genocs-library-docs:1.1.1
 docker tag genocs/genocs-library-docs genocs/genocs-library-docs:latest
 
 # login to docker hub
 docker login
 
 # push the image to docker hub
-docker push genocs/genocs-library-docs:1.1.0
+docker push genocs/genocs-library-docs:1.1.1
 docker push genocs/genocs-library-docs:latest
 ```
 3. Run the following command to run the docker image on localhost:1613
