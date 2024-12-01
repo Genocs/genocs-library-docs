@@ -2,7 +2,7 @@
 title: "CLI"
 description: "The genocs CLI (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides unified experience across different platforms, allowing developers to create cross-platform applications with ease. With its extensive set of commands, the .NET CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-11-16T00:00:00+02:00
+lastmod: 2024-12-01T00:00:00+02:00
 draft: false
 images: []
 ---
@@ -70,15 +70,16 @@ The picture shows the console log upon the template is installed.
 
 ## The Templates
 
-| Template        |      Command      |  To be used for                                 |
-|:----------------|:------------------|------------------------------------------------:|
-| angular         | gnx-angular       | angular front-end SPA                           |
-| react           | gnx-react         | react front-end SPA                             |
-| blazor          | gnx-wasmblazor    | web assembly - blazor portal                    |
-| cleanblazor     | gnx-cleanblazor   | clean architecture - blazor portal              |
-| webapi          | gnx-cleanwebapi   | onion clean architecture - WebAPI               |
-| webapi          | gnx-microwebapi   | microservice multitenant - WebAPI               |
-| webapi          | gnx-librawebapi   | microservice on top of Genocs Library - WebAPI  |
+| Template        |      Command      |   CLI Command         |  To be used for                                 |
+|:----------------|:------------------|:----------------------|------------------------------------------------:|
+| angular         | gnx-angular       | **angular**           | angular front-end SPA                           |
+| react           | gnx-react         | **react**             | react front-end SPA                             |
+| blazor          | gnx-wasmblazor    | **blazor-wasm**       | web assembly - blazor portal                    |
+| cleanblazor     | gnx-cleanblazor   | **blazor-clean**      | clean architecture - blazor portal              |
+| webapi          | gnx-cleanwebapi   | **clean-webapi**      | onion clean architecture - WebAPI               |
+| webapi          | gnx-microwebapi   | **micro-webapi**      | microservice multitenant - WebAPI               |
+| webapi          | gnx-librawebapi   | **libra-webapi**      | microservice on top of Genocs Library - WebAPI  |
+
 
 ## Uninstall templates
 
@@ -102,23 +103,23 @@ To create a blazor portal use one of these commands
 
 ``` bash
 # To build a blazor portal 
-genocs blazor new <Company.Project.Service>
+genocs blazor-wasm new <Company.Project.Service>
 
-# (SOON) To build a clean architecture blazor portal 
-genocs cleanblazor new <Company.Project.Service>
+# To build a clean architecture blazor portal 
+genocs blazor-clean new <Company.Project.Service>
 ```
 
 ### WebAPI
 
 ``` bash
 # To build a web api architecture webapi 
-genocs webapi new <Company.Project.Service>
+genocs libra-webapi new <Company.Project.Service>
 
-# Another option to build a clen architecture webapi 
-genocs cleanapi new <Company.Project.Service>
+# Another option to build a clean architecture webapi 
+genocs clean-webapi new <Company.Project.Service>
 
 # To build a microservice web Api with multitenant support
-genocs microservice  <Company.Project.Service>
+genocs micro-webapi <Company.Project.Service>
 ```
 
 ## The solution
@@ -138,13 +139,52 @@ dotnet build ./src/genocs.cli.csproj
 # Pack the tool (to be deployed on nuget) 
 dotnet pack
 
-# Run the tool to install the templates using the net8 as runtime
-dotnet run -f net8.0 --project ./src/genocs.cli.csproj genocs -i
+# Run the tool to install the templates using the NET9 runtime
+dotnet run -f net9.0 --project ./src/genocs.cli.csproj genocs -i
 
 # Run the tool to install the templates (some as above with cd command)
 cd ./src
-dotnet run -f net8.0 genocs -i
+dotnet run -f net9.0 genocs -i
 
 # Install the tool from local folder to the global cache
 dotnet tool install --global --add-source ./src/nupkg genocs.cli
+```
+
+## One in once
+
+In the following section, you will find the commands to create a new service from scratch.
+For sake of simplicity, we will change the name of the service from `<Company.Project.Service>` to a demo name.
+
+``` bash
+# To build a microservice web Api with multitenant support
+genocs micro-webapi n Genocs.TestWebApi
+
+# To build a blazor portal 
+genocs blazor-wasm new Genocs.TestWebBlazorPortal
+
+# To restore and build the services
+dotnet restore ./Genocs.TestWebApi
+dotnet build ./Genocs.TestWebApi
+
+dotnet restore ./Genocs.TestWebBlazorPortal
+dotnet build ./Genocs.TestWebBlazorPortal
+
+# To run the API
+dotnet run --project ./Genocs.TestWebApi/src/WebApi/WebApi.csproj
+
+# Run following command into another terminal
+dotnet run --project ./Genocs.TestWebBlazorPortal/src/Host/Host.csproj
+```
+
+```mermaid
+architecture-beta
+    group api(logos:aws-lambda)[Example]
+
+    service webapp(logos:aws-cognito)[WebApp] in api
+    service webapi(logos:aws-lambda)[WebApi] in api
+    service db(logos:aws-documentdb)[Database] in api
+
+    db:T -- B:webapi
+    webapi:L -- R:webapp
+
 ```
