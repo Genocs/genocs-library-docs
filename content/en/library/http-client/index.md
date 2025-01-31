@@ -18,7 +18,7 @@ toc: true
 
 ### Overview
 
-Enhances the built-in HttpClient with an IHttpClient interface with retry policy using Polly and adds a possibility to easily use **Consul** service discovery and **Fabio** load balancing mechanisms, as well as switching between the different implementations.
+Enhances the built-in `HttpClient` with an `IHttpClient` interface with retry policy using Polly and adds a possibility to easily use **Consul** service discovery and **Fabio** load balancing mechanisms, as well as switching between the different implementations.
 
 ## Installation
 
@@ -33,17 +33,19 @@ dotnet add package Genocs.HTTP
 
 ### Usage
 
-Extend `IGenocsBuilder` with `AddHttpClient()` that will register the required services.
+1. Extend `IGenocsBuilder` with `AddHttpClient()` that will register the required services.
 
-``` cs
-public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
-{
-    builder.AddHttpClient();
-    // Other services.
-    
-    return builder;
-}
-```
+  ``` cs
+  // Create a new WebApplication
+  var builder = WebApplication.CreateBuilder(args);
+
+  builder.AddGenocs()
+          .AddHttpClient()
+          .Build();
+
+  ... // Add other services
+  // Other services.
+  ```
 
 Then, simply inject `IHttpClient` (and optionally HttpClientOptions to resolve services URLS) to execute HTTP requests.
 
@@ -107,20 +109,18 @@ dotnet add package Genocs.Discovery
 
 ### Usage
 
-Extend IGenocsBuilder with `AddConsul()` that will register the required services.
+1. Extend IGenocsBuilder with `AddConsul()` that will register the required services.
 
-``` cs
-public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
-{
-    builder
-        .AddHttpClient()
-        .AddConsul();
-    // Other services.
+    ``` cs
+    // Create a new WebApplication
+    var builder = WebApplication.CreateBuilder(args);
 
-    return 
-    builder;
-}
-```
+    builder.AddGenocs()
+            .AddHttpClient()
+            .AddConsul()
+            .Build();
+
+    ```
 
 ### Options
 
@@ -175,20 +175,18 @@ dotnet add package Genocs.LoadBalancing
 - Genocs.Discovery
 
 ### Usage
-Extend `IGenocsBuilder` with `AddFabio()` that will register the required services.
+1. Extend `IGenocsBuilder` with `AddFabio()` that will register the required services.
 
-``` cs
-public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
-{
-    builder
-        .AddHttpClient()
-        .AddConsul()
-        .AddFabio();
-    // Other services.
+    ``` cs
+    // Create a new WebApplication
+    var builder = WebApplication.CreateBuilder(args);
 
-    return builder;
-}
-```
+    builder.AddGenocs()
+            .AddHttpClient()
+            .AddConsul()
+            .AddFabio()
+            .Build();
+    ```
 
 ### Options
 

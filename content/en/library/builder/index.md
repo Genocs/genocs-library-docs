@@ -36,24 +36,33 @@ There are two ways to setup the builder:
     This is what you need to do in the `Program.cs` file.
 
     ```csharp
+    using Genocs.Core.Builders;
+    using Genocs.Logging;
+
+    // Setup the logger
+    StaticLogger.EnsureInitialized();
+
     // Create a new WebApplication
     var builder = WebApplication.CreateBuilder(args);
 
-    builder.AddGenocs();
+    IGenocsBuilder gnxBuilder = builder.AddGenocs();
 
     ... // Add other services
+
+    // Build the application
+    gnxBuilder.Build();
     ```
 
     This option will allow you to be able to integrate [Microsoft Aspire](https://learn.microsoft.com/en-us/dotnet/aspire/) effortlessly, as well as, you can add the following services:
 
     ```csharp
     ... // From the above code
-    builder.AddJwt()
-            .AddOpenTelemetry()
-            .AddMongoFast()
-            .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
-            .AddApplicationServices()
-            .Build();
+    gnxBuilder.AddJwt()
+                .AddOpenTelemetry()
+                .AddMongoFast()
+                .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
+                .AddApplicationServices()
+                .Build();
     ```
 
 2. Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` that will get register the required services.
