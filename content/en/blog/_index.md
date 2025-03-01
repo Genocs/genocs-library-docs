@@ -20,15 +20,8 @@ You can download Postman from the official website [here](https://www.postman.co
 
 In this blog post, we will show you how to set up Postman and start using it to test your APIs. specifically, we will cover the following topics:
 
-1. How and whento setup Collection Variables
+1. How and when to setup Collection Variables
 2. Creating a new collection
 3. Creating a new request
 4. Sending a request
 5. Viewing the response
-
-
-
-
-
-{{< blog >}}
-```
