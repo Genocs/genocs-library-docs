@@ -75,9 +75,32 @@ git remote delete origin
 ```
 
 
-Build pipeline yaml file for DemoApi and DemoFE project.
+## Build pipeline yaml files
 
-Add file `pipelines\app-service-ci.yml` to the root of the project
+There are two build pipeline yaml files that you can use to setup the build pipeline for the project.
+One is for the app service and the other is for the docker image.
+
+
+### App Service Build Pipeline
+
+Before run pipeline please check the variables:
+
+> **General variables** 
+> 1. BuildConfiguration *(Release or Debug)*
+>    {{< img src="library_variables.png" >}}
+>
+>    {{< img src="library_variable.png" >}}
+> 
+> **Library variables**
+> 1. azureSubscription *(Only for deployment to Azure)*
+> 
+> **Pipeline variables**
+> 1. majorVer
+> 2. minorVer
+> 3. appServiceName *(Only for deployment to Azure)*
+----
+
+Add file `azure-pipelines\app-service-ci.yml` to the root of the project
 
 ```yaml
 # ASP.NET Core (.NET Framework)
@@ -170,10 +193,13 @@ steps:
 #    runtimeStack: 'DOTNETCORE|9.0'
 ```
 
-Deploy pipeline yaml file for DemoApi.
+### Docker Build Pipeline
+
+The Pipeline requires a Service Connections to deploy Images to Azure Container Registry.
+1. `Service Connections`: AcrDevelopmentConnection
 
 
-Add file `pipelines\app-container-ci.yml` to the root of the project
+Add file `azure-pipelines\app-container-ci.yml` to the root of the project
 
 ```yaml
 # ASP.NET Core (.NET Framework)
@@ -192,12 +218,11 @@ resources:
 variables:
   # Agent VM image name
   vmImageName: "ubuntu-latest"
-  imageName: bp.sirio.demobe # Replace with your image name
+  imageName: backend # Replace with your image name
   registry: genocs # Replace with your Docker registry (e.g., Docker Hub, ACR)
   repository: $(registry)/$(imageName)
-  dockerfile: dockerfile # Path to your Dockerfile
-  buildArgValue: $(Build.BuildId) # Example: Use the build ID as the argument value
-  patArgValue: "123ABC" # The PAT
+  dockerfile: Dockerfile # Path to your Dockerfile
+  buildArgValue: "--build-arg BUILD_ENV=$(buildEnv)" # Use this to pass the build environment to the Dockerfile
 
 stages:
   - stage: BuildAndPush
@@ -215,7 +240,7 @@ stages:
               repository: $(repository)
               tags: "$(Build.BuildId),latest" # Use build number as tag
               Dockerfile: $(dockerfile)
-              buildArgs: "PAT=$(patArgValue)" # Pass the PAT to the build argument
+              buildArgs: buildArgValue # Pass the the build argument
               # Add other build options as needed, e.g., target, context
               # buildContext: .  # Uncomment if your Dockerfile is not in the root of the repo
               # target: my-target # Uncomment if you are using multi-stage builds
@@ -224,9 +249,10 @@ stages:
             displayName: Push Image
             inputs:
               command: push
-              containerRegistry: "DockerhubConnection"
+              containerRegistry: "AcrDevelopmentConnection"
               repository: $(repository)
               tags: "$(Build.BuildId),latest"
 ```
 
-Setup deployment pipeline for DemoApi.
+## Conclusion
+Enjoy your new project on Azure DevOps!
