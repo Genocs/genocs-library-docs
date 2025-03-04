@@ -254,5 +254,70 @@ stages:
               tags: "$(Build.BuildId),latest"
 ```
 
+
+```yaml
+# ASP.NET Core (.NET Framework)
+# Build and test ASP.NET Core projects targeting .NET9.
+# Add steps that publish symbols, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+# Before run pipeline please check the variables
+# *** Service Connection ***
+# AcrConnectionDev (Service connection to Azure Container Registry for development)
+# AcrConnectiionUAT (Service connection to Azure Container Registry for UAT)
+# AcrConnectionProd (Service connection to Azure Container Registry for production)
+
+# *** General variables ***
+# BuildConfiguration (Release or Debug)
+
+
+
+# *** Pipeline variables ***
+#
+
+
+name: $(Build.BuildId)
+
+trigger:
+  - none
+
+resources:
+  - repo: self
+
+variables:
+  vmImageName: "ubuntu-latest" # Agent VM image name
+  imageName: fiscanner-hello # Your image name
+  dockerfile: Dockerfile # Your Dockerfile path
+  containerArgs: "--build-arg GREETING=Souch beautifull" # Argument to pass to the container
+
+stages:
+  - stage: BuildAndPush
+    displayName: Build and Push Docker Image
+    jobs:
+      - job: DEV
+        displayName: Build Docker Image
+        condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/develop'), eq(variables['envName'], 'dev'))
+        pool:
+          vmImage: $(vmImageName)
+        steps:
+          - task: Docker@2
+            displayName: Build
+            inputs:
+              command: build
+              repository: $(imageName)
+              tags: "$(Build.BuildId),latest" # Use build number as tag
+              dockerfile: $(dockerfile)
+              buildArgs: containerArgs # Pass the the build argument
+              containerRegistry: "AcrConnection2025"
+
+          - task: Docker@2
+            displayName: Push
+            inputs:
+              command: push
+              repository: $(imageName)
+              tags: "$(Build.BuildId),latest" # Use build number as tag
+              containerRegistry: "AcrConnection2025"
+```
+
 ## Conclusion
 Enjoy your new project on Azure DevOps!
