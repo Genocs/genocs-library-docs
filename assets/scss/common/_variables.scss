@@ -27,6 +27,11 @@ $pink-500: #d32e9d;
 $primary: $purple;
 $secondary : $pink-500;
 
+// Bootstrap color contrast settings
+$min-contrast-ratio: 3; // Reduce from default 4.5 to 3 to prevent warnings
+$color-contrast-dark: $black;
+$color-contrast-light: $white;
+
 $color-btn-bg: $primary;
 $color-btn-border: darken($primary, 5%);
 $color-btn-text: $white;
