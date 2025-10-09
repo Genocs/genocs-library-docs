@@ -6,15 +6,17 @@ enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 languageCode = "en-US"
+
 [pagination]
 pagerSize = 7
+
 rssLimit = 10
 googleAnalytics = "UA-32530775-1"
 
 # Multilingual
 defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
-# defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 # add redirects/headers
 [outputs]

@@ -1,0 +1,184 @@
+[[main]]
+  name = "Introduzione"
+  url = "/it/introduction/"
+  weight = 10
+
+[[main]]
+  name = "CLI"
+  url = "/it/cli/"
+  weight = 20
+
+[[main]]
+  name = "Libreria"
+  url = "/it/library/"
+  weight = 30
+
+[[main]]
+  name = "Template"
+  url = "/it/templates/"
+  weight = 40
+
+[[main]]
+  name = "Blazor Template"
+  url = "/it/blazor-template/"
+  weight = 50
+
+[[main]]
+  name = "Containers"
+  url = "/it/containers/"
+  weight = 60
+
+[[main]]
+  name = "Documentazione"
+  url = "/it/docs/"
+  weight = 70
+
+[[main]]
+  name = "Blog"
+  url = "/it/blog/"
+  weight = 80
+
+[[main]]
+  name = "Contatti"
+  url = "/it/contact/"
+  weight = 90
+
+##############################
+
+[[templates]]
+  name = "Generale"
+  identifier = "general"
+  url = "/it/templates/general/"
+  weight = 10
+
+[[templates]]
+  name = "Multitenancy"
+  identifier = "multitenancy-dotnet-template"
+  url = "/it/templates/multitenancy-template/"
+  weight = 20
+
+[[templates]]
+  name = "Onion"
+  identifier = "onion-dotnet-template"
+  url = "/it/templates/onion-template/"
+  weight = 30
+
+[[templates]]
+  name = "Libreria"
+  identifier = "library-dotnet-template"
+  url = "/it/templates/library-template/"
+  weight = 40
+
+[[templates]]
+  name = "Tutorial"
+  identifier = "templates-tutorials"
+  url = "/it/templates/tutorials/"
+  weight = 50
+
+##############################
+
+[[introduction]]
+  name = "Guida Introduttiva"
+  identifier = "basics-getting-started"
+  url = "/it/introduction/getting-started/"
+  weight = 10
+
+[[introduction]]
+  name = "Esplorare la Documentazione"
+  identifier = "basics-exploring-docs"
+  url = "/it/introduction/exploring-docs/"
+  weight = 20
+
+[[introduction]]
+  name = "Contribuire"
+  identifier = "basics-contributing"
+  url = "/it/introduction/contributing/"
+  weight = 30
+
+##############################
+
+[[docs]]
+  name = "Prologo"
+  identifier = "prologue"
+  url = "/it/docs/prologue/"
+  weight = 10
+
+[[docs]]
+  name = "Aiuto"
+  identifier = "help"
+  url = "/it/docs/help/"
+  weight = 20
+
+##############################
+
+[[library]]
+  name = "Autenticazione"
+  identifier = "authentication"
+  url = "/it/library/authentication/"
+  weight = 10
+
+[[library]]
+  name = "Azure Key Vault"
+  identifier = "azure-key-vault"
+  url = "/it/library/azure-key-vault/"
+  weight = 20
+
+[[library]]
+  name = "Builder"
+  identifier = "builder"
+  url = "/it/library/builder/"
+  weight = 30
+
+[[library]]
+  name = "CQRS"
+  identifier = "cqrs"
+  url = "/it/library/cqrs/"
+  weight = 40
+
+[[library]]
+  name = "Tracing Distribuito"
+  identifier = "distributed-tracing"
+  url = "/it/library/distributed-tracing/"
+  weight = 50
+
+[[library]]
+  name = "Client HTTP"
+  identifier = "http-client"
+  url = "/it/library/http-client/"
+  weight = 60
+
+[[library]]
+  name = "Logging"
+  identifier = "logging"
+  url = "/it/library/logging/"
+  weight = 70
+
+[[library]]
+  name = "Messaggistica"
+  identifier = "messaging"
+  url = "/it/library/messaging/"
+  weight = 80
+
+[[library]]
+  name = "Metriche"
+  identifier = "metrics"
+  url = "/it/library/metrics/"
+  weight = 90
+
+[[library]]
+  name = "Monitoraggio"
+  identifier = "monitoring"
+  url = "/it/library/monitoring/"
+  weight = 100
+
+[[library]]
+  name = "Persistenza"
+  identifier = "persistence"
+  url = "/it/library/persistence/"
+  weight = 110
+
+[[library]]
+  name = "Sicurezza"
+  identifier = "security"
+  url = "/it/library/security/"
+  weight = 120

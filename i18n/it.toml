@@ -1,2 +1,38 @@
 [get-started]
-   other = "Avvio"
+   other = "Inizia"
+
+[home]
+   other = "Home"
+
+[docs]
+   other = "Documentazione"
+
+[blog]
+   other = "Blog"
+
+[contact]
+   other = "Contatti"
+
+[language]
+   other = "Lingua"
+
+[edit-page]
+   other = "Modifica questa pagina"
+
+[last-modified]
+   other = "Ultima modifica"
+
+[next]
+   other = "Successivo"
+
+[previous]
+   other = "Precedente"
+
+[search-placeholder]
+   other = "Cerca nella documentazione..."
+
+[table-of-contents]
+   other = "Indice dei Contenuti"
+
+[back-to-top]
+   other = "Torna su"
