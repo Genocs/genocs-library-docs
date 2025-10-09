@@ -64,7 +64,7 @@ smallLimit = "30"
 footer = "Developed & Maintained by <a href=\"https://www.genocs.com/\">Genocs</a>"
 
 # Feed
-copyRight = "Copyright (c) 2024 Genocs"
+copyRight = "Copyright (c) 2025 Genocs"
 
 # Alert
 alert = true

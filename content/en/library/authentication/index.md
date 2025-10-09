@@ -1,5 +1,5 @@
 ---
-title : "Authentication - JWT"
+title: "Authentication - JWT"
 description: "Adds the integration with JWT using an available authentication middleware and system components to validate and grant the access tokens."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
@@ -17,7 +17,7 @@ toc: true
 
 ## Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Auth
 ```
 
@@ -44,7 +44,7 @@ There are three different ways you can to create the access tokens:
 
 Extend `IGenocsBuilder` with `AddJwt()` that will register the required services.
 
-``` cs
+```cs
 public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 {
     builder.AddJwt()
@@ -58,7 +58,7 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 
 Extend `IGenocsBuilder` with `AddPrivateKeyJwt()` that will register the required services.
 
-``` cs
+```cs
 public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 {
     builder.AddPrivateKeyJwt()
@@ -68,14 +68,13 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 }
 ```
 
-
 ## JWT authentication with OpenId provider
 
 OpenId official web page: [https://openid.net/](https://openid.net/)
 
 Extend `IGenocsBuilder` with `AddOpenIdJwt()` that will register the required services.
 
-``` cs
+```cs
 public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 {
     builder.AddOpenIdJwt()
@@ -86,7 +85,8 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 ```
 
 Add the use of the authentication middleware in the `ConfigureServices` method of the `Startup` class.
-``` cs
+
+```cs
 public static IGenocsBuilder UseGenocs(this IGenocsBuilder builder)
 {
     builder.UseOpenIdJwt()
@@ -97,7 +97,8 @@ public static IGenocsBuilder UseGenocs(this IGenocsBuilder builder)
 ```
 
 Build an authentication middleware that will validate the access tokens.
-``` cs
+
+```cs
 public static IApplicationBuilder UseFirebaseAuthentication(this IApplicationBuilder builder)
 {
     return builder.UseMiddleware<FirebaseAuthenticationMiddleware>();
@@ -105,22 +106,23 @@ public static IApplicationBuilder UseFirebaseAuthentication(this IApplicationBui
 ```
 
 Add the use of the authentication middleware in the `Configure` method of the `Startup` class.
-``` cs
+
+```cs
 app.UseFirebaseAuthentication();
 ```
 
 **NOTE**: Please, make sure that the `System.IdentityModel.Tokens.Jwt` package is NOT installed in the project. If it is, remove it from the project file.
 
-``` cs
+```cs
     <ItemGroup>
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
     </ItemGroup>
-``` cs
+```
 
 
 Then, invoke `UseAuthentication()` extension from `IApplicationBuilder`.
 
-``` cs
+```cs
 public static IApplicationBuilder UseGenocs(this IApplicationBuilder app)
 {
     app.UseAuthentication();
@@ -132,7 +134,7 @@ public static IApplicationBuilder UseGenocs(this IApplicationBuilder app)
 
 Creating the access tokens can be done by using `IJwtHandler` interface.
 
-``` c#
+```cs
 public class UserService
 {
     private readonly IJwtHandler _jwtHandler;
@@ -141,14 +143,14 @@ public class UserService
     {
         _jwtHandler = jwtHandler;
     }
-    
+
     public async Task<string> SignInAsync(string email, string password)
     {
         var user = ... //Fetch the user from a custom database
         ValidateCredentials(user, password); //Validate the credentials etc.
 
         //Generate the token with an optional role and other claims
-        var token = _jwtHandler.CreateToken(user.Id, user.Role, user.Claims); 
+        var token = _jwtHandler.CreateToken(user.Id, user.Role, user.Claims);
 
         return token.AccessToken;
     }
@@ -159,7 +161,7 @@ To blacklist and deactivate the access tokens, use `IAccessTokenService` and inv
 
 ## Options
 
-The default section name for the JWT settings is `jwt`. The following options are available: 
+The default section name for the JWT settings is `jwt`. The following options are available:
 
 - `enabled` - If true then the JWT authentication is enabled.
 - `allowAnonymousEndpoints` - If true then the JWT authentication is disabled for the endpoints with the AllowAnonymous attribute.
@@ -170,7 +172,7 @@ The default section name for the JWT settings is `jwt`. The following options ar
 - `validIssuer` - An issuer that can use the access tokens.
 - `authority` - The URL of the OpenId provider.
 - `audience` - An audience that can use the access tokens.
-- `challenge` - The challenge used to authenticate the user.    
+- `challenge` - The challenge used to authenticate the user.
 - `metadataAddress` - The URL of the OpenId provider metadata.
 - `saveToken` - If true then the token will be saved in the authentication properties.
 - `saveSigninToken` - If true then the token will be saved in the sign-in properties.

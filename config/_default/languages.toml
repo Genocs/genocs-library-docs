@@ -5,17 +5,24 @@
   [en.params]
     languageISO = "EN"
 
+[it]
+  languageName = "Italian"
+  contentDir = "content/it"
+  weight = 15
+  [it.params]
+    languageISO = "IT"
+
 [de]
   languageName = "German"
   contentDir = "content/de"
-  weight = 15
+  weight = 20
   [de.params]
     languageISO = "DE"
 
 [nl]
   languageName = "Nederlands"
   contentDir = "content/nl"
-  weight = 20
+  weight = 25
   [nl.params]
     languageISO = "NL"
     titleAddition = "Modern documentatie-thema"
