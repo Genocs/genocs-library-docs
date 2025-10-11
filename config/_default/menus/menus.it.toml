@@ -26,8 +26,8 @@
 
 [[templates]]
   name = "Blazor"
-  identifier = "blazor"
-  url = "/it/blazor-template/general/getting-started/"
+  identifier = "blazor-dotnet-template"
+  url = "/it/templates/blazor-template/"
   weight = 60
 
 [[templates]]
