@@ -3,12 +3,12 @@ title : "Introduzione"
 description: "Benvenuti nella documentazione completa delle potenti librerie software di Genocs progettate per rivoluzionare lo sviluppo di soluzioni microservizi cloud-agnostiche. In questa guida, esploreremo le varie capacità e funzionalità offerte da queste librerie, dandovi la possibilità di creare applicazioni robuste e scalabili che si adattano perfettamente a qualsiasi ambiente cloud."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-11-16T00:00:00+02:00
+lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 ---
 
-{{< img src="logo.png" >}}
+{{< img src="gnx-enterprise-library.png" >}}
 
 Genocs, un'azienda tecnologica leader, ha sviluppato una suite di librerie software specificamente progettate per affrontare le sfide che gli sviluppatori devono affrontare nella costruzione di architetture microservizi cloud-agnostiche. Con queste librerie, gli sviluppatori possono liberare la loro creatività e concentrarsi sulla costruzione di applicazioni eccezionali senza essere legati a un provider cloud specifico. Che tu stia lavorando con Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), o qualsiasi altro provider cloud principale, le librerie di Genocs garantiscono compatibilità e portabilità attraverso molteplici ambienti cloud.
 

@@ -3,7 +3,7 @@ title : "Monitoring"
 description: "Genocs Library is a collection of Enterprise Level Libraries and Templates for Modern Web Applications that gets you started with premium application development in no-time!"
 lead: ""
 date: 2023-11-29T21:00:19+02:00
-lastmod: 2023-11-29T21:00:19+02:00
+lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 menu:
@@ -14,8 +14,6 @@ menu:
 weight: 9
 toc: true
 ---
-
-{{< img src="logo.png" >}}
 
 ### Overview
 Adds logging and tracing capability, by default uses Azure Appinsights, Jaeger and Console tracing sistem. The system configure Masstransit with RabbitMQ and 

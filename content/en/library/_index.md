@@ -3,12 +3,12 @@ title : "Library"
 description: "Genocs Library is a collection of Enterprise Level Libraries and Templates for Modern Web Applications that gets you started with premium application development in no-time!"
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2023-06-25T15:40:19+02:00
+lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 ---
 
-{{< img src="logo.png" >}}
+{{< img src="gnx-framework.png" >}}
 
 Supported features that will help to quickly set up your next microservices:
 

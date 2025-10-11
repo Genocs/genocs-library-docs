@@ -3,7 +3,7 @@ title : "Builder"
 description: "Genocs builder is the entrypoint for the application builder."
 lead: ""
 date: 2023-12-20T17:40:19+02:00
-lastmod: 2024-11-30T00:00:00+02:00
+lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 menu:
@@ -202,7 +202,7 @@ Log.CloseAndFlush();
 
 ## Console
 
-{{< img src="service_console.png" >}}
+{{< img src="gnx-service-console.png" >}}
 
 
 ## Options

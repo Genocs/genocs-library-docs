@@ -3,12 +3,12 @@ title : "Introduction"
 description: "Welcome to the comprehensive documentation of Genocs' powerful software libraries designed to revolutionize the development of cloud-agnostic microservice solutions. In this guide, we will explore the various capabilities and features offered by these libraries, empowering you to create robust and scalable applications that seamlessly adapt to any cloud environment."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2025-10-11T12:12:40Z
+lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 ---
 
-{{< img src="logo.png" >}}
+{{< img src="gnx-framework.png" >}}
 
 Genocs, a leading technology company, has developed a suite of software libraries specifically crafted to address the challenges faced by developers in building cloud-agnostic microservice architecture. With these libraries, developers can unleash their creativity and focus on building exceptional applications without being tied to a specific cloud provider. Whether you're working with Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), or any other major cloud provider, Genocs' libraries ensure compatibility and portability across multiple cloud environments.
 

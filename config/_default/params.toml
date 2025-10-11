@@ -5,8 +5,8 @@ title = "Genocs Framework Documentation"
 titleSeparator = "-"
 titleAddition = "Open-Source Framework for Enterprise Applications"
 description = "Genocs Framework Documentation is a project to cater the needs of Developers and Organizations to reduce the development effort"
-logo = "/images/main-logo.png"
-navBarLogo = "/images/icon.png"
+logo = "/images/gnx-framework.png"
+navBarLogo = "/images/gnx-icon.png"
 rootUrl = "https://www.genocs.com"
 
 
@@ -17,7 +17,7 @@ rootUrl = "https://www.genocs.com"
 mainSections = ["introduction", "cli", "library", "templates", "containers" ]
 
 ## Open Graph
-images = ["logo.png"]
+images = ["gnx-icon.png"]
 ogLocale = "en_US"
 domainTLD = "doks.netlify.app"
 titleHome = "Genocs Documentation"
@@ -35,10 +35,10 @@ schemaAuthorTwitter = "https://twitter.com/noccogiovanni"
 schemaAuthorLinkedIn = "https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/"
 schemaAuthorGitHub = "https://github.com/giovanninocco"
 schemaLocale = "en-US"
-schemaLogo = "logo.png"
+schemaLogo = "gnx-icon.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "logo.png"
+schemaImage = "gnx-icon.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/noccogiovanni"

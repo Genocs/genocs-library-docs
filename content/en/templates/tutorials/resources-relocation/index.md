@@ -3,7 +3,7 @@ title: "Azure Resource reloaction"
 description: "How to move Azure resources from one Tenant to another"
 lead: "How to move Azure resources from one Tenant to another"
 date: 2025-01-31 11:08:50+02:00
-lastmod: 2025-01-31 11:08:50+02:00
+lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 menu:
@@ -19,10 +19,8 @@ toc: true
 
 Enhanced Azure Resource Tenant-to-Tenant Migration Procedure
 
-This document outlines the procedure for migrating Azure resources from one tenant to another.  Direct resource or resource group moves between tenants aren't supported.  Instead, we migrate subscriptions.
-This procedure uses a temporary "transfer subscription" in the source tenant.  After the transfer, resources are moved to the final target subscription.
-
-
+This document outlines the procedure for migrating Azure resources from one tenant to another. Direct resource or resource group moves between tenants aren't supported. Instead, we migrate subscriptions.
+This procedure uses a temporary "transfer subscription" in the source tenant. After the transfer, resources are moved to the final target subscription.
 
 ## Prerequisites
 
@@ -30,35 +28,34 @@ This procedure uses a temporary "transfer subscription" in the source tenant.  A
 - **Subscription Management Permissions**: Permissions to create and manage subscriptions in both tenants.
 - **Billing Ownership Transfer Permissions**: Permissions to transfer billing ownership of subscriptions.
 - **Resource Inventory**: A detailed inventory of resources to be moved, including:
-    - Resource Type
-    - Resource Group
-    - Dependencies (e.g., Virtual Networks, Storage Accounts, Databases)
-    - Configurations (Network, Security, Data)
-    - Special considerations (e.g., data residency requirements, licensing)
+  - Resource Type
+  - Resource Group
+  - Dependencies (e.g., Virtual Networks, Storage Accounts, Databases)
+  - Configurations (Network, Security, Data)
+  - Special considerations (e.g., data residency requirements, licensing)
 - **Backup and Recovery Plan**: A documented plan for backing up data and restoring it in case of issues.
 - **Testing Plan**: A detailed testing plan to validate functionality after the migration.
 - **Rollback Plan**: A plan to revert changes if the migration fails.
-
 
 ## Procedure
 
 ### 1. Preparation
 
-- **Backup Data**: Back up all critical data, including databases, virtual     machine disks, and configuration files. Consider using Azure Backup, Azure     Site Recovery, or native application backup mechanisms.
-    - **Export ARM Templates**: Export ARM templates for all resources to be     moved. This will help with recreating the resources in the target     environment if needed.
-    - **Document Existing Configurations**: Document all relevant     configurations, including:
-    - **Network settings** (VNETs, subnets, NSGs, Route Tables)
-    - **Security settings** (RBAC roles, policies, Key Vaults)
-    - **Application configurations** (connection strings, dependencies)
-    - **User and Service Principal** assignments
-    - **Custom Role Definitions**
-    - **Policies (Azure Policy)**
-- **Create Transfer Subscription**: In the source tenant, create a new     "Pay-As-You-Go" subscription. This will be used as a temporary holding place     for the resources. Ensure the subscription is not associated with any existing     CSP agreement.
+- **Backup Data**: Back up all critical data, including databases, virtual machine disks, and configuration files. Consider using Azure Backup, Azure Site Recovery, or native application backup mechanisms.
+  - **Export ARM Templates**: Export ARM templates for all resources to be moved. This will help with recreating the resources in the target environment if needed.
+  - **Document Existing Configurations**: Document all relevant configurations, including:
+  - **Network settings** (VNETs, subnets, NSGs, Route Tables)
+  - **Security settings** (RBAC roles, policies, Key Vaults)
+  - **Application configurations** (connection strings, dependencies)
+  - **User and Service Principal** assignments
+  - **Custom Role Definitions**
+  - **Policies (Azure Policy)**
+- **Create Transfer Subscription**: In the source tenant, create a new "Pay-As-You-Go" subscription. This will be used as a temporary holding place for the resources. Ensure the subscription is not associated with any existing CSP agreement.
 - **Prepare Scripts (PowerShell/CLI)**: Develop scripts to:
-    - Deploy resources from ARM templates.
-    - Configure networking and security.
-    - Assign RBAC roles.
-    - Automate testing.
+  - Deploy resources from ARM templates.
+  - Configure networking and security.
+  - Assign RBAC roles.
+  - Automate testing.
 
 ### 2. Resource Migration
 
@@ -94,15 +91,14 @@ This procedure uses a temporary "transfer subscription" in the source tenant.  A
 - **Microsoft Support**: Consider engaging Microsoft Support for assistance with complex migrations.
 - **Compliance**: Ensure compliance with data residency, security, and regulatory requirements during the migration.
 
-This enhanced procedure provides a more comprehensive and robust approach to migrating Azure resources between tenants.  By following these steps and considering the important considerations, you can minimize risks and ensure a smooth transition. Remember to always consult the official Microsoft documentation for the most up-to-date information and best practices.
-
-
+This enhanced procedure provides a more comprehensive and robust approach to migrating Azure resources between tenants. By following these steps and considering the important considerations, you can minimize risks and ensure a smooth transition. Remember to always consult the official Microsoft documentation for the most up-to-date information and best practices.
 
 ## Solution
-1.	To create one user with *global admin* rights in source tenant and given *ownership* to source and target subscription in both tenants along with *global admin rights*.
-2.	To created one Pay-As-You-Go subscription as transfer subscription in source tenant using new ID with help of credit card as existing subscription was created by CSP partner
-3.	We have taken snapshots of resources and restored in Pay-As-You-Go subscription due to same VLAN was used for all resource groups in existing tenant.
-4.	Once restore completed then we putted down the all resources in existing subscription and enabled the moved resources in Pay-As-You-Go subscription.
+
+1. To create one user with _global admin_ rights in source tenant and given _ownership_ to source and target subscription in both tenants along with _global admin rights_.
+2. To created one Pay-As-You-Go subscription as transfer subscription in source tenant using new ID with help of credit card as existing subscription was created by CSP partner
+3. We have taken snapshots of resources and restored in Pay-As-You-Go subscription due to same VLAN was used for all resource groups in existing tenant.
+4. Once restore completed then we putted down the all resources in existing subscription and enabled the moved resources in Pay-As-You-Go subscription.
 5. Test the application, DBs and access.
 6. When testing was completed by the application team then we changed the tenant using change directory option for Pay-As-You-Go subscription.
 7. After a couple of hours Pay-As-You-Go subscription disappeared from source tenant and reflected in target tenant. Note: for couple of hours Pay-As-You-Go subscription was not visible to target tenant under subscription service so we have taken the ownership through dashboard in Azure portal of target tenant using elevated access. This issue happens sometimes as permission gets removed automatically when you do the tenant to tenant transfer of resources.
@@ -113,19 +109,18 @@ Before proceeding with the next steps: wherever possible backup data and export 
 
 Save any Users/Service Principals, Custom role definitions and Role assignments that the subscription currently works with the subscription and recreate them in the new tenant (az role and az assignment commands) because:
 
-When you transfer billing ownership of your subscription to an account in another Azure AD tenant, you can move the subscription to the new account's tenant. If you do so, all users, groups, or service principals that had Azure role assignments to manage subscriptions and its resources lose their access. 
+When you transfer billing ownership of your subscription to an account in another Azure AD tenant, you can move the subscription to the new account's tenant. If you do so, all users, groups, or service principals that had Azure role assignments to manage subscriptions and its resources lose their access.
 
 Only the user in the new account who accepts your transfer request will have access to manage the resources. The new owner must manually add these users to the subscription to provide access to the user who lost it. For more information, see Transfer an Azure subscription to a different Azure AD directory.
 
 Finally, we will follow the instructions for transferring an Azure Subscription to a new Tenant. Read [transfer-subscription](https://learn.microsoft.com/en-us/azure/role-based-access-control/transfer-subscription)
 (Please note that this process takes a while to reflect the new resources in the new tenant, usually much longer than the 1-2 hours they mention).
 
- If you do not see your resources in the Portal - try the CLI.
+If you do not see your resources in the Portal - try the CLI.
 
-1.	Transfer billing ownership of Azure Subscription to the other tenant (https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/billing-subscription-transfer)
-2.	Once billing ownership is transferred. Transfer the subscription to the new tenant.
-If you have any custom policies that applied to the subscription - those will have to be recreated too.
-
+1. Transfer billing ownership of Azure Subscription to the other tenant (https://learn.microsoft.com/en-us/azure/cost-management-billing/manage/billing-subscription-transfer)
+2. Once billing ownership is transferred. Transfer the subscription to the new tenant.
+   If you have any custom policies that applied to the subscription - those will have to be recreated too.
 
 ## References
 
@@ -136,5 +131,6 @@ Move all resources that need to be transferred to the new tenant into transfer-r
 - [move-resources-between-subscriptions-under-different-tenants](https://social.technet.microsoft.com/wiki/contents/articles/51360.azure-how-to-move-resources-between-subscriptions-under-different-tenants.aspx)
 
 You could try downloading the VHD and then uploading it on the other tenant
+
 - [download-vhd](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/download-vhd)
 - [upload-generalized-managed](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/upload-generalized-managed)
