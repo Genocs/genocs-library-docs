@@ -3,7 +3,7 @@ title : "Infrastructures"
 description: "How to setup your infrastructure!"
 lead: "How to setup your infrastructure!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2025-10-11T15:34:50Z
+lastmod: 2025-10-11T16:44:41Z
 draft: false
 images: []
 ---
@@ -14,7 +14,7 @@ In this walkthrough we will setup the steps required to have an infrastructure u
 
 This proposal is thought as to be used on Azure, even though most of the options could be reused for any cloud provider like Google Cloud or AWS.
 
-{{<img src="gnx-k8s-architecture">}}
+<img src="/images/gnx-architecture-network.svg" alt="Architecture Network">
 
 ## Prerequisites
 

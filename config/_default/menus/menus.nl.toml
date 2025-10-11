@@ -57,14 +57,14 @@
 
 [[main]]
   name = "Infrastrutture"
-  identifier = "infrastructure"
-  url = "/it/containers/"
+  identifier = "infrastructures"
+  url = "/it/infrastructures/"
   weight = 110
 
 [[main]]
   name = "DevOps"
   identifier = "devops"
-  url = "/it/containers/"
+  url = "/it/devops/"
   weight = 120  
 
 ####################################

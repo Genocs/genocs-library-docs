@@ -3,7 +3,7 @@ title : "DevOps"
 description: "How to setup your DevOps pipeline!"
 lead: "How to setup your DevOps pipeline!"
 date: 2025-10-11T15:40:19+02:00
-lastmod: 2025-10-11T15:34:50Z
+lastmod: 2025-10-11T16:44:41Z
 draft: false
 images: []
 ---
@@ -14,7 +14,7 @@ In this walkthrough we will setup the steps required to have a DevOps pipeline u
 
 This proposal is thought as to be used on Azure, even though most of the options could be reused for any cloud provider like Google Cloud or AWS.
 
-<img src="/images/gnx-ci-cd-pipeline.svg" alt=".NET">
+<img src="/images/gnx-ci-cd-pipeline.svg" alt="CI/CD Pipeline">
 
 ## Prerequisites
 

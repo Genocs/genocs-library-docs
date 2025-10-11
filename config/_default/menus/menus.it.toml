@@ -57,8 +57,8 @@
 
 [[main]]
   name = "Infrastrutture"
-  identifier = "infrastructure"
-  url = "/it/containers/"
+  identifier = "infrastructures"
+  url = "/it/infrastructures/"
   weight = 110
 
 [[main]]
