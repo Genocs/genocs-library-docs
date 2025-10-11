@@ -1,8 +1,8 @@
 ---
 title: "Contact"
-description: "Drop us an email."
+description: "Drop us an email"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-11-16T00:00:00+02:00
+lastmod: 2025-10-11T12:12:40Z
 draft: false
 images: []
 ---

@@ -1,6 +1,6 @@
 {
-  "name": "genocs-library",
-  "description": "Genocs Library Doks theme",
+  "name": "genocs-framework-documentation",
+  "description": "Genocs Framework Documentation",
   "version": "1.2.0",
   "browserslist": [
     "defaults"

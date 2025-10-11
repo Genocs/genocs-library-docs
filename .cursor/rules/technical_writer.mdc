@@ -1,0 +1,90 @@
+---
+description: This rule provides comprehensive best practices to write documentation for a Software library, covering topics organization, writing style, code examples, API references, accessibility, and maintenance. It aims to improve library adoption, speed up the learning curve, and overall efficiency when working with the library.
+globs: [ ".py", ".js", ".ts", ".json", ".yml", ".yaml", ".sh", ".md", ".css", ".html" ]
+alwaysApply: false
+---
+
+# Documentation Library Best Practices and Writing Styles
+This document outlines the recommended best practices for writing technical documentation. It covers various aspects including writing style, topic organization, and tooling to ensure robust, scalable, and user-friendly documentation that boosts library adoption.
+
+## 1. Topic Organization and Structure
+A well-organized documentation set is crucial for comprehension and user navigation. The following guidelines provide a structured approach to organizing your documentation projects.
+
+### 1.1. Directory Structure
+Adopt a modular and logical directory structure that mirrors the library's architecture and components. Group related files together.
+
+Example:
+
+```plaintext
+content/
+├── getting-started/
+│   ├── installation.md
+│   └── quickstart-tutorial.md
+├── guides/
+│   ├── authentication.md
+│   └── advanced-feature-x.md
+├── api-reference/
+│   ├── module-a.md
+│   └── module-b.md
+└── concepts/
+    ├── architecture.md
+    └── security.md
+```
+
+### 1.2. Information Architecture
+Structure the content to serve different user needs. Every documentation set should include the following four types of content:
+
+**Tutorials / Getting Started Guides**: Step-by-step, goal-oriented instructions that guide a new user through their first successful experience with the library.
+
+**How-To Guides**: Problem-focused articles that provide a series of steps to solve a specific, real-world problem (e.g., "How to set up a webhook").
+
+**Conceptual Guides**: High-level explanations that help users understand the "why" behind the library's architecture, design principles, and core concepts.
+
+**API Reference**: Detailed, exhaustive documentation for every public class, method, function, and parameter. This section should be highly structured and easy to search.
+
+## 2. Writing Style and Tone
+Clarity, consistency, and a focus on the user are paramount.
+
+**Audience-Centric**: Always write with the target audience in mind. Use terminology they will understand and tailor the technical depth accordingly.
+
+**Clarity and Conciseness**: Use simple, direct language. Avoid jargon, complex sentences, and ambiguity. Prefer short paragraphs and bullet points.
+
+**Active Voice**: Use the active voice to make instructions clearer and more direct. For example, "The function returns a boolean" is better than "A boolean is returned by the function."
+
+**Consistent Terminology**: Maintain a glossary or style guide to ensure that terms for components, actions, and concepts are used consistently throughout the documentation.
+
+## 3. Code Examples and Snippets
+Code examples are one of the most critical parts of developer documentation.
+
+**Correct and Runnable**: All code examples must be tested and guaranteed to run correctly. They should be self-contained whenever possible.
+
+**Minimal and Focused**: Each example should demonstrate a single concept or function. Avoid including unnecessary logic that distracts from the main point.
+
+**Provide Context**: Explain what the code does, why it's structured that way, and what the expected output is. Use comments within the code to clarify non-obvious steps.
+
+## 4. API Reference Documentation
+The API reference is the source of truth for the library's public interface.
+
+**Completeness**: Document every public class, method, function, argument, and return value. Do not leave parts of the public API undocumented.
+
+**Use Docstrings/Annotations**: Leverage code comments (e.g., JSDoc, Python Docstrings, JavaDoc) to generate API reference documentation automatically. This keeps the documentation in sync with the source code.
+
+**Clarity on Details**: Clearly specify parameter types, default values, whether a parameter is optional, and the exact structure of return objects. Document all potential errors or exceptions that can be thrown.
+
+## 5. Review and Quality Assurance
+Documentation is a product and should be treated with the same rigor as code.
+
+**Technical Review**: All documentation must be reviewed by the developers or SMEs responsible for the feature to ensure technical accuracy.
+
+**Editorial Review**: A second pass should check for grammar, spelling, clarity, and adherence to the writing style guide.
+
+**Test All Instructions**: Every procedure, tutorial, and how-to guide must be tested by someone other than the author to ensure the steps are clear and correct.
+
+## 6. Maintenance and Lifecycle
+Documentation must evolve alongside the software.
+
+**Keep Content Synchronized**: Establish a process to update documentation with every software release. New features, breaking changes, and bug fixes must be reflected in the docs.
+
+**Version Control ("Docs-as-Code")**: Store documentation in a version control system (e.g., Git) alongside the source code. This ensures changes are tracked and can be released in sync.
+
+**Document Deprecations**: Clearly mark deprecated features. Explain why they are deprecated, when they will be removed, and what developers should use as a replacement.

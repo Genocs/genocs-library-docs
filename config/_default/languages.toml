@@ -4,8 +4,8 @@
   weight = 10
   [en.params]
     languageISO = "EN"
-    titleHome = "Genocs Library"
-    titleAddition = "Modern Documentation Theme"
+    titleHome = "Genocs Framework Documentation"
+    titleAddition = "Modern Enterprise Framework Documentation"
     description = "Modern, secure, fast, and SEO-ready documentation theme built with Hugo."
     footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
 
@@ -15,7 +15,7 @@
   weight = 20
   [it.params]
     languageISO = "IT"
-    titleHome = "Libreria Genocs"
-    titleAddition = "Tema di Documentazione Moderno"
-    description = "Tema di documentazione moderno, sicuro, veloce e pronto per SEO costruito con Hugo."
+    titleHome = "Documentazione Genocs Framework"
+    titleAddition = "La Documentazione per l'utilizzo del framework per lo sviluppo di Soluzioni Enterprise"
+    description = "La Documentazione Genocs Framework è un set completo di informazioni che contiene Librerie, Best Practice, per sviluppare software moderna, sicuro, scalabile, velocemente."
     footer = "Alimentato da <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, e <a href=\"https://getdoks.org/\">Doks</a>"

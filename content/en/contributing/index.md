@@ -1,18 +1,10 @@
 ---
 title: "Contributing"
 description: "Contributing to Genocs Library"
-lead: "Contributing to Genocs Library"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-11-16T00:00:00+02:00
+lastmod: 2025-10-11T00:00:00+02:00
 draft: false
 images: []
-menu:
-  introduction:
-    identifier: "basics-contributing"
-    name: "Contributing"
-    parent: "introduction"
-weight: 3
-toc: true
 ---
 
 Being a completely community driven project, I encourage the community to submit their valuable contributions to whichever repository they are comfortable with.

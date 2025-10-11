@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Genocs Library"
+title = "Genocs Framework Documentation"
 titleSeparator = "-"
 titleAddition = "Open-Source Framework for Enterprise Applications"
-description = "Genocs Library is a project to cater the needs of Developers and Organizations to reduce the development effort"
+description = "Genocs Framework Documentation is a project to cater the needs of Developers and Organizations to reduce the development effort"
 logo = "/images/main-logo.png"
 navBarLogo = "/images/icon.png"
 rootUrl = "https://www.genocs.com"
@@ -14,13 +14,13 @@ rootUrl = "https://www.genocs.com"
 # docsVersion = "1"
 
 # Search
-mainSections = ["introduction", "cli", "library", "templates", "blazor", "containers" ]
+mainSections = ["introduction", "cli", "library", "templates", "containers" ]
 
 ## Open Graph
 images = ["logo.png"]
 ogLocale = "en_US"
 domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+titleHome = "Genocs Documentation"
 
 ## Twitter Cards
 twitterSite = "@noccogiovanni"

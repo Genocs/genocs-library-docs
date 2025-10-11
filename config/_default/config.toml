@@ -15,7 +15,7 @@ googleAnalytics = "UA-32530775-1"
 
 # Multilingual
 defaultContentLanguage = "en"
-disableLanguages = ["de", "nl"]
+disableLanguages = ["nl"]
 defaultContentLanguageInSubdir = false
 
 # add redirects/headers

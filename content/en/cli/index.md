@@ -1,12 +1,12 @@
 ---
 title: "CLI"
 description: "The genocs CLI (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides unified experience across different platforms, allowing developers to create cross-platform applications with ease. With its extensive set of commands, the .NET CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development."
+lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-12-01T00:00:00+02:00
+lastmod: 2025-10-11T12:12:40Z
 draft: false
 images: []
 ---
-
 
 ## Introduction
 
@@ -176,7 +176,7 @@ dotnet run --project ./Genocs.TestWebApi/src/WebApi/WebApi.csproj
 dotnet run --project ./Genocs.TestWebBlazorPortal/src/Host/Host.csproj
 ```
 
-```mermaid
+``` mermaid
 architecture-beta
     group api(logos:aws-lambda)[Example]
 
