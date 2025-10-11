@@ -1,50 +1,51 @@
 ---
-title : "Containers"
-description: "How to containerize your solution!"
-lead: "Containerizing applications is mandatory step for modern enterprise applications. Genocs Library contains containers setup as well!"
-date: 2023-05-13T15:40:19+02:00
+title : "DevOps"
+description: "How to setup your DevOps pipeline!"
+lead: "How to setup your DevOps pipeline!"
+date: 2025-10-11T15:40:19+02:00
 lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 ---
 
-Setup Kubernetes cluster to be production ready isn't a simple task. It requires to take in consideration many topics.
+Setup DevOps pipeline to be production ready isn't a simple task. It requires to take in consideration many topics.
 
-In this walkthrough we will setup the steps required to have a Kubernetes cluster up and running.
+In this walkthrough we will setup the steps required to have a DevOps pipeline up and running.
 
 This proposal is thought as to be used on Azure, even though most of the options could be reused for any cloud provider like Google Cloud or AWS.
 
-{{<img src="gnx-k8s-architecture">}}
+<img src="/images/gnx-ci-cd-pipeline.svg" alt=".NET">
 
 ## Prerequisites
 
-- **Azure Subscription** to create AKS cluster
-- **kubectl** logged into Kubernetes cluster
+- **Azure Subscription** to create Azure DevOps project
+- **kubectl** logged into Azure DevOps project
 - **PowerShell**
 - **Postman**
 - **Helm**
 - **DockerHub account** (optional)
+- **Github account** (optional)
 
 ## Introduction
 
-The setup is spitted into different steps:
+The setup is split into different steps:
 
 - Bare components
 - Security
-- Scaling
+- CI/CD
 - Monitoring
 - Application
 
 ## Setup - Overview
 
-During this step we are going to setup Kubernetes cluster tackling the following components:
+During this step we are going to setup Azure DevOps project tackling the following components:
 
 - Setup private Docker images repository
-- Setup the Kubernetes cluster
+- Setup the Azure DevOps project
 - Setup the Vault for secrets
 - Secure secrets
 - Setup networking
-- Setup autoscaler
+- Setup CI/CD
 
 ### Monitoring
 

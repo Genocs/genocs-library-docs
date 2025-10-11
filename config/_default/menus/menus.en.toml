@@ -45,7 +45,7 @@
 [[templates]]
   name = "Library"
   identifier = "library-dotnet-template"
-  url = "/it/templates/library-template/"
+  url = "/templates/library-template/"
   weight = 90
 
 [[templates]]
@@ -58,13 +58,13 @@
 [[main]]
   name = "Infrastructures"
   identifier = "infrastructure"
-  url = "/containers/"
+  url = "/infrastructure/"
   weight = 110
 
 [[main]]
   name = "DevOps"
   identifier = "devops"
-  url = "/containers/"
+  url = "/devops/"
   weight = 120  
 
 ####################################

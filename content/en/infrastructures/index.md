@@ -1,24 +1,24 @@
 ---
-title : "Containers"
-description: "How to containerize your solution!"
-lead: "Containerizing applications is mandatory step for modern enterprise applications. Genocs Library contains containers setup as well!"
+title : "Infrastructures"
+description: "How to setup your infrastructure!"
+lead: "How to setup your infrastructure!"
 date: 2023-05-13T15:40:19+02:00
 lastmod: 2025-10-11T15:34:50Z
 draft: false
 images: []
 ---
 
-Setup Kubernetes cluster to be production ready isn't a simple task. It requires to take in consideration many topics.
+Modern application requires to be hosted on an infrastructure to be production ready. It requires to take in consideration many topics.
 
-In this walkthrough we will setup the steps required to have a Kubernetes cluster up and running.
+In this walkthrough we will setup the steps required to have an infrastructure up and running on Azure.
 
 This proposal is thought as to be used on Azure, even though most of the options could be reused for any cloud provider like Google Cloud or AWS.
 
-{{<img src="gnx-library_v1.png">}}
+{{<img src="gnx-k8s-architecture">}}
 
 ## Prerequisites
 
-- **Azure Subscription** to create AKS cluster
+- **Azure Subscription** to create Kubernetes cluster
 - **kubectl** logged into Kubernetes cluster
 - **PowerShell**
 - **Postman**
