@@ -1,15 +1,32 @@
-# Use the official Nginx image from the Docker Hub
-FROM nginx:latest
+# Stage 1: Build the Hugo site
+FROM node:20 AS builder
 
-# Copy custom configuration file from the current directory
-# to the Nginx configuration directory
+# Set working directory
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy all project files
+COPY . .
+
+# Clean and build the Hugo site
+RUN npm run clean && npm run build
+
+# Stage 2: Serve with Nginx
+FROM nginx:alpine
+
+# Copy custom Nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy website files to the default Nginx public directory
-COPY public /usr/share/nginx/html
+# Copy built site from builder stage
+COPY --from=builder /app/public /usr/share/nginx/html
 
-# Expose port 80 to the outside world
+# Expose port 80
 EXPOSE 80
 
-# Start Nginx when the container has provisioned
+# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
