@@ -18,7 +18,7 @@ toc: true
 
 ## Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Tracing
 ```
 
@@ -127,7 +127,7 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 
 Following settings are required to be set in your **appsettings.json**
 
-``` json
+```json
 "jaeger": {
     "enabled": true,
     "serviceName": "orders",

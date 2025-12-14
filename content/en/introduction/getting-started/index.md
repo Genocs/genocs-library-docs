@@ -39,7 +39,7 @@ As the name suggests, the idea is to provide a full-stack end to end solution to
 
 <b>Genocs Library</b> should be the one-stop that caters to the needs of various developers in various technology. This obviously would require a lot of community adaptation and contributions.
 
-As for the initial releases, <b>Genocs Library</b> sports an API Project built on Microsoft's newest .NET 9.0 and the front-end application (that consumes the .NET 9 Web API) built with Blazor WebAssembly!
+As for the initial releases, <b>Genocs Library</b> sports an API Project built on Microsoft's newest 10.0 and the front-end application (that consumes the .NET10.0 Web API) built with Blazor WebAssembly!
 
 ## Projects
 
@@ -49,7 +49,7 @@ As for the initial releases, <b>Genocs Library</b> sports an API Project built o
     <div class="row justify-content-center text-center" style="padding:10px!important">
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET 9.0 Microservice Template</h2>
+          <h2 class="h4">.NET10.0 Microservice Template</h2>
           <div class="tablet-group">
               <div class="tablet">web api</div>
               <div class="tablet tablet-secondary">.NET</div>
@@ -61,13 +61,13 @@ As for the initial releases, <b>Genocs Library</b> sports an API Project built o
       </div>
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET 9.0 Web API Template</h2>
+          <h2 class="h4">.NET10.0 Web API Template</h2>
           <div class="tablet-group">
               <div class="tablet">web api</div>
               <div class="tablet tablet-secondary">.NET</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Getting to work with the latest and greatest of Microsoft's .NET 9.0 Web API fused with the goodness of Genocs Library.</p>
+          <p>Getting to work with the latest and greatest of Microsoft's .NET10.0 Web API fused with the goodness of Genocs Library.</p>
           <p><a href="https://github.com/Genocs/templates">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/templates/general/getting-started/">Read Getting Started Guide</a></p>
         </div>
       </div>
@@ -80,7 +80,7 @@ As for the initial releases, <b>Genocs Library</b> sports an API Project built o
               <div class="tablet tablet-secondary">blazor webassembly</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Clean Architecture Template Template for .NET 9.0 Blazor WebAssembly built for Genocs-Api WebAPI with MudBlazor Components.</p>
+          <p>Clean Architecture Template Template for .NET10.0 Blazor WebAssembly built for Genocs-Api WebAPI with MudBlazor Components.</p>
           <p><a href="https://github.com/Genocs/genocs-library-docs">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read Getting Started Guide</a></p>
         </div>
       </div>

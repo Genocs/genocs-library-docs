@@ -9,6 +9,7 @@ images: []
 menu:
   docs:
     parent: "prologue"
+    identifier: "quick-start"
 weight: 110
 toc: true
 ---
@@ -34,31 +35,31 @@ Not quite sure? Use the Doks child theme.
 
 #### Doks child theme
 
-``` bash
+```bash
 git clone https://github.com/h-enk/doks-child-theme.git my-doks-site
 ```
 
 #### Doks starter theme
 
-``` bash
+```bash
 git clone https://github.com/h-enk/doks.git my-doks-site
 ```
 
 ### Change directories
 
-``` bash
+```bash
 cd my-doks-site
 ```
 
 ### Install dependencies
 
-``` bash
+```bash
 npm install
 ```
 
 ### Start development server
 
-``` bash
+```bash
 npm run start
 ```
 

@@ -214,7 +214,7 @@ The **ACR** (Azure Container Registry) allows to store Docker images inside a pr
 
 Run [initializeACR](/Powershell/initializeACR.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\initializeACR.ps1
 ```
 
@@ -222,7 +222,7 @@ Run [initializeACR](/Powershell/initializeACR.ps1) PowerShell script with defaul
 
 Run [initializeAKS](/Powershell/initializeAKS.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\initializeAKS.ps1
 ```
 
@@ -239,7 +239,7 @@ Secret data are:
 
 Run [initializeAKV](/Powershell/initializeAKV.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\initializeAKV.ps1
 ```
 
@@ -255,7 +255,7 @@ The PowerShell script will *'Create peering between AGIC and AKS and vice versa*
 
 Run [initializeNetwork](/Powershell/initializeNetwork.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\initializeNetwork.ps1
 ```
 
@@ -265,7 +265,7 @@ This step shows how to setup a script file to push Secrets inside AKV.
 
 Run [deployAKV-secrets](/Powershell/deployAKV-secrets.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\deployAKV-secrets.ps1
 ```
 
@@ -277,7 +277,7 @@ This step shows how to setup a RabbitMQ node inside AKS.
 
 Run [deployRabbitMQ](/Powershell/deployRabbitMQ.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\deployRabbitMQ.ps1
 ```
 
@@ -289,7 +289,7 @@ This step shows how to setup a MongoDb instance inside AKS.
 
 Run [deployMongoDB](/Powershell/deployMongoDB.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\deployMongoDB.ps1
 ```
 
@@ -299,7 +299,7 @@ This step shows how to setup a Prometheus and Grafana inside AKS.
 
 Run [deployPrometheus](/Powershell/deployPrometheus.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\deployPrometheus.ps1
 ```
 
@@ -309,7 +309,7 @@ This step shows how to setup a Jaeger distributed Tracing inside AKS.
 
 Run [deployJaeger](/Powershell/deployJaeger.ps1) PowerShell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\deployJaeger.ps1
 ```
 
@@ -319,13 +319,13 @@ This step shall install the KEDA autoscaler inside AKS.
 
 Run [deployKEDA](/Powershell/deployKEDA.ps1) powershell script with default values from root directory.
 
-``` PS
+```PS
 .\Powershell\deployKEDA.ps1
 ```
 
 Verify KEDA is installed correctly on the Kubernetes cluster.
 
-``` bash
+```bash
 kubectl get all -n keda
 ```
 
@@ -335,14 +335,14 @@ Deploy External WebAPI (Producer), Internal WebAPI and Backgroud Worker Consumer
 
 Execute the PowerShell script.
 
-``` PS
+```PS
 # Use this to setup the application with Secret coming from file as Opaque secret
 cd Powershell 
 .\deployApplications-AKS-SecretFile.ps1
 cd ..
 ```
 
-``` PS
+```PS
 # Use this to deploy the application using secret coming from Key Vault
 cd Powershell 
 .\Powershell\deployApplications-AKS.ps1
@@ -353,7 +353,7 @@ The `deployApplications-AKS` PowerShell script deploys the RabbitMQConsumer and 
 
 Alternately, all the components can also be deployed directly using the `kubectl` apply command recursively on the k8s directory as shown below:
 
-``` bash
+```bash
 # Run the kubectl apply recursively on k8s directory
 kubectl apply -R -f .
 ```
@@ -362,7 +362,7 @@ kubectl apply -R -f .
 
 Execute the `deployAutoScaler.ps1` PowerShell script.
 
-``` PS
+```PS
 cd Powershell 
 .\deployAutoScaler.ps1
 cd ..
@@ -370,7 +370,7 @@ cd ..
 
 **Note:** The default options can be overwritten by passing arguments to the initializeAKS script. In the below example, we are overriding the number of nodes in the AKS cluster to 4 instead of 3 and resource group name as `kedaresgrp`.
 
-``` PS
+```PS
 .\Powershell\initilaizeAKS `
     -workerNodeCount 4 `
     -resourceGroupName "kedaresgrp"
@@ -378,7 +378,7 @@ cd ..
 
 If you do not wish to run the individual PowerShell scripts, you can run one single script which will deploy all the necessary things by running the above scripts in correct order.
 
-``` PS
+```PS
 .\Powershell\deployAll.ps1
 ```
 
@@ -386,7 +386,7 @@ If you do not wish to run the individual PowerShell scripts, you can run one sin
 
  General purpose command to get info about K8S resources
 
-``` bash
+```bash
 # General purpose command to get all resources
 # -A to get all namespaces
 # -w to watch for changes
@@ -422,7 +422,7 @@ Also note the public `LoadBalancer` IP for the Producer Service. In this case th
 
 The RabbitMQ `ScaledObject` will be deployed as part of the deployment. Watch out for the deployments to see the changes in the scaling as the number of messages increases
 
-``` bash
+```bash
 kubectl get deployment -w
 kubectl get deploy -w
 ```
@@ -439,7 +439,7 @@ In order to do this, open a bash shell and run the command.
 
 Please keep the shell open to keep open the port forwarding.
 
-``` bash
+```bash
 kubectl port-forward svc/rabbitmq 15672:15672
 ```
 
@@ -492,7 +492,7 @@ Once all the messages are processed, KEDA will scale down the pods and the deplo
 
 List Custom Resource Definition
 
-``` bash
+```bash
 kubectl get crd
 ```
 
@@ -502,7 +502,7 @@ As part of the KEDA installation, ScaledObject and TriggerAuthentications are de
 
 ### 2.16 Delete all resources
 
-``` PS
+```PS
 .\Powershell\deleteRG.ps1
 ```
 

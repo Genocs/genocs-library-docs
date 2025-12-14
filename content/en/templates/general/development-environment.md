@@ -20,16 +20,16 @@ Please Note that this project is being built on a Windows11 Machine using Visual
 
 ## .NET SDK
 
-As mentioned earlier, this project is built with the latest available .NET SDK, which is .NET 9.0.
+As mentioned earlier, this project is built with the latest available .NET SDK, which is .NET10.0.
 
-Ensure that you have the latest version of the SDK available - [Download from Microsoft](https://dotnet.microsoft.com/download/dotnet/8.0)
+Ensure that you have the latest version of the SDK available - [Download from Microsoft](https://dotnet.microsoft.com/download/dotnet/10.0)
 
 {{< alert icon="💡" text="Note : At the time of compiling this documentation, the latest version available was SDK 9.0.101" />}}
 
 
 ## IDE
 
-Visual Studio Code IDE is the recommended IDE to use for Genocs Library's .NET Templates. If you are not already using this IDE, consider switching to it. It's definitely worth it! (_Fun Fact : I recently switched from Visual Studio 2019 Community to Visual Studio Code and it's been awesome!_)
+Visual Studio Code IDE is the recommended IDE to use for Genocs Library's .NET Templates. If you are not already using this IDE, consider switching to it. It's definitely worth it! (_Fun Fact : I recently switched from Visual Studio 2025 Community to Visual Studio Code and it's been awesome!_)
 
 However, you are always free to use your choice of IDEs as well.
 

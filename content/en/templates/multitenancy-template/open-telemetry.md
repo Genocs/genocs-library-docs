@@ -17,7 +17,7 @@ toc: true
 
 ## Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Tracing
 ```
 

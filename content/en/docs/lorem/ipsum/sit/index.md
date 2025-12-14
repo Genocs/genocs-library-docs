@@ -9,6 +9,7 @@ images: []
 menu:
   docs:
     parent: "ipsum"
+    identifier: "sit"
 weight: 710
 toc: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Authentication & Authorization"
-description: ".NET 9.0 - Boilerplate API Tutorial with Email Sign Up, Verification, Authentication & Forgot Password"
-lead: "Introducing about how to use authentication and authorization with NET9."
+description: ".NET10.0 - Boilerplate API Tutorial with Email Sign Up, Verification, Authentication & Forgot Password"
+lead: "Introducing about how to use authentication and authorization with NET10.0."
 date: 2024-12-09T00:00:00+02:00
 lastmod: 2024-12-09T00:00:00+02:00
 draft: false
@@ -22,7 +22,7 @@ Authentication is implemented with JWT access tokens and refresh tokens. On succ
 HTTP Only cookies are used for refresh tokens to increase security because they are not accessible to client-side javascript which prevents XSS (cross site scripting) attacks. Refresh tokens only have access to generate new JWT tokens (via the */accounts/refresh-token route*), they cannot perform any other secure action which prevents them from being used in CSRF (cross site request forgery) attacks.
 
 ### API endpoints
-The example .NET9 API has the following endpoints/routes to demonstrate email sign up and verification, authentication and role based autorization, refreshing and revoking tokens, forgot password and reset password, and secure account management routes:
+The example .NET10.0 API has the following endpoints/routes to demonstrate email sign up and verification, authentication and role based autorization, refreshing and revoking tokens, forgot password and reset password, and secure account management routes:
 
 - POST `/accounts/authenticate` - public route that accepts POST requests containing an email and password in the body. On success a JWT access token is returned with basic account details, and an HTTP Only cookie containing a refresh token.
 - POST `/accounts/refresh-token` - public route that accepts POST requests containing a cookie with a refresh token. On success a new JWT access token is returned with basic account details, and an HTTP Only cookie containing a new refresh token (see refresh token rotation just below for an explanation).
@@ -52,8 +52,8 @@ To try to keep things simple the boilerplate API uses a SQLite database, SQLite 
 The boilerplate API project is available on GitHub at https://github.com/cornflourblue/dotnet-6-signup-verification-api.
 
 
-Tools required to run the .NET 6.0 Tutorial Example Locally
-To develop and run .NET 6.0 applications locally, download and install the following:
+Tools required to run the .NET10.0 Tutorial Example Locally
+To develop and run .NET10.0 applications locally, download and install the following:
 
 .NET SDK - includes the .NET runtime and command line tools
 Visual Studio Code - code editor that runs on Windows, Mac and Linux

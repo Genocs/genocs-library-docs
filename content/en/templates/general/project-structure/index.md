@@ -21,7 +21,7 @@ Genocs Library's .NET Microservice Template is based on Clean Architecture. In o
 
 This means that the entire solution is built in such a way that it can be scaled, maintained easily by teams of developers. This WebAPI Solution Primarily consists of the following .csproj files.
 
-``` bash
+```bash
 ├── src
 │   ├── Application.csproj
 │   ├── Shared.csproj
@@ -61,7 +61,7 @@ Note that the *Host* project depends on
 
 This is one of the projects in the Core Folder apart from the Domain Project. Here you get to see Abstract Classes and Interfaces that are inherited and implemented in the Infrastructure Project. This refers to Dependency Inversion.
 
-``` bash
+```bash
 ├── Core
 |   ├── Application
 |   |   ├── Auditing

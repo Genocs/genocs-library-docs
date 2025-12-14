@@ -34,7 +34,7 @@ You would have to the /token endpoint for this.
 
 As mentioned earlier, the default credentials are
 
-``` json
+```json
 {
     "email":"admin@root.com",
     "password":"123Pa$$word!"
@@ -64,7 +64,7 @@ I have included the files required for you to test the Genocs WebAPI in the **./
 
 As mentioned earlier, to the /api/tokens endpoint we POST a request with the following body and add a `tenantId = root` key to the request header. This should return a valid token from the webapi.
 
-``` json
+```json
 {
   "email": "admin@root.com",
   "password": "123Pa$$word!"
@@ -105,7 +105,7 @@ Whenever a valid token is generated via Postman, it is stored as a variable of t
 
 Your request body would look somewhat like this:
 
-``` json
+```json
 {
   "keyword": "",
   "pageNumber": 0,
@@ -123,7 +123,7 @@ Presuming that you have a valid token you'll see:
 
 {{< img src="search-brand.png" >}}
 
-``` json
+```json
 {
     "data": [
         {
@@ -159,7 +159,7 @@ Presuming that you have a valid token you'll see:
 
 Let's create a new Brand. Open up Catalog/Brands/create-brand request via Postman and POST the following body.
 
-``` json
+```json
 {
     "name":"Bra1nod #29",
     "description":"Something Cool!"
@@ -175,7 +175,7 @@ Resend the **'search-brands'** request to see your new brand listed in the respo
 
 Next let's add a product. Run the **'create-product'** request at this point and you'll see a failure message:
 
-``` json
+```json
 {
     "source": "DN.WebApi.Application",
     "exception": "brand.notfound [en-US]",

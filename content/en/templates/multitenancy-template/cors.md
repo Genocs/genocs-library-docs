@@ -21,7 +21,7 @@ Genocs Web API has support for providing to several clients, all of the configur
 
 We present two scenarios that demonstrate how Cross-Origin requests by clients can be served:
 
-``` json
+```json
 {
   "CorsSettings": {
     "Angular": "http://localhost:4200",

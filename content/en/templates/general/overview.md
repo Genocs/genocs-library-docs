@@ -1,7 +1,7 @@
 ---
 title: "Overview"
-description: "Genocs Library built with .NET 9.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: "Genocs Library built with .NET 9.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: "Genocs Library built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: "Genocs Library built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
 lastmod: 2024-11-24T00:00:00+02:00
 draft: false
@@ -22,11 +22,11 @@ Genocs Library is a starting point for your next `.NET Microservices library` th
 
 ## Goals
 
-The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET 9.0 microservice cloud agnostic solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
+The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET10.0 microservice cloud agnostic solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
 
 ## Features
 
-- [x] Built on .NET 9.0
+- [x] Built on .NET10.0
 - [x] Follows Clean Architecture Principles
 - [x] Domain Driven Design
 - [x] Cloud Ready. Can be deployed to AWS Infrastructure as ECS Containers using Terraform!
@@ -91,7 +91,7 @@ Before creating your first solution, you should ensure that your local machine h
 
 After you have installed .NET, you will need to install the `Genocs CLI` console tool.
 
-``` bash
+```bash
 dotnet tool install --global Genocs.CLI
 genocs install
 ```
@@ -105,13 +105,13 @@ Simply navigate to a new directory (wherever you want to place your new solution
 
 Run the following command. Note that, in this demonstration, I am naming my new solution as Genocs.Starter.
 
-``` bash
+```bash
 genocs api new Genocs.Starter
 ```
 
 OR
 
-``` bash
+```bash
 genocs api n Genocs.Starter
 ```
 
@@ -121,7 +121,7 @@ For further steps and details, [Read the Getting Started Guide](https://genocs-b
 #### Update
 To update the tool & templates, run the following commands
 
-``` bash
+```bash
 dotnet tool update Genocs.CLI --global
 genocs update
 ```
@@ -142,13 +142,13 @@ So, for a better developer experience, I have added Makefile into the solution. 
 
 To build the solution
 
-``` bash
+```bash
 make build
 ```
 
 By default, the solution is configured to work with postgresql database (mainly because of hte OS licensing). So, you will have to make sure that postgresql database instance is up and running on your machine. You can modify the connection string to include your username and password. Connections strings can be found at `src/Host/Configurations/database.json` and `src/Host/Configurations/hangfire.json`. Once that's done, let's start up the API server.
 
-``` bash
+```bash
 make start
 ```
 
@@ -162,7 +162,7 @@ For testing this API, we have 3 options.
 
 The default credentials to this API is:
 
-``` json
+```json
 {
     "email":"admin@root.com",
     "password":"123Pa$$word!"
@@ -177,7 +177,7 @@ This is a POST Request. Here the body of the request will be the JSON (credentia
 
 Here is a sample CURL command for getting the tokens.
 
-``` curl
+```curl
 curl -X POST \
   'https://localhost:5001/api/tokens' \
   --header 'Accept: */*' \
@@ -192,7 +192,7 @@ curl -X POST \
 
 And here is the response.
 
-``` json
+```json
 {
   "token": "<your JWT Token>",
   "refreshToken": "<your refresh token>",
@@ -206,17 +206,17 @@ For further steps and details, [Read the Getting Started Guide](https://genocs-b
 
 ## Containerization
 
-The API project, being .NET 9.0, it is configured to have built-in support for containerization. That means, you really don't need a Dockerfile to containerize the webapi.
+The API project, being .NET10.0, it is configured to have built-in support for containerization. That means, you really don't need a Dockerfile to containerize the webapi.
 
 To build a docker image, all you have to do is, ensure that docker-desktop or docker instance is running. And run the following command at the root of the solution.
 
-``` bash
+```bash
 make publish
 ```
 
 You can also push the docker image directly to dockerhub or any supported registry by using the following command.
 
-``` bash
+```bash
 make publish-to-hub
 ```
 
@@ -226,7 +226,7 @@ You will have to update your docker registry / repo url in the Makefile though!.
 
 This project also comes with examples of docker compose files, where you can spin up the webapi and database isntance in your local containers with the following commands.
 
-``` bash
+```bash
 make dcu #docker compose up - Boots up the webapi & postgresql container
 make dcd #docker compose down - Shuts down the webapi & postgresql containers
 ```
@@ -249,7 +249,7 @@ In brief, the terraform folder has 2 sub-folders.
 
 The Backend folder is internally used by Terraform for state management and locking. There is a one-time setup you have to do against this folder. Navigate to the backend folder and run the command.
 
-``` bash
+```bash
 terraform init
 terraform apply -auto-approve
 ```
@@ -258,7 +258,7 @@ This would create the required S3 Buckets and DDB table for you.
 
 Next is the `environments/staging` folder. Here too, run the following command.
 
-``` bash
+```bash
 terraform init
 ```
 
@@ -270,7 +270,7 @@ Once done, you can go the terraform.tfvars file to change the variables like,
 
 After that, simply back to the root of the solution and run the following command.
 
-``` bash
+```bash
 make ta
 ```
 
@@ -278,7 +278,7 @@ This will evaluate your terraform files and create a provision plan for you. Onc
 
 To destroy the deployed resources, run the following
 
-``` bash
+```bash
 make td
 ```
 

@@ -9,6 +9,7 @@ images: []
 menu:
   docs:
     parent: "help"
+    identifier: "how-to-update"
 weight: 610
 toc: true
 ---

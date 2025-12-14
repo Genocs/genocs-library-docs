@@ -44,7 +44,7 @@ ore di sviluppo e tempo di ricerca per sviluppatori e team.</p>
 
 Prima di iniziare, assicurati di avere installato:
 
-- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) o superiore
+- [.NET10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) o superiore
 - [Git](https://git-scm.com/downloads)
 - Un editor di codice come [Visual Studio](https://visualstudio.microsoft.com/) o [VS Code](https://code.visualstudio.com/)
 

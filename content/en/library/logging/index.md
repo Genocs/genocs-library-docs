@@ -26,7 +26,7 @@ Adds the logging capability, by default uses Serilog for logging with optional e
 
 ### Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Logging
 ```
 
@@ -144,7 +144,7 @@ public class SomeService
 
 **appsettings.json**
 
-``` json
+```json
 "logger": {
     "enabled": true,
     "level": "Information",

@@ -104,7 +104,7 @@ Add file `azure-pipelines\app-service-ci.yml` to the root of the project
 
 ```yaml
 # ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting .NET9.
+# Build and test ASP.NET Core projects targeting 10.0.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
@@ -190,7 +190,7 @@ steps:
 #    appType: 'webAppLinux'
 #    webAppName: '$(AppServiceName)'
 #    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-#    runtimeStack: 'DOTNETCORE|9.0'
+#    runtimeStack: 'DOTNETCORE|10.0'
 ```
 
 ### Docker Build Pipeline
@@ -203,7 +203,7 @@ Add file `azure-pipelines\app-container-ci.yml` to the root of the project
 
 ```yaml
 # ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting .NET9.
+# Build and test ASP.NET Core projects targeting .NET10.0.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
@@ -257,7 +257,7 @@ stages:
 
 ```yaml
 # ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting .NET9.
+# Build and test ASP.NET Core projects targeting .NET10.0.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 

@@ -42,7 +42,7 @@ Before creating your first Genocs Library solution, you should ensure that your 
 
 After you have installed .NET, you will need to install the `genocs` console tool.
 
-``` bash
+```bash
 dotnet tool install --global Genocs.CLI
 genocs install
 ```
@@ -80,7 +80,7 @@ Simply navigate to a new directory (wherever you want to place your new solution
 
 Run the following command. Note that, in this demonstration I am naming my new solution as `Genocs.Starter`.
 
-``` bash
+```bash
 genocs api new Genocs.Starter
 ```
 
@@ -114,7 +114,7 @@ Another issue I noticed with creating solutions via Visual Studio is that the So
 
 Next, open up command prompt on this directory and run the following.
 
-``` bash
+```bash
 code .
 ```
 
@@ -132,7 +132,7 @@ Details on the usage of other Settings will be explained in the upcoming documen
 
 #### PostgreSQL
 
-``` json
+```json
 "DatabaseSettings": {
     "DBProvider": "postgresql",
     "ConnectionString": "Host=localhost;Database=rootTenantDb;Username=postgres;Password=root;Include Error Detail=true"
@@ -141,7 +141,7 @@ Details on the usage of other Settings will be explained in the upcoming documen
 
 #### MySQL
 
-``` json
+```json
 "DatabaseSettings": {
     "DBProvider": "mysql",
     "ConnectionString": "server=localhost;uid=root;pwd=root;database=defaultRootDb;Allow User Variables=True"
@@ -149,7 +149,7 @@ Details on the usage of other Settings will be explained in the upcoming documen
 ```
 #### MSSQL
 
-``` json
+```json
 "DatabaseSettings": {
     "DBProvider": "mssql",
     "ConnectionString": "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=rootTenantDb;Integrated Security=True;MultipleActiveResultSets=True"
@@ -157,7 +157,7 @@ Details on the usage of other Settings will be explained in the upcoming documen
 ```
 #### Oracle
 
-``` json
+```json
 "DatabaseSettings": {
   "DBProvider": "oracle",
   "ConnectionString": "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=49154))(CONNECT_DATA =(SERVER=DEDICATED)(SERVICE_NAME=ORCLPDB1.localdomain)));User Id=fullstack;Password=password123"
@@ -170,7 +170,7 @@ Next, let's understand how to build & run the project!
 
 You can definitely use the standard ways of dotnet to build and run the application using the following commands.
 
-``` bash
+```bash
  cd src/Host
  dotnet build
  dotnet run
@@ -184,13 +184,13 @@ Note that you will always have to be at the root of the application to execute t
 
 To build the solution,
 
-``` bash
+```bash
 make build
 ```
 
 Once that's done, let's start up the API server.
 
-``` bash
+```bash
 make start
 ```
 
@@ -204,7 +204,7 @@ As you can see from the logs, a couple of operations happen as soon as you launc
 - Being a Multitenant solution, the Application is programmed to seed a default Tenant named `root`, that is basically the super-admin of the entire application and has permissions to manage tenants.
 - Once Tenant record is seeded, the tenant admin , roles and permissions are also seeded. Note that the default credentials for the root tenant admin are as follows.
 
-``` json
+```json
 {
     "email":"admin@root.com",
     "password":"123Pa$$word!"

@@ -19,7 +19,7 @@ toc: true
 
 ## Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Configurations
 ```
 
@@ -59,7 +59,7 @@ public static IWebHostBuilder GetWebHostBuilder(string[] args)
 
 **appsettings.json**
 
-``` json
+```json
 "vault": {
   "enabled": true,
   "url": "http://localhost:8200",

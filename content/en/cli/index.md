@@ -18,15 +18,7 @@ Genocs tool is based on [Microsoft-dotnet tools](https://learn.microsoft.com/en-
 
 ## Supported runtime
 
-Genocs CLI can be used on both .NET6|8|9.
-
----
-
-## Visual Studio Integration
-
-The Genocs CLI is integrated with Visual Studio. You can use the Genocs CLI to create, build, and run applications directly from Visual Studio. The Genocs CLI provides a unified experience across different platforms, allowing you to create cross-platform applications with ease. You can use the Genocs CLI to automate tasks such as project management, dependency resolution, and deployment. The Genocs CLI is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development.
-
-{{< img src="vs_integration.png" >}}
+Genocs CLI can be used on both .NET10.x, .NET9.x, .NET8.x.
 
 ---
 
@@ -36,13 +28,13 @@ To install the tool the only thing you must do is to take it from NuGet, install
 
 {{< img src="initialize.png" >}}
 
-``` bash
+```bash
 dotnet tool install -g genocs.cli
 ```
 
 ### Useful commands
 
-``` bash
+```bash
 # Get the list of tools
 dotnet tool list
 
@@ -85,7 +77,7 @@ The picture shows the console log upon the template is installed.
 
 To uninstall the templates, you can use the following command:
 
-``` bash
+```bash
 # Get the templates list
 dotnet new uninstall
 
@@ -97,11 +89,11 @@ dotnet new uninstall Genocs.MicroserviceTemplate
 dotnet new uninstall Genocs.Microservice.Template
 ```
 
-### blazor
+### Blazor
 
 To create a blazor portal use one of these commands
 
-``` bash
+```bash
 # To build a blazor portal 
 genocs blazor-wasm new <Company.Project.Service>
 
@@ -111,7 +103,7 @@ genocs blazor-clean new <Company.Project.Service>
 
 ### WebAPI
 
-``` bash
+```bash
 # To build a web api architecture webapi 
 genocs libra-webapi new <Company.Project.Service>
 
@@ -132,7 +124,7 @@ You are free to fork or to clone it. Then you can update it at your own pace.
 
 ### Useful commands to work on your own
 
-``` bash
+```bash
 # Build the project 
 dotnet build ./src/genocs.cli.csproj
 
@@ -155,7 +147,7 @@ dotnet tool install --global --add-source ./src/nupkg genocs.cli
 In the following section, you will find the commands to create a new service from scratch.
 For sake of simplicity, we will change the name of the service from `<Company.Project.Service>` to a demo name.
 
-``` bash
+```bash
 # To build a microservice web Api with multitenant support
 genocs micro-webapi n Genocs.TestWebApi
 
@@ -176,15 +168,24 @@ dotnet run --project ./Genocs.TestWebApi/src/WebApi/WebApi.csproj
 dotnet run --project ./Genocs.TestWebBlazorPortal/src/Host/Host.csproj
 ```
 
-``` mermaid
+```mermaid
 architecture-beta
-    group api(logos:aws-lambda)[Example]
+  group api(cloud)[Microservice]
 
-    service webapp(logos:aws-cognito)[WebApp] in api
-    service webapi(logos:aws-lambda)[WebApi] in api
-    service db(logos:aws-documentdb)[Database] in api
+  service fe(server)[FrontEnd] in api
+  service be(server)[BackEnd] in api
+  service db(database)[Database] in api
+  service disk1(disk)[Storage] in api
 
-    db:T -- B:webapi
-    webapi:L -- R:webapp
-
+  fe:B --> T:be
+  be:B --> T:db
+  be:L --> R:disk1
 ```
+
+---
+
+## Visual Studio Integration
+
+The Genocs CLI is integrated with Visual Studio. You can use the Genocs CLI to create, build, and run applications directly from Visual Studio. The Genocs CLI provides a unified experience across different platforms, allowing you to create cross-platform applications with ease. You can use the Genocs CLI to automate tasks such as project management, dependency resolution, and deployment. The Genocs CLI is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development.
+
+{{< img src="vs_integration.png" >}}

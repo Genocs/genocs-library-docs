@@ -1,7 +1,7 @@
 {
   "name": "genocs-framework-documentation",
   "description": "Genocs Framework Documentation",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "browserslist": [
     "defaults"
   ],
@@ -38,29 +38,29 @@
     "@babel/core": "^7.28",
     "@babel/preset-env": "^7.28",
     "@fullhuman/postcss-purgecss": "^7.0",
-    "auto-changelog": "^2.5.0",
+    "auto-changelog": "^2.5",
     "autoprefixer": "^10.4",
     "bootstrap": "^5.3",
     "clipboard": "^2.0",
-    "eslint": "^9.37",
+    "eslint": "^9.39",
     "exec-bin": "^1.0.0",
-    "flexsearch": "^0.8.212",
+    "flexsearch": "^0.8",
     "highlight.js": "^11.11",
     "hugo-installer": "^4.0",
     "instant.page": "^5.2",
     "katex": "^0.16",
     "lazysizes": "^5.3",
-    "markdownlint-cli": "^0.45",
+    "markdownlint-cli": "^0.47",
     "mermaid": "^11.12",
     "node-fetch": "^3.3",
     "postcss": "^8.5",
     "postcss-cli": "^11.0",
     "purgecss-whitelister": "^2.4",
     "shx": "^0.4.0",
-    "stylelint": "^16.25",
+    "stylelint": "^16.26",
     "stylelint-config-standard-scss": "^16.0"
   },
   "otherDependencies": {
-    "hugo": "0.148.0"
+    "hugo": "0.149.0"
   }
 }

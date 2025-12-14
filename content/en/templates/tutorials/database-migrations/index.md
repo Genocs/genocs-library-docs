@@ -21,7 +21,7 @@ Genocs Library's Web API is built on top of Entity Framework Core. This means th
 
 Before you begin, make sure you have the following installed on your machine:
 
-1. [.NET 9.0 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
+1. [.NET10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 2. [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
 3. Database Server:
 
@@ -37,23 +37,23 @@ Before you begin, make sure you have the following installed on your machine:
 ### Setting up Entity Framework Core
 
 1. Install the Entity Framework Core tools globally
-   ``` bash
+   ```bash
    dotnet tool install --global dotnet-ef
    ```
 
 2. Add the Entity Framework Core Design package to your (Host) project
    By default the Host project is delivered with the necessary packages.
-    ``` bash
+    ```bash
     dotnet add package Microsoft.EntityFrameworkCore.Design
     ```
 
 3. Create the initial migration
-    ``` bash
+    ```bash
     dotnet ef migrations add InitialCreate
     ```
 
 4. Update the database
-    ``` bash
+    ```bash
     dotnet ef database update
     ```
 
@@ -99,7 +99,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 #### database.json
 
 **mssql** 
-``` json
+```json
 {
   "DatabaseSettings": {
     "DBProvider": "mssql",
@@ -109,7 +109,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **mysql**
-``` json
+```json
 {
   "DatabaseSettings": {
     "DBProvider": "mysql",
@@ -119,7 +119,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **oracle**
-``` json
+```json
 {
   "DatabaseSettings": {
     "DBProvider": "oracle",
@@ -129,7 +129,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **postgresql**
-``` json
+```json
 {
   "DatabaseSettings": {
     "DBProvider": "postgresql",
@@ -139,7 +139,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **sqlite**
-``` json
+```json
 {
   "DatabaseSettings": {
     "DBProvider": "sqlite",
@@ -151,7 +151,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 #### hangfire.json
 
 **mssql**
-``` json
+```json
 {
   "Storage": {
     "StorageProvider": "mssql",
@@ -161,7 +161,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **mysql**
-``` json
+```json
 {
   "Storage": {
     "StorageProvider": "mysql",
@@ -171,7 +171,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **oracle**
-``` json
+```json
 {
   "Storage": {
     "StorageProvider": "oracle",
@@ -182,7 +182,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **postgresql**
-``` json
+```json
 {
   "Storage": {
     "StorageProvider": "postgresql",
@@ -192,7 +192,7 @@ Below are some sample configurations for MySQL Provider. The above is applicable
 ```
 
 **sqlite**
-``` json
+```json
 {
   "Storage": {
     "StorageProvider": "sqlite",
@@ -216,13 +216,13 @@ As mentioned earlier, since we have 2 Db Contexts defined in our application, we
 
 The generic command to add migrations over the **Application Db Context** goes like this:
 
-``` bash
+```bash
 dotnet ef migrations add <CommitMessage> --project ../Migrators/Migrators.<DBProvider>/ --context ApplicationDbContext -o Migrations/Application
 ```
 
 The generic command to add migrations over the **Tenant Db Context** goes like this:
 
-``` bash
+```bash
 dotnet ef migrations add <CommitMessage> --project ../Migrators/Migrators.<DBProvider>/ --context TenantDbContext -o Migrations/Tenant
 ```
 
@@ -236,13 +236,13 @@ Keeping that in mind, here is how you would add Migrations for MySQL.
 2. Open up the command terminal on the Host Project's directory.
 3. To add migrations related to ApplicationDbContext, run
 
-``` bash
+```bash
 dotnet ef migrations add AddedMenuEntity --project ../Migrators/Migrators.MySQL/ --context ApplicationDbContext -o Migrations/Application
 ```
 
 4. To add migrations related to TenantDbContext, run
 
-``` bash
+```bash
 dotnet ef migrations add ModifiedTenantTable --project ../Migrators/Migrators.MySQL/ --context TenantDbContext -o Migrations/Tenant
 ```
 

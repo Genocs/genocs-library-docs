@@ -1,7 +1,7 @@
 ---
 title: "Overview"
-description: "Built with .NET 9 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: "Built with .NET 9 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: "Built with .NET10.0 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: "Built with .NET10.0 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13T15:40:19+02:00
 lastmod: 2024-11-24T00:00:00+02:00
 draft: false
@@ -21,12 +21,12 @@ toc: true
 The goal of this repository is to help developers / companies kickstart their Web Application Development with a pre-built Blazor WebAssembly Template that includes several much needed components and features.
 
 > Note that this is a frontend / client application only! The backend for this application is available in a separate repository.
-> - Find Genocs Library's .NET 9.0 Web API Template here - https://github.com/Genocs/templates
+> - Find Genocs Library's .NET10.0 Web API Template here - https://github.com/Genocs/templates
 
 ## Prerequisites
 
 - Make sure you have the API Running. Here is Genocs API Backend - https://github.com/Genocs/templates
-- Once Genocs Library's .NET 9.0 Web API is up and running, run the Blazor WebAssembly Project to consume it's services.
+- Once Genocs Library's .NET10.0 Web API is up and running, run the Blazor WebAssembly Project to consume it's services.
 
 ## Community
 

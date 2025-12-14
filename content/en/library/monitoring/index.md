@@ -26,7 +26,7 @@ MongoDB tracing :
 
 ### Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Monitoring
 ```
 
@@ -53,7 +53,7 @@ services.AddCustomOpenTelemetry(configuration);
 
 **appsettings.json**
 
-``` json
+```json
   "AppSettings": {
     "ServiceName": "Service WebApi",
   },

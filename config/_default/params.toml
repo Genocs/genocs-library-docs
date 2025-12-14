@@ -69,7 +69,7 @@ copyRight = "Copyright (c) 2025 Genocs"
 # Alert
 alert = true
 alertDismissable = false
-alertText = ".NET 9.0 Genocs Library Released <a target=\"_blank\" class=\"alert-link\" href=\"https://www.youtube.com/watch?v=TgxDvU---Ak/\">Click here to get started!</a>"
+alertText = ".NET10.0 Genocs Library Released <a target=\"_blank\" class=\"alert-link\" href=\"https://www.youtube.com/watch?v=TgxDvU---Ak/\">Click here to get started!</a>"
 
 # Edit Page
 repoHost = "GitHub"

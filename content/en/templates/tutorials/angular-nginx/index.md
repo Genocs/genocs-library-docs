@@ -125,7 +125,7 @@ Create a new pipeline in Azure DevOps and add the following code to the `azure-p
 
 ```yaml
 # ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting .NET9.
+# Build and test ASP.NET Core projects targeting .NET10.0.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 # The Pipeline requires three Service Connections to deploy Images to Azure Container Registry

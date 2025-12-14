@@ -26,7 +26,7 @@ For more information about Azure Key Vault, please visit the [Azure Key Vault do
 
 ### Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Secrets.AzureKeyVault
 ```
 

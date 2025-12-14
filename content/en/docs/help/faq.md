@@ -9,6 +9,7 @@ images: []
 menu:
   docs:
     parent: "help"
+    identifier: "faq"
 weight: 630
 toc: true
 ---

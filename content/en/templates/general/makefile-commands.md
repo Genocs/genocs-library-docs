@@ -20,7 +20,7 @@ Makefile is included within this solution to give a better developer experience.
 **Note: The makefile commands have to be executed at the root of the solution where Makefile file exists.**
 
 ## Build
-``` bash
+```bash
 make build
 ```
 This would internally trigger the `dotnet build` command against the `./src/Host/Host.csproj` file.
@@ -33,7 +33,7 @@ This boots up the WebAPI at http://localhost:5001. Make sure that you have your 
 
 ## Nuget
 
-``` bash
+```bash
 make nuget
 ```
 
@@ -41,7 +41,7 @@ This packs your Solution into a nuget package. The required .template.config fol
 
 ## Publish Docker Image
 
-``` bash
+```bash
 make publish
 ```
 Using .NET 9.0's Built-In Containerization feature, this command builds the docker image for you using the `dotnet publish` command internally. Here is how to setup the metadata of your docker image.
@@ -64,7 +64,7 @@ Ensure that you have docker instances running before you execute this command.
 
 Similar to the previous command, you can build and push docker images directly to docker hub. In this case, you really dont need a docker instance running to build your docker image.
 
-``` bash
+```bash
 make publish-to-hub
 ```
 Note: Currently, the docker repository is set to mine. You can modify this to yours in the Makefile.
@@ -88,7 +88,7 @@ In brief, the terraform folder has 2 sub-folders.
 
 The Backend folder is internally used by Terraform for state management and locking. There is a one-time setup you have to do against this folder. Navigate to the backend folder and run the command.
 
-``` bash
+```bash
 terraform init
 terraform apply -auto-approve
 ```
@@ -97,7 +97,7 @@ This would create the required S3 Buckets and DDB table for you.
 
 Next is the `environments/staging` folder. Here too, run the following command.
 
-``` bash
+```bash
 terraform init
 ```
 
@@ -113,7 +113,7 @@ After that, simply navigate back to the root of the solution and run the followi
 
 The below command gives you the plan of resources that needs to be created/modified/deleted in the aws world.
 
-``` bash
+```bash
 make tp
 ```
 
@@ -121,7 +121,7 @@ make tp
 
 This command will provision resources into AWS for you.
 
-``` bash
+```bash
 make ta
 ```
 
@@ -141,7 +141,7 @@ Once the command has completed, you will be getting an API URL, which you can us
 
 The below commands destroys all the resources created, related to Genocs Library.
 
-``` bash
+```bash
 make td
 ```
 
@@ -151,7 +151,7 @@ make td
 
 This project also comes with examples of docker compose files, where you can spin up the webapi and database instance in your local containers with the following commands.
 
-``` bash
+```bash
 make dcu #docker compose up - Boots up the webapi & postgresql container
 make dcd #docker compose down - Shuts down the webapi & postgresql containers
 ```

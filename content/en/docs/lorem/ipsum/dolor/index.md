@@ -9,6 +9,7 @@ images: []
 menu:
   docs:
     parent: "ipsum"
+    identifier: "dolor"
 weight: 700
 toc: true
 ---

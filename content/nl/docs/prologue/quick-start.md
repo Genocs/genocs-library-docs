@@ -9,6 +9,7 @@ images: []
 menu:
   docs:
     parent: "prologue"
+    identifier: "quick-start"
 weight: 110
 toc: true
 ---

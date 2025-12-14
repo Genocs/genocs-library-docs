@@ -36,7 +36,7 @@ Here is how the logs show up on Console via Serilog.
 
 Structured logging is the best part of using Serilog! It is possible to use JSON formatters to evenly log messages and warning to files in the local directory. Package used - `Serilog.Sinks.File`
 
-``` json
+```json
 "Name": "File",
 "Args": {
   "path": "Logs/logs.json",
@@ -59,7 +59,7 @@ Package used - `Serilog.Sinks.Seq`
 
 Make sure you have SEQ installed and running on your machine / environment. SEQ is free for Individual use. Once setup, point to the SEQ Instance. It usually runs over the `5341` port.
 
-``` json
+```json
 "Name": "Seq",
 "Args": {
   "serverUrl": "http://localhost:5341"
@@ -83,7 +83,7 @@ By default,
 
 Package used - `Serilog.Sinks.Elasticsearch`
 
-``` json
+```json
 "Name": "Elasticsearch",
 "Args": {
   "nodeUris": "http://localhost:9200;",

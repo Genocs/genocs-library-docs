@@ -22,7 +22,7 @@ Enhances the built-in `HttpClient` with an `IHttpClient` interface with retry po
 
 ## Installation
 
-``` bash
+```bash
 dotnet add package Genocs.HTTP
 ```
 
@@ -78,7 +78,7 @@ public class SomeService
 
 **appsettings.json**
 
-``` json
+```json
 "httpClient": {
   "type": "",
   "retries": 2,
@@ -98,7 +98,7 @@ Provides ConsulServiceDiscoveryMessageHandler (used by IHttpClient) that integra
 
 ### Installation
 
-``` bash
+```bash
 dotnet add package Genocs.Discovery
 ```
 
@@ -140,7 +140,7 @@ dotnet add package Genocs.Discovery
 
 **appsettings.json**
 
-``` json
+```json
 "consul": {
   "enabled": true,
   "url": "http://localhost:8500",
@@ -164,7 +164,7 @@ Provides FabioMessageHandler (used by `IHttpClient`) that integrates with Fabio 
 
 ### Installation
 
-``` bash
+```bash
 dotnet add package Genocs.LoadBalancing
 ```
 
@@ -198,7 +198,7 @@ dotnet add package Genocs.LoadBalancing
 
 **appsettings.json**
 
-``` json
+```json
 "fabio": {
   "enabled": true,
   "url": "http://localhost:9999",

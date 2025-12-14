@@ -24,7 +24,7 @@ The configuration folder is located in the Host project.
 
 ## General Structure
 
-``` bash
+```bash
 ├── Host.csproj
 │   ├── Configurations
 │   |   ├── cache.json
@@ -77,7 +77,7 @@ Depends on the client consuming the WebAPI.
 
 By default, the dbprovider is set to postgresql. You will also have to change the connection string that is defined in hangfire.json.
 
-``` json
+```json
 {
   "DatabaseSettings": {
     "DBProvider": "postgresql",
@@ -98,7 +98,7 @@ Accept-Language: <local-key>
 
 Here, the locale-key can be anything like `fr|de|it` and so on. The default locale is set to english `en`.
 
-``` json
+```json
 {
   "LocalizationSettings": {
     "EnableLocalization": true,
@@ -126,7 +126,7 @@ Here, the locale-key can be anything like `fr|de|it` and so on. The default loca
 
 Genocs Library internally uses Serilog for logging. Here is the configuration for logger.
 
-``` json
+```json
 {
   "LoggerSettings": {
     "AppName": "Genocs.WebApi",
@@ -145,7 +145,7 @@ StructuredConsoleLogging -> This can be useful when deploying the application to
 
 We use Ethereal, a fake SMTP Service for mocking email transactions. Don't worry, the included credentials are valid, but you can create your own as well. Check [ethereal](https://ethereal.email/)
 
-``` json
+```json
 {
   "MailSettings": {
     "DisplayName": "Giovanni Emanuele Nocco",
@@ -162,7 +162,7 @@ We use Ethereal, a fake SMTP Service for mocking email transactions. Don't worry
 
 TODO: Add more details about the security settings.
 
-``` json
+```json
 {
   "SecuritySettings": {
     "Provider": "Jwt",

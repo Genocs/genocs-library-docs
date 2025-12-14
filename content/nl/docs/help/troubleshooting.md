@@ -9,6 +9,7 @@ images: []
 menu: 
   docs:
     parent: "help"
+    identifier: "troubleshooting"
 weight: 620
 toc: true
 ---
