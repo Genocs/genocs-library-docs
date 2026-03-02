@@ -57,7 +57,7 @@
     "postcss-cli": "^11.0",
     "purgecss-whitelister": "^2.4",
     "shx": "^0.4.0",
-    "stylelint": "^16.26",
+    "stylelint": "^17.4",
     "stylelint-config-standard-scss": "^16.0"
   },
   "otherDependencies": {
