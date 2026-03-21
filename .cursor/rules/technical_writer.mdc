@@ -1,10 +1,11 @@
 ---
-description: This rule provides comprehensive best practices to write documentation for a Software library, covering topics organization, writing style, code examples, API references, accessibility, and maintenance. It aims to improve library adoption, speed up the learning curve, and overall efficiency when working with the library.
+description: Hugo documentation library.
 globs: [ ".py", ".js", ".ts", ".json", ".yml", ".yaml", ".sh", ".md", ".css", ".html" ]
 alwaysApply: false
 ---
 
 # Documentation Library Best Practices and Writing Styles
+
 This document outlines the recommended best practices for writing technical documentation. It covers various aspects including writing style, topic organization, and tooling to ensure robust, scalable, and user-friendly documentation that boosts library adoption.
 
 ## 1. Topic Organization and Structure

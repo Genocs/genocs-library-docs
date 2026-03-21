@@ -93,6 +93,9 @@
           </svg></span>
       </button>
       {{ end -}}
+      {{ if eq .Site.Params.options.docsVersioning true -}}
+      {{ partial "header/version-dropdown.html" (dict "Page" . "dropdownId" "doks-versions-nav") }}
+      {{ end -}}
       {{ if eq .Site.Params.options.multilingualMode true -}}
       <div class="dropdown order-md-2">
         <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown"
@@ -156,26 +159,7 @@
     {{ end -}}
 
     {{ if eq .Site.Params.options.docsVersioning true -}}
-    <div class="dropdown ms-3">
-      <button class="btn btn-doks-light dropdown-toggle" id="doks-versions" data-bs-toggle="dropdown"
-        aria-expanded="false" data-bs-display="static" aria-label="Toggle version menu">
-        <span class="d-none d-lg-inline">Doks</span> v{{ .Site.Params.docsVersion }}
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-versions">
-        <li><a class="dropdown-item current" aria-current="true"
-            href="/docs/{{ .Site.Params.docsVersion }}/prologue/introduction/">Latest ({{ .Site.Params.docsVersion
-            }}.x)</a></li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="/docs/0.2/prologue/introduction/">v0.2.x</a></li>
-        <li><a class="dropdown-item" href="/docs/0.1/prologue/introduction/">v0.1.x</a></li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
-      </ul>
-    </div>
+    <div class="ms-3 d-inline-block">{{ partial "header/version-dropdown.html" (dict "Page" . "dropdownId" "doks-versions-subnav") }}</div>
     {{ end -}}
 
     <button

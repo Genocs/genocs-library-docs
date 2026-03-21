@@ -11,10 +11,10 @@ rootUrl = "https://www.genocs.com"
 
 
 ## Documentation
-# docsVersion = "1"
+docsVersion = "9.0"
 
 # Search
-mainSections = ["introduction", "cli", "library", "templates", "containers" ]
+mainSections = ["introduction", "cli", "library", "templates", "containers", "infrastructures", "devops" ]
 
 ## Open Graph
 images = ["gnx-icon.png"]
@@ -89,7 +89,7 @@ lastMod = true
   highLight = true
   kaTex = false
   multilingualMode = false
-  docsVersioning = false
+  docsVersioning = true
   fullWidth = true
 
 [menu]

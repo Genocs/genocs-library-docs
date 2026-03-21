@@ -1,12 +1,12 @@
-- group: v0.x
+- group: v8.x
   baseurl: "/docs"
-  description: "Current major release. Last update was v0.2.0."
+  description: "Previous major release. Last update was v8.1.0."
   versions:
-    - v: "0.1"
-    - v: "0.2"
+    - v: "8.0"
+    - v: "8.1"
 
-- group: v1.x
+- group: v9.x
   baseurl: "/docs"
-  description: "Every minor and patch release from v1 is listed below. Last update was v1.0.0."
+  description: "Latest release. Every minor and patch release from v9 is listed below. Last update was v9.0.0."
   versions:
-    - v: "1.0"
+    - v: "9.0"

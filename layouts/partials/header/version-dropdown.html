@@ -1,0 +1,31 @@
+{{- $page := .Page -}}
+{{- $docsVersions := index $page.Site.Data "docs-versions" -}}
+{{- $currentVersion := $page.Site.Params.docsVersion -}}
+{{- $dropdownId := default "doks-versions" .dropdownId -}}
+<div class="dropdown order-md-2{{ if in $page.Site.Params.mainSections $page.Section }}{{ else }} ms-md-2{{ end }}">
+  <button class="btn btn-doks-light dropdown-toggle" id="{{ $dropdownId }}" data-bs-toggle="dropdown"
+    aria-expanded="false" data-bs-display="static" aria-label="Toggle library version menu">
+    <span class="d-none d-lg-inline">Library</span> v{{ $currentVersion }}
+    <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" class="feather feather-chevron-down">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="{{ $dropdownId }}">
+    {{- range $release := sort $docsVersions "group" "desc" -}}
+      {{- range $version := sort $release.versions "v" "desc" -}}
+        {{- $versionUrl := printf "%s/%s/" $release.baseurl $version.v -}}
+        {{- $isLatest := eq $version.v $currentVersion -}}
+        <li>
+          <a class="dropdown-item{{ if $isLatest }} current{{ end }}" {{ if $isLatest }}aria-current="true"{{ end }}
+            href="{{ $versionUrl }}">
+            v{{ $version.v }}{{ if $isLatest }} <span class="badge bg-primary ms-1">Latest</span>{{ end }}
+          </a>
+        </li>
+      {{- end -}}
+    {{- end -}}
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
+  </ul>
+</div>

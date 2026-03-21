@@ -48,17 +48,17 @@
    docker build -t genocs/genocs-library-docs .
     
    # tag the image
-   docker tag genocs/genocs-library-docs genocs/genocs-library-docs:1.3.0
+   docker tag genocs/genocs-library-docs genocs/genocs-library-docs:1.4.0
    docker tag genocs/genocs-library-docs genocs/genocs-library-docs:latest
 
    # build and tag in a single command
-   docker build -t genocs/genocs-library-docs:latest -t genocs/genocs-library-docs:1.3.0 .
+   docker build -t genocs/genocs-library-docs:latest -t genocs/genocs-library-docs:1.4.0 .
     
    # login to docker hub
    docker login
     
    # push the image to docker hub
-   docker push genocs/genocs-library-docs:1.3.0
+   docker push genocs/genocs-library-docs:1.4.0
    docker push genocs/genocs-library-docs:latest
    ```
 3. Run the following command to run the docker image on localhost:1613
@@ -71,5 +71,3 @@
 ## Acknowledgment
 
 - Original theme [h-enk doks](https://github.com/h-enk/doks)
-- Original project [fullstackhero](https://github.com/fullstackhero)
-- Awesome mentor [Mukesh Murugan](https://github.com/iammukeshm)
