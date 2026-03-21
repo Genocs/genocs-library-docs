@@ -3,7 +3,7 @@ title : "Introduzione"
 description: "Benvenuti nella documentazione completa delle potenti librerie software di Genocs progettate per rivoluzionare lo sviluppo di soluzioni microservizi cloud-agnostiche. In questa guida, esploreremo le varie capacità e funzionalità offerte da queste librerie, dandovi la possibilità di creare applicazioni robuste e scalabili che si adattano perfettamente a qualsiasi ambiente cloud."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2025-10-11T15:34:50Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 ---

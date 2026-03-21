@@ -3,7 +3,7 @@ title: "Genocs Microservice Template along with Entity Framework Core"
 description: "Adding Database Migrations for Entity Framework Core"
 lead: "Adding Database Migrations for Entity Framework Core"
 date: 2022-01-15T21:31:40+05:30
-lastmod: 2024-11-24T00:00:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

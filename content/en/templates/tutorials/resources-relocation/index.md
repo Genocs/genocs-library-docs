@@ -3,7 +3,7 @@ title: "Azure Resource reloaction"
 description: "How to move Azure resources from one Tenant to another"
 lead: "How to move Azure resources from one Tenant to another"
 date: 2025-01-31 11:08:50+02:00
-lastmod: 2025-10-11T15:34:50Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

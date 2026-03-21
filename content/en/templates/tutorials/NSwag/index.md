@@ -3,7 +3,7 @@ title: "How to use NSwag with Genocs Microservice Template"
 description: "Using NSwag with Genocs Microservice Template"
 lead: "Let's get started with using NSwag with Genocs Microservice Template"
 date: 2024-10-07T16:14:00+02:00
-lastmod: 2024-10-07T16:14:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

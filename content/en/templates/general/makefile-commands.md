@@ -3,7 +3,7 @@ title: "MakeFile Commands"
 description: "Here are some important MakeFile Commands that are to be used along with Genocs Library CLI."
 lead: "Here are some important MakeFile Commands that are to be used along with Genocs Library CLI."
 date: 2023-05-13 10:23:13+02:00
-lastmod: 2024-11-24T00:00:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

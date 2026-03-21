@@ -3,7 +3,7 @@ title: "Setup Azure DevOps Project"
 description: "How to setup Azure DevOps project"
 lead: "This tutorial will guide you on how to setup Azure DevOps project"
 date: 2025-03-01T00:00:00+02:00
-lastmod: 2025-03-01T00:00:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

@@ -3,7 +3,7 @@ title: "Commands"
 description: "Doks comes with commands for common tasks."
 lead: "Doks comes with commands for common tasks."
 date: 2020-10-13T15:21:01+02:00
-lastmod: 2026-03-21T17:47:30Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

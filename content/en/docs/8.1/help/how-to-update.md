@@ -3,7 +3,7 @@ title: "How to Update"
 description: "Regularly update the installed npm packages to keep your Doks website stable, usable, and secure."
 lead: "Regularly update the installed npm packages to keep your Doks website stable, usable, and secure."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T17:47:30Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

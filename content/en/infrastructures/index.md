@@ -3,7 +3,7 @@ title : "Infrastructures"
 description: "How to setup your infrastructure!"
 lead: "How to setup your infrastructure!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2025-10-11T16:44:41Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 ---

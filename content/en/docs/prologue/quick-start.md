@@ -3,7 +3,7 @@ title: "Quick Start"
 description: "One page summary of how to start a new Doks project."
 lead: "One page summary of how to start a new Doks project."
 date: 2020-11-16T13:59:39+01:00
-lastmod: 2020-11-16T13:59:39+01:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

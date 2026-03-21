@@ -3,7 +3,7 @@ title: "Guida Introduttiva"
 description: "Iniziamo con la Libreria Genocs!"
 lead: "Iniziamo con la Libreria Genocs!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2025-10-11T15:34:50Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

@@ -3,7 +3,7 @@ title : "Builder"
 description: "Genocs builder is the entrypoint for the application builder."
 lead: ""
 date: 2023-12-20T17:40:19+02:00
-lastmod: 2025-10-11T15:34:50Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

@@ -3,7 +3,7 @@ title : "DevOps"
 description: "How to setup your DevOps pipeline!"
 lead: "How to setup your DevOps pipeline!"
 date: 2025-10-11T15:40:19+02:00
-lastmod: 2025-10-11T16:44:41Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 ---

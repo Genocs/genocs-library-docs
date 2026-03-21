@@ -3,7 +3,7 @@ title: "Overview"
 description: "Genocs Library built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 lead: "Genocs Library built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2024-11-24T00:00:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

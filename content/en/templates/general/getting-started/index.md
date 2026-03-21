@@ -3,7 +3,7 @@ title: "Getting Started 🚀"
 description: "Let's get started with the .NET WebApi Template!"
 lead: "Let's get started with the .NET WebApi Template!"
 date: 2021-08-30T00:59:34+05:30
-lastmod: 2024-02-29T19:44:05+05:30
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

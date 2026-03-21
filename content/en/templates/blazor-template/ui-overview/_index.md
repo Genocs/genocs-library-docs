@@ -2,7 +2,7 @@
 title : "UI Overview"
 description: "Sneak Peak of Genocs Library's Blazor Web Asssembly Template."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2025-10-11T13:16:43Z
+lastmod: 2026-03-21T18:34:29Z
 lead: ""
 draft: false
 images: []

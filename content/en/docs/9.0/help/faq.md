@@ -3,7 +3,7 @@ title: "FAQ"
 description: "Answers to frequently asked questions."
 lead: "Answers to frequently asked questions."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T17:47:30Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

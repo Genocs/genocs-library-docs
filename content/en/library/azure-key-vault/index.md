@@ -3,7 +3,7 @@ title : "Azure Key Vault"
 description: "Genocs Library package for Azure Key Vault"
 lead: ""
 date: 2023-11-29T21:00:19+02:00
-lastmod: 2024-11-17T00:00:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

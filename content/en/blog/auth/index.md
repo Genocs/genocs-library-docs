@@ -3,7 +3,7 @@ title: "Authentication & Authorization"
 description: ".NET10.0 - Boilerplate API Tutorial with Email Sign Up, Verification, Authentication & Forgot Password"
 lead: "Introducing about how to use authentication and authorization with NET10.0."
 date: 2024-12-09T00:00:00+02:00
-lastmod: 2024-12-09T00:00:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 weight: 10
 images: ["say-hello-to-doks.png"]

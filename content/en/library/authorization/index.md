@@ -3,7 +3,7 @@ title: "Authorization"
 description: "Adds the integration with authorization middleware and system components to validate and grant the access to the resources."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2025-10-11T16:18:19Z
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

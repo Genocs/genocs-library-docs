@@ -3,7 +3,7 @@ title: "Development Environment"
 description: "Setting up the Development Environment for the Blazor WebAssembly Template"
 lead: "Let's get started with setting up the Development Environment for Blazor WebAssembly Template Development!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2024-11-24T00:00:00+02:00
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:

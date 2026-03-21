@@ -3,7 +3,7 @@ title: "OpenAPI"
 description: "How to implement logging tracing and monitoring by using OpenTelementry."
 lead: "Genocs's Web API and OpenTelelemetry."
 date: 2021-08-24T11:40:05+05:30
-lastmod: 2021-10-28T10:07:45+05:30
+lastmod: 2026-03-21T18:34:29Z
 draft: false
 images: []
 menu:
