@@ -1,11 +1,17 @@
 ---
-title : "Genocs Library v9.0"
-description: "The Genocs Library v9.0 is the latest version of Genocs Library"
-lead: "Ciao"
-date: 2026-03-21T15:40:19+02:00
+title: "Agentic Support"
+description: "This document provides information about the agentic support features available in the AGENTIC framework. Agentic support allows agents to perform tasks autonom..."
+lead: "This document provides information about the agentic support features available in the AGENTIC frame"
+date: 2026-03-21T00:00:00+00:00
 lastmod: 2026-03-21T19:00:21Z
 draft: false
 images: []
+menu:
+  docs:
+    parent: "library"
+    identifier: "agentic-support"
+weight: 200
+toc: true
 ---
 
 # Agentic Support
@@ -30,9 +36,13 @@ The AGENTIC framework supports a wide range of ecosystems, including:
 
 ## Claude
 
+
 The AGENTIC framework provides support for Anthropic's Claude language model, allowing agents to leverage its advanced conversational abilities. This integration enables agents to understand and respond to user inputs more effectively, making interactions more natural and engaging.
 
 Claude configuration can be customized to suit specific use cases, allowing agents to optimize their performance based on the requirements of the task at hand. This support enhances the overall user experience and enables agents to handle a wider range of scenarios with greater efficiency.
+
+
+
 
 ## Antigravity
 
