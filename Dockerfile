@@ -1,5 +1,5 @@
 # Stage 1: Build the Hugo site
-FROM node:20 AS builder
+FROM node:24 AS builder
 
 # Set working directory
 WORKDIR /app

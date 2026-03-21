@@ -3,7 +3,7 @@ title: "Setup Angular with Nginx"
 description: "How to setup Angular with Nginx"
 lead: "This tutorial will guide you on how to setup Angular with Nginx withing a Docker container"
 date: 2025-03-01T00:00:00+02:00
-lastmod: 2025-03-01T00:00:00+02:00
+lastmod: 2026-03-21T15:55:08Z
 draft: false
 images: []
 menu:
@@ -69,7 +69,7 @@ http {
 Create a file named `Dockerfile` in the root of your project with the following content:
 
 ```dockerfile
-FROM node:22 AS build
+FROM node:24 AS build
 
 # Create app directory
 WORKDIR /usr/src/app
