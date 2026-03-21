@@ -5,7 +5,7 @@ var config = {
   fontFamily: '"Nunito", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";',
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  mermaid.initialize(config);
-  mermaid.init(undefined, '.language-mermaid');
+document.addEventListener('DOMContentLoaded', async () => {
+  mermaid.initialize({ ...config, startOnLoad: false });
+  await mermaid.run({ querySelector: '.language-mermaid', suppressErrors: true });
 });
