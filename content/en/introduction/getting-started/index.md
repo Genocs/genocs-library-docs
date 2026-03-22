@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Let's get started with Genocs Library!"
 lead: "Let's get started with Genocs Library!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-22T18:14:18Z
 draft: false
 images: []
 menu:
@@ -45,6 +45,7 @@ As for the initial releases, <b>Genocs Library</b> sports an API Project built o
 
 <p>Here are the awesome Genocs projects!</p>
 </div>
+
 <div>
     <div class="row justify-content-center text-center" style="padding:10px!important">
       <div class="card feature-card" style="padding:0px!important">
