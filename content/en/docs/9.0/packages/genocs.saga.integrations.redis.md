@@ -6,6 +6,12 @@ date: 2026-03-21T15:40:19+02:00
 lastmod: 2026-03-22T14:49:10Z
 draft: false
 images: []
+menu:
+  docs:
+    identifier: "genocs-saga-integrations-redis"
+    name: "Genocs.Saga.Integrations.Redis"
+    parent: "docs-9-packages"
+weight: 12
 ---
 
 ## Consumer Mode for Agents

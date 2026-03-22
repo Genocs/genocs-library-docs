@@ -3,12 +3,12 @@ title: "Overview"
 description: "Built with .NET10.0 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 lead: "Built with .NET10.0 and MudBlazor Component Library. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-22T15:16:14Z
 draft: false
 images: []
 menu:
   templates:
-    identifier: "general-overview"
+    identifier: "blazor-overview"
     name: "Overview"
     parent: "blazor"
 weight: 1

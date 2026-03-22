@@ -8,9 +8,9 @@ draft: false
 images: []
 menu:
   docs:
-    identifier: "onion-dotnet-template-general-overview"
-    name: "Overview"
-    parent: "Genocs Library"
+    identifier: "genocs-auth"
+    name: "Genocs.Auth"
+    parent: "docs-9-packages"
 weight: 1
 toc: true
 ---

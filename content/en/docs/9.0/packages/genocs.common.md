@@ -6,6 +6,13 @@ date: 2026-03-21T15:40:19+02:00
 lastmod: 2026-03-22T14:49:10Z
 draft: false
 images: []
+menu:
+  docs:
+    identifier: "genocs-common"
+    name: "Genocs.Common"
+    parent: "docs-9-packages"
+weight: 2
+toc: true
 ---
 
 ## Consumer Mode for Agents
