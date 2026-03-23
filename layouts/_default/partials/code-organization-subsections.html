@@ -1,0 +1,89 @@
+## Code organization
+
+### [docker-compose](docker-compose)
+
+Contains the docker compose files to install a bunch of enterprise level tools.
+
+Please refer to this [README](./docker-compose/README.md) for details.
+
+### [docs](docs)
+
+Contains some useful documentation like:
+
+- [aks-preview](./docs/aks-preview.md)
+- [azure-developer-community](./docs/azure-developer-community.md)
+- [minikube-wsl2](./docs/minikube-wsl2.md)
+- [monitoring-and-observability](./docs/monitoring-and-observability.md)
+
+### [src](src)
+
+Contains the source code for a hypothetical application.
+
+It contains the source code for a model class used by two services:
+
+- The **Producers**: a WebApi that send messages to RabbitMQ cluster
+- The **Internal Service**: a WebApi that can be used only inside the cluster
+- The **Consumers**: a Worker listening RabbitMQ messages.
+
+`Genocs.KubernetesCourse.WebApi` contains the code for generating the messages which are published to a RabbitMQ queue, as well as to call an internal WebApi.
+
+`Genocs.KubernetesCourse.Internal.WebApi` contains the code for the WebApi used only inside the cluster.
+
+`Genocs.KubernetesCourse.Worker` contains the consumer code processing RabbitMQ messages.
+
+Both the Producer and Consumer uses the common data model.
+
+In order to build these using Dockerfile:
+
+- [Genocs.KubernetesCourse.WebApi](./src/Genocs.KubernetesCourse.WebApi.dockerfile)
+- [Genocs.KubernetesCourse.Internal.WebApi](./src/Genocs.KubernetesCourse.Internal.WebApi.dockerfile)
+- [Genocs.KubernetesCourse.Worker](./src/Genocs.KubernetesCourse.Worker.dockerfile)
+
+You can build them and they are ready to be pushed to:
+
+- Azure Container Registry [docker-compose ACR](./src/docker-compose-acr.yaml)
+- DockerHub [docker-compose Dockerhub](./src/docker-compose-dockerhub.yaml)
+
+The docker images can be built and push to dockerhub using the following commands:
+
+``` ps
+# Build
+docker-compose -f .\src\docker-compose-dockerhub.yaml build
+
+# Push
+docker-compose -f .\src\docker-compose-dockerhub.yaml push
+```
+
+**NOTE:** Please update the yaml files with the correct image version before use them.
+
+### [PowerShell](PowerShell)
+
+Contains the helper PowerShell scripts to:
+
+- Provisioning the AKS cluster
+- To proxy into the Kubernetes control plane
+- To deploy the application
+- To delete the application
+- To delete the resource group
+
+**NOTE:** AKS is expensive to keep alive
+
+### [k8s](k8s)
+
+Contains Kubernetes manifest files for deploying the Producer, Consumer and the Autoscaler components to the Kubernetes cluster.
+
+### [helm](helm)
+
+Contains the Helm RBAC enabling yaml file which add the Cluster Role Binding for RBAC enabled Kubernetes cluster.
+
+This was required before Helm 3.0 for the Tiller service. With helm 3.0, Tiller is no longer required.
+
+### [terraform](terraform)
+
+Contains the terraform Kubernetes cluster setup. The setup is primary meant to be used on Azure. Anyway, deploy on other cloud Provider is quite straightforward.
+
+### [skaffold](skaffold)
+
+The Skaffold and Kaniko Kubernetes cluster setup.
+
+This allows to setup Kubernetes cluster on Google Cloud.

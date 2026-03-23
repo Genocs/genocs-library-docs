@@ -14,51 +14,51 @@
   weight = 30
 
 [[main]]
-  name = "Templates"
-  url = "/templates/"
+  name = "Templating"
+  url = "/templating/"
   weight = 40
 
-[[templates]]
+[[templating]]
   name = "General"
   identifier = "general"
-  url = "/templates/general/"
+  url = "/templating/general/"
   weight = 50
 
-[[templates]]
+[[templating]]
   name = "Blazor"
   identifier = "blazor"
-  url = "/templates/blazor-template/"
+  url = "/templating/blazor/"
   weight = 60
 
-[[templates]]
+[[templating]]
   name = "Multitenancy"
-  identifier = "multitenancy-dotnet-template"
-  url = "/templates/multitenancy-template/"
+  identifier = "multitenancy"
+  url = "/templating/multitenancy/"
   weight = 70
 
-[[templates]]
+[[templating]]
   name = "Onion"
-  identifier = "onion-dotnet-template"
-  url = "/templates/onion-template/"
+  identifier = "onion"
+  url = "/templating/onion/"
   weight = 80
 
-[[templates]]
+[[templating]]
   name = "Library"
-  identifier = "library-dotnet-template"
-  url = "/templates/library-template/"
+  identifier = "library"
+  url = "/templating/library/"
   weight = 90
 
-[[templates]]
+[[templating]]
   name = "Tutorials"
   identifier = "tutorials"
-  url = "/templates/tutorials/"
+  url = "/templating/tutorials/"
   weight = 100
 
 
 [[main]]
-  name = "Infrastructures"
-  identifier = "infrastructures"
-  url = "/infrastructures/"
+  name = "Infrastructure"
+  identifier = "infrastructure"
+  url = "/infrastructure/"
   weight = 110
 
 [[main]]
@@ -70,9 +70,9 @@
 ####################################
 
 [[main]]
-  name = "Containers"
-  identifier = "containers"
-  url = "/containers/"
+  name = "Containerization"
+  identifier = "containerization"
+  url = "/containerization/"
   weight = 130
 
 ####################################

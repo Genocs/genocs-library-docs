@@ -1,0 +1,34 @@
+## Resource Groups
+
+This demo will create all the Azure Resource inside:
+
+- rg-aks-genocs
+- rg-agic-genocs
+- MC_rg-aks-genocs_aks-genocs_westeurope
+- DefaultResourceGroup-WEU
+
+## 1. rg-aks-genocs
+
+- aks-genocs - Kubernetes service
+- genocscontainer - Container registry
+- kv-genocsakst - Key vault
+
+## 2. rg-agic-genocs
+
+- agic-genocs - Application gateway
+- agic-pip - Public IP address
+- agic-vnet - Virtual network
+
+## 3. MC_rg-aks-genocs_aks-genocs_westeurope
+
+- 4c0f07f9-b962-478a-a875-be77a79462dc      Public IP address           West Europe
+- aks-agentpool-33168902-nsg                Network security group      West Europe
+- aks-agentpool-33168902-routetable         Route table                 West Europe
+- aks-genocs-agentpool                      Managed Identity            West Europe
+- aks-nodepool1-12518635-vmss               Virtual machine scale set   West Europe
+- aks-vnet-33168902                         Virtual network             West Europe
+- kubernetes                                Load balancer               West Europe
+- omsagent-aks-genocs                       Managed Identity            West Europe
+- pvc-49df2627-0ef7-4264-8441-f0e36b629bf2  Disk                        West Europe
+
+## 4. DefaultResourceGroup-WEU

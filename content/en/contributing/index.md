@@ -2,7 +2,7 @@
 title: "Contributing"
 description: "Contributing to Genocs Library"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-23T21:39:47Z
 draft: false
 images: []
 ---
@@ -34,7 +34,7 @@ Please note the following steps are applicable only for the `genocs-library-docs
 6. At the root of the repository run `npm install`. This installs all the required packages. It might take some time depending on your network connection.
 7. All the documentation is to be written in markdown format.
 8. Refer `https://github.com/Genocs/genocs-library-docs/blob/main/content/en/templates/general/getting-started/index.md` to get an idea on how to write documentation and include images, code snippets and stuff.
-9. To run the application locally, run the command `npm run start` and navigate to **localhost:1313**
+9. To run the application locally, run the command `npm run start` and navigate to `http://localhost:1313` in your browser (Hugo development server).
 10. Once ready, send a Pull Request.
 
 ```mermaid

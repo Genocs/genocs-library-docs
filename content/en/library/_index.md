@@ -1,35 +1,52 @@
 ---
-title : "Library"
-description: "Genocs Library is a collection of Enterprise Level Libraries and Templates for Modern Web Applications that gets you started with premium application development in no-time!"
-lead: ""
+title: "Library"
+description: "Versioned entry page for Genocs Library documentation."
+lead: "Choose a docs version to get started quickly."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-23T21:39:47Z
 draft: false
 images: []
 ---
 
-{{< img src="gnx-framework.png" >}}
+## About Genocs Library
 
-Supported features that will help to quickly set up your next microservices:
+**Genocs Library is a comprehensive suite of software libraries designed for building cloud-agnostic microservice solutions** that seamlessly adapt across AWS, Azure, GCP, and other cloud platforms.
 
-- Authentication [JWT](http://jwt.io) with secret key & certificates extensions
-- CQRS basic abstractions
-- [Consul](https://www.consul.io) service registry integration
-- [Swagger](https://swagger.io) extensions
-- [Redocly](https://redocly.com/) extensions
-- [RestEase](https://github.com/canton7/RestEase) extensions
-- [Fabio](https://github.com/fabiolb/fabio) load balancer integration
-- Logging extensions for [Serilog](https://serilog.net/) & integration with [Seq](https://datalust.co/seq), [ELK](https://www.elastic.co/what-is/elk-stack), [Loki](https://grafana.com/oss/loki/)
-- Message brokers abstractions & CQRS support
-- [RabbitMQ](https://www.rabbitmq.com) integration
-- Inbox + Outbox implementation for EF Core, Mongo
-- [AppMetrics](https://www.app-metrics.io) extensions
-- [Prometheus](https://prometheus.io) integration
-- [MongoDB](https://www.mongodb.com/cloud) extensions
-- [OpenStack OCS](https://specs.openstack.org/openstack/ironic-specs/specs/4.0/msft-ocs-power-driver.html) support
-- [Redis](https://redis.io) extensions
-- [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault) Azure key vault integration
-- [Vault](https://www.vaultproject.io) secrets engine (settings, dynamic credentials, PKI etc.) integration
-- Security extensions (certificates, mTLS, encryption etc.)
-- [Jaeger](https://www.jaegertracing.io) tracing integration
-- Web API extensions (minimal routing-based API, CQRS support)
+### Why Choose Genocs Library
+
+- **Cloud Agnostic**: Write once, deploy anywhere. Build microservices decoupled from specific cloud providers and migrate freely across platforms.
+- **Production-Ready Tools**: Built-in support for observability, fault tolerance, service discovery, and DevOps integration—everything you need for resilient systems.
+- **Developer Velocity**: Pre-built modules for authentication, messaging, caching, and distributed tracing accelerate development and reduce boilerplate.
+
+---
+
+## Choose Your Documentation Version
+
+### **Latest Release — Genocs Library v9.0** ⭐
+
+**Start here for new projects and the newest features.**
+
+[→ Browse Genocs Library v9.0 Docs](/docs/9.0/)
+
+---
+
+### All Available Versions
+
+| Version | Release Status | Use Case |
+|---------|----------------|----------|
+| **v9.x** | Latest Release | New projects, latest features, and best practices |
+| **v8.x** | Stable Previous | Mature production deployments, legacy maintenance |
+
+**[View All Versions](/versions/#library)**
+
+---
+
+## Quick Navigation
+
+- **New to Genocs?** Start with the [Introduction](/introduction/) for an overview of capabilities.
+- **Need specific module docs?** Each version includes guides for authentication, messaging, logging, metrics, and more.
+- **Questions?** See our [Contributing Guidelines](/) or reach out via our [Contact Page](/contact/).
+
+---
+
+**Ready to build cloud-agnostic microservices?** [Start with v9.0](/docs/9.0/) or [browse all versions](/versions/#library).

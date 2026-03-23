@@ -1,51 +1,52 @@
 ---
-title : "DevOps"
-description: "How to setup your DevOps pipeline!"
-lead: "How to setup your DevOps pipeline!"
-date: 2025-10-11T15:40:19+02:00
+title: "Infrastructure"
+description: "How to set up your infrastructure."
+lead: "How to set up your infrastructure."
+aliases:
+  - /infrastructure/
+date: 2023-05-13T15:40:19+02:00
 lastmod: 2026-03-23T21:39:47Z
 draft: false
 images: []
 ---
 
-Setup DevOps pipeline to be production ready isn't a simple task. It requires to take in consideration many topics.
+Modern application requires to be hosted on an infrastructure to be production ready. It requires to take in consideration many topics.
 
-In this walkthrough we will setup the steps required to have a DevOps pipeline up and running.
+In this walkthrough we will setup the steps required to have an infrastructure up and running on Azure.
 
 This proposal is thought as to be used on Azure, even though most of the options could be reused for any cloud provider like Google Cloud or AWS.
 
-<img src="/images/gnx-ci-cd-pipeline.svg" alt="CI/CD Pipeline">
+<img src="/images/gnx-architecture-network.svg" alt="Architecture Network">
 
 ## Prerequisites
 
-- **Azure Subscription** to create Azure DevOps project
-- **kubectl** logged into Azure DevOps project
+- **Azure Subscription** to create Kubernetes cluster
+- **kubectl** logged into Kubernetes cluster
 - **PowerShell**
 - **Postman**
 - **Helm**
 - **DockerHub account** (optional)
-- **Github account** (optional)
 
 ## Introduction
 
-The setup is split into different steps:
+The setup is spitted into different steps:
 
 - Bare components
 - Security
-- CI/CD
+- Scaling
 - Monitoring
 - Application
 
 ## Setup - Overview
 
-During this step we are going to setup Azure DevOps project tackling the following components:
+During this step we are going to setup Kubernetes cluster tackling the following components:
 
 - Setup private Docker images repository
-- Setup the Azure DevOps project
+- Setup the Kubernetes cluster
 - Setup the Vault for secrets
 - Secure secrets
 - Setup networking
-- Setup CI/CD
+- Setup autoscaler
 
 ### Monitoring
 
