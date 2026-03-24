@@ -3,15 +3,16 @@ title: "Genocs.Saga.Integrations.MongoDB"
 description: "Genocs.Saga.Integrations.MongoDB — Agent Reference Documentation"
 lead: "Genocs.Saga.Integrations.MongoDB — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-saga-integrations-mongodb"
     name: "Genocs.Saga.Integrations.MongoDB"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 11
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,12 +28,12 @@ Genocs.Saga.Integrations.MongoDB replaces the default in-memory saga persistence
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Saga.Integrations.MongoDB` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | MongoDB-backed saga state and log persistence |
-| Typical startup APIs | `AddSaga` + `UseMongoPersistence` |
+| Key                  | Value                                         |
+| -------------------- | --------------------------------------------- |
+| Package              | `Genocs.Saga.Integrations.MongoDB`            |
+| Target frameworks    | `net10.0`, `net9.0`, `net8.0`                 |
+| Primary role         | MongoDB-backed saga state and log persistence |
+| Typical startup APIs | `AddSaga` + `UseMongoPersistence`             |
 
 ## Install
 
@@ -63,18 +64,18 @@ Use the `sagaMongo` section in `appsettings.json`.
 
 ```json
 {
-    "sagaMongo": {
-        "enabled": true,
-        "connectionString": "mongodb://localhost:27017",
-        "database": "genocs_saga"
-    }
+  "sagaMongo": {
+    "enabled": true,
+    "connectionString": "mongodb://localhost:27017",
+    "database": "genocs_saga"
+  }
 }
 ```
 
-| Setting | Type | Description |
-|---|---|---|
-| `connectionString` | `string` | MongoDB connection string for saga persistence. Required. |
-| `database` | `string` | Database name for saga state and log collections. Required. |
+| Setting            | Type     | Description                                                 |
+| ------------------ | -------- | ----------------------------------------------------------- |
+| `connectionString` | `string` | MongoDB connection string for saga persistence. Required.   |
+| `database`         | `string` | Database name for saga state and log collections. Required. |
 
 ## Dependencies
 
@@ -85,8 +86,8 @@ Use the `sagaMongo` section in `appsettings.json`.
 ## Troubleshooting
 
 1. Saga still behaves as if using in-memory persistence after adding this package.
-Fix: Ensure `UseMongoPersistence` is called inside the `AddSaga(saga => { ... })` builder callback during startup.
+   Fix: Ensure `UseMongoPersistence` is called inside the `AddSaga(saga => { ... })` builder callback during startup.
 2. Startup throws `SagaException` while loading saga Mongo settings.
-Fix: Validate that `sagaMongo.connectionString` and `sagaMongo.database` are present and non-empty.
+   Fix: Validate that `sagaMongo.connectionString` and `sagaMongo.database` are present and non-empty.
 3. Compensation history is missing or unreadable after a deployment update.
-Fix: Maintain backward compatibility in serialized saga message and state contracts across versions.
+   Fix: Maintain backward compatibility in serialized saga message and state contracts across versions.

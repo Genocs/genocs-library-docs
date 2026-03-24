@@ -3,15 +3,16 @@ title: "Genocs.Persistence.MongoDB"
 description: "Genocs.Persistence.MongoDB — Agent Reference Documentation"
 lead: "Genocs.Persistence.MongoDB — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-persistence-mongodb"
     name: "Genocs.Persistence.MongoDB"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 10
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,12 +28,12 @@ Genocs.Persistence.MongoDB provides MongoDB connectivity and repository wiring f
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Persistence.MongoDB` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | MongoDB persistence and repository integration |
-| Typical startup APIs | `AddMongo`, `AddMongoWithRegistration` |
+| Key                  | Value                                          |
+| -------------------- | ---------------------------------------------- |
+| Package              | `Genocs.Persistence.MongoDB`                   |
+| Target frameworks    | `net10.0`, `net9.0`, `net8.0`                  |
+| Primary role         | MongoDB persistence and repository integration |
+| Typical startup APIs | `AddMongo`, `AddMongoWithRegistration`         |
 
 ## Install
 
@@ -64,36 +65,36 @@ Use the `mongoDb` section in `appsettings.json`.
 
 ```json
 {
-    "mongoDb": {
-        "connectionString": "mongodb://localhost:27017",
-        "database": "genocs_orders",
-        "enableTracing": true,
-        "seed": false,
-        "setRandomDatabaseSuffix": false
-    }
+  "mongoDb": {
+    "connectionString": "mongodb://localhost:27017",
+    "database": "genocs_orders",
+    "enableTracing": true,
+    "seed": false,
+    "setRandomDatabaseSuffix": false
+  }
 }
 ```
 
-| Setting | Type | Description |
-|---|---|---|
-| `connectionString` | `string` | MongoDB connection string. Required. |
-| `database` | `string` | Target database name. Required. |
-| `enableTracing` | `bool` | Subscribes the Mongo diagnostic activity source for tracing. |
-| `seed` | `bool` | Triggers the registered `IMongoSeeder` during initialization. |
-| `setRandomDatabaseSuffix` | `bool` | Appends a random GUID suffix to the database name, mainly for tests. |
+| Setting                   | Type     | Description                                                          |
+| ------------------------- | -------- | -------------------------------------------------------------------- |
+| `connectionString`        | `string` | MongoDB connection string. Required.                                 |
+| `database`                | `string` | Target database name. Required.                                      |
+| `enableTracing`           | `bool`   | Subscribes the Mongo diagnostic activity source for tracing.         |
+| `seed`                    | `bool`   | Triggers the registered `IMongoSeeder` during initialization.        |
+| `setRandomDatabaseSuffix` | `bool`   | Appends a random GUID suffix to the database name, mainly for tests. |
 
 The option class includes validation semantics through `MongoOptions.IsValid(...)`: registration is skipped when `connectionString` or `database` is empty.
 
 ## Decision Matrix For Agents
 
-| Goal | Preferred API | Why |
-|---|---|---|
-| Register Mongo connectivity only | `AddMongo()` | Minimal setup when repositories are custom-registered |
-| Register Mongo plus a scoped generic repository | `AddMongoWithRegistration()` | Fastest path; registers `IMongoRepository<T>` for all entities automatically |
-| Register a specific typed repository | `AddMongoRepository<TEntity, TKey>(collectionName)` | Pins a collection name for entities with non-ObjectId keys |
-| Scan and register custom repository implementations | `RegisterMongoRepositories(assembly)` | Convention-based scanning of all `IMongoRepository<T>` implementations |
-| Access `IMongoDatabase` or `IMongoClient` directly | `IMongoDatabaseProvider` (resolved from DI) | Single abstraction for low-level driver access |
-| Create a driver session for transactions | `IMongoSessionFactory.CreateAsync()` | Returns an `IClientSessionHandle` for multi-document transactions |
+| Goal                                                | Preferred API                                       | Why                                                                          |
+| --------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Register Mongo connectivity only                    | `AddMongo()`                                        | Minimal setup when repositories are custom-registered                        |
+| Register Mongo plus a scoped generic repository     | `AddMongoWithRegistration()`                        | Fastest path; registers `IMongoRepository<T>` for all entities automatically |
+| Register a specific typed repository                | `AddMongoRepository<TEntity, TKey>(collectionName)` | Pins a collection name for entities with non-ObjectId keys                   |
+| Scan and register custom repository implementations | `RegisterMongoRepositories(assembly)`               | Convention-based scanning of all `IMongoRepository<T>` implementations       |
+| Access `IMongoDatabase` or `IMongoClient` directly  | `IMongoDatabaseProvider` (resolved from DI)         | Single abstraction for low-level driver access                               |
+| Create a driver session for transactions            | `IMongoSessionFactory.CreateAsync()`                | Returns an `IClientSessionHandle` for multi-document transactions            |
 
 ## Behavior Notes / Constraints
 
@@ -105,16 +106,16 @@ The option class includes validation semantics through `MongoOptions.IsValid(...
 
 ## Public Capability Map
 
-| Capability | Surface |
-|---|---|
-| Register Mongo connectivity from configuration | `AddMongo` on `IGenocsBuilder` |
-| Register Mongo plus scoped generic repository | `AddMongoWithRegistration` on `IGenocsBuilder` |
-| Register a named collection-bound repository | `AddMongoRepository<TEntity, TKey>` on `IGenocsBuilder` |
-| Scan assembly for repository implementations | `RegisterMongoRepositories(assembly)` on `IGenocsBuilder` |
-| Typed entity repository contract | `IMongoRepository<TEntity>` (ObjectId key) |
-| Typed repository with custom key | `IMongoBaseRepository<TEntity, TKey>` |
-| Direct database and client access | `IMongoDatabaseProvider` |
-| Create driver sessions for transactions | `IMongoSessionFactory` |
+| Capability                                     | Surface                                                   |
+| ---------------------------------------------- | --------------------------------------------------------- |
+| Register Mongo connectivity from configuration | `AddMongo` on `IGenocsBuilder`                            |
+| Register Mongo plus scoped generic repository  | `AddMongoWithRegistration` on `IGenocsBuilder`            |
+| Register a named collection-bound repository   | `AddMongoRepository<TEntity, TKey>` on `IGenocsBuilder`   |
+| Scan assembly for repository implementations   | `RegisterMongoRepositories(assembly)` on `IGenocsBuilder` |
+| Typed entity repository contract               | `IMongoRepository<TEntity>` (ObjectId key)                |
+| Typed repository with custom key               | `IMongoBaseRepository<TEntity, TKey>`                     |
+| Direct database and client access              | `IMongoDatabaseProvider`                                  |
+| Create driver sessions for transactions        | `IMongoSessionFactory`                                    |
 
 ## Dependencies
 
@@ -125,8 +126,8 @@ The option class includes validation semantics through `MongoOptions.IsValid(...
 ## Troubleshooting
 
 1. Repository services cannot be resolved from DI.
-Fix: Use `AddMongoWithRegistration()` to register the generic `IMongoRepository<T>`, or call `AddMongoRepository<TEntity, TKey>()` for typed collection mappings explicitly before `Build()`.
+   Fix: Use `AddMongoWithRegistration()` to register the generic `IMongoRepository<T>`, or call `AddMongoRepository<TEntity, TKey>()` for typed collection mappings explicitly before `Build()`.
 2. Application fails to connect to MongoDB outside local development.
-Fix: Validate `mongoDb.connectionString`, ensure credentials and TLS settings are correct, and confirm that network and firewall rules permit the connection.
+   Fix: Validate `mongoDb.connectionString`, ensure credentials and TLS settings are correct, and confirm that network and firewall rules permit the connection.
 3. Seed data does not execute during startup.
-Fix: Set `seed: true` in the `mongoDb` configuration section and ensure a custom `IMongoSeeder` implementation is registered, or that the default seeder initialization flow is not suppressed.
+   Fix: Set `seed: true` in the `mongoDb` configuration section and ensure a custom `IMongoSeeder` implementation is registered, or that the default seeder initialization flow is not suppressed.

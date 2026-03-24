@@ -3,15 +3,16 @@ title: "Genocs.Messaging"
 description: "Genocs.Messaging — Agent Reference Documentation"
 lead: "Genocs.Messaging — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-messaging"
     name: "Genocs.Messaging"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 6
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,11 +28,11 @@ weight: 6
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Messaging` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | Broker abstraction layer |
+| Key               | Value                                                                                                                                           |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Package           | `Genocs.Messaging`                                                                                                                              |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                                                                                                   |
+| Primary role      | Broker abstraction layer                                                                                                                        |
 | Core entry points | `IBusPublisher`, `IBusSubscriber`, `SubscribeCommand<T>`, `SubscribeEvent<T>`, `AddServiceBusCommandDispatcher`, `AddServiceBusEventDispatcher` |
 
 ## Install
@@ -66,23 +67,23 @@ app.Run();
 
 Configuration is supplied by the concrete transport you install:
 
-| Transport package | Expected settings section |
-|---|---|
-| `Genocs.Messaging.RabbitMQ` | `rabbitmq` |
+| Transport package                  | Expected settings section              |
+| ---------------------------------- | -------------------------------------- |
+| `Genocs.Messaging.RabbitMQ`        | `rabbitmq`                             |
 | `Genocs.Messaging.AzureServiceBus` | Azure Service Bus queue/topic sections |
-| `Genocs.Messaging.Outbox` | `outbox` |
+| `Genocs.Messaging.Outbox`          | `outbox`                               |
 
 The base package only contributes contracts and CQRS bridge helpers. If messaging behavior needs to change through configuration, change the installed provider package rather than this package.
 
 ## Decision Matrix For Agents
 
-| Goal | Preferred API |
-|---|---|
-| Publish any message through the abstraction | `IBusPublisher.PublishAsync<T>(...)` |
+| Goal                                             | Preferred API                          |
+| ------------------------------------------------ | -------------------------------------- |
+| Publish any message through the abstraction      | `IBusPublisher.PublishAsync<T>(...)`   |
 | Subscribe command handlers via scoped resolution | `IBusSubscriber.SubscribeCommand<T>()` |
-| Subscribe event handlers via scoped resolution | `IBusSubscriber.SubscribeEvent<T>()` |
-| Bridge command dispatching to bus publishing | `AddServiceBusCommandDispatcher()` |
-| Bridge event dispatching to bus publishing | `AddServiceBusEventDispatcher()` |
+| Subscribe event handlers via scoped resolution   | `IBusSubscriber.SubscribeEvent<T>()`   |
+| Bridge command dispatching to bus publishing     | `AddServiceBusCommandDispatcher()`     |
+| Bridge event dispatching to bus publishing       | `AddServiceBusEventDispatcher()`       |
 
 ## Behavior Notes / Constraints
 
@@ -105,9 +106,8 @@ The base package only contributes contracts and CQRS bridge helpers. If messagin
 ## Troubleshooting
 
 1. Publish calls succeed but nothing reaches infrastructure.
-Fix: Install and configure a concrete transport provider package.
+   Fix: Install and configure a concrete transport provider package.
 2. Handler subscriptions never run.
-Fix: Register transport subscriber startup flow and call `SubscribeCommand<T>()` or `SubscribeEvent<T>()` for each message type.
+   Fix: Register transport subscriber startup flow and call `SubscribeCommand<T>()` or `SubscribeEvent<T>()` for each message type.
 3. Command/event dispatch is not routed to bus.
-Fix: Register `AddServiceBusCommandDispatcher()` and `AddServiceBusEventDispatcher()` during startup.
-
+   Fix: Register `AddServiceBusCommandDispatcher()` and `AddServiceBusEventDispatcher()` during startup.

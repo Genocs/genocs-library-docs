@@ -3,15 +3,16 @@ title: "Genocs.Messaging.Outbox.MongoDB"
 description: "Genocs.Messaging.Outbox.MongoDB — Agent Reference Documentation"
 lead: "Genocs.Messaging.Outbox.MongoDB — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-messaging-outbox-mongodb"
     name: "Genocs.Messaging.Outbox.MongoDB"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 8
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,11 +28,11 @@ weight: 8
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Messaging.Outbox.MongoDB` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | MongoDB durable outbox and inbox persistence |
+| Key               | Value                                                                             |
+| ----------------- | --------------------------------------------------------------------------------- |
+| Package           | `Genocs.Messaging.Outbox.MongoDB`                                                 |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                                     |
+| Primary role      | MongoDB durable outbox and inbox persistence                                      |
 | Core entry points | `AddMessageOutbox(o => o.AddMongo())`, `IMessageOutbox`, `IMessageOutboxAccessor` |
 
 ## Install
@@ -70,40 +71,40 @@ This integration uses two sections together:
 
 ```json
 {
-    "outbox": {
-        "enabled": true,
-        "intervalMilliseconds": 5000,
-        "expiry": 3600,
-        "inboxCollection": "inbox",
-        "outboxCollection": "outbox",
-        "type": "sequential",
-        "disableTransactions": false
-    },
-    "mongoDb": {
-        "connectionString": "mongodb://localhost:27017",
-        "database": "genocs_outbox",
-        "enableTracing": true,
-        "seed": false,
-        "setRandomDatabaseSuffix": false
-    }
+  "outbox": {
+    "enabled": true,
+    "intervalMilliseconds": 5000,
+    "expiry": 3600,
+    "inboxCollection": "inbox",
+    "outboxCollection": "outbox",
+    "type": "sequential",
+    "disableTransactions": false
+  },
+  "mongoDb": {
+    "connectionString": "mongodb://localhost:27017",
+    "database": "genocs_outbox",
+    "enableTracing": true,
+    "seed": false,
+    "setRandomDatabaseSuffix": false
+  }
 }
 ```
 
-| Section | Setting | Type | Description |
-|---|---|---|---|
-| `outbox` | `enabled` | `bool` | Enables the base outbox runtime. |
-| `outbox` | `intervalMilliseconds` | `double` | Poll interval used to fetch unsent records. |
-| `outbox` | `expiry` | `int` | Enables cleanup of processed inbox/outbox records when positive. |
-| `mongoDb` | `connectionString` | `string` | MongoDB connection string used by the provider. |
-| `mongoDb` | `database` | `string` | Target database name. |
+| Section   | Setting                | Type     | Description                                                      |
+| --------- | ---------------------- | -------- | ---------------------------------------------------------------- |
+| `outbox`  | `enabled`              | `bool`   | Enables the base outbox runtime.                                 |
+| `outbox`  | `intervalMilliseconds` | `double` | Poll interval used to fetch unsent records.                      |
+| `outbox`  | `expiry`               | `int`    | Enables cleanup of processed inbox/outbox records when positive. |
+| `mongoDb` | `connectionString`     | `string` | MongoDB connection string used by the provider.                  |
+| `mongoDb` | `database`             | `string` | Target database name.                                            |
 
 ## Decision Matrix For Agents
 
-| Goal | Preferred API |
-|---|---|
-| Keep outbox API and switch persistence to MongoDB | `AddMessageOutbox(o => o.AddMongo())` |
-| Customize inbox and outbox collection names | `outbox.inboxCollection` and `outbox.outboxCollection` |
-| Enable record cleanup by expiry | `outbox.expiry` |
+| Goal                                              | Preferred API                                          |
+| ------------------------------------------------- | ------------------------------------------------------ |
+| Keep outbox API and switch persistence to MongoDB | `AddMessageOutbox(o => o.AddMongo())`                  |
+| Customize inbox and outbox collection names       | `outbox.inboxCollection` and `outbox.outboxCollection` |
+| Enable record cleanup by expiry                   | `outbox.expiry`                                        |
 
 ## Dependencies
 
@@ -113,8 +114,8 @@ This integration uses two sections together:
 ## Troubleshooting
 
 1. Pending records fail while rehydrating message payloads.
-Fix: Keep message contracts version-compatible and ensure required runtime types are loadable.
+   Fix: Keep message contracts version-compatible and ensure required runtime types are loadable.
 2. Processed records never expire.
-Fix: Set a positive `outbox.expiry` and confirm index creation permissions in MongoDB.
+   Fix: Set a positive `outbox.expiry` and confirm index creation permissions in MongoDB.
 3. Inbox handling fails with Mongo session or transaction errors.
-Fix: Set `outbox.disableTransactions` to true when deployment topology does not support required transaction features.
+   Fix: Set `outbox.disableTransactions` to true when deployment topology does not support required transaction features.

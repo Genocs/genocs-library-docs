@@ -3,15 +3,16 @@ title: "Genocs.Messaging.RabbitMQ"
 description: "Genocs.Messaging.RabbitMQ — Agent Reference Documentation"
 lead: "Genocs.Messaging.RabbitMQ — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-messaging-rabbitmq"
     name: "Genocs.Messaging.RabbitMQ"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 9
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,12 +28,12 @@ Genocs.Messaging.RabbitMQ implements the Genocs messaging abstractions over Rabb
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Messaging.RabbitMQ` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | RabbitMQ transport provider for Genocs messaging |
-| Typical startup APIs | `AddRabbitMQAsync`, `UseRabbitMQ` |
+| Key                  | Value                                            |
+| -------------------- | ------------------------------------------------ |
+| Package              | `Genocs.Messaging.RabbitMQ`                      |
+| Target frameworks    | `net10.0`, `net9.0`, `net8.0`                    |
+| Primary role         | RabbitMQ transport provider for Genocs messaging |
+| Typical startup APIs | `AddRabbitMQAsync`, `UseRabbitMQ`                |
 
 ## Install
 
@@ -63,110 +64,110 @@ Use the `rabbitmq` section in `appsettings.json`.
 
 ```json
 {
-	"rabbitmq": {
-		"connectionName": "orders-api",
-		"hostNames": ["localhost"],
-		"port": 5672,
-		"virtualHost": "/",
-		"username": "guest",
-		"password": "guest",
-		"requestedHeartbeat": "00:01:00",
-		"requestedConnectionTimeout": "00:00:30",
-		"socketReadTimeout": "00:00:30",
-		"socketWriteTimeout": "00:00:30",
-		"continuationTimeout": "00:00:20",
-		"handshakeContinuationTimeout": "00:00:10",
-		"networkRecoveryInterval": "00:00:05",
-		"messageProcessingTimeout": "00:00:30",
-		"requestedChannelMax": 0,
-		"requestedFrameMax": 0,
-		"conventionsCasing": "snake_case",
-		"retries": 3,
-		"retryInterval": 5,
-		"messagesPersisted": true,
-		"spanContextHeader": "span_context",
-		"maxProducerChannels": 16,
-		"requeueFailedMessages": false,
-		"context": {
-			"enabled": true,
-			"header": "context"
-		},
-		"exchange": {
-			"name": "genocs",
-			"type": "topic",
-			"declare": true,
-			"durable": true,
-			"autoDelete": false
-		},
-		"queue": {
-			"template": "{service}/{message}",
-			"declare": true,
-			"durable": true,
-			"exclusive": false,
-			"autoDelete": false
-		},
-		"deadLetter": {
-			"enabled": true,
-			"prefix": "dlx.",
-			"suffix": ".dead",
-			"declare": true,
-			"durable": true,
-			"exclusive": false,
-			"autoDelete": false,
-			"ttl": 60000
-		},
-		"ssl": {
-			"enabled": false,
-			"serverName": null,
-			"certificatePath": null,
-			"caCertificatePath": null,
-			"x509IgnoredStatuses": []
-		},
-		"qos": {
-			"prefetchSize": 0,
-			"prefetchCount": 10,
-			"global": false
-		},
-		"conventions": {
-			"messageAttribute": {
-				"ignoreExchange": false,
-				"ignoreRoutingKey": false,
-				"ignoreQueue": false
-			}
-		},
-		"logger": {
-			"enabled": true,
-			"logConnectionStatus": true,
-			"logMessagePayload": false
-		}
-	}
+  "rabbitmq": {
+    "connectionName": "orders-api",
+    "hostNames": ["localhost"],
+    "port": 5672,
+    "virtualHost": "/",
+    "username": "guest",
+    "password": "guest",
+    "requestedHeartbeat": "00:01:00",
+    "requestedConnectionTimeout": "00:00:30",
+    "socketReadTimeout": "00:00:30",
+    "socketWriteTimeout": "00:00:30",
+    "continuationTimeout": "00:00:20",
+    "handshakeContinuationTimeout": "00:00:10",
+    "networkRecoveryInterval": "00:00:05",
+    "messageProcessingTimeout": "00:00:30",
+    "requestedChannelMax": 0,
+    "requestedFrameMax": 0,
+    "conventionsCasing": "snake_case",
+    "retries": 3,
+    "retryInterval": 5,
+    "messagesPersisted": true,
+    "spanContextHeader": "span_context",
+    "maxProducerChannels": 16,
+    "requeueFailedMessages": false,
+    "context": {
+      "enabled": true,
+      "header": "context"
+    },
+    "exchange": {
+      "name": "genocs",
+      "type": "topic",
+      "declare": true,
+      "durable": true,
+      "autoDelete": false
+    },
+    "queue": {
+      "template": "{service}/{message}",
+      "declare": true,
+      "durable": true,
+      "exclusive": false,
+      "autoDelete": false
+    },
+    "deadLetter": {
+      "enabled": true,
+      "prefix": "dlx.",
+      "suffix": ".dead",
+      "declare": true,
+      "durable": true,
+      "exclusive": false,
+      "autoDelete": false,
+      "ttl": 60000
+    },
+    "ssl": {
+      "enabled": false,
+      "serverName": null,
+      "certificatePath": null,
+      "caCertificatePath": null,
+      "x509IgnoredStatuses": []
+    },
+    "qos": {
+      "prefetchSize": 0,
+      "prefetchCount": 10,
+      "global": false
+    },
+    "conventions": {
+      "messageAttribute": {
+        "ignoreExchange": false,
+        "ignoreRoutingKey": false,
+        "ignoreQueue": false
+      }
+    },
+    "logger": {
+      "enabled": true,
+      "logConnectionStatus": true,
+      "logMessagePayload": false
+    }
+  }
 }
 ```
 
-| Setting | Type | Description |
-|---|---|---|
-| `connectionName` | `string` | Friendly connection name visible on the RabbitMQ server. |
-| `hostNames` | `string[]` | One or more RabbitMQ broker hostnames. |
-| `port` | `int` | AMQP port; `0` leaves the driver default. |
-| `virtualHost` | `string` | Virtual host. Defaults to `/`. |
-| `username` | `string` | Broker username. |
-| `password` | `string` | Broker password. |
-| `requestedHeartbeat` | `TimeSpan` | Requested heartbeat interval. |
-| `requestedConnectionTimeout` | `TimeSpan` | Connection timeout. |
-| `socketReadTimeout` | `TimeSpan` | Socket read timeout. |
-| `socketWriteTimeout` | `TimeSpan` | Socket write timeout. |
-| `conventionsCasing` | `string` | Naming convention for generated exchange, queue, and routing names. |
-| `retries` | `int` | Maximum message processing retry attempts. |
-| `retryInterval` | `int` | Seconds between retries. |
+| Setting                      | Type       | Description                                                         |
+| ---------------------------- | ---------- | ------------------------------------------------------------------- |
+| `connectionName`             | `string`   | Friendly connection name visible on the RabbitMQ server.            |
+| `hostNames`                  | `string[]` | One or more RabbitMQ broker hostnames.                              |
+| `port`                       | `int`      | AMQP port; `0` leaves the driver default.                           |
+| `virtualHost`                | `string`   | Virtual host. Defaults to `/`.                                      |
+| `username`                   | `string`   | Broker username.                                                    |
+| `password`                   | `string`   | Broker password.                                                    |
+| `requestedHeartbeat`         | `TimeSpan` | Requested heartbeat interval.                                       |
+| `requestedConnectionTimeout` | `TimeSpan` | Connection timeout.                                                 |
+| `socketReadTimeout`          | `TimeSpan` | Socket read timeout.                                                |
+| `socketWriteTimeout`         | `TimeSpan` | Socket write timeout.                                               |
+| `conventionsCasing`          | `string`   | Naming convention for generated exchange, queue, and routing names. |
+| `retries`                    | `int`      | Maximum message processing retry attempts.                          |
+| `retryInterval`              | `int`      | Seconds between retries.                                            |
 
 ## Decision Matrix For Agents
 
-| Goal | Preferred API | Why |
-|---|---|---|
-| Register RabbitMQ transport | `await gnxBuilder.AddRabbitMQAsync()` | Wires `IBusPublisher`, `IBusSubscriber`, and all broker services |
-| Start the background consumer | `app.UseRabbitMQ()` | Activates the hosted subscriber processing pipeline |
-| Inject a custom serializer | `AddRabbitMQAsync(..., serializer: mySerializer)` | Replaces the default Newtonsoft.Json payload serializer |
-| Register processing plugins | `AddRabbitMQAsync(..., plugins: r => r.Add<MyPlugin>())` | Adds pre/post-processing hooks via `IRabbitMqPlugin` |
+| Goal                          | Preferred API                                            | Why                                                              |
+| ----------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------- |
+| Register RabbitMQ transport   | `await gnxBuilder.AddRabbitMQAsync()`                    | Wires `IBusPublisher`, `IBusSubscriber`, and all broker services |
+| Start the background consumer | `app.UseRabbitMQ()`                                      | Activates the hosted subscriber processing pipeline              |
+| Inject a custom serializer    | `AddRabbitMQAsync(..., serializer: mySerializer)`        | Replaces the default Newtonsoft.Json payload serializer          |
+| Register processing plugins   | `AddRabbitMQAsync(..., plugins: r => r.Add<MyPlugin>())` | Adds pre/post-processing hooks via `IRabbitMqPlugin`             |
 
 ## Behavior Notes / Constraints
 
@@ -176,12 +177,12 @@ Use the `rabbitmq` section in `appsettings.json`.
 
 ## Public Capability Map
 
-| Capability | Surface |
-|---|---|
+| Capability                               | Surface                                |
+| ---------------------------------------- | -------------------------------------- |
 | Register RabbitMQ transport and services | `AddRabbitMQAsync` on `IGenocsBuilder` |
-| Activate subscriber background service | `UseRabbitMQ` on `IApplicationBuilder` |
-| Publish messages to the broker | `IBusPublisher` (resolved from DI) |
-| Subscribe to broker messages | `IBusSubscriber` (resolved from DI) |
+| Activate subscriber background service   | `UseRabbitMQ` on `IApplicationBuilder` |
+| Publish messages to the broker           | `IBusPublisher` (resolved from DI)     |
+| Subscribe to broker messages             | `IBusSubscriber` (resolved from DI)    |
 
 ## Dependencies
 
@@ -193,8 +194,8 @@ Use the `rabbitmq` section in `appsettings.json`.
 ## Troubleshooting
 
 1. Service fails to start with a broker connection error.
-Fix: Verify `rabbitmq.hostNames`, `username`, `password`, and that the broker is reachable on the configured port.
+   Fix: Verify `rabbitmq.hostNames`, `username`, `password`, and that the broker is reachable on the configured port.
 2. Messages are published successfully but no handlers execute.
-Fix: Confirm `UseRabbitMQ()` is called after `builder.Build()` and that subscriber registrations are in place before the app starts.
+   Fix: Confirm `UseRabbitMQ()` is called after `builder.Build()` and that subscriber registrations are in place before the app starts.
 3. Messages are retried too many times or move to dead-letter unexpectedly.
-Fix: Review `retries`, `retryInterval`, `requeueFailedMessages`, and `deadLetter.enabled` in the `rabbitmq` configuration section.
+   Fix: Review `retries`, `retryInterval`, `requeueFailedMessages`, and `deadLetter.enabled` in the `rabbitmq` configuration section.

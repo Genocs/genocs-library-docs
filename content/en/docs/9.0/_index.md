@@ -1,9 +1,9 @@
 ---
-title : "v9.0"
+title: "v9.0"
 description: "The Genocs Library v9.0 documentation"
 lead: "The Genocs Library v9.0 is the latest version of Genocs Library"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T15:21:56Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     identifier: "docs-9"
     name: "Version 9.0"
     parent: ""
-weight: 0
+weight: 1
 ---
 
-## The Genocs Library v9.0 documentation
+## **The Genocs library documentation**

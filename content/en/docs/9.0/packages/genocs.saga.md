@@ -3,15 +3,16 @@ title: "Genocs.Saga"
 description: "Genocs.Saga — Agent Reference Documentation"
 lead: "Genocs.Saga — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-saga"
     name: "Genocs.Saga"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 13
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,12 +28,12 @@ Genocs.Saga provides the saga orchestration runtime and contracts for long-runni
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Saga` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | Saga orchestration runtime |
-| Typical startup APIs | `AddSaga` |
+| Key                  | Value                         |
+| -------------------- | ----------------------------- |
+| Package              | `Genocs.Saga`                 |
+| Target frameworks    | `net10.0`, `net9.0`, `net8.0` |
+| Primary role         | Saga orchestration runtime    |
+| Typical startup APIs | `AddSaga`                     |
 
 ## Install
 
@@ -58,24 +59,24 @@ The base package does not define an `appsettings.json` section.
 
 Configuration enters the system through the persistence integration you choose:
 
-| Integration | Section |
-|---|---|
-| Default in-memory persistence | None |
-| `Genocs.Saga.Integrations.MongoDB` | `sagaMongo` |
-| `Genocs.Saga.Integrations.Redis` | `sagaRedis` or an explicitly named serialized section |
+| Integration                        | Section                                               |
+| ---------------------------------- | ----------------------------------------------------- |
+| Default in-memory persistence      | None                                                  |
+| `Genocs.Saga.Integrations.MongoDB` | `sagaMongo`                                           |
+| `Genocs.Saga.Integrations.Redis`   | `sagaRedis` or an explicitly named serialized section |
 
 Everything else is registration-driven: saga discovery, handlers, and lifecycle behavior are controlled by code and DI registration rather than by base-package settings.
 
 ## Decision Matrix For Agents
 
-| Goal | Preferred API | Why |
-|---|---|---|
-| Enable saga runtime with defaults | `AddSaga()` | Registers all runtime services with in-memory state and log |
-| Override persistence provider | `AddSaga(saga => saga.UseSagaStateRepository<T>()...)` | Configures durable state/log storage without changing action contracts |
-| Process a message through the saga pipeline | `ISagaCoordinator.ProcessAsync<TMessage>(message)` | Central runtime entry — runs the full seek/init/process/post pipeline |
-| Supply completion and rejection callbacks | `ISagaCoordinator.ProcessAsync(message, onCompleted, onRejected)` | Hooks into the post-processing result without custom saga logic |
-| Replace state storage | `ISagaBuilder.UseSagaStateRepository<T>()` | Accepts any `ISagaStateRepository` implementation |
-| Replace log storage | `ISagaBuilder.UseSagaLog<T>()` | Accepts any `ISagaLog` implementation |
+| Goal                                        | Preferred API                                                     | Why                                                                    |
+| ------------------------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Enable saga runtime with defaults           | `AddSaga()`                                                       | Registers all runtime services with in-memory state and log            |
+| Override persistence provider               | `AddSaga(saga => saga.UseSagaStateRepository<T>()...)`            | Configures durable state/log storage without changing action contracts |
+| Process a message through the saga pipeline | `ISagaCoordinator.ProcessAsync<TMessage>(message)`                | Central runtime entry — runs the full seek/init/process/post pipeline  |
+| Supply completion and rejection callbacks   | `ISagaCoordinator.ProcessAsync(message, onCompleted, onRejected)` | Hooks into the post-processing result without custom saga logic        |
+| Replace state storage                       | `ISagaBuilder.UseSagaStateRepository<T>()`                        | Accepts any `ISagaStateRepository` implementation                      |
+| Replace log storage                         | `ISagaBuilder.UseSagaLog<T>()`                                    | Accepts any `ISagaLog` implementation                                  |
 
 ## Behavior Notes / Constraints
 
@@ -87,15 +88,15 @@ Everything else is registration-driven: saga discovery, handlers, and lifecycle 
 
 ## Public Capability Map
 
-| Capability | Surface |
-|---|---|
-| Register saga runtime services | `AddSaga` on `IServiceCollection` |
-| Customise persistence providers | `ISagaBuilder` |
-| Coordinate message processing end-to-end | `ISagaCoordinator.ProcessAsync` |
-| Saga state persistence contract | `ISagaStateRepository` |
-| Saga log persistence contract | `ISagaLog` |
-| Define a saga message handler | `ISagaAction<TSaga, TMessage>` |
-| Define a saga-initialising handler | `ISagaStartAction<TSaga, TMessage>` |
+| Capability                               | Surface                             |
+| ---------------------------------------- | ----------------------------------- |
+| Register saga runtime services           | `AddSaga` on `IServiceCollection`   |
+| Customise persistence providers          | `ISagaBuilder`                      |
+| Coordinate message processing end-to-end | `ISagaCoordinator.ProcessAsync`     |
+| Saga state persistence contract          | `ISagaStateRepository`              |
+| Saga log persistence contract            | `ISagaLog`                          |
+| Define a saga message handler            | `ISagaAction<TSaga, TMessage>`      |
+| Define a saga-initialising handler       | `ISagaStartAction<TSaga, TMessage>` |
 
 ## Dependencies
 
@@ -105,8 +106,8 @@ Everything else is registration-driven: saga discovery, handlers, and lifecycle 
 ## Troubleshooting
 
 1. Saga actions are not executed for incoming messages.
-Fix: Confirm that `ISagaAction<TSaga, TMessage>` or `ISagaStartAction` is implemented in a loaded assembly; verify that assembly scanning via `AppDomain.CurrentDomain.GetAssemblies()` includes the target assembly at startup.
+   Fix: Confirm that `ISagaAction<TSaga, TMessage>` or `ISagaStartAction` is implemented in a loaded assembly; verify that assembly scanning via `AppDomain.CurrentDomain.GetAssemblies()` includes the target assembly at startup.
 2. Saga state is lost after application restart.
-Fix: Replace the default in-memory persistence by calling `UseSagaStateRepository<T>()` and `UseSagaLog<T>()` on `ISagaBuilder` with a durable integration package such as `Genocs.Saga.Integrations.MongoDB`.
+   Fix: Replace the default in-memory persistence by calling `UseSagaStateRepository<T>()` and `UseSagaLog<T>()` on `ISagaBuilder` with a durable integration package such as `Genocs.Saga.Integrations.MongoDB`.
 3. Compensation never executes on rejected workflows.
-Fix: Verify the saga transitions to rejected state (the rejection path must be triggered in the saga action), and ensure saga log persistence is configured and writable so that the log history required for reverse compensation is available.
+   Fix: Verify the saga transitions to rejected state (the rejection path must be triggered in the saga action), and ensure saga log persistence is configured and writable so that the log history required for reverse compensation is available.

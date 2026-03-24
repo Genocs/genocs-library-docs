@@ -3,15 +3,16 @@ title: "Genocs.Core"
 description: "Genocs.Core — Agent Reference Documentation"
 lead: "Genocs.Core — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-core"
     name: "Genocs.Core"
-    parent: "docs-9-packages"
-weight: 3
+    parent: "packages"
+weight: 2
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,11 +28,11 @@ weight: 3
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Core` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | Core runtime bootstrap and in-process CQRS registration |
+| Key               | Value                                                                           |
+| ----------------- | ------------------------------------------------------------------------------- |
+| Package           | `Genocs.Core`                                                                   |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                                   |
+| Primary role      | Core runtime bootstrap and in-process CQRS registration                         |
 | Core entry points | `AddGenocs()`, `Build()`, `UseGenocs()`, `AddDispatchers()`, `AddHandlers(...)` |
 
 ## Install
@@ -66,23 +67,23 @@ app.Run();
 
 What actually influences runtime behavior:
 
-| Input | Where it comes from | Why it matters |
-|---|---|---|
-| Handler scan string passed to `AddHandlers(...)` | Code | Determines which loaded assemblies are scanned for command, query, and event handlers. |
-| Registered startup initializers | Code/DI | Controls what `UseGenocs()` executes during startup. |
+| Input                                                                 | Where it comes from   | Why it matters                                                                                              |
+| --------------------------------------------------------------------- | --------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Handler scan string passed to `AddHandlers(...)`                      | Code                  | Determines which loaded assemblies are scanned for command, query, and event handlers.                      |
+| Registered startup initializers                                       | Code/DI               | Controls what `UseGenocs()` executes during startup.                                                        |
 | Shared sections such as `app`, `logger`, `telemetry`, `jwt`, `webApi` | Other Genocs packages | These sections affect modules registered through the core builder, but they are not owned by `Genocs.Core`. |
 
 Treat `Genocs.Core` as orchestration infrastructure. Configuration lives in the modules you compose on top of it.
 
 ## Decision Matrix For Agents
 
-| If you need to... | Use |
-|---|---|
-| Initialize Genocs runtime services | `AddGenocs()` |
-| Finalize Genocs module registrations | `IGenocsBuilder.Build()` |
-| Run Genocs startup initialization in middleware pipeline | `UseGenocs()` |
-| Register in-process command/query/event dispatchers | `AddDispatchers()` |
-| Register handler types through assembly scan | `AddHandlers("MyService")` |
+| If you need to...                                        | Use                        |
+| -------------------------------------------------------- | -------------------------- |
+| Initialize Genocs runtime services                       | `AddGenocs()`              |
+| Finalize Genocs module registrations                     | `IGenocsBuilder.Build()`   |
+| Run Genocs startup initialization in middleware pipeline | `UseGenocs()`              |
+| Register in-process command/query/event dispatchers      | `AddDispatchers()`         |
+| Register handler types through assembly scan             | `AddHandlers("MyService")` |
 
 ## Behavior Notes / Constraints
 
@@ -105,10 +106,8 @@ Treat `Genocs.Core` as orchestration infrastructure. Configuration lives in the 
 ## Troubleshooting
 
 1. Handlers are not being resolved at runtime.
-Fix: Verify the assembly selector passed to `AddHandlers(...)` matches the deployed handler assembly name.
+   Fix: Verify the assembly selector passed to `AddHandlers(...)` matches the deployed handler assembly name.
 2. Startup logic registered through Genocs does not execute.
-Fix: Ensure `UseGenocs()` is invoked after app build and before endpoint execution.
+   Fix: Ensure `UseGenocs()` is invoked after app build and before endpoint execution.
 3. Command or query dispatch services are missing from DI.
-Fix: Register `AddDispatchers()` before calling `builder.Build()`.
-
-
+   Fix: Register `AddDispatchers()` before calling `builder.Build()`.

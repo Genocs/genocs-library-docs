@@ -3,15 +3,16 @@ title: "Genocs.WebApi.CQRS"
 description: "Genocs.WebApi.CQRS — Agent Reference Documentation"
 lead: "Genocs.WebApi.CQRS — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-webapi-cqrs"
     name: "Genocs.WebApi.CQRS"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 14
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,12 +28,12 @@ weight: 14
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.WebApi.CQRS` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | CQRS endpoint dispatch bridge |
-| Main APIs | `AddInMemoryDispatcher`, `UseDispatcherEndpoints`, `Dispatch`, `UsePublicContracts` |
+| Key               | Value                                                                               |
+| ----------------- | ----------------------------------------------------------------------------------- |
+| Package           | `Genocs.WebApi.CQRS`                                                                |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                                       |
+| Primary role      | CQRS endpoint dispatch bridge                                                       |
+| Main APIs         | `AddInMemoryDispatcher`, `UseDispatcherEndpoints`, `Dispatch`, `UsePublicContracts` |
 
 ## Install
 
@@ -74,6 +75,6 @@ app.Run();
 ## Troubleshooting
 
 1. CQRS endpoints resolve but no command or query executes.
-Fix: Register the underlying `ICommandDispatcher`, `IQueryDispatcher`, and `IEventDispatcher` services in DI.
+   Fix: Register the underlying `ICommandDispatcher`, `IQueryDispatcher`, and `IEventDispatcher` services in DI.
 2. `/_contracts` returns empty or incomplete results.
-Fix: Ensure contract types are loaded at runtime and use the correct `attributeRequired` setting.
+   Fix: Ensure contract types are loaded at runtime and use the correct `attributeRequired` setting.

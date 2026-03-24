@@ -3,15 +3,16 @@ title: "Genocs.WebApi"
 description: "Genocs.WebApi — Agent Reference Documentation"
 lead: "Genocs.WebApi — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-webapi"
     name: "Genocs.WebApi"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 15
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,12 +28,12 @@ weight: 15
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.WebApi` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | Web API conventions and endpoint DSL |
-| Main APIs | `AddWebApi`, `UseEndpoints`, `AddErrorHandler<T>`, `UseErrorHandler`, `UseAllForwardedHeaders` |
+| Key               | Value                                                                                          |
+| ----------------- | ---------------------------------------------------------------------------------------------- |
+| Package           | `Genocs.WebApi`                                                                                |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                                                  |
+| Primary role      | Web API conventions and endpoint DSL                                                           |
+| Main APIs         | `AddWebApi`, `UseEndpoints`, `AddErrorHandler<T>`, `UseErrorHandler`, `UseAllForwardedHeaders` |
 
 ## Install
 
@@ -66,14 +67,14 @@ app.Run();
 
 ```json
 {
-    "webApi": {
-        "bindRequestFromRoute": true
-    }
+  "webApi": {
+    "bindRequestFromRoute": true
+  }
 }
 ```
 
-| Setting | Type | Description |
-|---|---|---|
+| Setting                | Type   | Description                                                                                                          |
+| ---------------------- | ------ | -------------------------------------------------------------------------------------------------------------------- |
 | `bindRequestFromRoute` | `bool` | When enabled, request-binding helpers can hydrate request objects from route values in addition to the request body. |
 
 ## Dependencies
@@ -84,6 +85,6 @@ app.Run();
 ## Troubleshooting
 
 1. Endpoints do not respond after startup.
-Fix: Ensure `UseEndpoints(...)` is called after `builder.Build()` and before `app.Run()`.
+   Fix: Ensure `UseEndpoints(...)` is called after `builder.Build()` and before `app.Run()`.
 2. Unhandled exceptions return default responses.
-Fix: Register a mapper with `AddErrorHandler<T>()` and add `UseErrorHandler()` to the pipeline.
+   Fix: Register a mapper with `AddErrorHandler<T>()` and add `UseErrorHandler()` to the pipeline.

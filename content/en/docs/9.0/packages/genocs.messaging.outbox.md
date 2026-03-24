@@ -3,15 +3,16 @@ title: "Genocs.Messaging.Outbox"
 description: "Genocs.Messaging.Outbox — Agent Reference Documentation"
 lead: "Genocs.Messaging.Outbox — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-messaging-outbox"
     name: "Genocs.Messaging.Outbox"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 7
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,11 +28,11 @@ weight: 7
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Messaging.Outbox` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | Outbox abstraction and processing runtime |
+| Key               | Value                                                                         |
+| ----------------- | ----------------------------------------------------------------------------- |
+| Package           | `Genocs.Messaging.Outbox`                                                     |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                                 |
+| Primary role      | Outbox abstraction and processing runtime                                     |
 | Core entry points | `AddMessageOutbox`, `AddInMemory`, `IMessageOutbox`, `IMessageOutboxAccessor` |
 
 ## Install
@@ -62,38 +63,38 @@ Use the `outbox` section.
 
 ```json
 {
-	"outbox": {
-		"enabled": true,
-		"expiry": 3600,
-		"intervalMilliseconds": 5000,
-		"inboxCollection": "inbox",
-		"outboxCollection": "outbox",
-		"type": "sequential",
-		"disableTransactions": false
-	}
+  "outbox": {
+    "enabled": true,
+    "expiry": 3600,
+    "intervalMilliseconds": 5000,
+    "inboxCollection": "inbox",
+    "outboxCollection": "outbox",
+    "type": "sequential",
+    "disableTransactions": false
+  }
 }
 ```
 
-| Setting | Type | Description |
-|---|---|---|
-| `enabled` | `bool` | Enables the outbox runtime and hosted processing loop. |
-| `expiry` | `int` | Expiry window used by providers that support processed-message cleanup. |
-| `intervalMilliseconds` | `double` | Polling interval used by the background processor. Must be positive when processing is enabled. |
-| `inboxCollection` | `string` | Inbox storage name used by durable providers such as MongoDB. |
-| `outboxCollection` | `string` | Outbox storage name used by durable providers such as MongoDB. |
-| `type` | `string` | Processing strategy hint used by the runtime, for example sequential versus batch-style processing. |
-| `disableTransactions` | `bool` | Disables transaction usage for providers that support transactional handling. |
+| Setting                | Type     | Description                                                                                         |
+| ---------------------- | -------- | --------------------------------------------------------------------------------------------------- |
+| `enabled`              | `bool`   | Enables the outbox runtime and hosted processing loop.                                              |
+| `expiry`               | `int`    | Expiry window used by providers that support processed-message cleanup.                             |
+| `intervalMilliseconds` | `double` | Polling interval used by the background processor. Must be positive when processing is enabled.     |
+| `inboxCollection`      | `string` | Inbox storage name used by durable providers such as MongoDB.                                       |
+| `outboxCollection`     | `string` | Outbox storage name used by durable providers such as MongoDB.                                      |
+| `type`                 | `string` | Processing strategy hint used by the runtime, for example sequential versus batch-style processing. |
+| `disableTransactions`  | `bool`   | Disables transaction usage for providers that support transactional handling.                       |
 
 For simple in-memory usage, only `enabled` and `intervalMilliseconds` are typically required. Collection and transaction settings become relevant when you add a durable provider.
 
 ## Decision Matrix For Agents
 
-| Goal | Preferred API |
-|---|---|
-| Enable outbox with default storage | `AddMessageOutbox()` |
-| Select explicit in-memory provider | `AddMessageOutbox(o => o.AddInMemory())` |
-| Buffer outbound message before publish | `IMessageOutbox.SendAsync(...)` |
-| Enforce idempotent inbound handling | `IMessageOutbox.HandleAsync(...)` |
+| Goal                                     | Preferred API                                                     |
+| ---------------------------------------- | ----------------------------------------------------------------- |
+| Enable outbox with default storage       | `AddMessageOutbox()`                                              |
+| Select explicit in-memory provider       | `AddMessageOutbox(o => o.AddInMemory())`                          |
+| Buffer outbound message before publish   | `IMessageOutbox.SendAsync(...)`                                   |
+| Enforce idempotent inbound handling      | `IMessageOutbox.HandleAsync(...)`                                 |
 | Retrieve and mark pending outbox records | `IMessageOutboxAccessor.GetUnsentAsync()` and `ProcessAsync(...)` |
 
 ## Behavior Notes / Constraints
@@ -117,8 +118,8 @@ For simple in-memory usage, only `enabled` and `intervalMilliseconds` are typica
 ## Troubleshooting
 
 1. Outbox processor never starts.
-Fix: Set `outbox.enabled` to true and configure a positive `outbox.intervalMilliseconds` value.
+   Fix: Set `outbox.enabled` to true and configure a positive `outbox.intervalMilliseconds` value.
 2. Messages disappear after service restart.
-Fix: Replace in-memory outbox storage with a durable outbox provider.
+   Fix: Replace in-memory outbox storage with a durable outbox provider.
 3. Duplicate inbound processing still occurs.
-Fix: Call `HandleAsync` with stable message identifiers for each consumed message.
+   Fix: Call `HandleAsync` with stable message identifiers for each consumed message.

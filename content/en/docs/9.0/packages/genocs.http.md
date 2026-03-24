@@ -3,15 +3,16 @@ title: "Genocs.Http"
 description: "Genocs.Http — Agent Reference Documentation"
 lead: "Genocs.Http — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-http"
     name: "Genocs.Http"
-    parent: "docs-9-packages"
+    parent: "packages"
 weight: 4
+toc: true
 ---
 
 ## Consumer Mode for Agents
@@ -27,11 +28,11 @@ weight: 4
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Http` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | Outbound HTTP client abstraction for service-to-service calls |
+| Key               | Value                                                                         |
+| ----------------- | ----------------------------------------------------------------------------- |
+| Package           | `Genocs.Http`                                                                 |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                                 |
+| Primary role      | Outbound HTTP client abstraction for service-to-service calls                 |
 | Core entry points | `AddHttpClient(...)`, `IHttpClient`, `HttpResult<T>`, `IHttpClientSerializer` |
 
 ## Install
@@ -62,76 +63,76 @@ Primary section: `httpClient`
 
 ```json
 {
-	"httpClient": {
-		"enabled": true,
-		"type": "consul",
-		"retries": 3,
-		"services": {
-			"orders": "http://orders-service",
-			"catalog": "http://catalog-service"
-		},
-		"removeCharsetFromContentType": true,
-		"correlationContextHeader": "x-correlation-context",
-		"correlationIdHeader": "x-correlation-id",
-		"requestMasking": {
-			"enabled": true,
-			"urlParts": ["token", "password"],
-			"maskTemplate": "*****"
-		}
-	}
+  "httpClient": {
+    "enabled": true,
+    "type": "consul",
+    "retries": 3,
+    "services": {
+      "orders": "http://orders-service",
+      "catalog": "http://catalog-service"
+    },
+    "removeCharsetFromContentType": true,
+    "correlationContextHeader": "x-correlation-context",
+    "correlationIdHeader": "x-correlation-id",
+    "requestMasking": {
+      "enabled": true,
+      "urlParts": ["token", "password"],
+      "maskTemplate": "*****"
+    }
+  }
 }
 ```
 
-| Setting | Type | Description |
-|---|---|---|
-| `enabled` | `bool` | Enables the section for consumers that read `HttpClientOptions`. |
-| `type` | `string` | Resolution mode for downstream services. Supported values in code are `consul` and `Fabio`. |
-| `retries` | `int` | Retry count applied by the Genocs HTTP client abstraction. |
-| `services` | `object` | Name-to-address map for downstream service resolution. |
-| `removeCharsetFromContentType` | `bool` | Removes charset from JSON content types when sending request bodies. |
-| `correlationContextHeader` | `string` | Header name used to propagate correlation-context payloads. |
-| `correlationIdHeader` | `string` | Header name used to propagate a correlation ID. |
-| `requestMasking.enabled` | `bool` | Enables masking of configured URL fragments in request logs. |
-| `requestMasking.urlParts` | `string[]` | URL fragments or segments to mask in logs. |
-| `requestMasking.maskTemplate` | `string` | Replacement text used when masking matched URL fragments. |
+| Setting                        | Type       | Description                                                                                 |
+| ------------------------------ | ---------- | ------------------------------------------------------------------------------------------- |
+| `enabled`                      | `bool`     | Enables the section for consumers that read `HttpClientOptions`.                            |
+| `type`                         | `string`   | Resolution mode for downstream services. Supported values in code are `consul` and `Fabio`. |
+| `retries`                      | `int`      | Retry count applied by the Genocs HTTP client abstraction.                                  |
+| `services`                     | `object`   | Name-to-address map for downstream service resolution.                                      |
+| `removeCharsetFromContentType` | `bool`     | Removes charset from JSON content types when sending request bodies.                        |
+| `correlationContextHeader`     | `string`   | Header name used to propagate correlation-context payloads.                                 |
+| `correlationIdHeader`          | `string`   | Header name used to propagate a correlation ID.                                             |
+| `requestMasking.enabled`       | `bool`     | Enables masking of configured URL fragments in request logs.                                |
+| `requestMasking.urlParts`      | `string[]` | URL fragments or segments to mask in logs.                                                  |
+| `requestMasking.maskTemplate`  | `string`   | Replacement text used when masking matched URL fragments.                                   |
 
 Optional section used by the RestEase integration: `restEase`
 
 ```json
 {
-	"restEase": {
-		"enabled": true,
-		"loadBalancer": "fabio",
-		"services": [
-			{
-				"name": "catalog",
-				"scheme": "https",
-				"host": "catalog.internal",
-				"port": 443
-			}
-		]
-	}
+  "restEase": {
+    "enabled": true,
+    "loadBalancer": "fabio",
+    "services": [
+      {
+        "name": "catalog",
+        "scheme": "https",
+        "host": "catalog.internal",
+        "port": 443
+      }
+    ]
+  }
 }
 ```
 
-| RestEase Setting | Type | Description |
-|---|---|---|
-| `enabled` | `bool` | Enables RestEase-specific client registration. |
-| `loadBalancer` | `string` | Load-balancer mode used by RestEase-generated clients. |
-| `services[].name` | `string` | Logical service name. |
-| `services[].scheme` | `string` | Request scheme such as `http` or `https`. |
-| `services[].host` | `string` | Host name used by the generated client. |
-| `services[].port` | `int` | Service port. |
+| RestEase Setting    | Type     | Description                                            |
+| ------------------- | -------- | ------------------------------------------------------ |
+| `enabled`           | `bool`   | Enables RestEase-specific client registration.         |
+| `loadBalancer`      | `string` | Load-balancer mode used by RestEase-generated clients. |
+| `services[].name`   | `string` | Logical service name.                                  |
+| `services[].scheme` | `string` | Request scheme such as `http` or `https`.              |
+| `services[].host`   | `string` | Host name used by the generated client.                |
+| `services[].port`   | `int`    | Service port.                                          |
 
 ## Decision Matrix For Agents
 
-| If you need to... | Use |
-|---|---|
-| Register typed outbound HTTP capabilities | `AddHttpClient(...)` |
-| Send standard typed requests | `IHttpClient` HTTP verb methods |
+| If you need to...                          | Use                                                                              |
+| ------------------------------------------ | -------------------------------------------------------------------------------- |
+| Register typed outbound HTTP capabilities  | `AddHttpClient(...)`                                                             |
+| Send standard typed requests               | `IHttpClient` HTTP verb methods                                                  |
 | Preserve status code and response metadata | `GetResultAsync(...)` and other `*ResultAsync` methods returning `HttpResult<T>` |
-| Send a custom `HttpRequestMessage` | `SendAsync(...)` or `SendResultAsync<T>(...)` |
-| Replace default JSON serializer | Register a custom `IHttpClientSerializer` |
+| Send a custom `HttpRequestMessage`         | `SendAsync(...)` or `SendResultAsync<T>(...)`                                    |
+| Replace default JSON serializer            | Register a custom `IHttpClientSerializer`                                        |
 
 ## Behavior Notes / Constraints
 
@@ -156,8 +157,8 @@ Optional section used by the RestEase integration: `restEase`
 ## Troubleshooting
 
 1. Retries are not occurring for failing requests.
-Fix: Confirm `httpClient.retries` is greater than zero and calls are executed through the registered `IHttpClient` abstraction.
+   Fix: Confirm `httpClient.retries` is greater than zero and calls are executed through the registered `IHttpClient` abstraction.
 2. Correlation headers are missing on outbound calls.
-Fix: Configure `correlationContextHeader` and `correlationIdHeader`, and register correlation value providers.
+   Fix: Configure `correlationContextHeader` and `correlationIdHeader`, and register correlation value providers.
 3. Sensitive URL segments appear in logs.
-Fix: Enable `requestMasking` and configure `urlParts` plus `maskTemplate` for consistent masking.
+   Fix: Enable `requestMasking` and configure `urlParts` plus `maskTemplate` for consistent masking.

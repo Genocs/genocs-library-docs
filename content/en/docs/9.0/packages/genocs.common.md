@@ -3,15 +3,15 @@ title: "Genocs.Common"
 description: "Genocs.Common — Agent Reference Documentation"
 lead: "Genocs.Common — Agent Reference Documentation"
 date: 2026-03-21T15:40:19+02:00
-lastmod: 2026-03-22T14:49:10Z
+lastmod: 2026-03-24T21:25:31Z
 draft: false
 images: []
 menu:
   docs:
     identifier: "genocs-common"
     name: "Genocs.Common"
-    parent: "docs-9-packages"
-weight: 2
+    parent: "packages"
+weight: 1
 toc: true
 ---
 
@@ -28,11 +28,11 @@ toc: true
 
 ## Quick Facts
 
-| Key | Value |
-|---|---|
-| Package | `Genocs.Common` |
-| Target frameworks | `net10.0`, `net9.0`, `net8.0` |
-| Primary role | Shared contracts and foundational types |
+| Key               | Value                                                                    |
+| ----------------- | ------------------------------------------------------------------------ |
+| Package           | `Genocs.Common`                                                          |
+| Target frameworks | `net10.0`, `net9.0`, `net8.0`                                            |
+| Primary role      | Shared contracts and foundational types                                  |
 | Core entry points | `ICommand`, `IQuery<TResult>`, `IEvent`, `IPagedQuery`, `PagedResult<T>` |
 
 ## Install
@@ -63,39 +63,39 @@ app.Run();
 
 ```json
 {
-	"app": {
-		"enabled": true,
-		"name": "BookStore",
-		"service": "bookstore-api",
-		"instance": "bookstore-api-01",
-		"version": "1.0.0",
-		"displayBanner": true,
-		"displayVersion": true
-	}
+  "app": {
+    "enabled": true,
+    "name": "BookStore",
+    "service": "bookstore-api",
+    "instance": "bookstore-api-01",
+    "version": "1.0.0",
+    "displayBanner": true,
+    "displayVersion": true
+  }
 }
 ```
 
-| Setting | Type | Description |
-|---|---|---|
-| `enabled` | `bool` | Enables use of the section by modules that consume `AppOptions`. |
-| `name` | `string` | Human-readable application name. |
-| `service` | `string` | Service identifier used by infrastructure and diagnostics integrations. |
-| `instance` | `string` | Instance identifier for the running process or container. |
-| `version` | `string` | Application version exposed to logs, banners, and diagnostics. |
-| `displayBanner` | `bool` | Shows the startup banner when supported by the host. |
-| `displayVersion` | `bool` | Shows the configured version at startup. |
+| Setting          | Type     | Description                                                             |
+| ---------------- | -------- | ----------------------------------------------------------------------- |
+| `enabled`        | `bool`   | Enables use of the section by modules that consume `AppOptions`.        |
+| `name`           | `string` | Human-readable application name.                                        |
+| `service`        | `string` | Service identifier used by infrastructure and diagnostics integrations. |
+| `instance`       | `string` | Instance identifier for the running process or container.               |
+| `version`        | `string` | Application version exposed to logs, banners, and diagnostics.          |
+| `displayBanner`  | `bool`   | Shows the startup banner when supported by the host.                    |
+| `displayVersion` | `bool`   | Shows the configured version at startup.                                |
 
 This package does not enforce the section itself, but downstream packages such as logging, telemetry, and hosting conventions commonly read `app` metadata.
 
 ## Decision Matrix For Agents
 
-| If you need to... | Use |
-|---|---|
-| Model a command contract | `ICommand` or `ICommand<TResult>` |
-| Model a query contract | `IQuery<TResult>` |
-| Model an integration or domain event contract | `IEvent` |
-| Standardize paged request input | `IPagedQuery` or `PagedQueryBase` |
-| Standardize paged response output | `PagedResult<T>` |
+| If you need to...                             | Use                               |
+| --------------------------------------------- | --------------------------------- |
+| Model a command contract                      | `ICommand` or `ICommand<TResult>` |
+| Model a query contract                        | `IQuery<TResult>`                 |
+| Model an integration or domain event contract | `IEvent`                          |
+| Standardize paged request input               | `IPagedQuery` or `PagedQueryBase` |
+| Standardize paged response output             | `PagedResult<T>`                  |
 
 ## Behavior Notes / Constraints
 
@@ -119,10 +119,8 @@ This package does not enforce the section itself, but downstream packages such a
 ## Troubleshooting
 
 1. Contracts compile but no business logic runs.
-Fix: Add a runtime package that registers handlers and dispatchers for your command/query/event contracts.
+   Fix: Add a runtime package that registers handlers and dispatchers for your command/query/event contracts.
 2. Pagination shapes differ across endpoints.
-Fix: Normalize request and response contracts on `IPagedQuery` and `PagedResult<T>`.
+   Fix: Normalize request and response contracts on `IPagedQuery` and `PagedResult<T>`.
 3. Domain objects use mixed identifier patterns.
-Fix: Standardize a single ID strategy and apply it consistently across contracts and entities.
-
-
+   Fix: Standardize a single ID strategy and apply it consistently across contracts and entities.
