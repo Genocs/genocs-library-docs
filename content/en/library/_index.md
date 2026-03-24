@@ -3,7 +3,7 @@ title: "Library"
 description: "Versioned entry page for Genocs Library documentation."
 lead: "Choose a docs version to get started quickly."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-23T21:39:47Z
+lastmod: 2026-03-24T21:59:55Z
 draft: false
 images: []
 ---
@@ -32,9 +32,9 @@ images: []
 
 ### All Available Versions
 
-| Version | Release Status | Use Case |
-|---------|----------------|----------|
-| **v9.x** | Latest Release | New projects, latest features, and best practices |
+| Version  | Release Status  | Use Case                                          |
+| -------- | --------------- | ------------------------------------------------- |
+| **v9.x** | Latest Release  | New projects, latest features, and best practices |
 | **v8.x** | Stable Previous | Mature production deployments, legacy maintenance |
 
 **[View All Versions](/versions/#library)**

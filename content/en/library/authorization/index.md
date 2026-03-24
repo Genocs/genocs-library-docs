@@ -3,7 +3,7 @@ title: "Authorization"
 description: "Adds the integration with authorization middleware and system components to validate and grant the access to the resources."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-03-24T21:59:55Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     identifier: "authorization"
     name: "Authorization"
     parent: "library"
-weight: 2
+weight: 4
 toc: true
 ---
 

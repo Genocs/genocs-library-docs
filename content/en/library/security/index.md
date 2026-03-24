@@ -1,9 +1,9 @@
 ---
-title : "Vault"
+title: "Vault"
 description: "Adds the secured and centralized configuration storage integration using Vault."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T21:59:55Z
 draft: false
 images: []
 menu:
@@ -14,8 +14,6 @@ menu:
 weight: 11
 toc: true
 ---
-
-
 
 ## Installation
 
@@ -31,7 +29,7 @@ dotnet add package Genocs.Configurations
 
 Extend `Program.cs -> CreateDefaultBuilder()` with `UseVault()` that will add the required services and fetch the options from Vault key-value secret storage during an application startup.
 
-``` cs
+```cs
 public static IWebHostBuilder GetWebHostBuilder(string[] args)
     => WebHost.CreateDefaultBuilder(args)
         .ConfigureServices(services => services.AddGenocs().Build())
@@ -53,7 +51,6 @@ public static IWebHostBuilder GetWebHostBuilder(string[] args)
 `password` - The password of the user used to authenticate to Vault, used when authType = userpass.
 
 `kv` - KV storage used for loading JSON settings during application startup.
-
 
 ## Settings
 

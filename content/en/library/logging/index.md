@@ -1,9 +1,9 @@
 ---
-title : "Logging"
+title: "Logging"
 description: "Adds the logging and tracing capability"
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T21:59:55Z
 draft: false
 images: []
 menu:
@@ -11,18 +11,17 @@ menu:
     identifier: "logging"
     name: "Logging"
     parent: "library"
-weight: 6
+weight: 2
 toc: true
 ---
 
-
 ### Overview
+
 Adds the logging capability, by default uses Serilog for logging with optional extensions (sinks):
 
 - Console
 - File
 - Seq
-
 
 ### Installation
 
@@ -38,7 +37,7 @@ dotnet add package Genocs.Logging
 
 Extend Program.cs -> `CreateBuilder()` with `UseLogging()` that will add the required services and configure `ILogger` available in ASP.NET Core framework.
 
-``` cs
+```cs
 using Genocs.Logging;
 
 StaticLogger.EnsureInitialized();
@@ -56,7 +55,7 @@ Log.CloseAndFlush();
 
 Then, simply inject `ILogger<T>` (being ASP.NET Core built-in abstraction) to write the logs.
 
-``` cs
+```cs
 public class SomeService
 {
     private readonly ILogger<SomeService> _logger;
@@ -141,7 +140,6 @@ public class SomeService
 
 `console.enableMetrics` - enables/disables metrics in console. Default: `false`.
 
-
 **appsettings.json**
 
 ```json
@@ -200,10 +198,10 @@ public class SomeService
     "period": "00:00:10",
     "lokiUsername": "user",
     "lokiPassword": "password"
-  },    
+  },
   "mongo": {
     "enabled": false
-  },  
+  },
   "seq": {
     "enabled": true,
     "url": "http://localhost:5341",

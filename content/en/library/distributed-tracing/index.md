@@ -1,9 +1,9 @@
 ---
-title : "Distributed Tracing"
+title: "Distributed Tracing"
 description: "Genocs Library make use of Distributed tracing to implement cross service tracing!"
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T21:59:55Z
 draft: false
 images: []
 menu:
@@ -11,10 +11,9 @@ menu:
     identifier: "distributed-tracing"
     name: "Distributed Tracing"
     parent: "library"
-weight: 4
+weight: 6
 toc: true
 ---
-
 
 ## Installation
 
@@ -26,7 +25,6 @@ dotnet add package Genocs.Tracing
 >
 > We have removed Open Tracing reference. The library is complaint with [Open Telemetry](https://opentelemetry.io/)
 > Library. We are in the process of upgrading naming convention of our library to Open Telemetry. Please stay tuned for the updates.
->
 
 ## Dependencies
 
@@ -37,12 +35,11 @@ Genocs Library does not generate any default spans for your ASP.NET Core applica
 
 ## Installation
 
-
 ## Usage
 
-Inside your *Program.cs* extend `IGenocsBuilder` with `AddOpenTelemetry()` then `AddJaeger()` that will create the `ITracer` using chosen sampler and reporter:
+Inside your _Program.cs_ extend `IGenocsBuilder` with `AddOpenTelemetry()` then `AddJaeger()` that will create the `ITracer` using chosen sampler and reporter:
 
-``` cs
+```cs
 
 var builder = services
                     .AddGenocs()
@@ -52,7 +49,7 @@ var builder = services
 //                    .AddJaeger();
 
 
-//other registrations    
+//other registrations
 return builder.Build();
 ```
 
@@ -62,27 +59,27 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 
 ### Creating custom spans
 
-> **Note:** 
+> **Note:**
 > Obsolete: This method is obsolete and will be removed in future versions. Please use the new method to create custom spans.
 
 > Once the `ITracer` got registered in Startup.cs file, you can inject it to any class you want to create custom spans (not provided by Open > Tracing) as follows:
-> 
-> ``` cs
+>
+> ```cs
 > public class MyClass
 > {
 >     private readonly ITracer _tracer;
-> 
+>
 >     public MyClass(ITracer tracer)
 >     {
 >         _tracer = tracer;
 >     }
-> 
+>
 >     public void MyMethod()
 >     {
 >         using(var scope = BuildScope())
 >         {
 >             var span = scope.Span;
-> 
+>
 >             try
 >             {
 >                 span.Log("Starting the execution of the code");
@@ -95,13 +92,15 @@ Once your application produces spans needed for Jaeger, you need to enable repor
 >             }
 >         }
 >     }
-> 
+>
 >     private IScope BuildScope()
 >         => _tracer
 >             .BuildSpan("Executing important code")
 >             .StartActive(true);
 > }
-```
+> ```
+
+````
 
 ## Options
 
@@ -139,5 +138,4 @@ Following settings are required to be set in your **appsettings.json**
     "exporterTimeoutMilliseconds": 30000,
     "maxExportBatchSize": 512
 }
-```
-
+````

@@ -1,9 +1,9 @@
 ---
-title : "Http Clients"
+title: "Http Clients"
 description: "Requests, service discovery, load balancing."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T21:59:55Z
 draft: false
 images: []
 menu:
@@ -14,7 +14,6 @@ menu:
 weight: 5
 toc: true
 ---
-
 
 ### Overview
 
@@ -30,26 +29,25 @@ dotnet add package Genocs.HTTP
 
 - Genocs.Core
 
-
 ### Usage
 
 1. Extend `IGenocsBuilder` with `AddHttpClient()` that will register the required services.
 
-  ``` cs
-  // Create a new WebApplication
-  var builder = WebApplication.CreateBuilder(args);
+```cs
+// Create a new WebApplication
+var builder = WebApplication.CreateBuilder(args);
 
-  builder.AddGenocs()
-          .AddHttpClient()
-          .Build();
+builder.AddGenocs()
+        .AddHttpClient()
+        .Build();
 
-  ... // Add other services
-  // Other services.
-  ```
+... // Add other services
+// Other services.
+```
 
 Then, simply inject `IHttpClient` (and optionally HttpClientOptions to resolve services URLS) to execute HTTP requests.
 
-``` cs
+```cs
 public class SomeService
 {
     private readonly string _webServiceUrl;
@@ -88,6 +86,7 @@ public class SomeService
   }
 }
 ```
+
 ---
 
 ## Service Discovery
@@ -111,16 +110,16 @@ dotnet add package Genocs.Discovery
 
 1. Extend IGenocsBuilder with `AddConsul()` that will register the required services.
 
-    ``` cs
-    // Create a new WebApplication
-    var builder = WebApplication.CreateBuilder(args);
+   ```cs
+   // Create a new WebApplication
+   var builder = WebApplication.CreateBuilder(args);
 
-    builder.AddGenocs()
-            .AddHttpClient()
-            .AddConsul()
-            .Build();
+   builder.AddGenocs()
+           .AddHttpClient()
+           .AddConsul()
+           .Build();
 
-    ```
+   ```
 
 ### Options
 
@@ -175,18 +174,19 @@ dotnet add package Genocs.LoadBalancing
 - Genocs.Discovery
 
 ### Usage
+
 1. Extend `IGenocsBuilder` with `AddFabio()` that will register the required services.
 
-    ``` cs
-    // Create a new WebApplication
-    var builder = WebApplication.CreateBuilder(args);
+   ```cs
+   // Create a new WebApplication
+   var builder = WebApplication.CreateBuilder(args);
 
-    builder.AddGenocs()
-            .AddHttpClient()
-            .AddConsul()
-            .AddFabio()
-            .Build();
-    ```
+   builder.AddGenocs()
+           .AddHttpClient()
+           .AddConsul()
+           .AddFabio()
+           .Build();
+   ```
 
 ### Options
 

@@ -1,9 +1,9 @@
 ---
-title : "Metrics"
+title: "Metrics"
 description: "Genocs Library is a collection of Enterprise Level Libraries and Templates for Modern Web Applications that gets you started with premium application development in no-time!"
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T21:59:55Z
 draft: false
 images: []
 menu:
