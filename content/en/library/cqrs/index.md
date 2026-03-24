@@ -1,9 +1,9 @@
 ---
-title : "CQRS"
+title: "CQRS"
 description: "Commands, queries and event handlers."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 menu:
@@ -38,7 +38,7 @@ Implement `ICommand` (marker) interface in the selected class. Since the command
 - Keep all the commands immutable
 - Name of your commands should be imperative
 
-``` cs
+```cs
 public class CreateAccount : ICommand
 {
     public Guid Id { get; }
@@ -56,7 +56,7 @@ public class CreateAccount : ICommand
 
 Create dedicated command handler class that implements `ICommandHandler<TCommand>` interface with `HandleAsync()` method:
 
-``` cs
+```cs
 public class CreateAccountHandler : ICommandHandler<CreateAccount>
 {
     public Task HandleAsync(CreateAccount command)
@@ -68,21 +68,21 @@ public class CreateAccountHandler : ICommandHandler<CreateAccount>
 
 You can easily register all command handlers in DI container by calling `AddCommandHandlers()` method on `IGenocsBuilder`:
 
-``` cs
+```cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
 {
     var builder = services
                         .AddGenocs()
                         .AddCommandHandlers();
 
-    //other registrations    
+    //other registrations
     return builder.Build();
 }
 ```
 
 Dispatching a particular command object can be also done using `Genocs.Common` package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryCommandDispatcher()` method:
 
-``` cs
+```cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
 {
     var builder = services
@@ -90,14 +90,14 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
                         .AddCommandHandlers()
                         .AddInMemoryCommandDispatcher();
 
-    //other registrations    
+    //other registrations
     return builder.Build();
 }
 ```
 
 Then simply inject `ICommandDispatcher` into a class and call `DispatchAsync()` method:
 
-``` cs
+```cs
 public class AccountsService
 {
     private readonly ICommandDispatcher _dispatcher;
@@ -105,7 +105,7 @@ public class AccountsService
     public AccountsService(ICommandDispatcher dispatcher)
     {
         _dispatcher = dispatcher;
-    } 
+    }
 
     public Task CreateAccountAsync(CreateAccount command)
         => _dispatcher.DispatchAsync(command);
@@ -122,7 +122,7 @@ Adds an ability to create and process queries in the sense of [CQRS](https://mar
 
 Implement `IQuery<TResult>` interface in the selected class:
 
-``` cs
+```cs
 public class GetAccount : IQuery<AccountDto>
 {
     public Guid Id { get; set; }
@@ -131,7 +131,7 @@ public class GetAccount : IQuery<AccountDto>
 
 Create dedicated query handler class that implements `IQueryHandler<TQuery, TResult>` interface with `HandleAsync()` method:
 
-``` cs
+```cs
 public class GetAccountHandler : IQueryHandler<GetAccount, AccountDto>
 {
     public Task<AccountDto> HandleAsync(GetAccount query)
@@ -143,21 +143,21 @@ public class GetAccountHandler : IQueryHandler<GetAccount, AccountDto>
 
 You can easily register all query handlers in DI container by calling `AddQueryHandlers()` method on `IGenocsBuilder`:
 
-``` cs
+```cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
 {
     var builder = services
                         .AddGenocs()
                         .AddQueryHandlers();
 
-    //other registrations    
+    //other registrations
     return builder.Build();
 }
 ```
 
 Dispatching a particular query object can be also done using `Genocs.Common` package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryQueryDispatcher()` method:
 
-``` cs
+```cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
 {
     var builder = services
@@ -165,14 +165,14 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
                         .AddQueryHandlers()
                         .AddInMemoryQueryDispatcher();
 
-    //other registrations    
+    //other registrations
     return builder.Build();
 }
 ```
 
 Then simply inject `IQueryDispatcher` into a class and call `DispatchAsync()` method:
 
-``` cs
+```cs
 public class AccountsService
 {
     private readonly IQueryDispatcher _dispatcher;
@@ -180,7 +180,7 @@ public class AccountsService
     public AccountsService(IQueryDispatcher dispatcher)
     {
         _dispatcher = dispatcher;
-    } 
+    }
 
     public Task<AccountDto> GetAccountAsync(Guid id)
         => _dispatcher.DispatchAsync(new GetAccount { Id = id });
@@ -200,7 +200,7 @@ Implement `IEvent` or `IRejectedEvent` (marker) interface in the selected class.
 - keep all the events immutable
 - name of your events should kept in the past tense
 
-``` cs
+```cs
 public class AccountCreated : IEvent
 {
     public Guid Id { get; }
@@ -214,7 +214,7 @@ public class AccountCreated : IEvent
 
 Create dedicated event handler class that implements `IEventHandler<TEvent>` interface with `HandleAsync()` method:
 
-``` cs
+```cs
 public class AccountCreatedHandler : IEventHandler<AccountCreated>
 {
     public Task HandleAsync(AccountCreated @event)
@@ -226,21 +226,21 @@ public class AccountCreatedHandler : IEventHandler<AccountCreated>
 
 You can easily register all event handlers in DI container by calling `AddEventHandlers()` method on `IGenocsBuilder`:
 
-``` cs
+```cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
 {
     var builder = services
                         .AddGenocs()
                         .AddEventHandlers();
 
-    //other registrations    
+    //other registrations
     return builder.Build();
 }
 ```
 
 Dispatching a particular event object can be also done using `Genocs.Common` package. Start with registering in-memory dispatcher on your `IGenocsBuilder` by calling a `AddInMemoryEventDispatcher()` method:
 
-``` cs
+```cs
 public IServiceProvider ConfigureServices(this IServiceCollection services)
 {
     var builder = services
@@ -248,14 +248,14 @@ public IServiceProvider ConfigureServices(this IServiceCollection services)
                         .AddCommandHandlers()
                         .AddInMemoryEventDispatcher();
 
-    //other registrations    
+    //other registrations
     return builder.Build();
 }
 ```
 
 Then simply inject `IEventDispatcher` into a class and call `DispatchAsync()` method:
 
-``` cs
+```cs
 public class AccountsService
 {
     private readonly IEventDispatcher _dispatcher;
@@ -263,7 +263,7 @@ public class AccountsService
     public AccountsService(IEventDispatcher dispatcher)
     {
         _dispatcher = dispatcher;
-    } 
+    }
 
     public Task PostProcessAccountCreation(AccountCreated @event)
         => _dispatcher.DispatchAsync(@event);

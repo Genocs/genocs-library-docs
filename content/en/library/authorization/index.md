@@ -3,7 +3,7 @@ title: "Authorization"
 description: "Adds the integration with authorization middleware and system components to validate and grant the access to the resources."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 menu:
@@ -38,16 +38,15 @@ The Genocs Authorization module provides the following features:
 - Authorization handlers
 - Authorization attributes
 
-
 In order to provide multiple authorization strategies and to be able to authorize the access to the resource for different purposes like FrontEnd Application and/or MCP services, the Genocs Authorization module provides the following features:
 
 - Authorization for FrontEnd Application
 - Authorization for MCP services
 
-
 The Authorization is made by using endpoint decorators and policies.
 
 ## How to enable the authorization
+
 Extend `IGenocsBuilder` with `AddOpenIdJwt()` that will register the required services.
 
 ```cs
@@ -55,7 +54,7 @@ public static IGenocsBuilder RegisterGenocs(this IGenocsBuilder builder)
 {
     builder.AddOpenIdJwt()
     // Other services.
-    
+
 
     // Return the Genocs builder to be used to chain other services
     return builder;
@@ -88,7 +87,6 @@ Upone the registration of the authorization services, you can use the following 
 
 The example below shows how to authorize the access to the resources using the `Authorize` decorator, you can also use the `ApiKeyOrJwtAuthorize` decorator to authorize the access to the resources using the `ApiKey` or `Jwt` authentication.
 
-
 ```cs
     /// <summary>
     /// Retrieves authorization information for the authenticated user.
@@ -105,7 +103,7 @@ The example below shows how to authorize the access to the resources using the `
     ///     GET /JwtAuthorized
     ///     Authorization: Bearer your-jwt-token-here
     /// </para>
-    /// 
+    ///
     /// </remarks>
     /// <returns>A string containing the authorization header value from the request.</returns>
     /// <response code="200">Returns the authorization header information successfully.</response>
@@ -124,7 +122,6 @@ The example below shows how to authorize the access to the resources using the `
     }
 ```
 
-
 ## Options
 
 The default section name for the authorization settings is `authorization`. The following options are available:
@@ -132,7 +129,6 @@ The default section name for the authorization settings is `authorization`. The 
 - `enabled` - If true then the authorization is enabled.
 - `devApiKey` - The API key used to authorize the client in the development environment.
 - `apiKeys` - A list of API keys that can be used to authorize the client.
-
 
 ## Settings
 

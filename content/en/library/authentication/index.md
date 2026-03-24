@@ -3,7 +3,7 @@ title: "Authentication - JWT"
 description: "Adds the integration with JWT using an available authentication middleware and system components to validate and grant the access tokens."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 menu:
@@ -118,7 +118,6 @@ app.UseFirebaseAuthentication();
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
     </ItemGroup>
 ```
-
 
 Then, invoke `UseAuthentication()` extension from `IApplicationBuilder`.
 

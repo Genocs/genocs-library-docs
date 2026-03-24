@@ -2,10 +2,8 @@
 title: "Infrastructure"
 description: "How to set up your infrastructure."
 lead: "How to set up your infrastructure."
-aliases:
-  - /infrastructure/
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-23T21:39:47Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 ---
@@ -60,10 +58,9 @@ Open-source Components uses in this demo:
 - [Jaeger](https://www.jaegertracing.io/)
 - [Prometheus](https://prometheus.io/)
 
-**NOTE:** The open-source components have the enterprise version. It requires to have active subscription if you plan to use them.  
+**NOTE:** The open-source components have the enterprise version. It requires to have active subscription if you plan to use them.
 
 ### Security and Networking
-
 
 Security and Networking context will implement all the components that allows to handle:
 

@@ -1,5 +1,5 @@
 ---
-title : "Containerization"
+title: "Containerization"
 description: "How to containerize your solution!"
 lead: "Containerizing applications is mandatory step for modern enterprise applications. Genocs Library contains containers setup as well!"
 date: 2023-05-13T15:40:19+02:00
@@ -58,10 +58,9 @@ Open-source Components uses in this demo:
 - [Jaeger](https://www.jaegertracing.io/)
 - [Prometheus](https://prometheus.io/)
 
-**NOTE:** The open-source components have the enterprise version. It requires to have active subscription if you plan to use them.  
+**NOTE:** The open-source components have the enterprise version. It requires to have active subscription if you plan to use them.
 
 ### Security and Networking
-
 
 Security and Networking context will implement all the components that allows to handle:
 

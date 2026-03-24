@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Let's get started with Genocs Library!"
 lead: "Let's get started with Genocs Library!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-22T18:14:18Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 menu:
@@ -14,6 +14,7 @@ menu:
 weight: 1
 toc: true
 ---
+
 <div>
 
 {{< img src="gnx-enterprise-library.png" >}}

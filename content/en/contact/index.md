@@ -2,20 +2,19 @@
 title: "Contact"
 description: "Drop us an email"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 ---
-
-## Getting in touch
 
 Below you can find some points for contacting us, as well as getting in touch with the community.
 
 ## Issues and Bug Reports
 
 For any bug reports, please first consult the main GitHub repositories:
+
 - [Source Code](https://github.com/Genocs/genocs-library/)
-- [Documentation]( https://github.com/Genocs/genocs-library-docs/)
+- [Documentation](https://github.com/Genocs/genocs-library-docs/)
 
 Chances are that a similar issue may have already been posted by other users in the past.
 

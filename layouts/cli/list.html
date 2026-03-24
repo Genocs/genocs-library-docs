@@ -1,22 +1,26 @@
 {{ define "main" }}
 <div class="row justify-content-center">
-  <div class="col-md-12 col-lg-10 col-xl-8">
-    <article>
-      <h1 class="text-center">{{ if eq .CurrentSection .FirstSection }}{{ .Section | humanize }}{{ else }}{{ .Title }}{{ end }}</h1>
-      <div class="text-center">{{ .Content }}</div>
-			<div class="card-list">
-				{{ $currentSection := .CurrentSection }}
-				{{ range where .Site.RegularPages.ByTitle "Section" .Section }}
-					{{ if in (.RelPermalink | string) $currentSection.RelPermalink }}
-						<div class="card my-3">
-							<div class="card-body">
-								<a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
-							</div>
-						</div>
-					{{ end }}
-				{{ end }}
-			</div>
-    </article>
-  </div>
+    <div class="col-md-12 col-lg-10 col-xl-8">
+        <article>
+            <h1 class="text-center">{{ if eq .CurrentSection .FirstSection }}{{ .Section | humanize }}{{ else }}{{ .Title }}{{ end }}</h1>
+            <div class="text-center">{{ .Content }}</div>
+            <div class="card-list">
+                {{ $currentSection := .CurrentSection }}
+                {{ range where .Site.RegularPages.ByTitle "Section" .Section }}
+                    {{ if in (.RelPermalink | string) $currentSection.RelPermalink }}
+                        <div class="card my-3">
+                            <div class="card-body">
+                                <a class="stretched-link" href="{{ .RelPermalink }}">
+                                    <h4 style="margin-top: 0;">{{ .Params.title | title }}</h4>
+                                    <p style="font-weight: 100; font-size: medium">{{ .Params.description | title }}</p>
+                                </a>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </article>
+        {{ partial "main/docs-navigation.html" . }}
+    </div>
 </div>
 {{ end }}

@@ -2,7 +2,7 @@
 title: "Contributing"
 description: "Contributing to Genocs Library"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-23T21:39:47Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 ---
@@ -45,7 +45,7 @@ gitGraph:
     commit
     commit tag:"test"
     checkout main
-    commit 
+    commit
     commit
     merge develop
     commit type: HIGHLIGHT
@@ -54,7 +54,6 @@ gitGraph:
 ```
 
 Submit your PR to join this Elite list ;) Make sure your code is warning free!
-
 
 ### Genocs Library
 
@@ -67,7 +66,6 @@ Here are the contributors:
 ### Genocs Library Documentation
 
 Here are the contributors:
-
 
 ### .NET Web API Clean Architecture Template
 

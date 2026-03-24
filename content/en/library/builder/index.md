@@ -1,9 +1,9 @@
 ---
-title : "Builder"
+title: "Builder"
 description: "Genocs builder is the entrypoint for the application builder."
 lead: ""
 date: 2023-12-20T17:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T20:59:42Z
 draft: false
 images: []
 menu:
@@ -33,53 +33,52 @@ There are two ways to setup the builder:
 
 1. Extend `WebApplicationBuilder` with `UseGenocs()`
 
-    This is what you need to do in the `Program.cs` file.
+   This is what you need to do in the `Program.cs` file.
 
-    ```csharp
-    using Genocs.Core.Builders;
-    using Genocs.Logging;
+   ```csharp
+   using Genocs.Core.Builders;
+   using Genocs.Logging;
 
-    // Setup the logger
-    StaticLogger.EnsureInitialized();
+   // Setup the logger
+   StaticLogger.EnsureInitialized();
 
-    // Create a new WebApplication
-    var builder = WebApplication.CreateBuilder(args);
+   // Create a new WebApplication
+   var builder = WebApplication.CreateBuilder(args);
 
-    IGenocsBuilder gnxBuilder = builder.AddGenocs();
+   IGenocsBuilder gnxBuilder = builder.AddGenocs();
 
-    ... // Add other services
+   ... // Add other services
 
-    // Build the application
-    gnxBuilder.Build();
-    ```
+   // Build the application
+   gnxBuilder.Build();
+   ```
 
-    This option will allow you to be able to integrate [Microsoft Aspire](https://learn.microsoft.com/en-us/dotnet/aspire/) effortlessly, as well as, you can add the following services:
+   This option will allow you to be able to integrate [Microsoft Aspire](https://learn.microsoft.com/en-us/dotnet/aspire/) effortlessly, as well as, you can add the following services:
 
-    ```csharp
-    ... // From the above code
-    gnxBuilder.AddJwt()
-                .AddOpenTelemetry()
-                .AddMongoFast()
-                .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
-                .AddApplicationServices()
-                .Build();
-    ```
+   ```csharp
+   ... // From the above code
+   gnxBuilder.AddJwt()
+               .AddOpenTelemetry()
+               .AddMongoFast()
+               .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
+               .AddApplicationServices()
+               .Build();
+   ```
 
 2. Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` that will get register the required services.
 
-    This is what you need to do in the `Program.cs` file.
+   This is what you need to do in the `Program.cs` file.
 
-    ```csharp
-    // Create a new WebApplication
-    var builder = WebApplication.CreateBuilder(args);
+   ```csharp
+   // Create a new WebApplication
+   var builder = WebApplication.CreateBuilder(args);
 
-    // Get the services
-    var services = builder.Services;
+   // Get the services
+   var services = builder.Services;
 
-    // Setup the builder
-    services.AddGenocs(builder.Configuration);
-    ```
-
+   // Setup the builder
+   services.AddGenocs(builder.Configuration);
+   ```
 
 > NOTE: By Adding `AddGenocs(builder.Configuration)` you are adding the following services:
 
@@ -96,8 +95,6 @@ No need to call MapHealthChecks, it is already done for you.
 // - /live
 app.MapDefaultEndpoints();
 ```
-
-
 
 ## Example
 
@@ -204,20 +201,18 @@ Log.CloseAndFlush();
 
 {{< img src="gnx-service-console.png" >}}
 
-
 ## Options
 
 - `name` - The service name. The service name is used to display the banner and the version is used to display the version of the service.
-- `service` - Service property is used to identify the service. This is used to identify the service in the logs. It *mandatory* to have this property when using the **OpenTelemetry** support.  
+- `service` - Service property is used to identify the service. This is used to identify the service in the logs. It _mandatory_ to have this property when using the **OpenTelemetry** support.
 - `instance` - The service instance. If present then the instance is used to setup **OpenTelemetry**.
 - `version` - The service version. If present then the version is used to setup **OpenTelemetry**.
 - `displayBanner` - If true then the banner is shown into the console.
 - `displayVersion` - If true then the service version is shown into the console. See `version` param.
 
-
 The service name is used to display the banner and the version is used to display the version of the service.
 
-```csharp
+````csharp
 
 ## Settings
 
@@ -232,4 +227,4 @@ Use the following settings in the `appsettings.json` file according to your need
     "displayBanner": true,
     "displayVersion": true
   }
-```
+````
