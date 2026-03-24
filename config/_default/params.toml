@@ -14,7 +14,7 @@ rootUrl = "https://www.genocs.com"
 docsVersion = "9.0"
 
 # Search
-mainSections = ["introduction", "cli", "library", "templates", "containers", "infrastructures", "devops" ]
+mainSections = ["cli", "containerization", "devops", "docs", "infrastructure", "introduction", "library", "templating" ]
 
 ## Open Graph
 images = ["gnx-icon.png"]
@@ -64,7 +64,7 @@ smallLimit = "30"
 footer = "Developed & Maintained by <a href=\"https://www.genocs.com/\">Genocs</a>"
 
 # Feed
-copyRight = "Copyright (c) 2025 Genocs"
+copyRight = "Copyright (c) 2026 Genocs"
 
 # Alert
 alert = true

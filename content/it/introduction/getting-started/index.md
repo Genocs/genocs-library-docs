@@ -3,7 +3,7 @@ title: "Guida Introduttiva"
 description: "Iniziamo con la Libreria Genocs!"
 lead: "Iniziamo con la Libreria Genocs!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-03-24T21:46:09Z
 draft: false
 images: []
 menu:
@@ -14,6 +14,7 @@ menu:
 weight: 1
 toc: true
 ---
+
 <div>
 
 {{< img src="gnx-enterprise-library.png" >}}
