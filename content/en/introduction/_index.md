@@ -3,7 +3,7 @@ title: "Introduction"
 description: "Welcome to the comprehensive documentation of Genocs' powerful software libraries designed to revolutionize the development of cloud-agnostic microservice solutions. In this guide, we will explore the various capabilities and features offered by these libraries, empowering you to create robust and scalable applications that seamlessly adapt to any cloud environment."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 ---
@@ -28,8 +28,8 @@ Key Features:
 
 - :white_check_mark: **Powerful Command Line Interface (CLI)**: Genocs' libraries come with a feature-rich command line interface, providing developers with a convenient and efficient way to interact with the libraries and perform various tasks. The CLI simplifies configuration, deployment, and management of your cloud-agnostic microservices.
 
-- :white_check_mark: **Template Templates**: To speed up the setup process, Genocs' libraries include a set of template templates. These templates serve as a starting point for your microservice projects, providing pre-configured structures and configurations. With these template templates, you can quickly set up the foundation of your application and focus on implementing your business logic.
+- :white_check_mark: **Starter templates**: To speed up setup, Genocs' libraries include project templates that act as starting points for your microservice projects, with pre-configured structures and configurations so you can focus on business logic.
 
-By utilizing Genocs' software libraries, along with the powerful command line interface and template templates, you can unlock the full potential of cloud-agnostic microservices, accelerating your development process and futureproofing your applications. Throughout this documentation, we will provide detailed explanations, code samples, and best practices to guide you in leveraging these libraries effectively.
+By utilizing Genocs' software libraries, along with the CLI and these templates, you can unlock the full potential of cloud-agnostic microservices, accelerating your development process and future-proofing your applications. Throughout this documentation, we provide explanations, code samples, and best practices to help you use these libraries effectively.
 
-Let's dive into and discover how Genocs' software libraries can empower you to build cloud-agnostic microservice solutions that scale, adapt, and thrive in today's dynamic cloud landscape.
+Discover how Genocs' software libraries can help you build cloud-agnostic microservice solutions that scale, adapt, and thrive in today's dynamic cloud landscape.

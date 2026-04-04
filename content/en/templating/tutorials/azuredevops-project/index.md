@@ -3,7 +3,7 @@ title: "Setup Azure DevOps Project"
 description: "How to setup Azure DevOps project"
 lead: "This tutorial will guide you on how to setup Azure DevOps project"
 date: 2025-03-01T00:00:00+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -29,8 +29,8 @@ toc: true
    - Add **PBI** (Product Backlog Item)
 
 6. Setup Git repositories
-   - Setup *Company.Project.DemoApi* Github repository
-   - Setup *Company.Project.DemoFE* Github repository
+   - Set up *Company.Project.DemoApi* GitHub repository
+   - Set up *Company.Project.DemoFE* GitHub repository
    
 7. Create project *Company.Project.DemoApi* locally
 8. Create project *Company.Project.DemoFE* locally
@@ -203,7 +203,7 @@ Add file `azure-pipelines\app-container-ci.yml` to the root of the project
 
 ```yaml
 # ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting .NET10.0.
+# Build and test ASP.NET Core projects targeting .NET 10.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
@@ -257,7 +257,7 @@ stages:
 
 ```yaml
 # ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting .NET10.0.
+# Build and test ASP.NET Core projects targeting .NET 10.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 

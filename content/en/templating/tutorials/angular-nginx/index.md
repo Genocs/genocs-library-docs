@@ -3,7 +3,7 @@ title: "Setup Angular with Nginx"
 description: "How to setup Angular with Nginx"
 lead: "This tutorial will guide you on how to setup Angular with Nginx withing a Docker container"
 date: 2025-03-01T00:00:00+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -125,7 +125,7 @@ Create a new pipeline in Azure DevOps and add the following code to the `azure-p
 
 ```yaml
 # ASP.NET Core (.NET Framework)
-# Build and test ASP.NET Core projects targeting .NET10.0.
+# Build and test ASP.NET Core projects targeting .NET 10.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 # The Pipeline requires three Service Connections to deploy Images to Azure Container Registry

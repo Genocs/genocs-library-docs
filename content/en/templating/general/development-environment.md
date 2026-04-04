@@ -3,7 +3,7 @@ title: "Development Environment"
 description: "Setting up the Development Environment for the Genocs .NET Templates"
 lead: "Let's get started with setting up the Development Environment"
 date: 2023-05-13T15:51:03+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -20,7 +20,7 @@ Please Note that this project is being built on a Windows11 Machine using Visual
 
 ## .NET SDK
 
-As mentioned earlier, this project is built with the latest available .NET SDK, which is .NET10.0.
+As mentioned earlier, this project is built with the latest available .NET SDK, which is .NET 10.
 
 Ensure that you have the latest version of the SDK available - [Download from Microsoft](https://dotnet.microsoft.com/download/dotnet/10.0)
 

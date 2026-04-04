@@ -3,7 +3,7 @@ title : "DevOps"
 description: "How to setup your DevOps pipeline!"
 lead: "How to setup your DevOps pipeline!"
 date: 2025-10-11T15:40:19+02:00
-lastmod: 2026-03-23T21:39:47Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 ---
@@ -24,7 +24,7 @@ This proposal is thought as to be used on Azure, even though most of the options
 - **Postman**
 - **Helm**
 - **DockerHub account** (optional)
-- **Github account** (optional)
+- **GitHub account** (optional)
 
 ## Introduction
 

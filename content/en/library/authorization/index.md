@@ -3,7 +3,7 @@ title: "Authorization"
 description: "Adds the integration with authorization middleware and system components to validate and grant the access to the resources."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -147,7 +147,7 @@ Use the following settings in the `appsettings.json` file according to your need
 
 ### Default settings
 
-Default settings for some variable has bee overwritten with the following configuration.
+Default settings for some variables have been overwritten with the following configuration.
 
 ```json
   "authorization": {

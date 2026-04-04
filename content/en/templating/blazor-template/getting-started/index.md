@@ -3,7 +3,7 @@ title: "Getting Started 🚀"
 description: "Getting Started with Genocs Library's Blazor WebAssembly Template."
 lead: "Getting Started with Genocs Library's Blazor WebAssembly Template."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -26,8 +26,8 @@ To get started with this Template, here are the available options.
 
 You would probably need to take this approach if you want to keep your source code up to date with the latest changes. To get started based on this repository, you need to get a copy locally. You have three options: fork, clone, or download.
 
-- Make a fork of Genocs Library's `blazor-wasm-template` repository in your Github account.
-- Next, since you need to start your private personal project, create your new `blazor-wasm-template` personal project by cloning the forked repository on your personal github. This could be done as simple as running `git clone https://github.com/{yourgithubuseraccount}/blazor-wasm-template.git` locally on your development machine.
+- Make a fork of Genocs Library's `blazor-wasm-template` repository in your GitHub account.
+- Next, since you need to start your private personal project, create your new `blazor-wasm-template` personal project by cloning the forked repository to your machine. This can be as simple as running `git clone https://github.com/{yourgithubuseraccount}/blazor-wasm-template.git` locally on your development machine.
 - Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{yourgithubuseraccount}/blazor-wasm-template` and `git remote set-url --push upstream DISABLE`
 
 Now, whenever there is a new update on Genocs Library's `blazor-wasm-template` repository, you could simply pull in the latest change on your private fork of the Genocs Library's `blazor-wasm-template` repository and later merge these changes with you personal projects.

@@ -1,10 +1,10 @@
 ---
 title: "Genocs Framework Documentation"
-description: "Genocs Framework Documentation offers Templates with latest packages and services that your projects will ever need. We intend to provide Clean and Well structured Templates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seemless."
-lead: "Genocs Framework Documentation offers Templates with latest packages and services that your projects will ever need. We intend to provide Clean and Well structured Templates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seemless."
+description: "Genocs Framework Documentation offers templates with the latest packages and services your projects need. We provide clean, well-structured templates with solid engineering practices and Clean Architecture principles that make your development experience seamless."
+lead: "Genocs Framework Documentation offers templates with the latest packages and services your projects need. We provide clean, well-structured templates with solid engineering practices and Clean Architecture principles that make your development experience seamless."
 sub: "Open-Source Framework for Enterprise Applications"
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2026-03-24T21:46:09Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 ---

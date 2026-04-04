@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Let's get started with Genocs Library!"
 lead: "Let's get started with Genocs Library!"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -21,26 +21,26 @@ toc: true
 
 ## Problem Statement
 
-<p>Ever gone through the pain of setting up new project from scratch each time?</p>
+<p>Ever gone through the pain of setting up a new project from scratch each time?</p>
 <p><b>Genocs Library</b> aims to
 address this pain point by offering starting points for various technologies that can help save
 hours of development and research time for developers and teams.</p>
 
 ## Solution
 
-<p><b>Genocs Library</b> offers a library framework and cli and templates with the latest packages and services that your projects will ever need. We intend to provide Clean and well-structured Templates with top-notch quality following standard coding practices and Clean Architecture principles that makes your development experience seamless.
+<p><b>Genocs Library</b> offers a library framework, CLI, and templates with the latest packages and services your projects need. We provide clean, well-structured templates following standard coding practices and Clean Architecture principles that make your development experience seamless.
 </p>
 <p class="code-green">Most importantly, <b>Genocs Library</b> is completely FREE to use!</p>
 
-As the name suggests, the idea is to provide a full-stack end to end solution to kick start products of any scale following a modularized monolith architecture with well-cut designs, code readability, scalability as the out-of-the-box features. Bottomline, using <b>Genocs Library</b>, your new projects will be up and running in no time.
+As the name suggests, the idea is to provide a full-stack, end-to-end solution to kick-start products of any scale following a modularized monolith architecture with clear design, readable code, and scalability out of the box. Bottom line: with <b>Genocs Library</b>, your new projects can be up and running quickly.
 
 ## Vision
 
-<b>Genocs Library</b> is not a single repository or project, rather a collection of libraries, templates and cli out of which you get to choose your preference. In the long term, <b>Genocs Library</b> would ideally have multiple API projects that are written in various technologies like .NET, Node.js, GoLang and multiple client applications that are built on awesome tech like Blazor, Vue.js, React, Angular and so on.
+<b>Genocs Library</b> is not a single repository or project; it is a collection of libraries, templates, and a CLI—you choose what fits. In the long term, <b>Genocs Library</b> aims to offer multiple API projects in technologies such as .NET, Node.js, and Go, and client applications on stacks like Blazor, Vue.js, React, and Angular.
 
-<b>Genocs Library</b> should be the one-stop that caters to the needs of various developers in various technology. This obviously would require a lot of community adaptation and contributions.
+<b>Genocs Library</b> aims to be a one-stop resource for developers across technologies. That vision depends on community adoption and contributions.
 
-As for the initial releases, <b>Genocs Library</b> sports an API Project built on Microsoft's newest 10.0 and the front-end application (that consumes the .NET10.0 Web API) built with Blazor WebAssembly!
+For the initial releases, <b>Genocs Library</b> includes an API project on <b>.NET 10</b> and a Blazor WebAssembly front end that consumes that Web API.
 
 ## Projects
 
@@ -51,26 +51,26 @@ As for the initial releases, <b>Genocs Library</b> sports an API Project built o
     <div class="row justify-content-center text-center" style="padding:10px!important">
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET10.0 Microservice Template</h2>
+          <h2 class="h4">.NET 10 microservice template</h2>
           <div class="tablet-group">
               <div class="tablet">web api</div>
               <div class="tablet tablet-secondary">.NET</div>
               <div class="tablet">microservices</div>
             </div>
           <p>Coming soon.</p>
-          <p><a href="https://github.com/Genocs/genocs-library">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-microservices-template/">Read Getting Started Guide</a></p>
+          <p><a href="https://github.com/Genocs/genocs-library">View GitHub repository</a> | <a href="https://genocs-blog.netlify.app/dotnet-microservices-template/">Read getting started guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
         <div style="padding:20px">
-          <h2 class="h4">.NET10.0 Web API Template</h2>
+          <h2 class="h4">.NET 10 Web API template</h2>
           <div class="tablet-group">
               <div class="tablet">web api</div>
               <div class="tablet tablet-secondary">.NET</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Getting to work with the latest and greatest of Microsoft's .NET10.0 Web API fused with the goodness of Genocs Library.</p>
-          <p><a href="https://github.com/Genocs/templates">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/templates/general/getting-started/">Read Getting Started Guide</a></p>
+          <p>Work with Microsoft's .NET 10 Web API combined with Genocs Library.</p>
+          <p><a href="https://github.com/Genocs/templates">View GitHub repository</a> | <a href="https://genocs-blog.netlify.app/templates/general/getting-started/">Read getting started guide</a></p>
         </div>
       </div>
       <div class="card feature-card" style="padding:0px!important">
@@ -82,8 +82,8 @@ As for the initial releases, <b>Genocs Library</b> sports an API Project built o
               <div class="tablet tablet-secondary">blazor webassembly</div>
               <div class="tablet">multitenancy</div>
             </div>
-          <p>Clean Architecture Template Template for .NET10.0 Blazor WebAssembly built for Genocs-Api WebAPI with MudBlazor Components.</p>
-          <p><a href="https://github.com/Genocs/genocs-library-docs">View Github Repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read Getting Started Guide</a></p>
+          <p>Clean Architecture template for .NET 10 Blazor WebAssembly, built for the Genocs Web API with MudBlazor components.</p>
+          <p><a href="https://github.com/Genocs/genocs-library-docs">View GitHub repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read getting started guide</a></p>
         </div>
       </div>
       <div class="card feature-card">

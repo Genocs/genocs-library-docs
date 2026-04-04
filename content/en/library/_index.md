@@ -3,7 +3,7 @@ title: "Library"
 description: "Versioned entry page for Genocs Library documentation."
 lead: "Choose a docs version to get started quickly."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 ---
@@ -45,7 +45,7 @@ images: []
 
 - **New to Genocs?** Start with the [Introduction](/introduction/) for an overview of capabilities.
 - **Need specific module docs?** Each version includes guides for authentication, messaging, logging, metrics, and more.
-- **Questions?** See our [Contributing Guidelines](/) or reach out via our [Contact Page](/contact/).
+- **Questions?** See our [Contributing guidelines](/contributing/) or reach out via our [Contact page](/contact/).
 
 ---
 

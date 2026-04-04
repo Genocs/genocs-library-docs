@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-description: "Genocs Library built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: "Genocs Library built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: "Genocs Library built with .NET 10. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: "Genocs Library built with .NET 10. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -22,11 +22,11 @@ Genocs Library is a starting point for your next `.NET Microservices library` th
 
 ## Goals
 
-The goal of this repository is to provide a complete and feature-rich starting point for any .NET Developer / Team to kick-start their next major project using .NET10.0 microservice cloud agnostic solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
+The goal of this repository is to provide a complete and feature-rich starting point for any .NET developer or team to kick-start their next major project with a .NET 10, cloud-agnostic microservice solution. This also serves the purpose of learning advanced concepts and implementations such as `Multitenancy, CQRS, Onion Architecture, Clean Coding standards, Cloud Deployments with Terraform to AWS, Docker Concepts, CICD Pipelines & Workflows` and so on.
 
 ## Features
 
-- [x] Built on .NET10.0
+- [x] Built on .NET 10
 - [x] Follows Clean Architecture Principles
 - [x] Domain Driven Design
 - [x] Cloud Ready. Can be deployed to AWS Infrastructure as ECS Containers using Terraform!
@@ -76,7 +76,7 @@ To get started with this Template, here are the available options.
 - Install using the `Genocs CLI` tool. Use this for release versions of the Template only.
 - Fork the Repository. Use this if you want to always keep your version of the Template up-to date with the latest changes.
 
-> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](/docs/templates/general/development-environment/)
+> Make sure that your DEV environment is set up. [Read the development environment guide](/docs/templates/general/development-environment/)
 
 ### Genocs CLI Tool
 
@@ -130,8 +130,8 @@ genocs update
 
 You would probably need to take this approach if you want to keep your source code up to date with the latest changes. To get started based on this repository, you need to get a copy locally. You have three options: fork, clone, or download.
 
-- Make a fork of this repository in your Github account.
-- Create your new `dotnet-templates` personal project by cloning the forked repository on your personal github.
+- Make a fork of this repository in your GitHub account.
+- Create your new `dotnet-templates` personal project by cloning the forked repository on your machine.
 - Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{githubuseraccount}/dotnet-templates` and `git remote set-url --push upstream DISABLE`
 
 For step by step instructions, [follow this](https://discord.com/channels/878181478972928011/892573122186838046/933513103688224838) and [this](https://gist.github.com/0xjac/85097472043b697ab57ba1b1c7530274).
@@ -206,7 +206,7 @@ For further steps and details, [Read the Getting Started Guide](/docs/templates/
 
 ## Containerization
 
-The API project, being .NET10.0, it is configured to have built-in support for containerization. That means, you really don't need a Dockerfile to containerize the webapi.
+The API project targets .NET 10 and is configured with built-in support for containerization, so you often do not need a Dockerfile to containerize the Web API.
 
 To build a docker image, all you have to do is, ensure that docker-desktop or docker instance is running. And run the following command at the root of the solution.
 

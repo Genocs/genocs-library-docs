@@ -3,7 +3,7 @@ title: "Getting Started 🚀"
 description: "Let's get started with the .NET WebApi Template!"
 lead: "Let's get started with the .NET WebApi Template!"
 date: 2021-08-30T00:59:34+05:30
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -27,7 +27,7 @@ To get started with this Template, here are the available options.
 - Install using the `Genocs CLI` tool. Use this for release versions of the Template only.
 - Fork the Repository. Use this if you want to always keep your version of the Template up-to date with the latest changes.
 
-> Make sure that your DEV enviroment is setup, [Read the Development Environment Guide](/docs/templates/general/development-environment/)
+> Make sure that your DEV environment is set up. [Read the development environment guide](/docs/templates/general/development-environment/)
 
 ## Genocs CLI Tool
 
@@ -61,8 +61,8 @@ To learn more about the Genocs CLI tool, [read here](https://github.com/Genocs/g
 
 You would probably need to take this approach if you want to keep your source code upto date with the latest changes. To get started based on this repository, you need to get a copy locally.
 
-- Make a fork of Genocs.CleanArchitectureTemplate's `dotnet-templates` repository in your Github account.
-- Next, since you need to start your private personal project, create your new `dotnet-templates` personal project by cloning the forked repository on your personal github. This could be done as simple as running `git clone https://github.com/{yourgithubuseraccount}/dotnet-templates.git` locally on your development machine.
+- Make a fork of Genocs.CleanArchitectureTemplate's `dotnet-templates` repository in your GitHub account.
+- Next, since you need to start your private personal project, create your new `dotnet-templates` personal project by cloning the forked repository to your machine. This can be as simple as running `git clone https://github.com/{yourgithubuseraccount}/dotnet-templates.git` locally on your development machine.
 - Setup an upstream remote on your personal project pointing to your forked repository using command `git remote add upstream https://github.com/{yourgithubuseraccount}/dotnet-templates` and `git remote set-url --push upstream DISABLE`
 
 Now, whenever there is a new update on Genocs CleanArchitectureTemplate's `dotnet-templates` repository, you could simply pull in the latest change on your private fork of the Genocs CleanArchitectureTemplate's `dotnet-templates` repository and later merge these changes with you personal projects.

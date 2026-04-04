@@ -3,22 +3,22 @@ title: "CLI"
 description: "The genocs CLI (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides unified experience across different platforms, allowing developers to create cross-platform applications with ease. With its extensive set of commands, the .NET CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity, flexibility, and scalability in application development."
 lead: ""
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 ---
 
 ## Introduction
 
-The **Genocs CLI** (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides unified experience across different services inside your platform. It allows developers to create applications with ease. With its extensive set of commands, the Genocs CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity and scalability in application development.
+The **Genocs CLI** (Command Line Interface) tool is a powerful and versatile command-line utility that enables developers to efficiently build, test, and run applications. It provides a unified experience across different services inside your platform. It allows developers to create applications with ease. With its extensive set of commands, the Genocs CLI tool simplifies the development process by automating tasks such as project management, dependency resolution, and deployment. It is an essential tool for modern developers, offering productivity and scalability in application development.
 
-**Genocs CLI** is the _dotnet tool_ that allow you to use the Genocs templates. Genocs templates are dotnet template that will help you to setup quickly and easily services in your environment.
+**Genocs CLI** is the _dotnet tool_ that allows you to use the Genocs templates. Genocs templates are `dotnet new` templates that help you set up services in your environment quickly and easily.
 
 Genocs tool is based on [Microsoft-dotnet tools](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools).
 
 ## Supported runtime
 
-Genocs CLI can be used on both .NET10.x, .NET9.x, .NET8.x.
+Genocs CLI can be used on .NET 10.x, .NET 9.x, and .NET 8.x.
 
 ---
 

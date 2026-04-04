@@ -1,9 +1,9 @@
 ---
 title: "Overview"
-description: ".NET Microservice Template built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
-lead: ".NET Microservice Template built with .NET10.0. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+description: ".NET Microservice Template built with .NET 10. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
+lead: ".NET Microservice Template built with .NET 10. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13T15:51:03+02:00
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -17,7 +17,7 @@ toc: true
 
 ## What's Genocs's .NET Multitenancy Template?
 
-Github Repository URI : [Genocs/dotnet-template](https://github.com/Genocs/microservice-template)
+GitHub repository URI : [Genocs/dotnet-template](https://github.com/Genocs/microservice-template)
 
 
 The template can be used with the `genocs cli`, `dotnet new` command or with the `Visual Studio 2022`, `Visual Studio Code` IDEs.
@@ -50,7 +50,7 @@ mindmap
 
 ## Features
 
-- :white_check_mark: Built on .NET10.0
+- :white_check_mark: Built on .NET 10
 - :white_check_mark: Follows Clean Architecture Principles
 - :white_check_mark: Domain Driven Design
 - :white_check_mark: Cloud Ready. Can be deployed to AWS Infrastructure as ECS Containers using Terraform
@@ -86,6 +86,6 @@ mindmap
 
 ## What's Genocs's .NET Microservice Template?
 
-Github Repository URI : [Genocs/dotnet-microservice-template](https://github.com/Genocs/microservice-template)
+GitHub repository URI : [Genocs/dotnet-microservice-template](https://github.com/Genocs/microservice-template)
 
 `Star the above repository and support me!`

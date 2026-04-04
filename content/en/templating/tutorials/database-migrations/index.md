@@ -3,7 +3,7 @@ title: "Genocs Microservice Template along with Entity Framework Core"
 description: "Adding Database Migrations for Entity Framework Core"
 lead: "Adding Database Migrations for Entity Framework Core"
 date: 2022-01-15T21:31:40+05:30
-lastmod: 2026-03-21T18:34:29Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -21,7 +21,7 @@ Genocs Library's Web API is built on top of Entity Framework Core. This means th
 
 Before you begin, make sure you have the following installed on your machine:
 
-1. [.NET10.0 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+1. [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
 2. [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
 3. Database Server:
 

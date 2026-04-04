@@ -3,7 +3,7 @@ title: "Builder"
 description: "Genocs builder is the entrypoint for the application builder."
 lead: ""
 date: 2023-12-20T17:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -53,7 +53,7 @@ There are two ways to setup the builder:
    gnxBuilder.Build();
    ```
 
-   This option will allow you to be able to integrate [Microsoft Aspire](https://learn.microsoft.com/en-us/dotnet/aspire/) effortlessly, as well as, you can add the following services:
+   This option lets you integrate [Microsoft Aspire](https://learn.microsoft.com/en-us/dotnet/aspire/) with little effort and add services such as:
 
    ```csharp
    ... // From the above code
@@ -65,7 +65,7 @@ There are two ways to setup the builder:
                .Build();
    ```
 
-2. Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` that will get register the required services.
+2. Extend `IServiceCollection` with `AddGenocs(builder.Configuration)` to register the required services.
 
    This is what you need to do in the `Program.cs` file.
 

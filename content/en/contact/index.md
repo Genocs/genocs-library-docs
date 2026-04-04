@@ -2,7 +2,7 @@
 title: "Contact"
 description: "Drop us an email"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 ---
@@ -32,4 +32,4 @@ Please make sure to always include the following details in your bug report:
 
 Join our Discord channel: [@genocs](https://discord.gg/fWwArnkV)
 
-Don't have access to `discord` yet? Please contact us at [info@genocs.com](info@genocs.com) to receive an invite.
+Don't have access to `discord` yet? Please contact us at [info@genocs.com](mailto:info@genocs.com) to receive an invite.

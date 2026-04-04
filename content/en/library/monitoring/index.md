@@ -3,7 +3,7 @@ title: "Monitoring"
 description: "Genocs Library is a collection of Enterprise Level Libraries and Templates for Modern Web Applications that gets you started with premium application development in no-time!"
 lead: ""
 date: 2023-11-29T21:00:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 menu:
@@ -17,7 +17,7 @@ toc: true
 
 ### Overview
 
-Adds logging and tracing capability, by default uses Azure Appinsights, Jaeger and Console tracing sistem. The system configure Masstransit with RabbitMQ and
+Adds logging and tracing capability. By default it uses Azure Application Insights, Jaeger, and console tracing. The system configures MassTransit with RabbitMQ and
 MongoDB tracing:
 
 - Console
@@ -36,7 +36,7 @@ dotnet add package Genocs.Monitoring
 
 ### Usage
 
-Extend Program.cs -> use services and congiguration object instance. They are both available in ASP.NET Core framework.
+Extend Program.cs -> use services and configuration object instance. They are both available in ASP.NET Core framework.
 
 ```cs
 services.AddCustomOpenTelemetry(configuration);
@@ -46,7 +46,7 @@ services.AddCustomOpenTelemetry(configuration);
 
 `appSettings:serviceName` - sets the service name used by Jaeger.
 
-`connectionStrings:applicationInsights` - sets the Azure Appinsights connection string. Null or empty to disable.
+`connectionStrings:applicationInsights` - sets the Azure Application Insights connection string. Null or empty to disable.
 
 `monitoring:jaeger` - sets the jaeger url to be used. Null or empty to disable.
 

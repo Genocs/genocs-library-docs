@@ -2,7 +2,7 @@
 title: "Contributing"
 description: "Contributing to Genocs Library"
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-04-04T15:26:42Z
 draft: false
 images: []
 ---
@@ -26,14 +26,14 @@ Currently, you can contribute to:
 
 Please note the following steps are applicable only for the `genocs-library-docs` repository.
 
-1. Fork the `genocs-library-docs` repository to your Github profile.
+1. Fork the `genocs-library-docs` repository to your GitHub profile.
 2. `[Optional]` Navigate to your newly forked Repository -> Settings -> Secrets.
 3. `[Optional]` Add a new Repository Secret with a name `GT_TOKEN`. As for the value, paste in your GitHub Token (https://github.com/settings/tokens)
 4. Clone this repository locally.
 5. Ensure that you have Node.js and Visual Code installed.
 6. At the root of the repository run `npm install`. This installs all the required packages. It might take some time depending on your network connection.
 7. All the documentation is to be written in markdown format.
-8. Refer `https://github.com/Genocs/genocs-library-docs/blob/main/content/en/templates/general/getting-started/index.md` to get an idea on how to write documentation and include images, code snippets and stuff.
+8. Refer to `https://github.com/Genocs/genocs-library-docs/blob/main/content/en/templating/general/getting-started/index.md` for examples of documentation structure, images, and code snippets.
 9. To run the application locally, run the command `npm run start` and navigate to `http://localhost:1313` in your browser (Hugo development server).
 10. Once ready, send a Pull Request.
 
