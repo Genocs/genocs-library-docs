@@ -1,41 +1,42 @@
 ---
 title: "Contributing"
-description: "Contributing to Genocs Library"
+description: "How to contribute to Genocs Library: repositories, documentation workflow, and contributor credits."
+lead: "Report issues, submit pull requests, or improve this site—each repository welcomes community contributions."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T15:53:29Z
 draft: false
 images: []
 ---
 
-Being a completely community driven project, I encourage the community to submit their valuable contributions to whichever repository they are comfortable with.
+Genocs Library is **community-driven**. You can help with **libraries**, **documentation**, **templates**, **deployment examples**, or **sample applications**—choose the repository that fits.
 
-Currently, you can contribute to:
+## Repositories
 
-- [Source Code](https://github.com/Genocs/genocs-library)
-- [Documentation](https://github.com/Genocs/genocs-library-docs)
-- [Template](https://github.com/Genocs/genocs-library-templates)
-- [Deployments](https://github.com/Genocs/enterprise-containers)
-- [Example](https://github.com/Genocs/genocs-basket)
+| Focus | Repository |
+| ----- | ---------- |
+| Core .NET packages | [genocs-library](https://github.com/Genocs/genocs-library) |
+| This documentation site | [genocs-library-docs](https://github.com/Genocs/genocs-library-docs) |
+| Template packs | [genocs-library-templates](https://github.com/Genocs/genocs-library-templates) |
+| Container / deployment examples | [enterprise-containers](https://github.com/Genocs/enterprise-containers) |
+| Sample application | [genocs-basket](https://github.com/Genocs/genocs-basket) |
+| Web API (clean architecture) template | [microservice-template](https://github.com/Genocs/microservice-template) |
+| Blazor WebAssembly template | [blazor-template](https://github.com/Genocs/blazor-template) |
+| Web API templates (collection) | [templates](https://github.com/Genocs/templates) |
 
-- [.NET Web API Template](https://github.com/Genocs/microservice-template)
-- [Blazor WebAssembly Template](https://github.com/Genocs/blazor-template)
-- [Angular Front-End](https://github.com/Genocs/angular-frontend-template) (soon)
-- [React Front-End](https://github.com/Genocs/react-frontend-template) (soon)
+**Roadmap:** [Angular](https://github.com/Genocs/angular-frontend-template) and [React](https://github.com/Genocs/react-frontend-template) front-end templates are planned; follow those repositories for updates.
 
-## How to contribute?
+## Contributing to this documentation
 
-Please note the following steps are applicable only for the `genocs-library-docs` repository.
+These steps apply to the **[genocs-library-docs](https://github.com/Genocs/genocs-library-docs)** repository.
 
-1. Fork the `genocs-library-docs` repository to your GitHub profile.
-2. `[Optional]` Navigate to your newly forked Repository -> Settings -> Secrets.
-3. `[Optional]` Add a new Repository Secret with a name `GT_TOKEN`. As for the value, paste in your GitHub Token (https://github.com/settings/tokens)
-4. Clone this repository locally.
-5. Ensure that you have Node.js and Visual Code installed.
-6. At the root of the repository run `npm install`. This installs all the required packages. It might take some time depending on your network connection.
-7. All the documentation is to be written in markdown format.
-8. Refer to `https://github.com/Genocs/genocs-library-docs/blob/main/content/en/templating/general/getting-started/index.md` for examples of documentation structure, images, and code snippets.
-9. To run the application locally, run the command `npm run start` and navigate to `http://localhost:1313` in your browser (Hugo development server).
-10. Once ready, send a Pull Request.
+1. Fork **genocs-library-docs** to your GitHub account.
+2. `[Optional]` In your fork: **Settings → Secrets**, add **`GT_TOKEN`** with a [GitHub personal access token](https://github.com/settings/tokens) if your automation requires it.
+3. Clone your fork locally.
+4. Install [Node.js](https://nodejs.org/) and an editor (for example [Visual Studio Code](https://code.visualstudio.com/)).
+5. From the repository root, run `npm install`.
+6. Write content in **Markdown** under `content/en/`. Use [templating getting started](https://github.com/Genocs/genocs-library-docs/blob/main/content/en/templating/general/getting-started/index.md) as a reference for layout, images, and snippets.
+7. Run the local site with `npm run start` and open `http://localhost:1313`.
+8. Open a **pull request** to the upstream default branch.
 
 ```mermaid
 gitGraph:
@@ -53,48 +54,38 @@ gitGraph:
     commit
 ```
 
-Submit your PR to join this Elite list ;) Make sure your code is warning free!
+Keep changes focused and avoid introducing avoidable build or lint issues.
 
-### Genocs Library
+## Contributors
 
-Here are the contributors:
+Thanks to everyone who contributes. Below are GitHub contributor images for selected repositories (same data as each repo’s **Contributors** graph).
+
+### Genocs Library (packages)
 
 <a href="https://github.com/Genocs/genocs-library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
+  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" alt="Contributors to Genocs/genocs-library" />
 </a>
 
-### Genocs Library Documentation
+### Documentation (this site)
 
-Here are the contributors:
-
-### .NET Web API Clean Architecture Template
-
-Here are the contributors:
-
-<a href="https://github.com/Genocs/genocs-library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
+<a href="https://github.com/Genocs/genocs-library-docs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library-docs" alt="Contributors to Genocs/genocs-library-docs" />
 </a>
 
-### .NET Web API Template (soon)
+### Web API template
 
-Here are the contributors:
-
-<a href="https://github.com/Genocs/genocs-library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
+<a href="https://github.com/Genocs/microservice-template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Genocs/microservice-template" alt="Contributors to Genocs/microservice-template" />
 </a>
 
-### Blazor WebAssembly Clean Architecture Template (soon)
+### Blazor template
 
-Here are the contributors:
-
-<a href="https://github.com/Genocs/genocs-library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
+<a href="https://github.com/Genocs/blazor-template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Genocs/blazor-template" alt="Contributors to Genocs/blazor-template" />
 </a>
 
-### Blazor WebAssembly .NET Web API Template
+### Templates (monorepo)
 
-Here are the contributors:
-
-<a href="https://github.com/Genocs/genocs-library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Genocs/genocs-library" />
+<a href="https://github.com/Genocs/templates/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Genocs/templates" alt="Contributors to Genocs/templates" />
 </a>

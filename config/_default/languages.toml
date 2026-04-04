@@ -4,9 +4,9 @@
   weight = 10
   [en.params]
     languageISO = "EN"
-    titleHome = "Genocs Framework Documentation"
-    titleAddition = "Modern Enterprise Framework Documentation"
-    description = "Modern, secure, fast, and SEO-ready documentation theme built with Hugo."
+    titleHome = "Genocs Library"
+    titleAddition = "Documentation for .NET libraries, CLI, and templates"
+    description = "Documentation for Genocs Library—NuGet packages, CLI, and templates for cloud-ready .NET microservices."
     footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
 
 [it]

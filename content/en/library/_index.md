@@ -1,9 +1,9 @@
 ---
 title: "Library"
-description: "Versioned entry page for Genocs Library documentation."
-lead: "Choose a docs version to get started quickly."
+description: "Pick a Genocs Library documentation version and open the NuGet package reference or topic guides."
+lead: "Versioned docs: start with v9.0 for the latest package guides, or open topic pages for authentication, logging, messaging, and more."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T15:53:29Z
 draft: false
 images: []
 ---

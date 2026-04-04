@@ -8,17 +8,19 @@
 
 Mechanical copy pass on `content/en`: spelling and grammar (e.g. seamless, comprehensive, been, environment), **GitHub** branding, **.NET 10** spacing in prose (TFM `net10.0` unchanged in package tables), fixed **contact** `mailto:`, **monitoring** overview (Application Insights, MassTransit, system/config phrasing), **contributing** sample-doc path and **library** hub link to `/contributing/`, **introduction** “starter templates” wording, **getting-started** project cards and vision copy, **builder** redundant phrasing, templating **GitHub** / **environment** fixes, and YAML pipeline comments for .NET 10.
 
----
-lastmod: 2026-04-04T15:26:42Z
+### Wave B — done (2026-04-04)
+
+Unified **Genocs Library** naming in site config (`params.toml`, English `languages.toml`), **home** `_index.md` (title, meta, diagram broker label **Genocs.Messaging**), **`docs/_index.md`** and **`docs/9.0/_index.md`** landing copy with navigation and package tables, **introduction** rewrite (tone + links), **getting-started** meta, **library** hub meta, and `package.json` description. Italian locale strings unchanged.
+
+### Wave C — done (2026-04-04)
+
+Filled **`library/messaging`**, **`library/persistence`** (fixed menu spelling **Persistence**), and **`library/metrics`** with overview + cross-links to **[v9.0](/docs/9.0/)**; rewrote **[contributing](/contributing/)** (repo table, doc workflow, correct **contrib.rocks** per repo); fixed **Blazor** card on **getting started** (repository → `blazor-template`); replaced broken **`/docs/templates/...`** links with **`/templating/general/...`** in templating pages.
 
 ## 1. Executive summary
 
 The English docs mix **three overlapping “products”** in naming and promise: *Genocs Framework Documentation*, *Genocs Library*, and *template* content. **v9.0 package reference pages** follow a modern, structured “agent reference” style, while **library topic pages** and **templating** sections vary from detailed to empty, with repeated marketing blurbs and legacy phrasing.
 
 Highest-impact wins: **unify naming and positioning**, **fix systematic typos and grammar**, **standardize .NET version formatting**, **align library topics with v9 package docs or cross-link**, and **repair broken or placeholder sections** (empty pages, wrong contributor blocks, bad links).
-
----
-lastmod: 2026-04-04T15:26:42Z
 
 ## 2. Inventory by area
 
@@ -32,12 +34,9 @@ lastmod: 2026-04-04T15:26:42Z
 | `docs/_index.md` | Stub | Nearly empty; typo in description |
 | `docs/9.0/` | Version landing | Minimal body |
 | `docs/9.0/packages/*.md` | NuGet reference | Consistent “Agent Reference” pattern |
-| `templating/**` | Templates deep-dive | Large; duplicate overview text; internal path `/docs/templates/` may not match site |
+| `templating/**` | Templates deep-dive | Large; duplicate overview text; `/docs/templates/` links updated to `/templating/` (Wave C) |
 | `cli/`, `contact/`, `contributing/` | Satellite | CLI repeats generic .NET CLI wording; contributing has structural issues |
 | `infrastructure/`, `containerization/`, `devops/` | Ops | Substantial overlap potential (similar KEDA/contributor blocks) |
-
----
-lastmod: 2026-04-04T15:26:42Z
 
 ## 3. Voice, naming, and positioning (P0)
 
@@ -53,9 +52,6 @@ lastmod: 2026-04-04T15:26:42Z
 2. **Pick canonical naming** (e.g. always “Genocs Library” for the product family; “this documentation site” for the site).
 3. **Tone ladder:** Home = short promise + diagram; Introduction = capabilities map; Getting Started = concrete next steps; Library/Docs = reference tone.
 4. **Reduce repeated superlatives** (“revolutionize,” “premium,” “elite”) or confine them to a single brand page.
-
----
-lastmod: 2026-04-04T15:26:42Z
 
 ## 4. Typos, grammar, and mechanical consistency (P0–P1)
 
@@ -79,9 +75,6 @@ lastmod: 2026-04-04T15:26:42Z
 2. **Standardize .NET branding:** prefer Microsoft-style “.NET 10” / “.NET 10.0” in prose; `net10.0` in TFM tables; avoid `.NET10.0` glued form unless house style dictates—**choose one style guide** and apply everywhere.
 3. **Fix `description` / `lead` duplication** on pages where both are identical (SEO: vary `description` slightly or shorten `lead`).
 
----
-lastmod: 2026-04-04T15:26:42Z
-
 ## 5. Factual and UX consistency (P1)
 
 **Issues**
@@ -98,9 +91,6 @@ lastmod: 2026-04-04T15:26:42Z
 2. **Fill or redirect** empty library pages; minimum: overview + install + link to `docs/9.0/packages/...`.
 3. **Contributing page:** one contributor widget per repo or a single list with correct repos; remove “soon” sections or mark clearly as roadmap.
 
----
-lastmod: 2026-04-04T15:26:42Z
-
 ## 6. Structural and style alignment: Library vs v9 packages (P1–P2)
 
 **Observation**
@@ -114,9 +104,6 @@ lastmod: 2026-04-04T15:26:42Z
 2. **Normalize headings:** Installation → Dependencies → Usage → Configuration → See also (package doc).
 3. **Retire or label** legacy ASP.NET Startup snippets where the stack is minimal hosting only.
 
----
-lastmod: 2026-04-04T15:26:42Z
-
 ## 7. Duplicate and boilerplate YAML descriptions (P2)
 
 **Observation**
@@ -127,9 +114,6 @@ lastmod: 2026-04-04T15:26:42Z
 
 1. **Unique `description` per page** (one sentence, topic-specific) for SEO and social previews.
 2. Shared boilerplate → short **“About Genocs Library”** include or single parent page—not repeated meta.
-
----
-lastmod: 2026-04-04T15:26:42Z
 
 ## 8. Templating section (P2)
 
@@ -145,9 +129,6 @@ lastmod: 2026-04-04T15:26:42Z
 2. Normalize **feature lists** (checkbox style, capitalization “Multi-tenancy”).
 3. Verify **Makefile** and docker-compose doc links (e.g. reported bad GitHub path in `makefile-commands.md`).
 
----
-lastmod: 2026-04-04T15:26:42Z
-
 ## 9. DevOps / infrastructure / containerization (P2)
 
 **Observation**
@@ -159,9 +140,6 @@ lastmod: 2026-04-04T15:26:42Z
 1. **Single source** via Hugo partial/shortcode or shared include for repeated deployment instructions.
 2. Align **terminology** (AKS, Kubernetes, step numbering) across the three pages.
 
----
-lastmod: 2026-04-04T15:26:42Z
-
 ## 10. Accessibility and formatting (P3)
 
 **Backlog**
@@ -169,9 +147,6 @@ lastmod: 2026-04-04T15:26:42Z
 1. Prefer semantic Markdown headings over `<p><b>` where possible (`introduction/getting-started/index.md`) for consistency and accessibility.
 2. **Alt text / figure captions** for hero images (`introduction/_index.md`, templating).
 3. **Tables:** ensure header rows and consistent terminology in package Quick Facts.
-
----
-lastmod: 2026-04-04T15:26:42Z
 
 ## 11. Suggested execution order
 
@@ -183,17 +158,11 @@ lastmod: 2026-04-04T15:26:42Z
 | **D** | Library vs package alignment + YAML descriptions | Consistent reference experience |
 | **E** | Templating split + dedupe devops blocks | Maintainable long-form content |
 
----
-lastmod: 2026-04-04T15:26:42Z
-
 ## 12. Open decisions (for product/docs owner)
 
 1. **Primary audience** for the homepage: framework evaluators, existing users, or contributors?
 2. **“Agent Reference”** framing on v9 pages: keep for all versions or rename for human readers on the public site?
 3. **Blog (genocs-blog.netlify.app)** vs on-site docs: which is canonical for tutorials?
 4. **Roadmap visibility:** “Coming soon” templates—dates or remove from main nav?
-
----
-lastmod: 2026-04-04T15:26:42Z
 
 *This backlog is a planning artifact; update checkboxes or tickets in your tracker as items complete.*

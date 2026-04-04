@@ -1,9 +1,9 @@
 ---
 title: "Getting Started"
-description: "Let's get started with Genocs Library!"
-lead: "Let's get started with Genocs Library!"
+description: "Install the CLI, choose a template, and run your first Genocs Library API or client—links to repos and walkthroughs."
+lead: "Practical entry point: templates, repositories, and guides to bootstrap a Genocs Library–based solution."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T15:53:29Z
 draft: false
 images: []
 menu:
@@ -83,7 +83,7 @@ For the initial releases, <b>Genocs Library</b> includes an API project on <b>.N
               <div class="tablet">multitenancy</div>
             </div>
           <p>Clean Architecture template for .NET 10 Blazor WebAssembly, built for the Genocs Web API with MudBlazor components.</p>
-          <p><a href="https://github.com/Genocs/genocs-library-docs">View GitHub repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read getting started guide</a></p>
+          <p><a href="https://github.com/Genocs/blazor-template">View GitHub repository</a> | <a href="https://genocs-blog.netlify.app/blazor-template/general/overview/">Read getting started guide</a></p>
         </div>
       </div>
       <div class="card feature-card">

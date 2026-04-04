@@ -3,7 +3,7 @@ title: "Genocs Microservice Template along with Entity Framework Core"
 description: "Adding Database Migrations for Entity Framework Core"
 lead: "Adding Database Migrations for Entity Framework Core"
 date: 2022-01-15T21:31:40+05:30
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T15:53:29Z
 draft: false
 images: []
 menu:
@@ -68,7 +68,7 @@ Note that currently, Genocs Microservice Template supports the following major D
 4. PostgreSQL
 5. SQLite
 
-Here you can find everything to setup the supported Database providers - [Setup Databases](/docs/templates/general/development-environment/)
+Here you can find everything to setup the supported Database providers - [Setup Databases](/templating/general/development-environment/)
 
 To maintain scalability, the database migrations of each of these DB Providers are kept in separate class library projects namely
 1. Migrators/Migrators.MSSQL

@@ -3,7 +3,7 @@ title: "Overview"
 description: "Genocs Library built with .NET 10. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 lead: "Genocs Library built with .NET 10. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles."
 date: 2023-05-13 09:17:27+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T15:53:29Z
 draft: false
 images: []
 menu:
@@ -66,7 +66,7 @@ The goal of this repository is to provide a complete and feature-rich starting p
 
 ## Documentation
 
-Read Documentation related to this Template here - /docs/templates/
+Documentation for this template lives in the **[Templating](/templating/)** section—for example [Overview](/templating/general/overview/) and [Getting started](/templating/general/getting-started/).
 > Feel free to contribute to the Documentation Repository - https://github.com/Genocs/genocs-library-docs
 
 ## Getting Started
@@ -76,7 +76,7 @@ To get started with this Template, here are the available options.
 - Install using the `Genocs CLI` tool. Use this for release versions of the Template only.
 - Fork the Repository. Use this if you want to always keep your version of the Template up-to date with the latest changes.
 
-> Make sure that your DEV environment is set up. [Read the development environment guide](/docs/templates/general/development-environment/)
+> Make sure that your DEV environment is set up. [Read the development environment guide](/templating/general/development-environment/)
 
 ### Genocs CLI Tool
 
@@ -116,7 +116,7 @@ genocs api n Genocs.Starter
 ```
 
 This will create a new .NET 9.0 WebAPI solution for you using the Genocs Templates.
-For further steps and details, [Read the Getting Started Guide](/docs/templates/general/getting-started/)
+For further steps and details, [Read the Getting Started Guide](/templating/general/getting-started/)
 
 #### Update
 To update the tool & templates, run the following commands
@@ -202,7 +202,7 @@ And here is the response.
 
 You will need to pass the `token` in the request headers to authenticate calls to the Genocs Library API!
 
-For further steps and details, [Read the Getting Started Guide](/docs/templates/general/getting-started/)
+For further steps and details, [Read the Getting Started Guide](/templating/general/getting-started/)
 
 ## Containerization
 
@@ -284,11 +284,11 @@ make td
 
 ## Important Links & Documentations
 
-Overview - [Read](/docs/templates/general/overview/)
+Overview - [Read](/templating/general/overview/)
 
-Getting Started - [Read](/docs/templates/general/getting-started/)
+Getting Started - [Read](/templating/general/getting-started/)
 
-Development Environment - [Learn about setting up the DEV environment](/docs/templates/general/development-environment/)
+Development Environment - [Learn about setting up the DEV environment](/templating/general/development-environment/)
 
 Participate in Discussions - [QNA & General Discussions](https://github.com/Genocs/genocs-templates/discussions)
 

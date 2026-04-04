@@ -3,7 +3,7 @@ title: "Getting Started 🚀"
 description: "Let's get started with the .NET WebApi Template!"
 lead: "Let's get started with the .NET WebApi Template!"
 date: 2021-08-30T00:59:34+05:30
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T15:53:29Z
 draft: false
 images: []
 menu:
@@ -27,7 +27,7 @@ To get started with this Template, here are the available options.
 - Install using the `Genocs CLI` tool. Use this for release versions of the Template only.
 - Fork the Repository. Use this if you want to always keep your version of the Template up-to date with the latest changes.
 
-> Make sure that your DEV environment is set up. [Read the development environment guide](/docs/templates/general/development-environment/)
+> Make sure that your DEV environment is set up. [Read the development environment guide](/templating/general/development-environment/)
 
 ## Genocs CLI Tool
 

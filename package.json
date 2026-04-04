@@ -1,6 +1,6 @@
 {
   "name": "genocs-framework-documentation",
-  "description": "Genocs Framework Documentation",
+  "description": "Genocs Library documentation site (Hugo + Doks)",
   "version": "1.4.0",
   "browserslist": [
     "defaults"
