@@ -16,6 +16,10 @@ Unified **Genocs Library** naming in site config (`params.toml`, English `langua
 
 Filled **`library/messaging`**, **`library/persistence`** (fixed menu spelling **Persistence**), and **`library/metrics`** with overview + cross-links to **[v9.0](/docs/9.0/)**; rewrote **[contributing](/contributing/)** (repo table, doc workflow, correct **contrib.rocks** per repo); fixed **Blazor** card on **getting started** (repository → `blazor-template`); replaced broken **`/docs/templates/...`** links with **`/templating/general/...`** in templating pages.
 
+### Wave D — done (2026-04-04)
+
+**Library topic alignment:** unique **`description` / `lead`** for every **`library/*/index.md`**; consistent **`## Reference documentation`** section with links to matching **[v9.0 package](/docs/9.0/)** pages (or explicit note when a package is not in the index). **Builder** markdown fence repaired; **distributed-tracing** duplicate `## Installation` removed and closing code fence fixed; **`complaint` → `compliant`** in tracing note; messaging/persistence/metrics reference headings normalized to `##`.
+
 ## 1. Executive summary
 
 The English docs mix **three overlapping “products”** in naming and promise: *Genocs Framework Documentation*, *Genocs Library*, and *template* content. **v9.0 package reference pages** follow a modern, structured “agent reference” style, while **library topic pages** and **templating** sections vary from detailed to empty, with repeated marketing blurbs and legacy phrasing.

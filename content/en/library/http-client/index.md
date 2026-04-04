@@ -1,9 +1,9 @@
 ---
 title: "Http Clients"
-description: "Requests, service discovery, load balancing."
-lead: ""
+description: "Resilient HTTP with Genocs.Http—Polly retries, optional Consul discovery, and Fabio load balancing."
+lead: "Register `IHttpClient` via `AddHttpClient()` and optional `AddConsul()` / `AddFabio()` for service discovery."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -205,3 +205,7 @@ dotnet add package Genocs.LoadBalancing
   "service": "some-service"
 }
 ```
+
+## Reference documentation
+
+Client APIs and resilience options: **[Genocs.Http (v9.0)](/docs/9.0/packages/genocs.http/)**. **[Library versions](/library/)**.

@@ -1,9 +1,9 @@
 ---
 title: "Vault"
-description: "Adds the secured and centralized configuration storage integration using Vault."
-lead: ""
+description: "HashiCorp Vault integration via Genocs.Configurations—centralized secrets and configuration at startup."
+lead: "Call `UseVault()` on the host builder and configure Vault URL, auth, and mapped keys."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -99,3 +99,7 @@ Each setting within the **appsettings.json** file can be overriden with a proper
 - VAULT_TOKEN
 - VAULT_USERNAME
 - VAULT_PASSWORD
+
+## Reference documentation
+
+`Genocs.Configurations` / Vault helpers are not listed in the current **[v9.0 package index](/docs/9.0/)**; browse **[Library versions](/library/)** or the **[docs home](/docs/)** when a versioned page is added.

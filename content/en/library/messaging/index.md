@@ -1,9 +1,9 @@
 ---
 title: "Messaging"
 description: "Publish and subscribe commands and events through Genocs messaging abstractions; add RabbitMQ, outbox, or other transports as NuGet packages."
-lead: "Transport-agnostic messaging with CQRS-friendly dispatch bridges—configure a concrete provider for your broker."
+lead: "Start with Genocs.Messaging, then add a transport (RabbitMQ, outbox, and so on) and wire dispatch bridges on `IGenocsBuilder`."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:53:29Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -44,7 +44,7 @@ Then add at least one **transport or integration** package (for example RabbitMQ
 
 Use `IGenocsBuilder` extensions from your packages (for example `AddServiceBusCommandDispatcher()` / `AddServiceBusEventDispatcher()`) and register the transport-specific services. Configuration lives with the transport (`rabbitmq`, `outbox`, and so on—not on `Genocs.Messaging` alone).
 
-### Reference documentation
+## Reference documentation
 
 For exact APIs, configuration tables, and troubleshooting, use the **v9.0** package guides:
 

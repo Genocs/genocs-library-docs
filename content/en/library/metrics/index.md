@@ -3,7 +3,7 @@ title: "Metrics"
 description: "How metrics fit into Genocs Library: health endpoints, observability sinks, and telemetry integrations—aligned with logging and monitoring packages."
 lead: "Metrics are exposed through observability tooling (for example Application Insights, OpenTelemetry, or Prometheus-style endpoints), not a single standalone “metrics-only” package in the v9 reference set."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:53:29Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -31,7 +31,7 @@ There is **no separate `Genocs.Metrics` package** in the current **[v9.0 package
 2. Enable the relevant **sinks and flags** in **`Genocs.Logging`**, **`Genocs.Monitoring`**, or related packages.
 3. Use **versioned package docs** for exact settings—search the **[v9.0 index](/docs/9.0/)** for “metrics”, “telemetry”, or “OpenTelemetry” in the package you use.
 
-### Reference documentation
+## Reference documentation
 
 Start from **[Genocs Library v9.0](/docs/9.0/)** and open the package you have installed (for example **Logging**, **HTTP**, or persistence packages that mention tracing).
 

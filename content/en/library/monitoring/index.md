@@ -1,9 +1,9 @@
 ---
 title: "Monitoring"
-description: "Genocs Library is a collection of Enterprise Level Libraries and Templates for Modern Web Applications that gets you started with premium application development in no-time!"
-lead: ""
+description: "Genocs.Monitoring—OpenTelemetry-style setup with Jaeger, Application Insights, and MassTransit tracing hooks."
+lead: "Configure `AddCustomOpenTelemetry`, service name, and connection strings for traces and downstream messaging visibility."
 date: 2023-11-29T21:00:19+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -63,3 +63,7 @@ services.AddCustomOpenTelemetry(configuration);
     "Jaeger": "localhost"
   }
 ```
+
+## Reference documentation
+
+There is no separate **`Genocs.Monitoring`** page in the current **[v9.0 package index](/docs/9.0/)**; telemetry and logging overlap is covered in **[Genocs.Logging (v9.0)](/docs/9.0/packages/genocs.logging/)**. **[Library versions](/library/)** for other releases.

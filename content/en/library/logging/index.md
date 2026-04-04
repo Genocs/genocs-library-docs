@@ -1,9 +1,9 @@
 ---
 title: "Logging"
-description: "Adds the logging and tracing capability"
-lead: ""
+description: "Serilog-based logging with Genocs.Logging—console, file, Seq, ELK, Azure Monitor, and sensitive-property filtering."
+lead: "Configure the `logger` section and sinks; inject `ILogger<T>` in application code."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -210,3 +210,7 @@ public class SomeService
   "tags": {}
 }
 ```
+
+## Reference documentation
+
+Sink matrix and configuration detail: **[Genocs.Logging (v9.0)](/docs/9.0/packages/genocs.logging/)**. **[Library versions](/library/)**.

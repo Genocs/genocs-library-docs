@@ -1,9 +1,9 @@
 ---
 title: "Builder"
-description: "Genocs builder is the entrypoint for the application builder."
-lead: ""
+description: "IGenocsBuilder from Genocs.Core—register modules, CQRS, logging, and integrations from Program.cs."
+lead: "Central place to compose Genocs services: `AddGenocs()`, `Build()`, and `UseGenocs()` on the ASP.NET Core pipeline."
 date: 2023-12-20T17:40:19+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -212,8 +212,6 @@ Log.CloseAndFlush();
 
 The service name is used to display the banner and the version is used to display the version of the service.
 
-````csharp
-
 ## Settings
 
 Use the following settings in the `appsettings.json` file according to your needs.
@@ -227,4 +225,8 @@ Use the following settings in the `appsettings.json` file according to your need
     "displayBanner": true,
     "displayVersion": true
   }
-````
+```
+
+## Reference documentation
+
+Host bootstrap and builder APIs: **[Genocs.Core (v9.0)](/docs/9.0/packages/genocs.core/)**, shared primitives: **[Genocs.Common (v9.0)](/docs/9.0/packages/genocs.common/)**. **[Library versions](/library/)**.

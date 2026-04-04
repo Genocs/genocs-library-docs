@@ -1,9 +1,9 @@
 ---
 title: "Authorization"
-description: "Adds the integration with authorization middleware and system components to validate and grant the access to the resources."
-lead: ""
+description: "API keys and authorization middleware for Genocs services—protect endpoints and configure development vs production keys."
+lead: "Use the `authorization` settings block with Genocs.Auth to enforce access to your HTTP APIs."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -159,3 +159,7 @@ Default settings for some variables have been overwritten with the following con
     ]
   }
 ```
+
+## Reference documentation
+
+Package reference and integration notes: **[Genocs.Auth (v9.0)](/docs/9.0/packages/genocs.auth/)**. **[Library versions](/library/)** for other doc lines.

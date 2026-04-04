@@ -1,9 +1,9 @@
 ---
 title: "Distributed Tracing"
-description: "Genocs Library make use of Distributed tracing to implement cross service tracing!"
-lead: ""
+description: "Distributed tracing with Genocs.Tracing—OpenTelemetry alignment, Jaeger export, and `IGenocsBuilder` integration."
+lead: "Add OpenTelemetry/Jaeger exporters and tune the `jaeger` section for cross-service visibility."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -23,17 +23,15 @@ dotnet add package Genocs.Tracing
 
 > **Open Tracing Migration to Open Telemetry**
 >
-> We have removed Open Tracing reference. The library is complaint with [Open Telemetry](https://opentelemetry.io/)
+> We have removed Open Tracing reference. The library is compliant with [Open Telemetry](https://opentelemetry.io/)
 > Library. We are in the process of upgrading naming convention of our library to Open Telemetry. Please stay tuned for the updates.
 
 ## Dependencies
 
 - Genocs.Core
-- Open Tracing
+- OpenTelemetry-compatible tracing components (see package README for current stack)
 
 Genocs Library does not generate any default spans for your ASP.NET Core applications. However, this can be simply achieved by plugging in Open Tracing.
-
-## Installation
 
 ## Usage
 
@@ -138,4 +136,8 @@ Following settings are required to be set in your **appsettings.json**
     "exporterTimeoutMilliseconds": 30000,
     "maxExportBatchSize": 512
 }
-````
+```
+
+## Reference documentation
+
+`Genocs.Tracing` is not listed as a standalone package in the current **[v9.0 index](/docs/9.0/)**; related observability options appear in **[Genocs.Logging (v9.0)](/docs/9.0/packages/genocs.logging/)** and **[Monitoring](/library/monitoring/)**. **[Library versions](/library/)** for other lines.

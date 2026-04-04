@@ -1,9 +1,9 @@
 ---
 title: "Azure Key Vault"
-description: "Genocs Library package for Azure Key Vault"
-lead: ""
+description: "Load configuration and secrets from Azure Key Vault with Genocs.Secrets.AzureKeyVault—managed identity or certificate-based access."
+lead: "Enable the `azureKeyVault` section and choose identity, RBAC, or certificate authentication."
 date: 2023-11-29T21:00:19+02:00
-lastmod: 2026-03-24T21:59:55Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -82,3 +82,7 @@ Use the following settings in the `appsettings.json` file according to your need
     "azureADDirectoryId": "your-directory-id"
   }
 ```
+
+## Reference documentation
+
+`Genocs.Secrets.AzureKeyVault` is not in the current **[v9.0 package list](/docs/9.0/)**; see **[Genocs.Auth (v9.0)](/docs/9.0/packages/genocs.auth/)** for JWT and secret-handling patterns that often pair with Key Vault. **[Library versions](/library/)**.

@@ -1,9 +1,9 @@
 ---
 title: "Authentication - JWT"
-description: "Adds the integration with JWT using an available authentication middleware and system components to validate and grant the access tokens."
-lead: ""
+description: "JWT and OpenID authentication with Genocs.Auth—certificates, secrets, or external identity providers wired through the Genocs builder."
+lead: "Issue and validate bearer tokens, integrate middleware, and tune the `jwt` section in appsettings."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:26:42Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -270,3 +270,7 @@ Default settings for some variables have been overwritten with the following con
   "roleClaimType" : "Role"
 }
 ```
+
+## Reference documentation
+
+NuGet-centric API, handler patterns, and troubleshooting: **[Genocs.Auth (v9.0)](/docs/9.0/packages/genocs.auth/)**. Other versions: **[Library versions](/library/)**.

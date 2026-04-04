@@ -1,9 +1,9 @@
 ---
 title: "CQRS"
-description: "Commands, queries and event handlers."
-lead: ""
+description: "Commands, queries, and events with Genocs.CQRS—dispatchers, handlers, and integration with the Genocs host."
+lead: "Model commands and events, register dispatchers, and wire handlers through `IGenocsBuilder`."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-03-24T20:59:42Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -269,3 +269,7 @@ public class AccountsService
         => _dispatcher.DispatchAsync(@event);
 }
 ```
+
+## Reference documentation
+
+HTTP-facing CQRS integration: **[Genocs.WebApi.CQRS (v9.0)](/docs/9.0/packages/genocs.webapi.cqrs/)**. Host and wiring: **[Genocs.Core (v9.0)](/docs/9.0/packages/genocs.core/)**. This topic page uses the `Genocs.CQRS` package name as in samples; **[Library versions](/library/)** for other lines.

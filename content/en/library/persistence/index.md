@@ -3,7 +3,7 @@ title: "Persistence"
 description: "MongoDB persistence and repositories for Genocs services—connection, repositories, and optional seeding from configuration."
 lead: "Use Genocs.Persistence.MongoDB for MongoDB clients, databases, and repositories wired through the Genocs builder."
 date: 2023-05-13T15:40:19+02:00
-lastmod: 2026-04-04T15:53:29Z
+lastmod: 2026-04-04T16:07:01Z
 draft: false
 images: []
 menu:
@@ -34,7 +34,7 @@ dotnet add package Genocs.Persistence.MongoDB
 
 Extend **`IGenocsBuilder`** with Mongo registration helpers (for example **`AddMongoWithRegistration()`**) during application startup. See the **[Genocs.Persistence.MongoDB v9.0 reference](/docs/9.0/packages/genocs.persistence.mongodb/)** for a full **Program.cs** example, **`appsettings.json`** schema, and troubleshooting.
 
-### Reference documentation
+## Reference documentation
 
 - **[Genocs.Persistence.MongoDB (v9.0)](/docs/9.0/packages/genocs.persistence.mongodb/)** — install recipe, configuration keys, and behavior notes.
 
